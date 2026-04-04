@@ -69,7 +69,7 @@ export function Hero() {
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
-          src="/video/hero-video.mp4"
+          src="https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302096/FeHK2XpaBormS6BB4RJX_r_jqxaZ8CwE_xchfqo.mp4"
           autoPlay
           muted
           loop

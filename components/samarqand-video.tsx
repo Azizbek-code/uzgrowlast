@@ -16,7 +16,8 @@ const presidentVisitProject = {
   title: "Prezidentning Samarqand viloyatiga tashrifi",
   description:
     "O'zbekiston Respublikasi Prezidentining Samarqand viloyatiga rasmiy tashrifi va yangi loyihalarni ochish marosimi",
-  video: "/video/samarqand.mp4",
+  video:
+    "https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302121/video_2026-04-04_10-35-19_r8tdyl.mp4",
   thumbnail: "/images/photo_2026-04-04_10-35-25.jpg",
   date: "2024-yil 15-mart",
   location: "Samarqand shahri",
