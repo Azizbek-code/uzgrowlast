@@ -27,7 +27,6 @@ const presidentVisitProject = {
     "5 ta yangi korxona ochilishi",
     "10,000+ yangi ish o'rinlari",
     "$50M investitsiyalar jalb qilindi",
-    "3 ta ta'lim muassasasi qurildi",
   ],
   highlights: [
     "Zamonaviy texnologiyalar parki",
