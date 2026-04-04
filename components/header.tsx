@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Menu, X, Phone, Mail, Globe, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, Phone, Mail, Globe, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Bosh sahifa" },
@@ -15,41 +15,43 @@ const navItems = [
   { href: "/texnologiya", label: "Texnologiya" },
   { href: "/investorlar", label: "Investorlar" },
   { href: "/aloqa", label: "Aloqa" },
-]
+];
 
 const languages = [
   { code: "uz", label: "O'zbekcha" },
   { code: "ru", label: "Русский" },
   { code: "en", label: "English" },
-]
+];
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [langOpen, setLangOpen] = useState(false)
-  const [currentLang, setCurrentLang] = useState("uz")
-  const pathname = usePathname()
-  const isHome = pathname === "/"
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const [currentLang, setCurrentLang] = useState("uz");
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const showTransparent = isHome && !isScrolled
+  const showTransparent = isHome && !isScrolled;
 
   return (
     <>
       {/* Top Bar */}
-      <div className={cn(
-        "hidden lg:block transition-all duration-300 border-b",
-        showTransparent 
-          ? "bg-black/20 backdrop-blur-sm border-white/10" 
-          : "bg-muted/50 border-border"
-      )}>
+      <div
+        className={cn(
+          "hidden lg:block transition-all duration-300 border-b",
+          showTransparent
+            ? "bg-black/20 backdrop-blur-sm border-white/10"
+            : "bg-muted/50 border-border",
+        )}
+      >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-10">
             <div className="flex items-center gap-6">
@@ -57,9 +59,9 @@ export function Header() {
                 href="tel:+998555152233"
                 className={cn(
                   "flex items-center gap-2 text-sm transition-colors",
-                  showTransparent 
-                    ? "text-white/80 hover:text-white" 
-                    : "text-muted-foreground hover:text-foreground"
+                  showTransparent
+                    ? "text-black/80 hover:text-white"
+                    : "text-gray-700 hover:text-gray-900",
                 )}
               >
                 <Phone className="w-3.5 h-3.5" />
@@ -69,44 +71,49 @@ export function Header() {
                 href="mailto:uzgrow@gmail.com"
                 className={cn(
                   "flex items-center gap-2 text-sm transition-colors",
-                  showTransparent 
-                    ? "text-white/80 hover:text-white" 
-                    : "text-muted-foreground hover:text-foreground"
+                  showTransparent
+                    ? "text-black/80 hover:text-white"
+                    : "text-gray-700 hover:text-gray-900",
                 )}
               >
                 <Mail className="w-3.5 h-3.5" />
                 uzgrow@gmail.com
               </a>
             </div>
-            
+
             {/* Language Switcher */}
             <div className="relative">
               <button
                 onClick={() => setLangOpen(!langOpen)}
                 className={cn(
                   "flex items-center gap-2 text-sm px-3 py-1.5 rounded-lg transition-colors",
-                  showTransparent 
-                    ? "text-white/80 hover:text-white hover:bg-white/10" 
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                  showTransparent
+                    ? "text-black/80 hover:text-white hover:bg-white/10"
+                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-100",
                 )}
               >
                 <Globe className="w-3.5 h-3.5" />
-                {languages.find(l => l.code === currentLang)?.label}
-                <ChevronDown className={cn("w-3.5 h-3.5 transition-transform", langOpen && "rotate-180")} />
+                {languages.find((l) => l.code === currentLang)?.label}
+                <ChevronDown
+                  className={cn(
+                    "w-3.5 h-3.5 transition-transform",
+                    langOpen && "rotate-180",
+                  )}
+                />
               </button>
-              
+
               {langOpen && (
                 <div className="absolute right-0 top-full mt-1 bg-background rounded-lg shadow-xl border border-border py-1 min-w-[140px] z-50">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => {
-                        setCurrentLang(lang.code)
-                        setLangOpen(false)
+                        setCurrentLang(lang.code);
+                        setLangOpen(false);
                       }}
                       className={cn(
                         "w-full px-4 py-2 text-sm text-left hover:bg-muted transition-colors",
-                        currentLang === lang.code && "text-primary font-medium"
+                        currentLang === lang.code && "text-primary font-medium",
                       )}
                     >
                       {lang.label}
@@ -125,32 +132,33 @@ export function Header() {
           "sticky top-0 left-0 right-0 z-50 transition-all duration-500",
           showTransparent
             ? "bg-transparent py-4"
-            : "bg-secondary/80 backdrop-blur-md shadow-lg py-3"
+            : "bg-secondary/80 backdrop-blur-md shadow-lg py-3",
         )}
       >
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className={cn(
-                "w-12 h-12 rounded-xl flex items-center justify-center font-bold text-xl transition-all duration-300",
-                showTransparent 
-                  ? "bg-white text-primary group-hover:scale-105" 
-                  : "bg-primary text-primary-foreground"
-              )}>
-                UG
-              </div>
+              <img
+                src="/images/logo.png"
+                alt="UZ-GROW Logo"
+                className="w-12 h-12 rounded-xl object-contain transition-all duration-300 group-hover:scale-105"
+              />
               <div className="flex flex-col">
-                <span className={cn(
-                  "font-bold text-xl tracking-tight transition-colors duration-300",
-                  showTransparent ? "text-white" : "text-foreground"
-                )}>
+                <span
+                  className={cn(
+                    "font-bold text-xl tracking-tight transition-colors duration-300",
+                    showTransparent ? "text-black" : "text-foreground",
+                  )}
+                >
                   UZ-GROW
                 </span>
-                <span className={cn(
-                  "text-xs tracking-wider transition-colors duration-300",
-                  showTransparent ? "text-white/70" : "text-muted-foreground"
-                )}>
+                <span
+                  className={cn(
+                    "text-xs tracking-wider transition-colors duration-300",
+                    showTransparent ? "text-black/70" : "text-muted-foreground",
+                  )}
+                >
                   AGRO-INJINIRING
                 </span>
               </div>
@@ -166,11 +174,11 @@ export function Header() {
                     "px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300",
                     pathname === item.href
                       ? showTransparent
-                        ? "text-white bg-white/20"
+                        ? "text-black bg-white/20"
                         : "text-primary bg-primary/10"
                       : showTransparent
-                        ? "text-white/90 hover:text-white hover:bg-white/10"
-                        : "text-foreground/80 hover:text-primary hover:bg-primary/5"
+                        ? "text-black/90 hover:text-white hover:bg-white/10"
+                        : "text-gray-900 hover:text-primary hover:bg-primary/5",
                   )}
                 >
                   {item.label}
@@ -186,7 +194,7 @@ export function Header() {
                   "rounded-full px-6 transition-all",
                   showTransparent
                     ? "bg-white text-primary hover:bg-white/90"
-                    : "bg-primary hover:bg-primary/90 text-primary-foreground"
+                    : "bg-primary hover:bg-primary/90 text-primary-foreground",
                 )}
               >
                 Bepul konsultatsiya
@@ -198,10 +206,14 @@ export function Header() {
               onClick={() => setIsOpen(!isOpen)}
               className={cn(
                 "lg:hidden p-2 rounded-lg transition-colors",
-                showTransparent ? "text-white" : "text-foreground"
+                showTransparent ? "text-white" : "text-foreground",
               )}
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
 
@@ -209,7 +221,7 @@ export function Header() {
           <div
             className={cn(
               "lg:hidden overflow-hidden transition-all duration-300",
-              isOpen ? "max-h-[600px] mt-4" : "max-h-0"
+              isOpen ? "max-h-[600px] mt-4" : "max-h-0",
             )}
           >
             <div className="bg-background rounded-2xl p-4 shadow-xl">
@@ -241,7 +253,7 @@ export function Header() {
                       "px-4 py-3 rounded-xl transition-colors font-medium",
                       pathname === item.href
                         ? "text-primary bg-primary/10"
-                        : "text-foreground hover:text-primary hover:bg-primary/5"
+                        : "text-foreground hover:text-primary hover:bg-primary/5",
                     )}
                   >
                     {item.label}
@@ -251,7 +263,9 @@ export function Header() {
 
               {/* Language Switcher Mobile */}
               <div className="mt-4 pt-4 border-t border-border">
-                <p className="text-xs text-muted-foreground mb-2 px-4">Til tanlang</p>
+                <p className="text-xs text-muted-foreground mb-2 px-4">
+                  Til tanlang
+                </p>
                 <div className="flex gap-2 px-4">
                   {languages.map((lang) => (
                     <button
@@ -261,7 +275,7 @@ export function Header() {
                         "px-3 py-1.5 text-sm rounded-lg transition-colors",
                         currentLang === lang.code
                           ? "bg-primary text-primary-foreground"
-                          : "bg-muted text-muted-foreground hover:bg-muted/80"
+                          : "bg-muted text-muted-foreground hover:bg-muted/80",
                       )}
                     >
                       {lang.label}
@@ -280,5 +294,5 @@ export function Header() {
         </div>
       </header>
     </>
-  )
+  );
 }

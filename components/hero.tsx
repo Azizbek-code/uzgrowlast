@@ -1,69 +1,83 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, ChevronLeft, ChevronRight, Download, Calculator } from "lucide-react"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  Play,
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  Calculator,
+} from "lucide-react";
 
 const slides = [
   {
-    quote: "Biz har bir loyihani individual yondashuv bilan amalga oshiramiz va mijozlarimiz mamnuniyatini ta'minlaymiz.",
+    quote:
+      "Biz har bir loyihani individual yondashuv bilan amalga oshiramiz va mijozlarimiz mamnuniyatini ta'minlaymiz.",
     author: "UZ-GROW jamoasi",
     role: "Agro-injiniring bo'yicha mutaxassislar",
     cta: "Turnkey issiqxonalar",
-    link: "#xizmatlar"
+    link: "#xizmatlar",
   },
   {
-    quote: "Zamonaviy texnologiyalar va tajribali mutaxassislar jamoasi bilan yuqori hosildorlikka erishishingizni kafolatlaymiz.",
+    quote:
+      "Zamonaviy texnologiyalar va tajribali mutaxassislar jamoasi bilan yuqori hosildorlikka erishishingizni kafolatlaymiz.",
     author: "Texnik bo'lim",
     role: "Loyihalash va qurish",
     cta: "Plastik issiqxonalar",
-    link: "#xizmatlar"
+    link: "#xizmatlar",
   },
   {
-    quote: "Energiya tejamkor va avtomatlashtirilgan tizimlar orqali xarajatlarni kamaytirib, daromadni oshiring.",
+    quote:
+      "Energiya tejamkor va avtomatlashtirilgan tizimlar orqali xarajatlarni kamaytirib, daromadni oshiring.",
     author: "Innovatsiya markazi",
     role: "Zamonaviy yechimlar",
     cta: "Shisha issiqxonalar",
-    link: "#xizmatlar"
+    link: "#xizmatlar",
   },
   {
-    quote: "Loyihalashdan tortib to'liq ishga tushirishgacha - biz bilan hamkorlik qiling va natijaga erishing.",
+    quote:
+      "Loyihalashdan tortib to'liq ishga tushirishgacha - biz bilan hamkorlik qiling va natijaga erishing.",
     author: "Xizmatlar bo'limi",
     role: "Kompleks yechimlar",
     cta: "Jihozlar va tizimlar",
-    link: "#texnologiya"
-  }
-]
+    link: "#texnologiya",
+  },
+];
 
 export function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 6000)
-    return () => clearInterval(timer)
-  }, [])
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length)
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () =>
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section id="bosh-sahifa" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Video/Image Background Placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a3d1a] via-[#2d5a2d] to-[#1a4a2e]">
-        {/* Video placeholder - user can add their own video here */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-white/20 text-center">
-            <Play className="w-24 h-24 mx-auto mb-4" />
-            <p className="text-lg">Video joylash uchun joy</p>
-            <p className="text-sm">/public/hero-video.mp4</p>
-          </div>
-        </div>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+    <section
+      id="bosh-sahifa"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
+      {/* Video Background */}
+      <div className="absolute inset-0">
+        <video
+          src="/video/hero-video.mp4"
+          autoPlay
+          muted
+          loop
+          className="w-full h-full object-cover"
+        ></video>
       </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 lg:px-8 pt-24 pb-12">
@@ -71,7 +85,9 @@ export function Hero() {
           {/* Tagline */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-white/90 text-sm font-medium">4+ yil tajriba - 100+ muvaffaqiyatli loyiha</span>
+            <span className="text-white/90 text-sm font-medium">
+              4+ yil tajriba - 100+ muvaffaqiyatli loyiha
+            </span>
           </div>
 
           {/* Main Title */}
@@ -86,8 +102,8 @@ export function Hero() {
               <div
                 key={index}
                 className={`absolute inset-0 transition-all duration-700 ${
-                  index === currentSlide 
-                    ? "opacity-100 translate-y-0" 
+                  index === currentSlide
+                    ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8 pointer-events-none"
                 }`}
               >
@@ -96,7 +112,9 @@ export function Hero() {
                 </blockquote>
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">{slide.author.charAt(0)}</span>
+                    <span className="text-white font-bold text-lg">
+                      {slide.author.charAt(0)}
+                    </span>
                   </div>
                   <div>
                     <p className="text-white font-semibold">{slide.author}</p>
@@ -109,8 +127,8 @@ export function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 mb-12">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 h-14 text-base"
               asChild
             >
@@ -119,9 +137,9 @@ export function Hero() {
                 Loyiha hisoblash
               </Link>
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="border-white/30 text-white hover:bg-white/10 rounded-full px-8 h-14 text-base bg-transparent"
               asChild
             >
@@ -140,8 +158,8 @@ export function Hero() {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? "w-10 bg-primary" 
+                    index === currentSlide
+                      ? "w-10 bg-primary"
                       : "w-4 bg-white/30 hover:bg-white/50"
                   }`}
                 />
@@ -166,11 +184,13 @@ export function Hero() {
 
         {/* Discover Button */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2">
-          <Link 
+          <Link
             href={slides[currentSlide].link}
             className="group flex items-center gap-2 text-white hover:text-primary transition-colors"
           >
-            <span className="text-sm font-medium">{slides[currentSlide].cta}</span>
+            <span className="text-sm font-medium">
+              {slides[currentSlide].cta}
+            </span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -187,7 +207,9 @@ export function Hero() {
               { value: "12+", label: "Viloyatda xizmat" },
             ].map((stat, index) => (
               <div key={index} className="py-5 px-4 text-center">
-                <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
+                <div className="text-2xl md:text-3xl font-bold text-white">
+                  {stat.value}
+                </div>
                 <div className="text-white/60 text-sm mt-1">{stat.label}</div>
               </div>
             ))}
@@ -195,5 +217,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
