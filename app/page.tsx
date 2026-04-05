@@ -3,15 +3,25 @@ import { Hero } from "@/components/hero";
 import { Services } from "@/components/services";
 import { About } from "@/components/about";
 import { Projects } from "@/components/projects";
-import { International } from "@/components/international";
-import { Regional } from "@/components/regional";
-import { SamarqandVideo } from "@/components/samarqand-video";
-import { Gallery } from "@/components/gallery";
-import { AssoDesignMedia } from "@/components/asso-design-media";
 import { Technology } from "@/components/technology";
-import { Investors } from "@/components/investors";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+
+export const metadata = {
+  title:
+    "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
+  description:
+    "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 100+ muvaffaqiyatli loyiha.",
+  keywords:
+    "issiqxona qurish, agro-injiniring, qishloq xo'jaligi, UZ-GROW, issiqxona turlari, polikarbonat issiqxona, gidroponik, agrobiznes, O'zbekiston, Toshkent",
+  openGraph: {
+    title:
+      "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
+    description:
+      "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar.",
+    images: ["/images/logo.png"],
+  },
+};
 
 export default function Home() {
   return (
@@ -21,13 +31,7 @@ export default function Home() {
       <Services />
       <About />
       <Projects />
-      <International />
-      <Regional />
-      <SamarqandVideo />
-      <Gallery />
-      <AssoDesignMedia />
       <Technology />
-      <Investors />
       <Contact />
       <Footer />
     </main>

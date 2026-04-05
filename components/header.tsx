@@ -9,11 +9,10 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Bosh sahifa" },
-  { href: "/xizmatlar", label: "Xizmatlar" },
-  { href: "/haqimizda", label: "Biz haqimizda" },
+  { href: "/issiqxona-turlari", label: "Issiqxona turlari" },
+  { href: "/agro-injiniring", label: "Agro-injiniring" },
   { href: "/loyihalar", label: "Loyihalar" },
-  { href: "/texnologiya", label: "Texnologiya" },
-  { href: "/investorlar", label: "Investorlar" },
+  { href: "/rahbariyat", label: "Rahbariyat" },
   { href: "/aloqa", label: "Aloqa" },
 ];
 
@@ -138,27 +137,17 @@ export function Header() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-3">
               <img
                 src="/images/logo.png"
                 alt="UZ-GROW Logo"
-                className="w-12 h-12 rounded-xl object-contain transition-all duration-300 group-hover:scale-105"
+                className="w-12 h-12 rounded-xl object-contain"
               />
               <div className="flex flex-col">
-                <span
-                  className={cn(
-                    "font-bold text-xl tracking-tight transition-colors duration-300",
-                    showTransparent ? "text-black" : "text-foreground",
-                  )}
-                >
+                <span className="font-bold text-xl tracking-tight text-foreground">
                   UZ-GROW
                 </span>
-                <span
-                  className={cn(
-                    "text-xs tracking-wider transition-colors duration-300",
-                    showTransparent ? "text-black/70" : "text-muted-foreground",
-                  )}
-                >
+                <span className="text-xs tracking-wider text-muted-foreground">
                   AGRO-INJINIRING
                 </span>
               </div>
@@ -171,14 +160,10 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300",
+                    "px-4 py-2 text-sm font-medium rounded-lg",
                     pathname === item.href
-                      ? showTransparent
-                        ? "text-black bg-white/20"
-                        : "text-primary bg-primary/10"
-                      : showTransparent
-                        ? "text-black/90 hover:text-white hover:bg-white/10"
-                        : "text-gray-900 hover:text-primary hover:bg-primary/5",
+                      ? "text-primary bg-primary/10"
+                      : "text-gray-900 hover:text-primary hover:bg-primary/5",
                   )}
                 >
                   {item.label}
@@ -186,8 +171,8 @@ export function Header() {
               ))}
             </nav>
 
-            {/* CTA Button */}
-            <div className="hidden lg:flex items-center">
+            {/* CTA Button - Removed as per request */}
+            {/* <div className="hidden lg:flex items-center">
               <Button
                 size="lg"
                 className={cn(
@@ -199,15 +184,12 @@ export function Header() {
               >
                 Bepul konsultatsiya
               </Button>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={cn(
-                "lg:hidden p-2 rounded-lg transition-colors",
-                showTransparent ? "text-white" : "text-foreground",
-              )}
+              className="lg:hidden p-2 rounded-lg text-foreground"
             >
               {isOpen ? (
                 <X className="w-6 h-6" />
@@ -284,11 +266,12 @@ export function Header() {
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-border">
+              {/* Mobile CTA Button - Removed as per request */}
+              {/* <div className="mt-4 pt-4 border-t border-border">
                 <Button className="w-full bg-primary hover:bg-primary/90 rounded-full">
                   Bepul konsultatsiya
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

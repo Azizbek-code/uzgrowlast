@@ -5,7 +5,15 @@ import { MapPin, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const categories = ["Barchasi", "Sanoat", "Qishloq xo'jaligi", "Quyosh"];
+const categories = [
+  "Barchasi",
+  "Sanoat",
+  "Qishloq xo'jaligi",
+  "Quyosh",
+  "Issiqxona turlari",
+  "Prezident tashrifi",
+  "Xalqaro loyihalar",
+];
 
 const projects = [
   {
@@ -68,7 +76,7 @@ const projects = [
     title: "Gidroponika issiqxonasi",
     location: "Navoiy viloyati",
     size: "1.5 gektar",
-    category: "Quyosh",
+    category: "Issiqxona turlari",
     description:
       "Navoiyda qurilgan gidroponika tizimli issiqxona. Suvsiz ekin yetishtirish texnologiyasi.",
     image: "/images/25.jpg",
@@ -79,7 +87,7 @@ const projects = [
     title: "Prezident ziyorati - Samarqand",
     location: "Samarqand viloyati",
     size: "10 gektar",
-    category: "Sanoat",
+    category: "Prezident tashrifi",
     description:
       "O'zbekiston Respublikasi Prezidentining Samarqand viloyatiga rasmiy tashrifi va yangi texnologiyalar parkining ochilishi.",
     image: "/images/photo_2026-04-04_10-35-25.jpg",
@@ -90,7 +98,7 @@ const projects = [
     title: "Xalqaro turizm markazi",
     location: "Buxoro viloyati",
     size: "8 gektar",
-    category: "Sanoat",
+    category: "Xalqaro loyihalar",
     description:
       "Buxoro shahrida qurilayotgan xalqaro turizm markazi. Zamonaviy mehmonxona va konferentsiya zallari majmui.",
     image: "/images/27.jpg",
@@ -101,10 +109,43 @@ const projects = [
     title: "Raqamli ta'lim platformasi",
     location: "Toshkent shahri",
     size: "2 gektar",
-    category: "Quyosh",
+    category: "Xalqaro loyihalar",
     description:
       "Toshkentda qurilayotgan raqamli ta'lim markazi. IT akademiyasi va texnopark kompleksi.",
     image: "/images/7.jpg",
+    year: "2024",
+  },
+  {
+    id: 10,
+    title: "Polikarbonat issiqxona majmui",
+    location: "Qashqadaryo viloyati",
+    size: "3 gektar",
+    category: "Issiqxona turlari",
+    description:
+      "Qashqadaryoda qurilgan polikarbonat issiqxonalari majmui. Zamonaviy texnologiyalar bilan jihozlangan.",
+    image: "/images/8.jpg",
+    year: "2024",
+  },
+  {
+    id: 11,
+    title: "Prezident bilan uchrashuv",
+    location: "Samarqand viloyati",
+    size: "5 gektar",
+    category: "Prezident tashrifi",
+    description:
+      "Prezident bilan tadbirkorlar uchrashuvi va yangi loyihalar muhokamasi.",
+    image: "/images/photo_2026-04-04_10-35-29.jpg",
+    year: "2024",
+  },
+  {
+    id: 12,
+    title: "Qozog'iston issiqxona loyihasi",
+    location: "Olmaota shahri",
+    size: "6 gektar",
+    category: "Xalqaro loyihalar",
+    description:
+      "Qozog'istonda qurilgan zamonaviy issiqxona. Markaziy Osiyo hamkorligi namunasi.",
+    image: "/images/4.jpg",
     year: "2024",
   },
 ];
