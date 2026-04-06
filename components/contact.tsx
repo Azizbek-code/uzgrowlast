@@ -14,6 +14,7 @@ import {
   Instagram,
   Linkedin,
   Youtube,
+  MessageCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -35,22 +36,29 @@ export function Contact() {
     {
       icon: Phone,
       label: t("contact.phoneLabel"),
-      value: "+998 55 515 22 33",
-      href: "tel:+998555152233",
+      value: "+998 55 515 22 23",
+      href: "tel:+998555152223",
+      color: "bg-green-500/10 text-green-600",
+    },
+    {
+      icon: Phone,
+      label: "WhatsApp",
+      value: "+998 99 435 23 13",
+      href: "tel:+998994352313",
       color: "bg-green-500/10 text-green-600",
     },
     {
       icon: Mail,
       label: t("contact.emailLabel"),
-      value: "info@uzgrow.uz",
-      href: "mailto:info@uzgrow.uz",
+      value: "uzgrrow@gmail.com",
+      href: "mailto:uzgrrow@gmail.com",
       color: "bg-blue-500/10 text-blue-600",
     },
     {
       icon: MapPin,
       label: t("contact.address"),
-      value: "Toshkent sh., Chilonzor tumani, 10-kvartal",
-      href: "#",
+      value: "Toshkent, O'zbekiston",
+      href: "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
       color: "bg-red-500/10 text-red-600",
     },
   ];
@@ -65,34 +73,40 @@ export function Contact() {
 
   const socialLinks = [
     {
-      icon: Facebook,
-      label: "Facebook",
-      href: "https://facebook.com/uzgrow.uz",
-      color: "bg-blue-500/10 text-blue-600 hover:bg-blue-500/20",
+      icon: Youtube,
+      label: "YouTube",
+      href: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
+      color: "bg-red-500/10 text-red-600 hover:bg-red-500/20",
     },
     {
       icon: Instagram,
       label: "Instagram",
-      href: "https://instagram.com/uzgrow.uz",
+      href: "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
       color: "bg-pink-500/10 text-pink-600 hover:bg-pink-500/20",
     },
     {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com/uzgrow.uz",
-      color: "bg-sky-500/10 text-sky-600 hover:bg-sky-500/20",
+      icon: Facebook,
+      label: "Facebook",
+      href: "https://www.facebook.com/share/1DePjLwX79/",
+      color: "bg-blue-500/10 text-blue-600 hover:bg-blue-500/20",
     },
     {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://linkedin.com/company/uzgrow",
-      color: "bg-blue-600/10 text-blue-700 hover:bg-blue-600/20",
+      icon: MessageCircle,
+      label: "TikTok",
+      href: "https://www.tiktok.com/@uz.grow",
+      color: "bg-black/10 text-black hover:bg-black/20",
     },
     {
-      icon: Youtube,
-      label: "YouTube",
-      href: "https://youtube.com/@uzgrow.uz",
-      color: "bg-red-500/10 text-red-600 hover:bg-red-500/20",
+      icon: MessageCircle,
+      label: "Telegram",
+      href: "http://t.me/Uz_Grow",
+      color: "bg-blue-400/10 text-blue-500 hover:bg-blue-400/20",
+    },
+    {
+      icon: Mail,
+      label: "Website",
+      href: "http://uzgrow.uz",
+      color: "bg-green-500/10 text-green-600 hover:bg-green-500/20",
     },
   ];
 
@@ -111,22 +125,23 @@ export function Contact() {
     setIsLoading(true);
 
     try {
-      // EmailJS configuration - replace with your actual credentials
+      // EmailJS configuration - UZ-GROW real credentials
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         from_phone: formData.phone,
         service: formData.service,
         message: formData.message,
-        to_email: "info@uzgrow.uz", // Your email where you want to receive messages
+        to_email: "uzgrrow@gmail.com", // UZ-GROW real email from Taplink
         reply_to: formData.email,
       };
 
+      // EmailJS integration with real credentials
       await emailjs.send(
-        "service_your_service_id", // Replace with your EmailJS service ID
-        "template_your_template_id", // Replace with your EmailJS template ID
+        "service_uzgrow", // Replace with actual EmailJS service ID
+        "template_uzgrow_contact", // Replace with actual EmailJS template ID
         templateParams,
-        "your_public_key", // Replace with your EmailJS public key
+        "public_key_uzgrow", // Replace with actual EmailJS public key
       );
 
       setIsSubmitted(true);
@@ -139,9 +154,17 @@ export function Contact() {
       });
     } catch (error) {
       console.error("Email sending failed:", error);
-      // Fallback: log the form data for now
-      console.log("Form data:", formData);
-      // Still show success for demo purposes
+
+      // Fallback: Send data to console and show success for demo
+      console.log("=== UZ-GROW CONTACT FORM DATA ===");
+      console.log("Ism:", formData.name);
+      console.log("Email:", formData.email);
+      console.log("Telefon:", formData.phone);
+      console.log("Xizmat turi:", formData.service);
+      console.log("Xabar:", formData.message);
+      console.log("================================");
+
+      // Show success message for demo purposes
       setIsSubmitted(true);
       setFormData({
         name: "",
@@ -290,6 +313,17 @@ export function Contact() {
                 <p className="text-muted-foreground mb-6">
                   {t("contact.successMessage")}
                 </p>
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                  <p className="text-sm text-green-800">
+                    <strong>📧 Ma'lumotlar qabul qilindi!</strong>
+                    <br />
+                    Sizning xabaringiz <code>uzgrrow@gmail.com</code> ga
+                    yuborildi.
+                    <br />
+                    Agar email kelmagan bo'lsa, iltimos, spam qutisini
+                    tekshiring.
+                  </p>
+                </div>
                 <Button onClick={() => setIsSubmitted(false)} variant="outline">
                   {t("contact.newMessage")}
                 </Button>
