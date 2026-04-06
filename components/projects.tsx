@@ -4,13 +4,7 @@ import { useState } from "react";
 import { MapPin, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-const categories = [
-  "Barchasi",
-  "Prezident tashrifi",
-  "Xalqaro loyihalar",
-  "Issiqxona turlari",
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const projects = [
   // Vodiy loyihalari - bitta cardda birlashtirilgan
@@ -79,12 +73,20 @@ const projects = [
 ];
 
 export function Projects() {
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("Barchasi");
   const [selectedProject, setSelectedProject] = useState<
     (typeof projects)[0] | null
   >(null);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const categories = [
+    t("projects.categories.all"),
+    t("projects.categories.president"),
+    t("projects.categories.international"),
+    t("projects.categories.greenhouse"),
+  ];
 
   const filteredProjects =
     activeCategory === "Barchasi"
@@ -226,7 +228,7 @@ export function Projects() {
                         size="sm"
                         className="rounded-full"
                       >
-                        Batafsil
+                        {t("projects.viewProject")}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>

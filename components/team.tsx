@@ -17,6 +17,7 @@ import {
   Briefcase,
   GraduationCap,
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const teamMembers = [
   {
@@ -26,11 +27,16 @@ const teamMembers = [
     avatar: "/images/logo.png",
     bio: "O'zbekistonlik innovator agrofaol va tadbirkor. 2017-yildan beri Markaziy Osiyo agrosektorida minglab fermerlar va agrobiznes vakillariga ma'lumot, ishonch va natija olib kelmoqda.",
     experience: "4+ yillik",
-    achievements: ["150,000+ obunachi", "100+ muvaffaqiyatli loyiha", "Xalqaro hamkorliklar"],
+    achievements: [
+      "150,000+ obunachi",
+      "100+ muvaffaqiyatli loyiha",
+      "Xalqaro hamkorliklar",
+    ],
     education: ["Qishloq xo'jaligi instituti", "Xalqaro biznes menejmenti"],
-    skills: ["Agro-injiniring", "Biznes strategiyasi", "Innovatsion yechimlar"],
-    email: "ceo@uzgrow.uz",
-    phone: "+998 90 123-45-67",
+    skills: ["Agrobiznes", "Innovatsiya", "Loyihalash", "Menejment"],
+    email: "rustamjon@uzgrow.uz",
+    phone: "+998 90 123-45-71",
+    location: "Toshkent, O'zbekiston",
     linkedin: "#",
     twitter: "#",
   },
@@ -41,11 +47,21 @@ const teamMembers = [
     avatar: "/images/team/azizbek.jpg",
     bio: "Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonaviy agrotexnologiyalarni joriy etmoqda.",
     experience: "10+ yillik",
-    achievements: ["50+ issiqxona loyihasi", "Texnik innovatsiyalar", "Sertifikatlangan mutaxassis"],
-    education: ["Toshkent qishloq xo'jaligi instituti", "Xalqaro issiqxona texnologiyalari"],
-    skills: ["Issiqxona dizayni", "Avtomatlashtirish", "Suv ta'minoti"],
+    achievements: [
+      "50+ issiqxona loyihasi",
+      "Texnik innovatsiyalar",
+      "Xalqaro sertifikatlar",
+    ],
+    education: ["Qurilish muhandisligi", "Avtomatlashtirish sistemlari"],
+    skills: [
+      "Issiqxona qurilish",
+      "Avtomatlashtirish",
+      "3D modellashtirish",
+      "Texnik nazorat",
+    ],
     email: "azizbek@uzgrow.uz",
-    phone: "+998 90 123-45-68",
+    phone: "+998 90 123-45-72",
+    location: "Toshkent, O'zbekiston",
     linkedin: "#",
     twitter: "#",
   },
@@ -56,11 +72,21 @@ const teamMembers = [
     avatar: "/images/team/dilshod.jpg",
     bio: "Katta miqyosli loyihalarni boshqarish va nazorat qilish bo'yicha mutaxassis. Muvaffaqiyatli loyihalarni vaqti yetkazishni ta'minlaydi.",
     experience: "8+ yillik",
-    achievements: ["30+ yirik loyiha", "Loyiha boshqaruvi", "Mijozlar mamnunligi"],
-    education: ["Qurilish muhandisligi instituti", "Loyiha menejmenti"],
-    skills: ["Loyiha boshqarish", "Byudjet rejalashtirish", "Sifat nazorati"],
+    achievements: [
+      "30+ muvaffaqiyatli loyiha",
+      "Vaqt yetkazish 100%",
+      "Mijozlar mamnunligi",
+    ],
+    education: ["Loyihalar boshqaruvi", "Biznes administratsiyasi"],
+    skills: [
+      "Loyihalar boshqaruvi",
+      "Mijozlar bilan ishlash",
+      "Byudjetlash",
+      "Sifat nazorati",
+    ],
     email: "dilshod@uzgrow.uz",
-    phone: "+998 90 123-45-69",
+    phone: "+998 90 123-45-73",
+    location: "Toshkent, O'zbekiston",
     linkedin: "#",
     twitter: "#",
   },
@@ -71,11 +97,16 @@ const teamMembers = [
     avatar: "/images/team/gulnora.jpg",
     bio: "Marketing va brend strategiyalari bo'yicha mutaxassis. Kompaniya imidjini rivojlantirish va mijozlar bazasini kengaytirish uchun mas'ul.",
     experience: "6+ yillik",
-    achievements: ["Marketing kampaniyalari", "Brend rivojlanishi", "Mijozlar ortishi"],
-    education: ["Toshkent Iqtisodiyot universiteti", "Digital marketing kurslari"],
-    skills: ["Digital marketing", "Kontent strategiyasi", "SMM"],
+    achievements: [
+      "20+ marketing kampaniyasi",
+      "Brendni rivojlantirish",
+      "Mijozlar bazasi 3x o'sishi",
+    ],
+    education: ["Marketing", "Xalqaro biznes"],
+    skills: ["Marketing strategiyasi", "SMM", "Kontent marketing", "Analitika"],
     email: "gulnora@uzgrow.uz",
-    phone: "+998 90 123-45-70",
+    phone: "+998 90 123-45-74",
+    location: "Toshkent, O'zbekiston",
     linkedin: "#",
     twitter: "#",
   },
@@ -86,18 +117,31 @@ const teamMembers = [
     avatar: "/images/team/javohir.jpg",
     bio: "Moliya va byudjet rejalashtirish bo'yicha mutaxassis. Kompaniya moliya salomatligini va samaradorligini ta'minlaydi.",
     experience: "7+ yillik",
-    achievements: ["Moliya optimallashtirish", "Xarajat kamayishi", "Soliq to'g'rilari"],
-    education: ["Toshkent Moliya instituti", "Xalqaro buxgalteriya"],
-    skills: ["Moliya tahlili", "Byudjet rejalashtirish", "Soliq hisobi"],
+    achievements: [
+      "Byudjet optimizatsiyasi",
+      "Xarajatlarni kamaytirish 20%",
+      "Moliya tahlili",
+    ],
+    education: ["Moliya va kredit", "MBA"],
+    skills: [
+      "Moliya tahlili",
+      "Byudjetlash",
+      "Investitsiya",
+      "Risk menejmenti",
+    ],
     email: "javohir@uzgrow.uz",
-    phone: "+998 90 123-45-71",
+    phone: "+998 90 123-45-75",
+    location: "Toshkent, O'zbekiston",
     linkedin: "#",
     twitter: "#",
   },
 ];
 
 export function Team() {
-  const [selectedMember, setSelectedMember] = useState<typeof teamMembers[0] | null>(null);
+  const [selectedMember, setSelectedMember] = useState<
+    (typeof teamMembers)[0] | null
+  >(null);
+  const { t } = useLanguage();
 
   return (
     <section className="py-20 bg-background">
@@ -106,14 +150,13 @@ export function Team() {
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-primary/10 text-primary px-4 py-2">
             <Users className="h-4 w-4 mr-2" />
-            Bizning Jamoa
+            {t("team.title")}
           </Badge>
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Kuchli va tajribali mutaxassislar
+            {t("team.subtitle")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Har bir loyiha bizning jamoamiz tomonidan professional yondashuv bilan amalga oshiriladi.
-            15+ yillik tajriba va 100+ muvaffaqiyatli loyiha.
+            {t("team.description")}
           </p>
         </div>
 
@@ -139,7 +182,9 @@ export function Team() {
                     <h3 className="text-lg font-bold text-foreground">
                       {member.name}
                     </h3>
-                    <p className="text-primary font-medium">{member.position}</p>
+                    <p className="text-primary font-medium">
+                      {member.position}
+                    </p>
                   </div>
                 </div>
 
@@ -216,7 +261,9 @@ export function Team() {
                     <h3 className="text-xl font-bold text-foreground">
                       {selectedMember.name}
                     </h3>
-                    <p className="text-primary font-medium">{selectedMember.position}</p>
+                    <p className="text-primary font-medium">
+                      {selectedMember.position}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -230,7 +277,7 @@ export function Team() {
                     <div>
                       <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                         <Users className="h-4 w-4" />
-                        Haqida
+                        {t("team.about")}
                       </h4>
                       <p className="text-muted-foreground leading-relaxed">
                         {selectedMember.bio}
@@ -241,9 +288,31 @@ export function Team() {
                     <div>
                       <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                         <Briefcase className="h-4 w-4" />
-                        Tajriba
+                        {t("team.experience")}
                       </h4>
-                      <p className="text-muted-foreground">{selectedMember.experience}</p>
+                      <p className="text-muted-foreground">
+                        {selectedMember.experience}
+                      </p>
+                    </div>
+
+                    {/* Achievements */}
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                        <Award className="h-4 w-4" />
+                        {t("team.achievements")}
+                      </h4>
+                      <div className="space-y-1">
+                        {selectedMember.achievements.map(
+                          (achievement, index) => (
+                            <div
+                              key={index}
+                              className="text-sm text-muted-foreground"
+                            >
+                              • {achievement}
+                            </div>
+                          ),
+                        )}
+                      </div>
                     </div>
 
                     {/* Education */}
@@ -254,7 +323,10 @@ export function Team() {
                       </h4>
                       <div className="space-y-1">
                         {selectedMember.education.map((edu, index) => (
-                          <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <div
+                            key={index}
+                            className="flex items-center gap-2 text-sm text-muted-foreground"
+                          >
                             <div className="w-2 h-2 bg-primary rounded-full" />
                             <span>{edu}</span>
                           </div>
@@ -265,17 +337,19 @@ export function Team() {
 
                   {/* Right Column */}
                   <div className="space-y-6">
-                    {/* Achievements */}
+                    {/* Education */}
                     <div>
                       <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                        <Award className="h-4 w-4" />
-                        Yutuqlar
+                        <GraduationCap className="h-4 w-4" />
+                        {t("team.education")}
                       </h4>
                       <div className="space-y-1">
-                        {selectedMember.achievements.map((achievement, index) => (
-                          <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <div className="w-2 h-2 bg-green-500 rounded-full" />
-                            <span>{achievement}</span>
+                        {selectedMember.education.map((edu, index) => (
+                          <div
+                            key={index}
+                            className="text-sm text-muted-foreground"
+                          >
+                            • {edu}
                           </div>
                         ))}
                       </div>
@@ -285,13 +359,16 @@ export function Team() {
                     <div>
                       <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                         <Lightbulb className="h-4 w-4" />
-                        Ko'nikmalar
+                        {t("team.skills")}
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedMember.skills.map((skill, index) => (
-                          <Badge key={index} variant="secondary" className="text-xs">
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                          >
                             {skill}
-                          </Badge>
+                          </span>
                         ))}
                       </div>
                     </div>
@@ -300,23 +377,50 @@ export function Team() {
                     <div>
                       <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                         <Mail className="h-4 w-4" />
-                        Aloqa
+                        {t("team.contact")}
                       </h4>
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Mail className="h-4 w-4" />
-                          <span>{selectedMember.email}</span>
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                          <Mail className="h-4 w-4 text-muted-foreground" />
+                          <span className="text-sm text-muted-foreground">
+                            {selectedMember.email}
+                          </span>
                         </div>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Phone className="h-4 w-4" />
-                          <span>{selectedMember.phone}</span>
+                        <div className="flex items-center gap-3">
+                          <Phone className="h-4 w-4 text-muted-foreground" />
+                          <span className="text-sm text-muted-foreground">
+                            {selectedMember.phone}
+                          </span>
                         </div>
-                        {selectedMember.linkedin && (
-                          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Linkedin className="h-4 w-4" />
-                            <span>LinkedIn</span>
-                          </div>
-                        )}
+                        <div className="flex items-center gap-3">
+                          <MapPin className="h-4 w-4 text-muted-foreground" />
+                          <span className="text-sm text-muted-foreground">
+                            {selectedMember.location}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex gap-2 mt-4">
+                        <Button
+                          size="sm"
+                          className="flex-1"
+                          onClick={() =>
+                            window.open(`mailto:${selectedMember.email}`)
+                          }
+                        >
+                          <Mail className="h-4 w-4 mr-2" />
+                          Email
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="flex-1"
+                          onClick={() =>
+                            window.open(`tel:${selectedMember.phone}`)
+                          }
+                        >
+                          <Phone className="h-4 w-4 mr-2" />
+                          Qo'ng'iroq
+                        </Button>
                       </div>
                     </div>
                   </div>

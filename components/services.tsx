@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Building2,
   Settings,
@@ -10,74 +10,56 @@ import {
   Check,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const services = [
-  {
-    icon: Building2,
-    title: "Issiqxona qurish",
-    shortDesc: "Loyihalashdan boshlab to'liq ishga tushirishgacha.",
-    description:
-      "Biz to'liq sikl asosida issiqxona quramiz. Natija: energiya tejamkor, yuqori hosildorlikka ega zamonaviy issiqxona.",
-    features: [
-      "Metall konstruksiya",
-      "Polikarbonat yoki shisha qoplama",
-      "Tomchilatib sug'orish",
-      "Avtomatlashtirilgan boshqaruv",
-    ],
-    image:
-      "https://certhon.com/wp-content/uploads/2021/10/turnkeygreenhouses.jpg",
-  },
-  {
-    icon: Settings,
-    title: "Loyihalash va qurish",
-    shortDesc: "Texnik chizma, klimat hisob-kitobi, konstruktiv yechimlar.",
-    description:
-      "Biz har bir kvadrat metrni rentabelli ishlashini ta'minlaymiz. Har bir loyiha individual hisoblanadi.",
-    features: [
-      "Hudud iqlimi asosida hisoblanadi",
-      "Shamol va yuklama tahlili",
-      "Ekin turiga moslashtiriladi",
-      "3D modellashtirish",
-      "Texnik hujjatlar",
-    ],
-    image:
-      "https://www.researchgate.net/publication/364171968/figure/fig1/AS:11431281088090647@1664975905953/Floor-plan-of-the-greenhouse.png",
-  },
-  {
-    icon: Cpu,
-    title: "Zamonaviy jihozlar",
-    shortDesc: "Isitish, sovutish, tomchilatib sug'orish, avtomatlashtirish.",
-    description:
-      "Eng zamonaviy va energiya tejamkor jihozlar bilan ta'minlaymiz.",
-    features: [
-      "Isitish tizimi",
-      "Ventilyatsiya va sovutish",
-      "Stelaj tizimi",
-      "LED grow lights",
-      "O'g'itlash va sug'orish tizimi",
-    ],
-    image: "https://m.media-amazon.com/images/I/51e8xMOkJQL._AC_SR290,290_.jpg",
-  },
-  {
-    icon: Users,
-    title: "Agro-konsalting",
-    shortDesc: "Ekin tanlash, hosildorlikni oshirish, eksport strategiyasi.",
-    description:
-      "Biz faqat qurmaymiz - natijaga olib chiqamiz. Rentabellik tahlili va biznes model ishlab chiqiladi.",
-    features: [
-      "Qulupnay (stellaq tizim)",
-      "Pomidor yetishtirish",
-      "Bodring yetishtirish",
-      "Eksport yo'nalishi",
-      "Biznes model yaratish",
-    ],
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF7Cgq6dpL4s9x9ipW3yZ5Zuxc68DF9vlBlg&s",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Services() {
   const [activeService, setActiveService] = useState(0);
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      icon: Building2,
+      title: t("services.engineering"),
+      shortDesc: t("services.engineeringDesc"),
+      description: t("services.engineeringFullDesc"),
+      features: [
+        t("services.engineeringFeatures.0"),
+        t("services.engineeringFeatures.1"),
+        t("services.engineeringFeatures.2"),
+        t("services.engineeringFeatures.3"),
+      ],
+      image:
+        "https://certhon.com/wp-content/uploads/2021/10/turnkeygreenhouses.jpg",
+    },
+    {
+      icon: Settings,
+      title: t("services.equipment"),
+      shortDesc: t("services.equipmentDesc"),
+      description: t("services.equipmentFullDesc"),
+      features: [
+        t("services.equipmentFeatures.0"),
+        t("services.equipmentFeatures.1"),
+        t("services.equipmentFeatures.2"),
+        t("services.equipmentFeatures.3"),
+      ],
+      image:
+        "https://m.media-amazon.com/images/I/51e8xMOkJQL._AC_SR290,290_.jpg",
+    },
+    {
+      icon: Cpu,
+      title: t("services.consulting"),
+      shortDesc: t("services.consultingDesc"),
+      description: t("services.consultingFullDesc"),
+      features: [
+        t("services.consultingFeatures.0"),
+        t("services.consultingFeatures.1"),
+        t("services.consultingFeatures.2"),
+        t("services.consultingFeatures.3"),
+      ],
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF7Cgq6dpL4s9x9ipW3yZ5Zuxc68DF9vlBlg&s",
+    },
+  ];
 
   return (
     <section id="xizmatlar" className="py-20 lg:py-32 bg-muted/30">
@@ -85,117 +67,117 @@ export function Services() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-            Xizmatlar
+            {t("services.title")}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
-            Nima qilamiz?
+            {t("services.subtitle")}
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            To&apos;liq sikl agro-injiniring yechimlari - loyihalashdan to
-            tayyor hosilgacha
+          <p className="text-muted-foreground text-lg mt-4 max-w-3xl mx-auto">
+            {t("services.description")}
           </p>
         </div>
 
-        {/* Services Interactive Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Service Tabs */}
-          <div className="space-y-4">
-            {services.map((service, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveService(index)}
-                className={cn(
-                  "w-full text-left p-6 rounded-2xl transition-all duration-300",
-                  activeService === index
-                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
-                    : "bg-card hover:bg-card/80 border border-border",
-                )}
-              >
-                <div className="flex items-start gap-4">
-                  <div
-                    className={cn(
-                      "w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors",
-                      activeService === index ? "bg-white/20" : "bg-primary/10",
-                    )}
-                  >
-                    <service.icon
-                      className={cn(
-                        "w-6 h-6",
-                        activeService === index ? "text-white" : "text-primary",
-                      )}
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3
-                      className={cn(
-                        "text-lg font-semibold mb-1",
-                        activeService === index
-                          ? "text-white"
-                          : "text-foreground",
-                      )}
-                    >
-                      {service.title}
-                    </h3>
-                    <p
-                      className={cn(
-                        "text-sm",
-                        activeService === index
-                          ? "text-white/80"
-                          : "text-muted-foreground",
-                      )}
-                    >
-                      {service.shortDesc}
-                    </p>
-                  </div>
-                  <ArrowRight
-                    className={cn(
-                      "w-5 h-5 transition-transform shrink-0",
-                      activeService === index
-                        ? "text-white translate-x-1"
-                        : "text-muted-foreground",
-                    )}
-                  />
-                </div>
-              </button>
-            ))}
-          </div>
+        {/* Service Tabs */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {services.map((service, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveService(index)}
+              className={cn(
+                "px-6 py-3 rounded-full text-sm font-medium transition-all duration-300",
+                activeService === index
+                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                  : "bg-background text-foreground hover:bg-muted border border-border",
+              )}
+            >
+              {service.title}
+            </button>
+          ))}
+        </div>
 
-          {/* Service Details */}
-          <div className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg">
-            {/* Image */}
-            <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 relative">
+        {/* Active Service Display */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Image */}
+          <div className="relative group">
+            <div className="aspect-video rounded-2xl overflow-hidden bg-muted">
               <img
                 src={services[activeService].image}
                 alt={services[activeService].title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center"></div>
-              </div>
             </div>
+            {/* Decorative elements */}
+            <div className="absolute -z-10 -bottom-6 -left-6 w-full h-full rounded-2xl bg-primary/10" />
+          </div>
 
-            {/* Content */}
-            <div className="p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                {services[activeService].title}
-              </h3>
-              <p className="text-muted-foreground mb-6">
+          {/* Right: Content */}
+          <div className="space-y-6">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  {React.createElement(services[activeService].icon, {
+                    className: "w-6 h-6 text-primary",
+                  })}
+                </div>
+                <h3 className="text-2xl font-bold text-foreground">
+                  {services[activeService].title}
+                </h3>
+              </div>
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 {services[activeService].description}
               </p>
+            </div>
 
-              {/* Features List */}
-              <ul className="space-y-3">
-                {services[activeService].features.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <Check className="w-3 h-3 text-primary" />
-                    </div>
-                    <span className="text-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Features */}
+            <div className="space-y-3">
+              {services[activeService].features.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-foreground">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="pt-6">
+              <a
+                href="#aloqa"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+              >
+                {t("common.contact")}
+                <ArrowRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
+        </div>
+
+        {/* Service Cards Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mt-20">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group bg-background rounded-2xl p-6 border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              onClick={() => setActiveService(index)}
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  {React.createElement(service.icon, {
+                    className: "w-6 h-6 text-primary",
+                  })}
+                </div>
+                <h4 className="text-lg font-semibold text-foreground">
+                  {service.title}
+                </h4>
+              </div>
+              <p className="text-muted-foreground mb-4">{service.shortDesc}</p>
+              <div className="flex items-center text-primary group-hover:text-primary/80 transition-colors">
+                <span className="text-sm font-medium">
+                  {t("common.readMore")}
+                </span>
+                <ArrowRight className="w-4 h-4 ml-1" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -3,15 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Target, Eye, Heart, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const stats = [
-  { value: 4, suffix: "+", label: "Yil tajriba" },
-  { value: 100, suffix: "+", label: "Muvaffaqiyatli loyiha" },
-  { value: 50, suffix: "+", label: "Mutaxassislar" },
-  { value: 12, suffix: "+", label: "Viloyatda xizmat" },
-];
-
-const values = ["Sifat", "Innovatsiya", "Ishonch", "Uzoq muddatli hamkorlik"];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0);
@@ -65,6 +57,21 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 export function About() {
+  const { t } = useLanguage();
+
+  const stats = [
+    { value: 4, suffix: "+", label: t("about.experience") },
+    { value: 100, suffix: "+", label: t("about.projects") },
+    { value: 50, suffix: "+", label: t("about.clients") },
+    { value: 12, suffix: "+", label: t("about.countries") },
+  ];
+
+  const values = [
+    t("about.values.0"),
+    t("about.values.1"),
+    t("about.values.2"),
+    t("about.values.3"),
+  ];
   return (
     <section
       id="haqimizda"

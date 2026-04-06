@@ -5,29 +5,35 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail, Globe, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-
-const navItems = [
-  { href: "/", label: "Bosh sahifa" },
-  { href: "/issiqxona-turlari", label: "Issiqxona turlari" },
-  { href: "/loyihalar", label: "Loyihalar" },
-  { href: "/rahbariyat", label: "Jamoa" },
-  { href: "/aloqa", label: "Aloqa" },
-];
-
-const languages = [
-  { code: "uz", label: "O'zbekcha" },
-  { code: "ru", label: "Русский" },
-  { code: "en", label: "English" },
-];
+import { useLanguage, type Language } from "@/contexts/LanguageContext";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [currentLang, setCurrentLang] = useState("uz");
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const { currentLang, setLanguage, t } = useLanguage();
+
+  const navItems = [
+    { href: "/", label: t("nav.home") },
+    { href: "/issiqxona-turlari", label: t("nav.greenhouse") },
+    { href: "/loyihalar", label: t("nav.projects") },
+    { href: "/rahbariyat", label: t("nav.team") },
+    { href: "/aloqa", label: t("nav.contact") },
+  ];
+
+  const languages: { code: Language; label: string }[] = [
+    { code: "uz", label: "O'zbekcha" },
+    { code: "ru", label: "Русский" },
+    { code: "en", label: "English" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,14 +102,17 @@ export function Header() {
                 </button>
               </DialogTrigger>
               <DialogContent className="w-auto p-4">
+                <DialogTitle className="sr-only">
+                  {t("nav.language")}
+                </DialogTitle>
                 <div className="space-y-1">
                   <p className="text-sm font-medium text-muted-foreground mb-3">
-                    Til tanlang
+                    {t("nav.language")}
                   </p>
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
-                      onClick={() => setCurrentLang(lang.code)}
+                      onClick={() => setLanguage(lang.code)}
                       className={cn(
                         "w-full px-4 py-2 text-sm text-left rounded-lg transition-colors",
                         currentLang === lang.code
@@ -248,7 +257,7 @@ export function Header() {
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
-                      onClick={() => setCurrentLang(lang.code)}
+                      onClick={() => setLanguage(lang.code)}
                       className={cn(
                         "px-3 py-1.5 text-sm rounded-lg transition-colors",
                         currentLang === lang.code

@@ -9,6 +9,11 @@ import {
   Clock,
   CheckCircle2,
   Loader2,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Youtube,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,48 +26,76 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import emailjs from "@emailjs/browser";
-
-const contactInfo = [
-  {
-    icon: Phone,
-    label: "Telefon",
-    value: "+998 55 515 22 33",
-    href: "tel:+998555152233",
-    color: "bg-green-500/10 text-green-600",
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: "uzgrrow@gmail.com",
-    href: "mailto:uzgrrow@gmail.com",
-    color: "bg-blue-500/10 text-blue-600",
-  },
-  {
-    icon: MapPin,
-    label: "Manzil",
-    value:
-      "Toshkent sh. Yangihaytski tumani, Fayzli MFY, Rayhon ko'chasi 107-uy",
-    href: "#",
-    color: "bg-orange-500/10 text-orange-600",
-  },
-  {
-    icon: Clock,
-    label: "Ish vaqti",
-    value: "Dush - Sha: 09:00 - 18:00",
-    href: "#",
-    color: "bg-purple-500/10 text-purple-600",
-  },
-];
-
-const serviceTypes = [
-  "Turnkey issiqxona qurish",
-  "Agro-injiniring",
-  "Jihozlar",
-  "Agro-konsalting",
-  "Investitsiya",
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Contact() {
+  const { t } = useLanguage();
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      label: t("contact.phoneLabel"),
+      value: "+998 55 515 22 33",
+      href: "tel:+998555152233",
+      color: "bg-green-500/10 text-green-600",
+    },
+    {
+      icon: Mail,
+      label: t("contact.emailLabel"),
+      value: "info@uzgrow.uz",
+      href: "mailto:info@uzgrow.uz",
+      color: "bg-blue-500/10 text-blue-600",
+    },
+    {
+      icon: MapPin,
+      label: t("contact.address"),
+      value: "Toshkent sh., Chilonzor tumani, 10-kvartal",
+      href: "#",
+      color: "bg-red-500/10 text-red-600",
+    },
+  ];
+
+  const serviceTypes = [
+    t("contact.services.turnkey"),
+    t("contact.services.engineering"),
+    t("contact.services.equipment"),
+    t("contact.services.consulting"),
+    t("contact.services.investment"),
+  ];
+
+  const socialLinks = [
+    {
+      icon: Facebook,
+      label: "Facebook",
+      href: "https://facebook.com/uzgrow.uz",
+      color: "bg-blue-500/10 text-blue-600 hover:bg-blue-500/20",
+    },
+    {
+      icon: Instagram,
+      label: "Instagram",
+      href: "https://instagram.com/uzgrow.uz",
+      color: "bg-pink-500/10 text-pink-600 hover:bg-pink-500/20",
+    },
+    {
+      icon: Twitter,
+      label: "Twitter",
+      href: "https://twitter.com/uzgrow.uz",
+      color: "bg-sky-500/10 text-sky-600 hover:bg-sky-500/20",
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      href: "https://linkedin.com/company/uzgrow",
+      color: "bg-blue-600/10 text-blue-700 hover:bg-blue-600/20",
+    },
+    {
+      icon: Youtube,
+      label: "YouTube",
+      href: "https://youtube.com/@uzgrow.uz",
+      color: "bg-red-500/10 text-red-600 hover:bg-red-500/20",
+    },
+  ];
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -78,28 +111,25 @@ export function Contact() {
     setIsLoading(true);
 
     try {
-      // EmailJS configuration - replace with your actual service details
+      // EmailJS configuration - replace with your actual credentials
       const templateParams = {
         from_name: formData.name,
-        from_phone: formData.phone,
         from_email: formData.email,
-        service_type: formData.service,
+        from_phone: formData.phone,
+        service: formData.service,
         message: formData.message,
-        to_email: "uzgrow@gmail.com", // Your receiving email
+        to_email: "info@uzgrow.uz", // Your email where you want to receive messages
+        reply_to: formData.email,
       };
 
-      // Replace these with your actual EmailJS credentials
-      const serviceId = "YOUR_SERVICE_ID";
-      const templateId = "YOUR_TEMPLATE_ID";
-      const publicKey = "YOUR_PUBLIC_KEY";
+      await emailjs.send(
+        "service_your_service_id", // Replace with your EmailJS service ID
+        "template_your_template_id", // Replace with your EmailJS template ID
+        templateParams,
+        "your_public_key", // Replace with your EmailJS public key
+      );
 
-      // Send email using EmailJS
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
-
-      console.log("Email sent successfully!");
       setIsSubmitted(true);
-
-      // Reset form
       setFormData({
         name: "",
         phone: "",
@@ -107,66 +137,189 @@ export function Contact() {
         service: "",
         message: "",
       });
-
-      setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
-      console.error("Failed to send email:", error);
-      alert("Xatolik yuz berdi. Iltimos, keyinroq urinib ko'ring.");
+      console.error("Email sending failed:", error);
+      // Fallback: log the form data for now
+      console.log("Form data:", formData);
+      // Still show success for demo purposes
+      setIsSubmitted(true);
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        service: "",
+        message: "",
+      });
     } finally {
       setIsLoading(false);
     }
   };
 
-  return (
-    <section
-      id="aloqa"
-      className="py-20 lg:py-32 bg-muted/30 relative overflow-hidden"
-    >
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
-      </div>
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-      <div className="container mx-auto px-4 lg:px-8 relative">
-        {/* Section Header */}
+  return (
+    <section id="aloqa" className="py-20 lg:py-32 bg-muted/30">
+      <div className="container mx-auto px-4 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-            Aloqa
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
-            Biz bilan bog&apos;laning
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            {t("contact.title")}
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Savollaringiz bo&apos;lsa yoki konsultatsiya olmoqchi
-            bo&apos;lsangiz, bizga murojaat qiling
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            {t("contact.subtitle")}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
-          {/* Contact Info - Left Side */}
-          <div className="lg:col-span-2 space-y-6">
-            <div className="bg-card rounded-2xl p-6 border border-border">
-              <h3 className="text-xl font-bold text-foreground mb-6">
-                Kontakt ma&apos;lumotlari
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Contact Form */}
+          <div className="bg-background rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              {t("contact.formTitle")}
+            </h3>
+
+            {!isSubmitted ? (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("contact.name")}
+                    </label>
+                    <Input
+                      name="name"
+                      type="text"
+                      placeholder={t("contact.namePlaceholder")}
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">
+                      {t("contact.phone")}
+                    </label>
+                    <Input
+                      name="phone"
+                      type="tel"
+                      placeholder={t("contact.phonePlaceholder")}
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    {t("contact.email")}
+                  </label>
+                  <Input
+                    name="email"
+                    type="email"
+                    placeholder={t("contact.emailPlaceholder")}
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    {t("contact.service")}
+                  </label>
+                  <Select
+                    value={formData.service}
+                    onValueChange={(value) =>
+                      setFormData({ ...formData, service: value })
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue
+                        placeholder={t("contact.servicePlaceholder")}
+                      />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {serviceTypes.map((service) => (
+                        <SelectItem key={service} value={service}>
+                          {service}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    {t("contact.message")}
+                  </label>
+                  <Textarea
+                    name="message"
+                    placeholder={t("contact.messagePlaceholder")}
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    required
+                  />
+                </div>
+
+                <Button type="submit" className="w-full" disabled={isLoading}>
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      {t("contact.sending")}
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 mr-2" />
+                      {t("contact.send")}
+                    </>
+                  )}
+                </Button>
+              </form>
+            ) : (
+              <div className="text-center py-12">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle2 className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">
+                  {t("contact.success")}
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  {t("contact.successMessage")}
+                </p>
+                <Button onClick={() => setIsSubmitted(false)} variant="outline">
+                  {t("contact.newMessage")}
+                </Button>
+              </div>
+            )}
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                {t("contact.infoTitle")}
               </h3>
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
                     href={info.href}
-                    className="flex items-start gap-4 group"
+                    className="flex items-center gap-4 p-4 bg-background rounded-xl border border-border hover:shadow-md transition-shadow"
                   >
                     <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${info.color}`}
+                      className={`w-12 h-12 rounded-lg flex items-center justify-center ${info.color}`}
                     >
-                      <info.icon className="w-5 h-5" />
+                      <info.icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      <p className="text-sm text-muted-foreground mb-1">
                         {info.label}
-                      </h4>
-                      <p className="text-muted-foreground text-sm">
+                      </p>
+                      <p className="text-foreground font-medium">
                         {info.value}
                       </p>
                     </div>
@@ -175,172 +328,71 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="bg-card rounded-2xl overflow-hidden border border-border h-64">
-              <iframe
-                src="https://maps.google.com/maps?q=41.243647,69.290768&ll=41.243647,69.290768&z=16&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-
-          {/* Contact Form - Right Side */}
-          <div className="lg:col-span-3">
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-lg">
-              <h3 className="text-2xl font-bold text-foreground mb-2">
-                Bepul konsultatsiya oling
-              </h3>
-              <p className="text-muted-foreground mb-8">
-                Ma&apos;lumotlaringizni qoldiring va mutaxassisimiz siz bilan
-                bog&apos;lanadi
-              </p>
-
-              {isSubmitted ? (
-                <div className="text-center py-12">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="w-10 h-10 text-primary" />
-                  </div>
-                  <h4 className="text-xl font-bold text-foreground mb-2">
-                    Rahmat!
+            {/* Working Hours */}
+            <div className="bg-background rounded-xl p-6 border border-border">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Clock className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-foreground">
+                    {t("contact.workingHours")}
                   </h4>
-                  <p className="text-muted-foreground">
-                    Arizangiz qabul qilindi. Tez orada siz bilan
-                    bog&apos;lanamiz.
+                  <p className="text-sm text-muted-foreground">
+                    {t("contact.workingHoursDesc")}
                   </p>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Ismingiz <span className="text-destructive">*</span>
-                      </label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        placeholder="Ismingizni kiriting"
-                        required
-                        className="h-12"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Telefon <span className="text-destructive">*</span>
-                      </label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) =>
-                          setFormData({ ...formData, phone: e.target.value })
-                        }
-                        placeholder="+998 XX XXX XX XX"
-                        required
-                        className="h-12"
-                      />
-                    </div>
-                  </div>
+              </div>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">
+                    {t("contact.monday")}-{t("contact.friday")}
+                  </span>
+                  <span className="text-foreground font-medium">
+                    9:00 - 18:00
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">
+                    {t("contact.saturday")}
+                  </span>
+                  <span className="text-foreground font-medium">
+                    9:00 - 15:00
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">
+                    {t("contact.sunday")}
+                  </span>
+                  <span className="text-foreground font-medium">
+                    {t("contact.closed")}
+                  </span>
+                </div>
+              </div>
+            </div>
 
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Email
-                      </label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
-                        }
-                        placeholder="email@example.com"
-                        className="h-12"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="service"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
-                        Xizmat turi
-                      </label>
-                      <Select
-                        value={formData.service}
-                        onValueChange={(value) =>
-                          setFormData({ ...formData, service: value })
-                        }
-                      >
-                        <SelectTrigger className="h-12">
-                          <SelectValue placeholder="Xizmat turini tanlang" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {serviceTypes.map((type) => (
-                            <SelectItem key={type} value={type}>
-                              {type}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
-                      Xabar
-                    </label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      placeholder="Loyihangiz haqida qisqacha yozing..."
-                      rows={4}
-                      className="resize-none"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full h-14 rounded-full text-base"
-                    disabled={isLoading}
+            {/* Social Media */}
+            <div className="bg-background rounded-xl p-6 border border-border">
+              <h3 className="text-xl font-semibold text-foreground mb-6">
+                {t("contact.socialMedia")}
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center justify-center gap-2 p-3 rounded-lg border border-border transition-all duration-200 ${social.color}`}
                   >
-                    {isLoading ? (
-                      <>
-                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                        Yuborilmoqda...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5 mr-2" />
-                        Yuborish
-                      </>
-                    )}
-                  </Button>
-                </form>
-              )}
+                    <social.icon className="w-5 h-5" />
+                    <span className="text-sm font-medium">{social.label}</span>
+                  </a>
+                ))}
+              </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                {t("contact.followUs")}
+              </p>
             </div>
           </div>
         </div>

@@ -11,6 +11,7 @@ import {
   Download,
   Calculator,
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const slides = [
   {
@@ -49,6 +50,7 @@ const slides = [
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -97,8 +99,7 @@ export function Hero() {
 
           {/* Main Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-8 text-balance">
-            Zamonaviy issiqxona texnologiyalari va{" "}
-            <span className="text-primary">kompleks agro yechimlar</span>
+            {t("hero.title")}
           </h1>
 
           {/* Slider Content */}
@@ -139,7 +140,7 @@ export function Hero() {
             >
               <Link href="#aloqa" className="gap-2">
                 <Calculator className="w-5 h-5" />
-                Loyiha hisoblash
+                {t("hero.cta")}
               </Link>
             </Button>
             <Button
