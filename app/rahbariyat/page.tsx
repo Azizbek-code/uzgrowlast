@@ -1,24 +1,27 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { CEO } from "@/components/ceo"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Team } from "@/components/team";
 
 export const metadata = {
-  title: 'Rahbariyat - UZ-GROW | CEO Rustamjon Rahmonov',
-  description: 'UZ-GROW kompaniyasi rahbariyati. CEO Rustamjon Rahmonov - 8+ yillik tajribaga ega agro-injiniring sohasi mutaxassisi. Kompaniya viziyasi va filosofiyasi.',
-  keywords: 'UZ-GROW CEO, Rustamjon Rahmonov, rahbariyat, agro-injiniring, biznes lider, O\'zbekiston tadbirkori',
+  title: "Jamoa - UZ-GROW | Mutaxassislar Jamoasi",
+  description:
+    "UZ-GROW kompaniyasi mutaxassislar jamoasi. 15+ yillik tajribaga ega professional mutaxassislar. Agro-injiniring, marketing, moliya va loyiha boshqaruvi.",
+  keywords:
+    "UZ-GROW jamoa, mutaxassislar, agro-injiniring, marketing, moliya, loyiha boshqaruvi, O'zbekiston",
   openGraph: {
-    title: 'Rahbariyat - UZ-GROW | CEO Rustamjon Rahmonov',
-    description: 'UZ-GROW kompaniyasi rahbariyati. CEO Rustamjon Rahmonov - 8+ yillik tajribaga ega agro-injiniring sohasi mutaxassisi.',
-    images: ['/images/logo.png'],
+    title: "Jamoa - UZ-GROW | Mutaxassislar Jamoasi",
+    description:
+      "UZ-GROW kompaniyasi mutaxassislar jamoasi. 15+ yillik tajribaga ega professional mutaxassislar.",
+    images: ["/images/logo.png"],
   },
-}
+};
 
 export default function RahbariyatPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      <CEO />
+      <Team />
       <Footer />
     </main>
-  )
+  );
 }

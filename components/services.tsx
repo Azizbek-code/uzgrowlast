@@ -29,7 +29,7 @@ const services = [
   },
   {
     icon: Settings,
-    title: "Agro-injiniring va loyihalash",
+    title: "Loyihalash va qurish",
     shortDesc: "Texnik chizma, klimat hisob-kitobi, konstruktiv yechimlar.",
     description:
       "Biz har bir kvadrat metrni rentabelli ishlashini ta'minlaymiz. Har bir loyiha individual hisoblanadi.",
@@ -40,7 +40,8 @@ const services = [
       "3D modellashtirish",
       "Texnik hujjatlar",
     ],
-    image: "/services/engineering.jpg",
+    image:
+      "https://www.researchgate.net/publication/364171968/figure/fig1/AS:11431281088090647@1664975905953/Floor-plan-of-the-greenhouse.png",
   },
   {
     icon: Cpu,
@@ -51,11 +52,11 @@ const services = [
     features: [
       "Isitish tizimi",
       "Ventilyatsiya va sovutish",
-      "CO2 tizimi",
+      "Stelaj tizimi",
       "LED grow lights",
       "O'g'itlash va sug'orish tizimi",
     ],
-    image: "/services/equipment.jpg",
+    image: "https://m.media-amazon.com/images/I/51e8xMOkJQL._AC_SR290,290_.jpg",
   },
   {
     icon: Users,
@@ -70,7 +71,8 @@ const services = [
       "Eksport yo'nalishi",
       "Biznes model yaratish",
     ],
-    image: "/services/consulting.jpg",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF7Cgq6dpL4s9x9ipW3yZ5Zuxc68DF9vlBlg&s",
   },
 ];
 
@@ -168,9 +170,7 @@ export function Services() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center">
-                  
-                </div>
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center"></div>
               </div>
             </div>
 

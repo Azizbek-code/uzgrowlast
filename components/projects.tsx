@@ -7,116 +7,65 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   "Barchasi",
-  "Sanoat",
-  "Qishloq xo'jaligi",
-  "Quyosh",
-  "Issiqxona turlari",
   "Prezident tashrifi",
   "Xalqaro loyihalar",
+  "Issiqxona turlari",
 ];
 
 const projects = [
+  // Vodiy loyihalari - bitta cardda birlashtirilgan
   {
     id: 1,
-    title: "Sanoat issiqxonasi",
-    location: "Toshkent viloyati",
-    size: "5 gektar",
-    category: "Sanoat",
-    description:
-      "Toshkent viloyatida qurilgan zamonaviy sanoat issiqxonasi. Metall konstruksiya va shisha qoplama bilan jihozlangan.",
-    image: "/images/1.jpg",
-    year: "2024",
-  },
-  {
-    id: 2,
-    title: "Qishloq xo'jaligi issiqxonasi",
-    location: "Farg'ona viloyati",
-    size: "2 gektar",
-    category: "Qishloq xo'jaligi",
-    description:
-      "Farg'ona vodiysida qurilgan fermer issiqxonasi majmui. Pomidor va bodring yetishtirish uchun mo'ljallangan.",
-    image: "/images/2.jpg",
-    year: "2023",
-  },
-  {
-    id: 3,
-    title: "Quyosh issiqxonasi",
-    location: "Samarqand viloyati",
-    size: "3 gektar",
-    category: "Quyosh",
-    description:
-      "Samarqandda qurilgan energiya mustaqil issiqxona. Quyosh panellari bilan ta'minlangan.",
-    image: "/images/3.jpg",
-    year: "2024",
-  },
-  {
-    id: 4,
-    title: "Qulupnay issiqxonasi",
-    location: "Andijon viloyati",
-    size: "1 gektar",
-    category: "Qishloq xo'jaligi",
-    description:
-      "Andijonda qurilgan zamonaviy qulupnay issiqxonasi. Stellaq tizimi bilan jihozlangan.",
-    image: "/images/4.jpg",
-    year: "2023",
-  },
-  {
-    id: 5,
-    title: "Eksport issiqxonasi",
-    location: "Qashqadaryo viloyati",
-    size: "4 gektar",
-    category: "Sanoat",
-    description:
-      "Qashqadaryoda qurilgan eksportga mo'ljallangan issiqxona kompleksi.",
-    image: "/images/24.jpg",
-    year: "2024",
-  },
-  {
-    id: 6,
-    title: "Gidroponika issiqxonasi",
-    location: "Navoiy viloyati",
-    size: "1.5 gektar",
-    category: "Issiqxona turlari",
-    description:
-      "Navoiyda qurilgan gidroponika tizimli issiqxona. Suvsiz ekin yetishtirish texnologiyasi.",
-    image: "/images/25.jpg",
-    year: "2023",
-  },
-  {
-    id: 7,
-    title: "Prezident ziyorati - Samarqand",
-    location: "Samarqand viloyati",
-    size: "10 gektar",
+    title: "Vodiy loyihalari",
+    location: "Vodiy",
+    size: "7 ta issiqxona",
     category: "Prezident tashrifi",
     description:
-      "O'zbekiston Respublikasi Prezidentining Samarqand viloyatiga rasmiy tashrifi va yangi texnologiyalar parkining ochilishi.",
-    image: "/images/photo_2026-04-04_10-35-25.jpg",
+      "Vodiy hududida qurilgan 7 ta zamonaviy issiqxona majmuasi. Turli o'lchamlarda va texnologiyalar bilan jihozlangan.",
+    images: [
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/37_2_ggepkx.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/32_2_n7x8lw.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/38_shg9uf.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469211/32_r91rs8.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468978/31_phdvd6.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468976/21_2_t9kklr.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468970/21_bv62xg.jpg",
+    ],
+    year: "2022-2024",
+  },
+
+  // Samarqand loyihalari - bitta cardda birlashtirilgan
+  {
+    id: 2,
+    title: "Samarqand loyihalari",
+    location: "Samarqand",
+    size: "2 ta issiqxona",
+    category: "Prezident tashrifi",
+    description:
+      "Samarqand viloyatida qurilgan 2 ta yirik issiqxona. Prezident tashrifi va tadbirkorlar uchrashuvi uchun mo'ljallangan.",
+    images: [
+      "/images/photo_2026-04-04_10-35-25.jpg",
+      "/images/photo_2026-04-04_10-35-29.jpg",
+    ],
     year: "2024",
   },
+
+  // Xalqaro loyihalar - bitta cardda birlashtirilgan
   {
-    id: 8,
-    title: "Xalqaro turizm markazi",
-    location: "Buxoro viloyati",
-    size: "8 gektar",
+    id: 3,
+    title: "Xalqaro loyihalar",
+    location: "Buxoro, Toshkent, Olmaota",
+    size: "3 ta loyiha",
     category: "Xalqaro loyihalar",
     description:
-      "Buxoro shahrida qurilayotgan xalqaro turizm markazi. Zamonaviy mehmonxona va konferentsiya zallari majmui.",
-    image: "/images/27.jpg",
+      "Buxoro xalqaro turizm markazi, Toshkent raqamli ta'lim platformasi va Olmaota issiqxona loyihalari.",
+    images: ["/images/27.jpg", "/images/7.jpg", "/images/4.jpg"],
     year: "2024",
   },
+
+  // Issiqxona turlari
   {
-    id: 9,
-    title: "Raqamli ta'lim platformasi",
-    location: "Toshkent shahri",
-    size: "2 gektar",
-    category: "Xalqaro loyihalar",
-    description:
-      "Toshkentda qurilayotgan raqamli ta'lim markazi. IT akademiyasi va texnopark kompleksi.",
-    image: "/images/7.jpg",
-    year: "2024",
-  },
-  {
-    id: 10,
+    id: 4,
     title: "Polikarbonat issiqxona majmui",
     location: "Qashqadaryo viloyati",
     size: "3 gektar",
@@ -124,28 +73,7 @@ const projects = [
     description:
       "Qashqadaryoda qurilgan polikarbonat issiqxonalari majmui. Zamonaviy texnologiyalar bilan jihozlangan.",
     image: "/images/8.jpg",
-    year: "2024",
-  },
-  {
-    id: 11,
-    title: "Prezident bilan uchrashuv",
-    location: "Samarqand viloyati",
-    size: "5 gektar",
-    category: "Prezident tashrifi",
-    description:
-      "Prezident bilan tadbirkorlar uchrashuvi va yangi loyihalar muhokamasi.",
-    image: "/images/photo_2026-04-04_10-35-29.jpg",
-    year: "2024",
-  },
-  {
-    id: 12,
-    title: "Qozog'iston issiqxona loyihasi",
-    location: "Olmaota shahri",
-    size: "6 gektar",
-    category: "Xalqaro loyihalar",
-    description:
-      "Qozog'istonda qurilgan zamonaviy issiqxona. Markaziy Osiyo hamkorligi namunasi.",
-    image: "/images/4.jpg",
+    images: ["/images/8.jpg"],
     year: "2024",
   },
 ];
@@ -156,6 +84,7 @@ export function Projects() {
     (typeof projects)[0] | null
   >(null);
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const filteredProjects =
     activeCategory === "Barchasi"
@@ -236,16 +165,24 @@ export function Projects() {
                   "relative h-80 rounded-2xl transition-all duration-500 transform-style-3d cursor-pointer",
                   hoveredProject === project.id ? "scale-[1.02]" : "",
                 )}
-                onClick={() => setSelectedProject(project)}
+                onClick={() => {
+                  setSelectedProject(project);
+                  setCurrentImageIndex(0);
+                }}
               >
                 {/* Front Side */}
                 <div className="absolute inset-0 rounded-2xl overflow-hidden bg-card border border-border shadow-lg backface-hidden">
                   {/* Image */}
                   <div className="absolute inset-0">
                     <img
-                      src={project.image}
+                      src={
+                        project.images
+                          ? project.images[0]
+                          : project.image || "/images/placeholder.jpg"
+                      }
                       alt={project.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      loading="lazy"
                     />
                   </div>
 
@@ -305,7 +242,10 @@ export function Projects() {
       {selectedProject && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-          onClick={() => setSelectedProject(null)}
+          onClick={() => {
+            setSelectedProject(null);
+            setCurrentImageIndex(0);
+          }}
         >
           <div
             className="relative bg-card rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
@@ -313,7 +253,10 @@ export function Projects() {
           >
             {/* Close Button */}
             <button
-              onClick={() => setSelectedProject(null)}
+              onClick={() => {
+                setSelectedProject(null);
+                setCurrentImageIndex(0);
+              }}
               className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/50 text-white hover:bg-black/70 flex items-center justify-center transition-colors"
             >
               <X className="w-5 h-5" />
@@ -336,10 +279,57 @@ export function Projects() {
             {/* Image */}
             <div className="aspect-video relative">
               <img
-                src={selectedProject.image}
+                src={
+                  selectedProject.images
+                    ? selectedProject.images[currentImageIndex]
+                    : selectedProject.image || "/images/placeholder.jpg"
+                }
                 alt={selectedProject.title}
                 className="w-full h-full object-cover"
               />
+
+              {/* Image Navigation */}
+              {selectedProject.images && selectedProject.images.length > 1 && (
+                <>
+                  <button
+                    onClick={() =>
+                      setCurrentImageIndex(
+                        (prev) =>
+                          (prev - 1 + selectedProject.images!.length) %
+                          selectedProject.images!.length,
+                      )
+                    }
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white hover:bg-black/70 flex items-center justify-center transition-colors"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() =>
+                      setCurrentImageIndex(
+                        (prev) => (prev + 1) % selectedProject.images!.length,
+                      )
+                    }
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 text-white hover:bg-black/70 flex items-center justify-center transition-colors"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+
+                  {/* Image Indicators */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    {selectedProject.images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          index === currentImageIndex
+                            ? "bg-white"
+                            : "bg-white/50"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Content */}

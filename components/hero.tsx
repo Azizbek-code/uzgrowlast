@@ -73,19 +73,24 @@ export function Hero() {
           autoPlay
           muted
           loop
-          className="w-full h-full object-cover"
+          playsInline
+          className="w-full h-full object-cover scale-105"
+          style={{
+            filter: "brightness(1.1) contrast(1.1) saturate(1.2)",
+            transform: "scale(1.05)",
+          }}
         ></video>
       </div>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/20 to-black/30" />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 lg:px-8 pt-24 pb-12">
         <div className="max-w-4xl">
           {/* Tagline */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
+          <div className="inline-flex items-center gap-2 bg-black/20 backdrop-blur-md rounded-full px-4 py-2 mb-8 border border-white/10">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-white/90 text-sm font-medium">
+            <span className="text-white text-sm font-medium">
               4+ yil tajriba - 100+ muvaffaqiyatli loyiha
             </span>
           </div>
@@ -111,7 +116,7 @@ export function Hero() {
                   &ldquo;{slide.quote}&rdquo;
                 </blockquote>
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center border border-white/20">
                     <span className="text-white font-bold text-lg">
                       {slide.author.charAt(0)}
                     </span>
@@ -140,7 +145,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 rounded-full px-8 h-14 text-base bg-transparent"
+              className="border-white/50 text-white hover:bg-white/20 hover:border-white/70 rounded-full px-8 h-14 text-base bg-transparent backdrop-blur-sm"
               asChild
             >
               <Link href="#" className="gap-2">

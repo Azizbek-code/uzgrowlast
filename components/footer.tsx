@@ -12,13 +12,13 @@ import {
 const footerLinks = {
   xizmatlar: [
     { label: "Issiqxona turlari", href: "/issiqxona-turlari" },
-    { label: "Agro-injiniring", href: "/agro-injiniring" },
-    { label: "Jihozlar", href: "/jixozlar" },
     { label: "Loyihalar", href: "/loyihalar" },
+    { label: "Jihozlar", href: "/jixozlar" },
+    { label: "Qurilish", href: "/qurilish" },
   ],
   kompaniya: [
     { label: "Biz haqimizda", href: "/haqimizda" },
-    { label: "Rahbariyat", href: "/rahbariyat" },
+    { label: "Jamoa", href: "/rahbariyat" },
     { label: "Xalqaro hamkorlik", href: "/xalqaro-hamkorlik" },
     { label: "Media hamkorlik", href: "/media-hamkorlik" },
   ],
@@ -31,10 +31,22 @@ const footerLinks = {
 };
 
 const socials = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Send, href: "#", label: "Telegram" },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
+    label: "Instagram",
+  },
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/share/1DePjLwX79/",
+    label: "Facebook",
+  },
+  {
+    icon: Linkedin,
+    href: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
+    label: "YouTube",
+  },
+  { icon: Send, href: "http://@Uz_Grow", label: "Telegram" },
 ];
 
 export function Footer() {
@@ -46,44 +58,51 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center font-bold text-xl text-primary-foreground">
+              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center font-bold text-2xl text-primary-foreground shadow-lg">
                 UG
               </div>
               <div>
-                <span className="text-xl font-bold block">UZ-GROW</span>
-                <span className="text-xs text-white/50 tracking-wider">
-                  AGRO-INJINIRING
+                <span className="text-2xl font-bold block">UZ-GROW</span>
+                <span className="text-sm tracking-wider text-white/50">
+                  QURUVCHI FIRMASI
                 </span>
               </div>
             </Link>
             <p className="text-white/70 mb-6 max-w-sm leading-relaxed">
-              O&apos;zbekistonda zamonaviy issiqxona qurish va agro-injiniring
+              O&apos;zbekistonda zamonaviy issiqxona qurish va qurilish
               xizmatlari. Biz bilan kelajak bugun boshlanadi.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="tel:+998555152233"
+                href="tel:+998555152223"
                 className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>+998 55 515 22 33</span>
+                <span>+998 55 515 22 23</span>
               </a>
               <a
-                href="mailto:uzgrow@gmail.com"
+                href="https://wa.me/+998994352313"
+                className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+              >
+                <Send className="w-4 h-4" />
+                <span>+998 99 435 23 13 (WhatsApp)</span>
+              </a>
+              <a
+                href="mailto:uzgrrow@gmail.com"
                 className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>uzgrow@gmail.com</span>
+                <span>uzgrrow@gmail.com</span>
               </a>
-              <div className="flex items-start gap-3 text-white/70">
-                <MapPin className="w-4 h-4 mt-1 shrink-0" />
-                <span>
-                  Toshkent sh., Yangihayor tumani, Fayzli MFY, Rayhon
-                  ko&apos;chasi, 107-uy
-                </span>
-              </div>
+              <a
+                href="https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto"
+                className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+              >
+                <MapPin className="w-4 h-4" />
+                <span>Toshkent, Rayhona ko'chasi 107-uy</span>
+              </a>
             </div>
           </div>
 

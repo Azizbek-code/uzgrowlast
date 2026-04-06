@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import {
   Home,
   Glasses,
@@ -29,31 +30,6 @@ import {
 const greenhouseTypes = [
   {
     id: 1,
-    title: "Oddiy issiqxona",
-    description:
-      "Eng sodda tuzilishga ega bo'lib, odatda yog'och yoki metall karkas va polietilen plyonka bilan yopiladi.",
-    image: "/images/1.jpg",
-    icon: <Home className="h-6 w-6" />,
-    features: [
-      "Sodda va arzon qurilish",
-      "Tez montaj qilish",
-      "Yengil materiallar",
-      "Har xil o'lchamlarda",
-    ],
-    advantages: ["Past narx", "Oson yig'ish", "Ta'mirlash oson"],
-    disadvantages: [
-      "Past bardoshlik",
-      "Yomon izolyatsiya",
-      "Qisqa foydalanish muddati",
-    ],
-    price: "Arzon",
-    complexity: "Past",
-    durability: "2-3 yil",
-    bestFor: "Boshlanuvchilar, kichik xo'jaliklar",
-    color: "bg-green-500",
-  },
-  {
-    id: 2,
     title: "Shisha issiqxona",
     description:
       "Yorug'likni yaxshi o'tkazadi, mustahkam, lekin qurilish xarajati yuqori.",
@@ -71,14 +47,13 @@ const greenhouseTypes = [
       "Ob-havoga chidamli",
     ],
     disadvantages: ["Yuqori narx", "Og'ir konstruktsiya", "Qiyin ta'mirlash"],
-    price: "Qimmat",
     complexity: "Yuqori",
     durability: "20+ yil",
     bestFor: "Professionallar, dekorativ maqsadlar",
     color: "bg-blue-500",
   },
   {
-    id: 3,
+    id: 2,
     title: "Polikarbonat issiqxona",
     description:
       "Issiqlikni yaxshi ushlab turadi va bardoshli materialdan tayyorlanadi.",
@@ -95,39 +70,14 @@ const greenhouseTypes = [
       "Uzoq xizmat qiladi",
       "Oson yig'ish",
     ],
-    disadvantages: ["O'rtacha narx", "Sirlarishi mumkin", "Cheklangan ranglar"],
-    price: "O'rtacha",
+    disadvantages: ["O'rtacha narx", "Sirlanishi mumkin", "Cheklangan ranglar"],
     complexity: "O'rtacha",
     durability: "10-15 yil",
     bestFor: "O'rtacha kattalikdagi xo'jaliklar",
     color: "bg-purple-500",
   },
   {
-    id: 4,
-    title: "Tunnel issiqxona",
-    description: "Yarim dumaloq shaklda bo'lib, tez va arzon quriladi.",
-    image: "/images/4.jpg",
-    icon: <Circle className="h-6 w-6" />,
-    features: [
-      "Yarim dumaloq shakl",
-      "Tez qurilish",
-      "Material tejash",
-      "Yaxshi havo aylanishi",
-    ],
-    advantages: ["Tez qurish", "Arzon", "Yaxshi suv oqimi"],
-    disadvantages: [
-      "Cheklangan balandlik",
-      "Shakl o'zgarmas",
-      "Past izolyatsiya",
-    ],
-    price: "Arzon",
-    complexity: "Past",
-    durability: "3-5 yil",
-    bestFor: "Katta maydonlar, keng ekish",
-    color: "bg-orange-500",
-  },
-  {
-    id: 5,
+    id: 3,
     title: "Sanoat issiqxonasi",
     description:
       "Katta hajmli, avtomatlashtirilgan tizimlarga ega, professional yetishtirish uchun mo'ljallangan.",
@@ -145,14 +95,13 @@ const greenhouseTypes = [
       "Yil bo'yi ishlash",
     ],
     disadvantages: ["Juda qimmat", "Murakkab", "Ko'p energiya sarfi"],
-    price: "Juda qimmat",
     complexity: "Juda yuqori",
     durability: "25+ yil",
-    bestFor: "Korporativ fermerlar, eksport",
+    bestFor: "Sanoat miqiyosi, katta korxonalar",
     color: "bg-red-500",
   },
   {
-    id: 6,
+    id: 4,
     title: "Gidroponik issiqxona",
     description:
       "Tuproqsiz, suv va ozuqa eritmalari orqali o'simlik yetishtiriladi.",
@@ -170,14 +119,13 @@ const greenhouseTypes = [
       "Kuniga to'g'ri kelish",
       "Qimmat uskunalar",
     ],
-    price: "Qimmat",
     complexity: "Yuqori",
     durability: "15-20 yil",
     bestFor: "Zamonaviy agrobiznes, shahar atrofi",
     color: "bg-cyan-500",
   },
   {
-    id: 7,
+    id: 5,
     title: "Vertikal issiqxona",
     description:
       "Joyni tejash uchun o'simliklar qavatma-qavat joylashtiriladi.",
@@ -195,41 +143,26 @@ const greenhouseTypes = [
       "Shahar sharoitida ishlash",
     ],
     disadvantages: ["Murakkab tizim", "Yuqori narx", "Doimiy nazorat kerak"],
-    price: "Qimmat",
     complexity: "Yuqori",
-    durability: "10-15 yil",
-    bestFor: "Shahar fermasi, kam joyli hududlar",
-    color: "bg-indigo-500",
+    durability: "15-20 yil",
+    bestFor: "Shahar atrofi, joy cheklangan hududlar",
+    color: "bg-emerald-500",
   },
 ];
 
 const comparisonTable = [
   {
-    type: "Narx",
-    oddiy: "Arzon",
-    shisha: "Qimmat",
-    polikarbonat: "O'rtacha",
-    tunnel: "Arzon",
-    sanoat: "Juda qimmat",
-    gidroponik: "Qimmat",
-    vertikal: "Qimmat",
-  },
-  {
     type: "Murakkablik",
-    oddiy: "Past",
     shisha: "Yuqori",
     polikarbonat: "O'rtacha",
-    tunnel: "Past",
     sanoat: "Juda yuqori",
     gidroponik: "Yuqori",
     vertikal: "Yuqori",
   },
   {
     type: "Xizmat muddati",
-    oddiy: "2-3 yil",
     shisha: "20+ yil",
     polikarbonat: "10-15 yil",
-    tunnel: "3-5 yil",
     sanoat: "25+ yil",
     gidroponik: "15-20 yil",
     vertikal: "10-15 yil",
@@ -238,7 +171,7 @@ const comparisonTable = [
 
 export function GreenhouseTypes() {
   return (
-    <section className="py-20 bg-gradient-to-b from-green-50 to-white">
+    <section className="py-20 bg-linear-to-b from-green-50 to-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -276,7 +209,7 @@ export function GreenhouseTypes() {
                     className={`${type.color} text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1`}
                   >
                     {type.icon}
-                    {type.price}
+                    {type.complexity}
                   </div>
                 </div>
               </div>
@@ -332,10 +265,6 @@ export function GreenhouseTypes() {
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-2 text-center">
                     <div className="bg-gray-50 rounded-lg p-2">
-                      <DollarSign className="h-4 w-4 text-green-600 mx-auto mb-1" />
-                      <p className="text-xs font-medium">{type.price}</p>
-                    </div>
-                    <div className="bg-gray-50 rounded-lg p-2">
                       <Zap className="h-4 w-4 text-blue-600 mx-auto mb-1" />
                       <p className="text-xs font-medium">{type.complexity}</p>
                     </div>
@@ -345,10 +274,12 @@ export function GreenhouseTypes() {
                     </div>
                   </div>
 
-                  <Button className="w-full" variant="outline">
-                    Batafsil ma'lumot
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Button>
+                  <Link href="/aloqa">
+                    <Button className="w-full" variant="outline">
+                      Batafsil ma'lumot
+                      <ArrowRight className="h-4 w-4 ml-2" />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -368,16 +299,10 @@ export function GreenhouseTypes() {
                     Xususiyat
                   </th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
-                    Oddiy
-                  </th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
                     Shisha
                   </th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
                     Polikarbonat
-                  </th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
-                    Tunnel
                   </th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
                     Sanoat
@@ -397,16 +322,10 @@ export function GreenhouseTypes() {
                       {row.type}
                     </td>
                     <td className="px-6 py-4 text-sm text-center text-gray-600">
-                      {row.oddiy}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-center text-gray-600">
                       {row.shisha}
                     </td>
                     <td className="px-6 py-4 text-sm text-center text-gray-600">
                       {row.polikarbonat}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-center text-gray-600">
-                      {row.tunnel}
                     </td>
                     <td className="px-6 py-4 text-sm text-center text-gray-600">
                       {row.sanoat}
@@ -425,7 +344,7 @@ export function GreenhouseTypes() {
         </div>
 
         {/* Selection Guide */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+        <div className="bg-linear-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
           <h3 className="text-2xl font-bold mb-4">
             To'g'ri Issiqxonini Qanday Tanlash?
           </h3>

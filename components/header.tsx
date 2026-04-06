@@ -5,14 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail, Globe, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Bosh sahifa" },
   { href: "/issiqxona-turlari", label: "Issiqxona turlari" },
-  { href: "/agro-injiniring", label: "Agro-injiniring" },
   { href: "/loyihalar", label: "Loyihalar" },
-  { href: "/rahbariyat", label: "Rahbariyat" },
+  { href: "/rahbariyat", label: "Jamoa" },
   { href: "/aloqa", label: "Aloqa" },
 ];
 
@@ -25,7 +25,6 @@ const languages = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState("uz");
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -81,46 +80,43 @@ export function Header() {
             </div>
 
             {/* Language Switcher */}
-            <div className="relative">
-              <button
-                onClick={() => setLangOpen(!langOpen)}
-                className={cn(
-                  "flex items-center gap-2 text-sm px-3 py-1.5 rounded-lg transition-colors",
-                  showTransparent
-                    ? "text-black/80 hover:text-white hover:bg-white/10"
-                    : "text-gray-700 hover:text-gray-900 hover:bg-gray-100",
-                )}
-              >
-                <Globe className="w-3.5 h-3.5" />
-                {languages.find((l) => l.code === currentLang)?.label}
-                <ChevronDown
+            <Dialog>
+              <DialogTrigger asChild>
+                <button
                   className={cn(
-                    "w-3.5 h-3.5 transition-transform",
-                    langOpen && "rotate-180",
+                    "flex items-center gap-1 text-xs px-2 py-1 rounded transition-colors",
+                    showTransparent
+                      ? "text-white hover:text-white/80"
+                      : "text-foreground hover:text-primary",
                   )}
-                />
-              </button>
-
-              {langOpen && (
-                <div className="absolute right-0 top-full mt-1 bg-background rounded-lg shadow-xl border border-border py-1 min-w-[140px] z-50">
+                >
+                  <Globe className="w-3 h-3" />
+                  {languages.find((l) => l.code === currentLang)?.label}
+                  <ChevronDown className="w-3 h-3" />
+                </button>
+              </DialogTrigger>
+              <DialogContent className="w-auto p-4">
+                <div className="space-y-1">
+                  <p className="text-sm font-medium text-muted-foreground mb-3">
+                    Til tanlang
+                  </p>
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
-                      onClick={() => {
-                        setCurrentLang(lang.code);
-                        setLangOpen(false);
-                      }}
+                      onClick={() => setCurrentLang(lang.code)}
                       className={cn(
-                        "w-full px-4 py-2 text-sm text-left hover:bg-muted transition-colors",
-                        currentLang === lang.code && "text-primary font-medium",
+                        "w-full px-4 py-2 text-sm text-left rounded-lg transition-colors",
+                        currentLang === lang.code
+                          ? "bg-primary text-primary-foreground"
+                          : "hover:bg-muted text-foreground",
                       )}
                     >
                       {lang.label}
                     </button>
                   ))}
                 </div>
-              )}
-            </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
@@ -141,14 +137,14 @@ export function Header() {
               <img
                 src="/images/logo.png"
                 alt="UZ-GROW Logo"
-                className="w-12 h-12 rounded-xl object-contain"
+                className="w-16 h-16 rounded-xl object-contain shadow-lg"
               />
               <div className="flex flex-col">
-                <span className="font-bold text-xl tracking-tight text-foreground">
+                <span className="font-bold text-2xl tracking-tight text-foreground">
                   UZ-GROW
                 </span>
-                <span className="text-xs tracking-wider text-muted-foreground">
-                  AGRO-INJINIRING
+                <span className="text-sm tracking-wider text-muted-foreground">
+                  QURUVCHI FIRMASI
                 </span>
               </div>
             </Link>

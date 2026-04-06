@@ -25,9 +25,9 @@ import {
 
 const stats = [
   { value: "4+", label: "Yillik tajriba" },
+  { value: "95+", label: "Mamlakatda xizmat" },
   { value: "100+", label: "Loyihalar" },
   { value: "50+", label: "Mijozlar" },
-  { value: "10K+", label: "m² issiqxona" },
 ];
 
 const values = [
@@ -66,10 +66,11 @@ export default function HaqimizdaPage() {
               Biz haqimizda
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              UZ-GROW — Agro-injiniring yetakchisi
+              4+ yillik tajriba
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Zamonaviy issiqxona qurilishi va agro-injiniring sohasida yetakchi
+              95 ta mamlakatda sizning yoningizda. UZ-GROW — zamonaviy issiqxona
+              qurilishi va quruvchi firma sifatida faoliyat yurituvchi
               kompaniya. Bizning maqsadimiz — O'zbekistonda yuqori
               samaradorlikka ega, innovatsion va eksportbop issiqxona
               infratuzilmasini rivojlantirish.
@@ -90,6 +91,35 @@ export default function HaqimizdaPage() {
                 <div className="text-primary-foreground/70">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                Biz bilan tanishing
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                60 yillik tajriba va 95 mamlakatdagi xizmatimiz haqida videoni
+                tomosha qiling
+              </p>
+            </div>
+
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <video
+                src="/about-video.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full aspect-video object-cover"
+                controls
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -268,7 +298,7 @@ export default function HaqimizdaPage() {
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <BarChart3 className="w-4 h-4 text-blue-600" />
-                      <span>8+ yillik tajriba</span>
+                      <span>4+ yillik tajriba</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <TrendingUp className="w-4 h-4 text-green-600" />

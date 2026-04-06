@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { 
-  User, 
-  Award, 
-  Target, 
-  Lightbulb, 
-  Users, 
-  Globe, 
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  User,
+  Award,
+  Target,
+  Lightbulb,
+  Users,
+  Globe,
   Heart,
   Star,
   Quote,
@@ -23,132 +23,141 @@ import {
   ChevronUp,
   Briefcase,
   GraduationCap,
-  TrendingUp
-} from "lucide-react"
+  TrendingUp,
+} from "lucide-react";
 
 const ceoData = {
   uz: {
     name: "Rustamjon Rahmonov",
     title: "Asoschi va Bosh Direktor",
     company: "UZ-GROW Agro-Injiniring",
-    experience: "8+ yillik",
+    experience: "4+ yillik",
     bio: "O'zbekistonlik innovator agrofaol va tadbirkor. 2017-yildan beri Markaziy Osiyo agrosektorida minglab fermerlar va agrobiznes vakillariga ma'lumot, ishonch va natija olib kelmoqda. Zamonaviy texnologiyalar va an'anaviy bilimlarni birlashtirib, qishloq xo'jaligini rivojlantirishga hissa qo'shmoqda.",
-    vision: "O'zbekistonni Markaziy Osiyoning qishloq xo'jaligi markaziga aylantirish, mahalliy fermerlarni global miqyosda raqobatbardosh qilish va yashil texnologiyalar orqali oziq-ovqat xavfsizligini ta'minlash.",
+    vision:
+      "O'zbekistonni Markaziy Osiyoning qishloq xo'jaligi markaziga aylantirish, mahalliy fermerlarni global miqyosda raqobatbardosh qilish va yashil texnologiyalar orqali oziq-ovqat xavfsizligini ta'minlash.",
     achievements: [
       "150,000+ obunachi ijtimoiy tarmoqlarda",
       "100+ muvaffaqiyatli loyiha",
-      "8+ yillik tajriba",
+      "4+ yillik tajriba",
       "Xalqaro hamkorliklar",
-      "Innovatsion yechimlar"
+      "Innovatsion yechimlar",
     ],
     education: [
       "Qishloq xo'jaligi instituti",
       "Xalqaro biznes menejmenti",
-      "Agro-texnologiyalar bo'yicha sertifikatlar"
+      "Agro-texnologiyalar bo'yicha sertifikatlar",
     ],
     skills: [
       "Agro-injiniring",
       "Biznes strategiyasi",
       "Innovatsiyalar",
       "Xalqaro hamkorlik",
-      "Raqamli marketing"
+      "Raqamli marketing",
     ],
-    philosophy: "Har bir fermer muvaffaqiyatli bo'lganda, butun mamlakat gullab-yashnaydi. Biz shu yo'lda katta oilamizni shakllantirmoqdamiz.",
-    quote: "Agro-biznes - bu faqat pul topish emas, balki millionlab insonlar hayotini yaxshilash, mamlakat oziq-ovqat mustaqilligini ta'minlash va kelajak avlodlari uchun yashil Yer yaratishdir.",
+    philosophy:
+      "Har bir fermer muvaffaqiyatli bo'lganda, butun mamlakat gullab-yashnaydi. Biz shu yo'lda katta oilamizni shakllantirmoqdamiz.",
+    quote:
+      "Agro-biznes - bu faqat pul topish emas, balki millionlab insonlar hayotini yaxshilash, mamlakat oziq-ovqat mustaqilligini ta'minlash va kelajak avlodlari uchun yashil Yer yaratishdir.",
     contact: {
       email: "ceo@uzgrow.uz",
       phone: "+998 88 435-23-13",
       linkedin: "linkedin.com/in/rustamjon-rahmonov",
-      telegram: "@rustamjon_ceo"
-    }
+      telegram: "@rustamjon_ceo",
+    },
   },
   ru: {
     name: "Рустамджон Рахмонов",
     title: "Основатель и Генеральный директор",
     company: "UZ-GROW Агро-инжиниринг",
-    experience: "8+ лет",
+    experience: "4+ лет",
     bio: "Узбекский инноватор, агроактивист и предприниматель. С 2017 года доставляет информацию, доверие и результаты тысячам фермеров и представителей агробизнеса в агросекторе Центральной Азии. Объединяя современные технологии и традиционные знания, вносит вклад в развитие сельского хозяйства.",
-    vision: "Превратить Узбекистан в центр сельского хозяйства Центральной Азии, сделать местных фермеров конкурентоспособными на глобальном уровне и обеспечить продовольственную безопасность через зеленые технологии.",
+    vision:
+      "Превратить Узбекистан в центр сельского хозяйства Центральной Азии, сделать местных фермеров конкурентоспособными на глобальном уровне и обеспечить продовольственную безопасность через зеленые технологии.",
     achievements: [
       "150,000+ подписчиков в соцсетях",
       "100+ успешных проектов",
-      "8+ лет опыта",
+      "4+ лет опыта",
       "Международные партнерства",
-      "Инновационные решения"
+      "Инновационные решения",
     ],
     education: [
       "Институт сельского хозяйства",
       "Международный бизнес-менеджмент",
-      "Сертификаты по агротехнологиям"
+      "Сертификаты по агротехнологиям",
     ],
     skills: [
       "Агро-инжиниринг",
       "Бизнес-стратегия",
       "Инновации",
       "Международное сотрудничество",
-      "Цифровой маркетинг"
+      "Цифровой маркетинг",
     ],
-    philosophy: "Когда каждый фермер успешен, процветает вся страна. Мы формируем большую семью на этом пути.",
-    quote: "Агробизнес - это не только заработок денег, но и улучшение жизни миллионов людей, обеспечение продовольственной независимости страны и создание зеленой Земли для будущих поколений.",
+    philosophy:
+      "Когда каждый фермер успешен, процветает вся страна. Мы формируем большую семью на этом пути.",
+    quote:
+      "Агробизнес - это не только заработок денег, но и улучшение жизни миллионов людей, обеспечение продовольственной независимости страны и создание зеленой Земли для будущих поколений.",
     contact: {
       email: "ceo@uzgrow.uz",
       phone: "+998 88 435-23-13",
       linkedin: "linkedin.com/in/rustamjon-rahmonov",
-      telegram: "@rustamjon_ceo"
-    }
+      telegram: "@rustamjon_ceo",
+    },
   },
   en: {
     name: "Rustamjon Rahmonov",
     title: "Founder & CEO",
     company: "UZ-GROW Agro-Engineering",
-    experience: "8+ years",
+    experience: "4+ years",
     bio: "Uzbekistani innovator, agro-activist and entrepreneur. Since 2017, has been delivering information, trust and results to thousands of farmers and agribusiness representatives in the Central Asian agro-sector. Combining modern technologies and traditional knowledge to contribute to agricultural development.",
-    vision: "Transform Uzbekistan into the agricultural hub of Central Asia, make local farmers globally competitive, and ensure food security through green technologies.",
+    vision:
+      "Transform Uzbekistan into the agricultural hub of Central Asia, make local farmers globally competitive, and ensure food security through green technologies.",
     achievements: [
       "150,000+ social media followers",
       "100+ successful projects",
-      "8+ years of experience",
+      "4+ years of experience",
       "International partnerships",
-      "Innovative solutions"
+      "Innovative solutions",
     ],
     education: [
       "Agricultural Institute",
       "International Business Management",
-      "Agro-technology certifications"
+      "Agro-technology certifications",
     ],
     skills: [
       "Agro-engineering",
       "Business Strategy",
       "Innovation",
       "International Partnerships",
-      "Digital Marketing"
+      "Digital Marketing",
     ],
-    philosophy: "When every farmer succeeds, the whole country flourishes. We are building a big family on this path.",
-    quote: "Agribusiness is not just about making money, but about improving millions of lives, ensuring the country's food independence, and creating a green Earth for future generations.",
+    philosophy:
+      "When every farmer succeeds, the whole country flourishes. We are building a big family on this path.",
+    quote:
+      "Agribusiness is not just about making money, but about improving millions of lives, ensuring the country's food independence, and creating a green Earth for future generations.",
     contact: {
       email: "ceo@uzgrow.uz",
       phone: "+998 88 435-23-13",
       linkedin: "linkedin.com/in/rustamjon-rahmonov",
-      telegram: "@rustamjon_ceo"
-    }
-  }
-}
+      telegram: "@rustamjon_ceo",
+    },
+  },
+};
 
 const languages = [
   { code: "uz", label: "O'zbekcha", flag: "🇺🇿" },
   { code: "ru", label: "Русский", flag: "🇷🇺" },
-  { code: "en", label: "English", flag: "🇬🇧" }
-]
+  { code: "en", label: "English", flag: "🇬🇧" },
+];
 
 export function CEO() {
-  const [currentLang, setCurrentLang] = useState("uz")
-  const [expandedSection, setExpandedSection] = useState<string | null>(null)
-  
-  const data = ceoData[currentLang as keyof typeof ceoData]
+  const [currentLang, setCurrentLang] = useState("uz");
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+
+  const data = ceoData[currentLang as keyof typeof ceoData];
 
   const toggleSection = (section: string) => {
-    setExpandedSection(expandedSection === section ? null : section)
-  }
+    setExpandedSection(expandedSection === section ? null : section);
+  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
@@ -156,11 +165,13 @@ export function CEO() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <img src="/images/logo.png" alt="UZ-GROW Logo" className="h-16 w-auto" />
+            <img
+              src="/images/logo.png"
+              alt="UZ-GROW Logo"
+              className="h-16 w-auto"
+            />
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Rahbariyat
-          </h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Rahbariyat</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Bizning rahbarimiz - innovatsiya, tajriba va ishonch uyg'unligi
           </p>
@@ -210,10 +221,12 @@ export function CEO() {
                 </div>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{data.name}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {data.name}
+                </h3>
                 <p className="text-blue-600 font-medium mb-1">{data.title}</p>
                 <p className="text-gray-600 text-sm mb-4">{data.company}</p>
-                
+
                 {/* Quick Stats */}
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center justify-between text-sm">
@@ -244,13 +257,22 @@ export function CEO() {
 
                 {/* Social Links */}
                 <div className="flex justify-center gap-3 mt-6">
-                  <a href="#" className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
+                  >
                     <Linkedin className="h-5 w-5 text-blue-600" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
+                  >
                     <Twitter className="h-5 w-5 text-blue-400" />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
+                  >
                     <MessageCircle className="h-5 w-5 text-blue-500" />
                   </a>
                 </div>
@@ -268,16 +290,24 @@ export function CEO() {
                     <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
                       <User className="h-5 w-5 text-blue-600" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Biografiya</h3>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      Biografiya
+                    </h3>
                   </div>
                   <button
-                    onClick={() => toggleSection('bio')}
+                    onClick={() => toggleSection("bio")}
                     className="text-gray-500 hover:text-gray-700"
                   >
-                    {expandedSection === 'bio' ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+                    {expandedSection === "bio" ? (
+                      <ChevronUp className="h-5 w-5" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5" />
+                    )}
                   </button>
                 </div>
-                <p className={`text-gray-600 leading-relaxed ${expandedSection === 'bio' ? '' : 'line-clamp-3'}`}>
+                <p
+                  className={`text-gray-600 leading-relaxed ${expandedSection === "bio" ? "" : "line-clamp-3"}`}
+                >
                   {data.bio}
                 </p>
               </CardContent>
@@ -291,16 +321,24 @@ export function CEO() {
                     <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
                       <Target className="h-5 w-5 text-purple-600" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Viziyasi</h3>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      Viziyasi
+                    </h3>
                   </div>
                   <button
-                    onClick={() => toggleSection('vision')}
+                    onClick={() => toggleSection("vision")}
                     className="text-gray-500 hover:text-gray-700"
                   >
-                    {expandedSection === 'vision' ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+                    {expandedSection === "vision" ? (
+                      <ChevronUp className="h-5 w-5" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5" />
+                    )}
                   </button>
                 </div>
-                <p className={`text-gray-600 leading-relaxed ${expandedSection === 'vision' ? '' : 'line-clamp-3'}`}>
+                <p
+                  className={`text-gray-600 leading-relaxed ${expandedSection === "vision" ? "" : "line-clamp-3"}`}
+                >
                   {data.vision}
                 </p>
               </CardContent>
@@ -329,20 +367,30 @@ export function CEO() {
                     <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
                       <Award className="h-5 w-5 text-green-600" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Yutuqlar</h3>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      Yutuqlar
+                    </h3>
                   </div>
                   <button
-                    onClick={() => toggleSection('achievements')}
+                    onClick={() => toggleSection("achievements")}
                     className="text-gray-500 hover:text-gray-700"
                   >
-                    {expandedSection === 'achievements' ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+                    {expandedSection === "achievements" ? (
+                      <ChevronUp className="h-5 w-5" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5" />
+                    )}
                   </button>
                 </div>
-                <div className={`grid grid-cols-1 md:grid-cols-2 gap-3 ${expandedSection === 'achievements' ? '' : 'max-h-32 overflow-hidden'}`}>
+                <div
+                  className={`grid grid-cols-1 md:grid-cols-2 gap-3 ${expandedSection === "achievements" ? "" : "max-h-32 overflow-hidden"}`}
+                >
                   {data.achievements.map((achievement, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-green-500 rounded-full" />
-                      <span className="text-gray-600 text-sm">{achievement}</span>
+                      <span className="text-gray-600 text-sm">
+                        {achievement}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -356,7 +404,9 @@ export function CEO() {
                   <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
                     <Heart className="h-5 w-5 text-orange-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Filosofiya</h3>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Filosofiya
+                  </h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
                   {data.philosophy}
@@ -412,15 +462,23 @@ export function CEO() {
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
           <h3 className="text-2xl font-bold mb-4">Rahbar bilan bog'lanish</h3>
           <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-            Agar siz loyihalarimiz haqida ko'proq ma'lumot olishmoqchi bo'lsangiz yoki hamkorlik qilishni istasangiz, 
-            bepul maslahat uchun murojaat qiling
+            Agar siz loyihalarimiz haqida ko'proq ma'lumot olishmoqchi
+            bo'lsangiz yoki hamkorlik qilishni istasangiz, bepul maslahat uchun
+            murojaat qiling
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+            <Button
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100"
+            >
               <Mail className="h-4 w-4 mr-2" />
               Email orqali bog'lanish
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-blue-600"
+            >
               <Phone className="h-4 w-4 mr-2" />
               Qo'ng'iroq qilish
             </Button>
@@ -428,5 +486,5 @@ export function CEO() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -177,13 +177,16 @@ export function Contact() {
 
             {/* Map Placeholder */}
             <div className="bg-card rounded-2xl overflow-hidden border border-border h-64">
-              <div className="w-full h-full bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <MapPin className="w-10 h-10 mx-auto mb-2 text-primary/50" />
-                  <p className="text-sm">Xarita joylash uchun joy</p>
-                  <p className="text-xs opacity-60">Google Maps embed</p>
-                </div>
-              </div>
+              <iframe
+                src="https://maps.google.com/maps?q=41.243647,69.290768&ll=41.243647,69.290768&z=16&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              />
             </div>
           </div>
 
