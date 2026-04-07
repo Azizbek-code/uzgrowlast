@@ -22,6 +22,7 @@ import {
   ArrowRight,
   Thermometer,
   Zap,
+  Users,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
