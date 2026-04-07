@@ -301,7 +301,7 @@ export default function AloqaPage() {
               Bizning manzilimiz
             </h2>
             <p className="text-muted-foreground">
-              Toshkent sh., Yangihayor tumani, Fayzli MFY, Rayhon ko'chasi,
+              Toshkent sh., Yangihayot tumani, Fayzli MFY, Rayhon ko'chasi,
               107-uy
             </p>
           </div>
@@ -339,7 +339,7 @@ export default function AloqaPage() {
                 size="sm"
                 onClick={() => {
                   const address =
-                    "Toshkent sh., Yangihayor tumani, Fayzli MFY, Rayhon ko'chasi, 107-uy";
+                    "Toshkent sh., Yangihayot tumani, Fayzli MFY, Rayhon ko'chasi, 107-uy";
                   navigator.clipboard.writeText(address);
                   alert("Manzil nusxalandi!");
                 }}
@@ -358,7 +358,7 @@ export default function AloqaPage() {
                 <h3 className="font-semibold text-foreground">Manzil</h3>
               </div>
               <p className="text-muted-foreground text-sm">
-                Toshkent sh., Yangihayor tumani, Fayzli MFY, Rayhon ko'chasi,
+                Toshkent sh., Yangihayot tumani, Fayzli MFY, Rayhon ko'chasi,
                 107-uy
               </p>
             </div>

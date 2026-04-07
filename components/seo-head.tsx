@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import Head from 'next/head'
+import Head from "next/head";
 
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  locale?: string
-  alternateUrls?: { [key: string]: string }
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  locale?: string;
+  alternateUrls?: { [key: string]: string };
 }
 
 export function SEOHead({
@@ -24,8 +24,8 @@ export function SEOHead({
   alternateUrls = {
     uz: "https://uzgrow.uz",
     ru: "https://uzgrow.uz/ru",
-    en: "https://uzgrow.uz/en"
-  }
+    en: "https://uzgrow.uz/en",
+  },
 }: SEOHeadProps) {
   return (
     <Head>
@@ -38,7 +38,7 @@ export function SEOHead({
       <meta charSet="UTF-8" />
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
-      
+
       {/* Open Graph Tags */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
@@ -49,7 +49,7 @@ export function SEOHead({
       <meta property="og:url" content={url} />
       <meta property="og:locale" content={locale} />
       <meta property="og:site_name" content="UZ-GROW" />
-      
+
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
@@ -57,21 +57,21 @@ export function SEOHead({
       <meta name="twitter:image" content={image} />
       <meta name="twitter:creator" content="@uzgrow" />
       <meta name="twitter:site" content="@uzgrow" />
-      
+
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      
+
       {/* Alternate Language URLs */}
       {Object.entries(alternateUrls).map(([lang, altUrl]) => (
         <link key={lang} rel="alternate" hrefLang={lang} href={altUrl} />
       ))}
-      
+
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png" />
-      
+
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
@@ -79,106 +79,111 @@ export function SEOHead({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "UZ-GROW Agro-Injiniring",
-            "url": url,
-            "logo": image,
-            "description": description,
-            "address": {
+            name: "UZ-GROW Agro-Injiniring",
+            url: url,
+            logo: image,
+            description: description,
+            address: {
               "@type": "PostalAddress",
-              "addressCountry": "UZ",
-              "addressLocality": "Toshkent",
-              "streetAddress": "Rayhona ko'chasi 107-uy"
+              addressCountry: "UZ",
+              addressLocality: "Toshkent",
+              streetAddress: "Rayhona ko'chasi 107-uy",
             },
-            "contactPoint": {
+            contactPoint: {
               "@type": "ContactPoint",
-              "telephone": "+998884352313",
-              "contactType": "customer service",
-              "email": "uzgrow@gmail.com",
-              "availableLanguage": ["Uzbek", "Russian", "English"]
+              telephone: "+998884352313",
+              contactType: "customer service",
+              email: "uzgrrow@gmail.com",
+              availableLanguage: ["Uzbek", "Russian", "English"],
             },
-            "sameAs": [
+            sameAs: [
               "https://www.facebook.com/uzgrow",
               "https://www.instagram.com/uzgrow",
               "https://www.linkedin.com/company/uzgrow",
               "https://www.youtube.com/c/uzgrow",
-              "https://t.me/uzgrow"
+              "https://t.me/uzgrow",
             ],
-            "founder": {
+            founder: {
               "@type": "Person",
-              "name": "Rustamjon Rahmonov",
-              "jobTitle": "CEO",
-              "url": "https://uzgrow.uz/ceo"
+              name: "Rustamjon Rahmonov",
+              jobTitle: "CEO",
+              url: "https://uzgrow.uz/ceo",
             },
-            "hasOfferCatalog": {
+            hasOfferCatalog: {
               "@type": "OfferCatalog",
-              "name": "Issiqxona va qishloq xo'jaligi xizmatlari",
-              "itemListElement": [
+              name: "Issiqxona va qishloq xo'jaligi xizmatlari",
+              itemListElement: [
                 {
                   "@type": "Offer",
-                  "itemOffered": {
+                  itemOffered: {
                     "@type": "Service",
-                    "name": "Issiqxona qurish",
-                    "description": "Turnkey issiqxona qurish xizmatlari"
-                  }
-                },
-                {
-                  "@type": "Offer", 
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Agro-injiniring",
-                    "description": "Qishloq xo'jaligi injiniring yechimlari"
-                  }
+                    name: "Issiqxona qurish",
+                    description: "Turnkey issiqxona qurish xizmatlari",
+                  },
                 },
                 {
                   "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service", 
-                    "name": "Agro-konsalting",
-                    "description": "Qishloq xo'jaligi bo'yicha konsalting xizmatlari"
-                  }
-                }
-              ]
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Agro-injiniring",
+                    description: "Qishloq xo'jaligi injiniring yechimlari",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Agro-konsalting",
+                    description:
+                      "Qishloq xo'jaligi bo'yicha konsalting xizmatlari",
+                  },
+                },
+              ],
             },
-            "areaServed": [
+            areaServed: [
               {
                 "@type": "Country",
-                "name": "O'zbekiston"
-              },
-              {
-                "@type": "Country", 
-                "name": "Qozog'iston"
+                name: "O'zbekiston",
               },
               {
                 "@type": "Country",
-                "name": "Qirg'iziston"
+                name: "Qozog'iston",
               },
               {
                 "@type": "Country",
-                "name": "Tojikiston"
+                name: "Qirg'iziston",
               },
               {
                 "@type": "Country",
-                "name": "Turkmaniston"
-              }
-            ]
-          })
+                name: "Tojikiston",
+              },
+              {
+                "@type": "Country",
+                name: "Turkmaniston",
+              },
+            ],
+          }),
         }}
       />
-      
+
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#2563eb" />
       <meta name="msapplication-TileColor" content="#2563eb" />
       <meta name="format-detection" content="telephone=no" />
-      
+
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
+
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       <link rel="dns-prefetch" href="//www.facebook.com" />
       <link rel="dns-prefetch" href="//connect.facebook.net" />
     </Head>
-  )
+  );
 }

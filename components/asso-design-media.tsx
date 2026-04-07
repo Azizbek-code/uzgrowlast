@@ -418,7 +418,7 @@ export function AssoDesignMedia() {
             </div>
             <div className="flex flex-col items-center">
               <Mail className="h-8 w-8 mb-2" />
-              <span>uzgrow@gmail.com</span>
+              <span>uzgrrow@gmail.com</span>
             </div>
             <div className="flex flex-col items-center">
               <Phone className="h-8 w-8 mb-2" />

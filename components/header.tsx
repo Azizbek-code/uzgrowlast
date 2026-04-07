@@ -56,32 +56,26 @@ export function Header() {
             : "bg-muted/50 border-border",
         )}
       >
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10">
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <a
                 href="tel:+998555152233"
-                className={cn(
-                  "flex items-center gap-2 text-sm transition-colors",
-                  showTransparent
-                    ? "text-black/80 hover:text-white"
-                    : "text-gray-700 hover:text-gray-900",
-                )}
+                className="flex items-center gap-2 text-sm sm:text-base transition-colors"
               >
-                <Phone className="w-3.5 h-3.5" />
-                +998 55 515 22 33
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="hidden sm:inline text-xs sm:text-sm">
+                  +998 55 515 22 33
+                </span>
               </a>
               <a
-                href="mailto:uzgrow@gmail.com"
-                className={cn(
-                  "flex items-center gap-2 text-sm transition-colors",
-                  showTransparent
-                    ? "text-black/80 hover:text-white"
-                    : "text-gray-700 hover:text-gray-900",
-                )}
+                href="mailto:uzgrrow@gmail.com"
+                className="flex items-center gap-2 text-sm sm:text-base transition-colors"
               >
-                <Mail className="w-3.5 h-3.5" />
-                uzgrow@gmail.com
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="hidden sm:inline text-xs sm:text-sm">
+                  uzgrrow@gmail.com
+                </span>
               </a>
             </div>
 
@@ -222,11 +216,11 @@ export function Header() {
                   +998 55 515 22 33
                 </a>
                 <a
-                  href="mailto:uzgrow@gmail.com"
+                  href="mailto:uzgrrow@gmail.com"
                   className="flex items-center gap-2 text-sm text-muted-foreground"
                 >
                   <Mail className="w-4 h-4 text-primary" />
-                  uzgrow@gmail.com
+                  uzgrrow@gmail.com
                 </a>
               </div>
 

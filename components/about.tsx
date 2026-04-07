@@ -92,7 +92,7 @@ export function About() {
                 poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%2391bf65'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle'%3EUZ-GROW%3C/text%3E%3C/svg%3E"
               >
                 <source
-                  src="https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302096/FeHK2XpaBormS6BB4RJX_r_jqxaZ8CwE_xchfqo.mp4"
+                  src="https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302096/FeHK2XpaBormS6BB4RJX_r_jqxaZ8CwE_xchfqo.mp4?w_1920&h_1080&f_auto&c_limit&cs_srgb&dpr_auto&fl_lossy"
                   type="video/mp4"
                 />
                 Sizning brauzeringiz video qo'llab-quvvatlamaydi.
@@ -116,7 +116,7 @@ export function About() {
               Biz haqimizda
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-              4 yildan ortiq oilaviy kompaniya 3 ta mamlakatda sizning
+              4 yildan ortiq  kompaniya 3 ta mamlakatda sizning
               yoningizda
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">

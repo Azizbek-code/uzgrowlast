@@ -10,15 +10,15 @@
 export const emailConfig = {
   // Replace with your EmailJS service ID
   serviceId: 'YOUR_SERVICE_ID',
-  
+
   // Replace with your EmailJS template ID
   templateId: 'YOUR_TEMPLATE_ID',
-  
+
   // Replace with your EmailJS public key
   publicKey: 'YOUR_PUBLIC_KEY',
-  
+
   // Email that will receive the form submissions
-  recipientEmail: 'uzgrow@gmail.com'
+  recipientEmail: 'uzgrrow@gmail.com'
 }
 
 // Example Email Template:

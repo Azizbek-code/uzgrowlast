@@ -14,7 +14,17 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Services() {
   const [activeService, setActiveService] = useState(0);
+  const [activeImage, setActiveImage] = useState(0);
   const { t } = useLanguage();
+
+  // Auto-rotate images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImage((prev) => (prev + 1) % 5);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [activeService]);
 
   const services = [
     {
@@ -29,7 +39,7 @@ export function Services() {
         t("services.engineeringFeatures.3"),
       ],
       image:
-        "https://certhon.com/wp-content/uploads/2021/10/turnkeygreenhouses.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469214/38_2_wy9ces.jpg",
     },
     {
       icon: Settings,
@@ -43,21 +53,7 @@ export function Services() {
         t("services.equipmentFeatures.3"),
       ],
       image:
-        "https://m.media-amazon.com/images/I/51e8xMOkJQL._AC_SR290,290_.jpg",
-    },
-    {
-      icon: Cpu,
-      title: t("services.consulting"),
-      shortDesc: t("services.consultingDesc"),
-      description: t("services.consultingFullDesc"),
-      features: [
-        t("services.consultingFeatures.0"),
-        t("services.consultingFeatures.1"),
-        t("services.consultingFeatures.2"),
-        t("services.consultingFeatures.3"),
-      ],
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF7Cgq6dpL4s9x9ipW3yZ5Zuxc68DF9vlBlg&s",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/37_2_ggepkx.jpg",
     },
   ];
 
@@ -97,14 +93,39 @@ export function Services() {
 
         {/* Active Service Display */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Image */}
+          {/* Left: Image Slider */}
           <div className="relative group">
             <div className="aspect-video rounded-2xl overflow-hidden bg-muted">
-              <img
-                src={services[activeService].image}
-                alt={services[activeService].title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className="flex transition-transform duration-500 ease-in-out">
+                {[1, 2, 3, 4, 5].map((index) => (
+                  <img
+                    key={index}
+                    src={`/images/service-${activeService}-${index + 1}.jpg`}
+                    alt={`${services[activeService].title} - Image ${index}`}
+                    className={`w-full h-full object-cover transition-opacity duration-300 ${
+                      index === activeImage ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Slider Indicators */}
+            <div className="absolute bottom-4 left-1/2 right-1/2 flex justify-center gap-2">
+              {[1, 2, 3, 4, 5].map((index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveImage(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === activeImage
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-white/50 hover:bg-white text-muted-foreground"
+                  }`}
+                  aria-label={`Go to image ${index + 1}`}
+                >
+                  <span className="sr-only">{index + 1}</span>
+                </button>
+              ))}
             </div>
             {/* Decorative elements */}
             <div className="absolute -z-10 -bottom-6 -left-6 w-full h-full rounded-2xl bg-primary/10" />
@@ -136,17 +157,6 @@ export function Services() {
                   <span className="text-foreground">{feature}</span>
                 </div>
               ))}
-            </div>
-
-            {/* CTA */}
-            <div className="pt-6">
-              <a
-                href="#aloqa"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
-              >
-                {t("common.contact")}
-                <ArrowRight className="w-4 h-4" />
-              </a>
             </div>
           </div>
         </div>

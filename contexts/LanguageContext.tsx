@@ -18,7 +18,6 @@ interface LanguageContextType {
 
 const translations = {
   uz: {
-    // Navigation
     nav: {
       home: "Bosh sahifa",
       greenhouse: "Issiqxona turlari",
@@ -27,7 +26,6 @@ const translations = {
       contact: "Aloqa",
       language: "Til tanlang",
     },
-    // Common
     common: {
       readMore: "Batafsil ma'lumot",
       contact: "Aloqa",
@@ -40,7 +38,6 @@ const translations = {
       category: "Kategoriya",
       all: "Barchasi",
     },
-    // Home
     hero: {
       title: "Zamonaviy Issiqxona Yechimlari",
       subtitle: "O'zbekistonning yetakchi agro-injiniring kompaniyasi",
@@ -48,7 +45,6 @@ const translations = {
         "Biz eng zamonaviy issiqxona texnologiyalarini joriy etamiz va qishloq xo'jaligini rivojlantiramiz",
       cta: "Bog'lanish",
     },
-    // About
     about: {
       title: "Biz haqimizda",
       subtitle: "15+ yillik tajriba",
@@ -60,7 +56,6 @@ const translations = {
       countries: "Davlatlar",
       values: ["Sifat", "Innovatsiya", "Ishonch", "Uzoq muddatli hamkorlik"],
     },
-    // Services
     services: {
       title: "Xizmatlar",
       subtitle: "To'liq aylanma xizmatlar",
@@ -98,7 +93,6 @@ const translations = {
         "Biznes model yaratish",
       ],
     },
-    // Projects
     projects: {
       title: "Loyihalar",
       subtitle: "Muvaffaqiyatli issiqxona loyihalari",
@@ -146,9 +140,8 @@ const translations = {
       viewGallery: "Galereyani ko'rish",
       close: "Yopish",
     },
-    // Team
     team: {
-      title: "Bizning Jamoa",
+      title: "Bizning jamoa",
       subtitle: "Kuchli va tajribali mutaxassislar",
       ourTeam: "Bizning jamoa",
       experience: "Tajriba",
@@ -156,8 +149,39 @@ const translations = {
       education: "Ta'lim",
       skills: "Ko'nikmalar",
       contact: "Aloqa",
+      members: {
+        rustamjon: {
+          name: "Rustamjon Rahmonov",
+          position: "Asoschisi va bosh direktori",
+          bio: "O'zbek innovatori va agrar tadbirkor. 2017 yildan beri Markaziy Osiyodagi minglab fermerlar va agrar tadbirkorlarga ma'lumot, ishonch va natijalar keltirmoqda.",
+        },
+        azizbek: {
+          name: "Azizbek Karimov",
+          position: "Texnik direktor",
+          bio: "Issiqxona qurilishi va texnologiyalari bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonaviy agrar texnologiyalarni joriy etadi.",
+        },
+        abdulloh: {
+          name: "Abdurasulov Abdulloh Sheraliyevich",
+          position: "Sotuv bo'limi boshlig'i",
+          bio: "6+ yillik tajribaga ega sotuv mutaxassisi. ROODELL'da sotuv hajmini 2 mlrd dan 13 mlrd so'mga oshirdi va 10 kishilik professional jamoa tuzdi.",
+        },
+        alisher: {
+          name: "Majidov Alisher",
+          position: "Marketing mutaxassisi",
+          bio: "10+ yillik tajribaga ega marketing mutaxassisi. 16 ta muvaffaqiyatli loyihani amalga oshirdi. Zamonaviy marketing strategiyalari va brend rivojlantirish bo'yicha chuqur bilimga ega.",
+        },
+        gulbaxor: {
+          name: "Gulbaxor Karaboyeva",
+          position: "Moliya direktori",
+          bio: "Moliya va boshqaruv bo'yicha tajribali mutaxassis. Moliyaviy strategiyalar ishlab chiqish va byudjetni boshqarish bo'yicha keng tajribaga ega.",
+        },
+        dilshod: {
+          name: "Dilshod Jo'rayev",
+          position: "Loyiha menejeri",
+          bio: "Yirik loyihalarni boshqarish va nazorat qilish bo'yicha mutaxassis. Muvaffaqiyatli loyihalarni o'z vaqtida amalga oshirishni ta'minlaydi.",
+        },
+      },
     },
-    // Greenhouse Types
     greenhouse: {
       title: "Issiqxona turlari",
       subtitle: "Har bir ekin uchun optimal yechim",
@@ -166,7 +190,7 @@ const translations = {
       glass: {
         title: "Shisha issiqxona",
         description:
-          "Yorug'likni yaxshi o'tkazadi, mustahkam, lekin qurilish xarajati yuqori.",
+          "Yorug'likni yaxshi o'tkazadi, mustahkam lekin qurilish xarajati yuqori.",
         features: [
           "Maksimal yorug'lik",
           "Uzoq muddatli",
@@ -179,51 +203,70 @@ const translations = {
       },
       polycarbonate: {
         title: "Polikarbonat issiqxona",
-        description:
-          "Yengil, arzon, yaxshi izolyatsiya qiladi, lekin shishagacha chidaymaydi.",
-        features: ["Yengil", "Arzon", "Yaxshi izolyatsiya"],
+        description: "Yengil, arzon va samaradorli. Ko'p yillar xizmat qiladi.",
+        features: ["Yengil material", "Yaxshi izolyatsiya", "Tez o'rnatish"],
         complexity: "O'rtacha",
         durability: "10-15 yil",
         cost: "O'rtacha",
         maintenance: "Oson",
       },
-      tunnel: {
-        title: "Tunnel issiqxona",
+      film: {
+        title: "Plyonka issiqxona",
         description:
-          "Soddadir, arzon, tez o'rnatiladi, lekin uzoq muddatga chidamli emas.",
-        features: ["Soddadir", "Arzon", "Tez o'rnatiladi"],
+          "Soddadir, arzon va tez o'rnatiladi. Uzoq muddatga chidamaydi.",
+        features: ["Arzon narx", "Tez o'rnatish", "Portativ"],
         complexity: "Past",
         durability: "5-8 yil",
         cost: "Past",
         maintenance: "Oson",
       },
-      industrial: {
-        title: "Sanoat issiqxonasi",
+      mini: {
+        title: "Mini issiqxona",
         description:
-          "Katta maydonlar uchun, avtomatlashtirilgan, yuqori samaradorlik.",
-        features: [
-          "Katta maydonlar",
-          "Avtomatlashtirilgan",
-          "Yuqori samaradorlik",
-        ],
-        complexity: "Yuqori",
-        durability: "25+ yil",
-        cost: "Yuqori",
-        maintenance: "Murakkab",
+          "Kichik hajmli, arzon va uy uchun ideal. Yangi boshlanuvchilar uchun.",
+        features: ["Kichik hajm", "Uy uchun ideal", "Oson boshqarish"],
+        complexity: "Past",
+        durability: "3-5 yil",
+        cost: "Past",
+        maintenance: "Juda oson",
       },
-      hydroponic: {
-        title: "Gidroponik issiqxona",
+      oddiy: {
+        title: "Oddiy issiqxona",
         description:
-          "Suvsiz o'stirish, yuqori hosildorlik, zamonaviy texnologiya.",
+          "Oddiy shaklda, arzon va ishonchasi oson. Kichik dehqonlar uchun.",
+        features: ["Oddiy shakl", "Ishonchasi oson", "Ko'p material"],
+        complexity: "Past",
+        durability: "3-7 yil",
+        cost: "Past",
+        maintenance: "Oson",
+      },
+      gektar: {
+        title: "Gektar issiqxona",
+        description:
+          "Katta maydonlar uchun, mustahkam konstruktsiya. Yuqori hosildorlik.",
         features: [
-          "Suvsiz o'stirish",
+          "Katta maydon",
+          "Mustahkam konstruktsiya",
           "Yuqori hosildorlik",
-          "Zamonaviy texnologiya",
         ],
         complexity: "Yuqori",
         durability: "15-20 yil",
         cost: "Yuqori",
         maintenance: "Murakkab",
+      },
+      polikarbanat: {
+        title: "Polikarbonat issiqxona",
+        description:
+          "Kengaytirilgan polikarbonat, yuqori izolyatsiya va mustahkamlik. Yirik loyihalar uchun.",
+        features: [
+          "Kengaytirilgan polikarbonat",
+          "Yuqori izolyatsiya",
+          "Katta maydonlar uchun",
+        ],
+        complexity: "Yuqori",
+        durability: "15-20 yil",
+        cost: "Yuqori",
+        maintenance: "O'rtacha",
       },
       vertical: {
         title: "Vertikal issiqxona",
@@ -263,7 +306,6 @@ const translations = {
         consult: "Mutaxassis bilan maslahatlashish",
       },
     },
-    // Contact
     contact: {
       title: "Aloqa",
       subtitle: "Biz bilan bog'laning",
@@ -305,8 +347,8 @@ const translations = {
       },
     },
   },
+
   ru: {
-    // Navigation
     nav: {
       home: "Главная",
       greenhouse: "Типы теплиц",
@@ -315,7 +357,6 @@ const translations = {
       contact: "Контакты",
       language: "Выберите язык",
     },
-    // Common
     common: {
       readMore: "Подробнее",
       contact: "Контакты",
@@ -328,7 +369,6 @@ const translations = {
       category: "Категория",
       all: "Все",
     },
-    // Home
     hero: {
       title: "Современные тепличные решения",
       subtitle: "Ведущая агроинжиниринговая компания Узбекистана",
@@ -336,7 +376,6 @@ const translations = {
         "Мы внедряем самые современные тепличные технологии и развиваем сельское хозяйство",
       cta: "Связаться",
     },
-    // About
     about: {
       title: "О нас",
       subtitle: "15+ лет опыта",
@@ -348,7 +387,6 @@ const translations = {
       countries: "Страны",
       values: ["Качество", "Инновации", "Доверие", "Долгосрочное партнерство"],
     },
-    // Services
     services: {
       title: "Услуги",
       subtitle: "Полный цикл услуг",
@@ -384,6 +422,55 @@ const translations = {
         "Техническая документация",
         "Экспортные направления",
         "Создание бизнес-модели",
+      ],
+    },
+    projects: {
+      title: "Проекты",
+      subtitle: "Успешные тепличные проекты",
+      description: "Президентские визиты и сельскохозяйственные проекты",
+      categories: {
+        all: "Все",
+        presidential: "Президентский визит",
+        international: "Международное сотрудничество",
+        greenhouse: "Теплица",
+        agriculture: "Сельское хозяйство",
+      },
+      vodiy: {
+        title: "Проекты Водий",
+        location: "Водий",
+        size: "7 теплиц",
+        description:
+          "Комплекс из 7 современных теплиц, построенных в регионе Водий. Оснащены различными размерами и технологиями.",
+        year: "2022-2024",
+      },
+      samarqand: {
+        title: "Проекты Самарканда",
+        location: "Самарканд",
+        size: "2 теплицы",
+        description:
+          "2 крупные теплицы, построенные в Самаркандской области. Предназначены для президентских визитов и встреч с предпринимателями.",
+        year: "2024",
+      },
+      international: {
+        title: "Международные проекты",
+        location: "Международный",
+        size: "5 теплиц",
+        description:
+          "5 теплиц, построенных для международных клиентов. Современные решения по европейским стандартам.",
+        year: "2023-2024",
+      },
+      agriculture: {
+        title: "Сельскохозяйственные проекты",
+        location: "Сельское хозяйство",
+        size: "3 теплицы",
+        description:
+          "3 теплицы, построенные для развития сельского хозяйства. Современные системы орошения и климат-контроля.",
+        year: "2024",
+      },
+      viewProject: "Подробнее",
+      viewGallery: "Смотреть галерею",
+      close: "Закрыть",
+    },
     team: {
       title: "Наша команда",
       subtitle: "Сильные и опытные специалисты",
@@ -393,49 +480,39 @@ const translations = {
       education: "Образование",
       skills: "Навыки",
       contact: "Контакты",
-    },
-    // Contact
-    contact: {
-      title: "Контакты",
-      subtitle: "Свяжитесь с нами",
-      formTitle: "Отправить сообщение",
-      name: "Имя",
-      namePlaceholder: "Введите ваше имя",
-      phone: "Телефон",
-      phonePlaceholder: "+998 XX XXX XX XX",
-      email: "Email",
-      emailPlaceholder: "email@example.com",
-      service: "Тип услуги",
-      servicePlaceholder: "Выберите услугу",
-      message: "Сообщение",
-      messagePlaceholder: "Напишите ваше сообщение...",
-      send: "Отправить",
-      sending: "Отправка...",
-      success: "Сообщение отправлено!",
-      successMessage: "Мы свяжемся с вами в ближайшее время",
-      newMessage: "Новое сообщение",
-      infoTitle: "Контактная информация",
-      workingHours: "Время работы",
-      workingHoursDesc: "Свяжитесь с нами",
-      monday: "Понедельник",
-      friday: "Пятница",
-      saturday: "Суббота",
-      sunday: "Воскресенье",
-      closed: "Выходной",
-      socialMedia: "Социальные сети",
-      followUs: "Присоединяйтесь к нам в социальных сетях",
-      location: "Адрес",
-      getDirections: "Построить маршрут",
-      copyAddress: "Скопировать адрес",
-      services: {
-        turnkey: "Строительство теплиц под ключ",
-        engineering: "Агроинжиниринг",
-        equipment: "Оборудование",
-        consulting: "Агроконсалтинг",
-        investment: "Инвестиции",
+      members: {
+        rustamjon: {
+          name: "Рустамжон Рахмонов",
+          position: "Основатель и генеральный директор",
+          bio: "Узбекский инноватор и аграрный предприниматель. С 2017 года приносит информацию, доверие и результаты для тысяч фермеров и аграрных предпринимателей в Центральной Азии.",
+        },
+        azizbek: {
+          name: "Азизбек Каримов",
+          position: "Технический директор",
+          bio: "Специалист по строительству теплиц и технологиям. С 10+ летним опытом внедряет современные аграрные технологии.",
+        },
+        abdulloh: {
+          name: "Абдурасулов Абдуллох Шералиевич",
+          position: "Руководитель отдела продаж",
+          bio: "Специалист по продажам с 6+ летним опытом. В ROODELL увеличил объем продаж с 2 млрд. до 13 млрд. сум и построил команду из 10 профессионалов.",
+        },
+        alisher: {
+          name: "Маджидов Алишер",
+          position: "Специалист по маркетингу",
+          bio: "Специалист по маркетингу с 10+ летним опытом. Реализовал 16 успешных проектов. Глубокие знания в современных маркетинговых стратегиях и развитии брендов.",
+        },
+        gulbaxor: {
+          name: "Гульбахор Карабоева",
+          position: "Финансовый директор",
+          bio: "Опытный специалист по финансам и управлению. Широкий опыт в разработке финансовых стратегий и управлении бюджетом.",
+        },
+        dilshod: {
+          name: "Дильшод Джураев",
+          position: "Менеджер проектов",
+          bio: "Специалист по управлению и контролю крупных проектов. Обеспечивает своевременную реализацию успешных проектов.",
+        },
       },
     },
-    // Greenhouse Types
     greenhouse: {
       title: "Типы теплиц",
       subtitle: "Оптимальное решение для каждой культуры",
@@ -492,9 +569,9 @@ const translations = {
       hydroponic: {
         title: "Гидропонная теплица",
         description:
-          "Безпочвенное выращивание, высокая урожайность, современная технология.",
+          "Беспочвенное выращивание, высокая урожайность, современная технология.",
         features: [
-          "Безпочвенное выращивание",
+          "Беспочвенное выращивание",
           "Высокая урожайность",
           "Современная технология",
         ],
@@ -516,6 +593,63 @@ const translations = {
         durability: "10-15 лет",
         cost: "Высокая",
         maintenance: "Сложное",
+      },
+      film: {
+        title: "Пленочная теплица",
+        description: "Простая, доступная, быстрая установка, но недолговечная.",
+        features: ["Дешевизна", "Быстрая установка", "Переносная"],
+        complexity: "Низкая",
+        durability: "5-8 лет",
+        cost: "Низкая",
+        maintenance: "Легко",
+      },
+      mini: {
+        title: "Мини-теплица",
+        description:
+          "Маленькая, доступная, идеальна для дома. Отлично для начинающих.",
+        features: ["Маленький размер", "Идеальна для дома", "Простая сборка"],
+        complexity: "Низкая",
+        durability: "3-5 лет",
+        cost: "Низкая",
+        maintenance: "Очень легко",
+      },
+      oddiy: {
+        title: "Обычная теплица",
+        description:
+          "Обычная форма, доступная, простая в обслуживании. Отлично для небольших участков.",
+        features: ["Обычная форма", "Простое обслуживание", "Много материалов"],
+        complexity: "Низкая",
+        durability: "3-7 лет",
+        cost: "Низкая",
+        maintenance: "Легко",
+      },
+      gektar: {
+        title: "Гектарная теплица",
+        description:
+          "Для больших площадей, надежная конструкция, высокая урожайность.",
+        features: [
+          "Большая площадь",
+          "Надежная конструкция",
+          "Высокая урожайность",
+        ],
+        complexity: "Высокая",
+        durability: "15-20 лет",
+        cost: "Высокая",
+        maintenance: "Сложно",
+      },
+      polikarbanat: {
+        title: "Поликарбонатная теплица",
+        description:
+          "Усовершенствованный поликарбонат, превосходная теплоизоляция, отличные характеристики. Идеально для круглогодичного выращивания.",
+        features: [
+          "Усовершенствованный поликарбонат",
+          "Превосходная теплоизоляция",
+          "Отличные характеристики",
+        ],
+        complexity: "Высокая",
+        durability: "15-20 лет",
+        cost: "Высокая",
+        maintenance: "Умеренно",
       },
       comparison: {
         title: "Сравнительная таблица",
@@ -541,9 +675,49 @@ const translations = {
         consult: "Консультация со специалистом",
       },
     },
+    contact: {
+      title: "Контакты",
+      subtitle: "Свяжитесь с нами",
+      formTitle: "Отправить сообщение",
+      name: "Имя",
+      namePlaceholder: "Введите ваше имя",
+      phone: "Телефон",
+      phonePlaceholder: "+998 XX XXX XX XX",
+      email: "Email",
+      emailPlaceholder: "email@example.com",
+      service: "Тип услуги",
+      servicePlaceholder: "Выберите услугу",
+      message: "Сообщение",
+      messagePlaceholder: "Напишите ваше сообщение...",
+      send: "Отправить",
+      sending: "Отправка...",
+      success: "Сообщение отправлено!",
+      successMessage: "Мы свяжемся с вами в ближайшее время",
+      newMessage: "Новое сообщение",
+      infoTitle: "Контактная информация",
+      workingHours: "Время работы",
+      workingHoursDesc: "Свяжитесь с нами",
+      monday: "Понедельник",
+      friday: "Пятница",
+      saturday: "Суббота",
+      sunday: "Воскресенье",
+      closed: "Выходной",
+      socialMedia: "Социальные сети",
+      followUs: "Присоединяйтесь к нам в социальных сетях",
+      location: "Адрес",
+      getDirections: "Построить маршрут",
+      copyAddress: "Скопировать адрес",
+      services: {
+        turnkey: "Строительство теплиц под ключ",
+        engineering: "Агроинжиниринг",
+        equipment: "Оборудование",
+        consulting: "Агроконсалтинг",
+        investment: "Инвестиции",
+      },
+    },
   },
+
   en: {
-    // Navigation
     nav: {
       home: "Home",
       greenhouse: "Greenhouse Types",
@@ -552,7 +726,6 @@ const translations = {
       contact: "Contact",
       language: "Choose Language",
     },
-    // Common
     common: {
       readMore: "Read More",
       contact: "Contact",
@@ -565,7 +738,6 @@ const translations = {
       category: "Category",
       all: "All",
     },
-    // Home
     hero: {
       title: "Modern Greenhouse Solutions",
       subtitle: "Leading agro-engineering company in Uzbekistan",
@@ -573,7 +745,6 @@ const translations = {
         "We implement the most modern greenhouse technologies and develop agriculture",
       cta: "Contact Us",
     },
-    // About
     about: {
       title: "About Us",
       subtitle: "15+ years of experience",
@@ -585,7 +756,6 @@ const translations = {
       countries: "Countries",
       values: ["Quality", "Innovation", "Trust", "Long-term partnership"],
     },
-    // Services
     services: {
       title: "Services",
       subtitle: "Full cycle services",
@@ -609,65 +779,67 @@ const translations = {
         "Climate control system",
         "Drip irrigation",
         "LED grow lights",
-        "Fertilization and irrigation system",
+        "O'g'itlash va sug'orish tizimi",
       ],
-      consulting: "Consulting",
-      consultingDesc: "Professional consultations and design",
+      consulting: "Konsalting",
+      consultingDesc: "Professional maslahatlar va loyihalash",
       consultingFullDesc:
-        "Our experienced specialists will offer you the best solutions. From design to full implementation",
+        "Bizning tajribali mutaxassislarimiz sizga eng yaxshi yechimlarni taklif qiladi. Loyihalashdan tortib to'liq ishga tushirishgacha.",
       consultingFeatures: [
-        "Inspection and analysis",
-        "3D modeling",
-        "Technical documentation",
-        "Export directions",
-        "Business model creation",
+        "Tekshiruv va tahlil",
+        "3D modellashtirish",
+        "Texnik hujjatlar",
+        "Eksport yo'nalishi",
+        "Biznes model yaratish",
       ],
     },
-    // Projects
     projects: {
       title: "Projects",
       subtitle: "Successful greenhouse projects",
-      description: "Presidential decrees and agricultural projects",
+      description: "Presidential visits and agricultural projects",
       categories: {
         all: "All",
-        presidential: "Presidential Decrees",
+        presidential: "Presidential Visit",
         international: "International Cooperation",
-        greenhouse: "Greenhouses",
+        greenhouse: "Greenhouse",
         agriculture: "Agriculture",
       },
       vodiy: {
-        title: "Water Projects",
-        location: "Water",
+        title: "Vodiy Projects",
+        location: "Vodiy",
         size: "7 greenhouses",
-        description: "7 modern greenhouses built in water area. Various sizes and technologies.",
+        description:
+          "A complex of 7 modern greenhouses built in the Vodiy region. Equipped with various sizes and technologies.",
         year: "2022-2024",
       },
       samarqand: {
         title: "Samarkand Projects",
         location: "Samarkand",
         size: "2 greenhouses",
-        description: "2 large greenhouses built in Samarkand region. For presidential decrees and meetings with entrepreneurs.",
+        description:
+          "2 large greenhouses built in the Samarkand region. Designed for presidential visits and meetings with entrepreneurs.",
         year: "2024",
       },
       international: {
         title: "International Projects",
         location: "International",
         size: "5 greenhouses",
-        description: "5 greenhouses built for international clients. Modern solutions according to European standards.",
+        description:
+          "5 greenhouses built for international clients. Modern solutions according to European standards.",
         year: "2023-2024",
       },
       agriculture: {
         title: "Agriculture Projects",
         location: "Agriculture",
         size: "3 greenhouses",
-        description: "3 greenhouses built for agricultural development. Modern irrigation and climate control systems.",
+        description:
+          "3 greenhouses built for agricultural development. Modern irrigation and climate control systems.",
         year: "2024",
       },
       viewProject: "View Details",
       viewGallery: "View Gallery",
       close: "Close",
     },
-    // Team
     team: {
       title: "Our Team",
       subtitle: "Strong and experienced specialists",
@@ -677,49 +849,39 @@ const translations = {
       education: "Education",
       skills: "Skills",
       contact: "Contact",
-    },
-    // Contact
-    contact: {
-      title: "Contact",
-      subtitle: "Get in touch",
-      formTitle: "Send Message",
-      name: "Name",
-      namePlaceholder: "Enter your name",
-      phone: "Phone",
-      phonePlaceholder: "+998 XX XXX XX XX",
-      email: "Email",
-      emailPlaceholder: "email@example.com",
-      service: "Service Type",
-      servicePlaceholder: "Select a service",
-      message: "Message",
-      messagePlaceholder: "Write your message...",
-      send: "Send",
-      sending: "Sending...",
-      success: "Message sent!",
-      successMessage: "We'll contact you soon",
-      newMessage: "New Message",
-      infoTitle: "Contact Information",
-      workingHours: "Working Hours",
-      workingHoursDesc: "Get in touch with us",
-      monday: "Monday",
-      friday: "Friday",
-      saturday: "Saturday",
-      sunday: "Sunday",
-      closed: "Closed",
-      socialMedia: "Social Media",
-      followUs: "Follow us on social media",
-      location: "Location",
-      getDirections: "Get Directions",
-      copyAddress: "Copy Address",
-      services: {
-        turnkey: "Turnkey Greenhouse Construction",
-        engineering: "Agro-engineering",
-        equipment: "Equipment",
-        consulting: "Agro-consulting",
-        investment: "Investment",
+      members: {
+        rustamjon: {
+          name: "Rustamjon Rahmonov",
+          position: "Founder and CEO",
+          bio: "Uzbek innovator and agricultural entrepreneur. Since 2017, he has been bringing information, trust and results to thousands of farmers and agricultural entrepreneurs in Central Asia.",
+        },
+        azizbek: {
+          name: "Azizbek Karimov",
+          position: "Technical Director",
+          bio: "Specialist in greenhouse construction and technologies. With 10+ years of experience, he implements modern agricultural technologies.",
+        },
+        abdulloh: {
+          name: "Abdurasulov Abdulloh Sheraliyevich",
+          position: "Head of Sales Department",
+          bio: "Sales specialist with 6+ years of experience. At ROODELL, he increased sales volume from 2 billion to 13 billion sum and built a 10-person professional team.",
+        },
+        alisher: {
+          name: "Majidov Alisher",
+          position: "Marketing Specialist",
+          bio: "Marketing specialist with 10+ years of experience. Implemented 16 successful projects. Deep knowledge in modern marketing strategies and brand development.",
+        },
+        gulbaxor: {
+          name: "Gulbaxor Karaboyeva",
+          position: "Financial Director",
+          bio: "Experienced specialist in finance and management. Extensive experience in developing financial strategies and budget management.",
+        },
+        dilshod: {
+          name: "Dilshod Jo'rayev",
+          position: "Project Manager",
+          bio: "Specialist in management and control of large-scale projects. Ensures timely implementation of successful projects.",
+        },
       },
     },
-    // Greenhouse Types
     greenhouse: {
       title: "Greenhouse Types",
       subtitle: "Optimal solution for every crop",
@@ -754,6 +916,58 @@ const translations = {
         durability: "5-8 years",
         cost: "Low",
         maintenance: "Easy",
+      },
+      film: {
+        title: "Film Greenhouse",
+        description: "Simple, affordable, quick setup, but not very durable.",
+        features: ["Affordable", "Quick setup", "Portable"],
+        complexity: "Low",
+        durability: "5-8 years",
+        cost: "Low",
+        maintenance: "Easy",
+      },
+      mini: {
+        title: "Mini Greenhouse",
+        description:
+          "Small size, affordable, ideal for home. Perfect for beginners.",
+        features: ["Small size", "Ideal for home", "Easy assembly"],
+        complexity: "Low",
+        durability: "3-5 years",
+        cost: "Low",
+        maintenance: "Very easy",
+      },
+      oddiy: {
+        title: "Standard Greenhouse",
+        description:
+          "Standard shape, affordable, easy maintenance. Perfect for small farms.",
+        features: ["Standard shape", "Easy maintenance", "Many materials"],
+        complexity: "Low",
+        durability: "3-7 years",
+        cost: "Low",
+        maintenance: "Easy",
+      },
+      gektar: {
+        title: "Hectare Greenhouse",
+        description: "For large areas, reliable construction, high yield.",
+        features: ["Large area", "Reliable construction", "High yield"],
+        complexity: "High",
+        durability: "15-20 years",
+        cost: "High",
+        maintenance: "Complex",
+      },
+      polikarbanat: {
+        title: "Polycarbonate Greenhouse",
+        description:
+          "Advanced polycarbonate, excellent insulation, great features. Ideal for year-round cultivation.",
+        features: [
+          "Advanced polycarbonate",
+          "Excellent insulation",
+          "Great features",
+        ],
+        complexity: "High",
+        durability: "15-20 years",
+        cost: "High",
+        maintenance: "Moderate",
       },
       industrial: {
         title: "Industrial Greenhouse",
@@ -802,6 +1016,46 @@ const translations = {
         business: "For Business",
         businessDesc: "Industrial, Hydroponic or Vertical - maximum efficiency",
         consult: "Consult with Specialist",
+      },
+    },
+    contact: {
+      title: "Contact",
+      subtitle: "Get in touch with us",
+      formTitle: "Send Message",
+      name: "Name",
+      namePlaceholder: "Enter your name",
+      phone: "Phone",
+      phonePlaceholder: "+998 XX XXX XX XX",
+      email: "Email",
+      emailPlaceholder: "email@example.com",
+      service: "Service Type",
+      servicePlaceholder: "Select a service",
+      message: "Message",
+      messagePlaceholder: "Write your message...",
+      send: "Send",
+      sending: "Sending...",
+      success: "Message sent!",
+      successMessage: "We'll contact you soon",
+      newMessage: "New Message",
+      infoTitle: "Contact Information",
+      workingHours: "Working Hours",
+      workingHoursDesc: "Get in touch with us",
+      monday: "Monday",
+      friday: "Friday",
+      saturday: "Saturday",
+      sunday: "Sunday",
+      closed: "Closed",
+      socialMedia: "Social Media",
+      followUs: "Follow us on social media",
+      location: "Location",
+      getDirections: "Get Directions",
+      copyAddress: "Copy Address",
+      services: {
+        turnkey: "Turnkey Greenhouse Construction",
+        engineering: "Agro-engineering",
+        equipment: "Equipment",
+        consulting: "Agro-consulting",
+        investment: "Investment",
       },
     },
   },

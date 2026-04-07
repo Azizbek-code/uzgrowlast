@@ -53,17 +53,17 @@ export function Footer() {
   return (
     <footer className="bg-[#1a1a1a] text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-6 lg:gap-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center font-bold text-2xl text-primary-foreground shadow-lg">
+          <div className="sm:col-span-1 lg:col-span-2">
+            <Link href="/" className="flex items-center gap-3 mb-6 sm:mb-4">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-xl flex items-center justify-center font-bold text-2xl text-primary-foreground shadow-lg">
                 UG
               </div>
               <div>
                 <span className="text-2xl font-bold block">UZ-GROW</span>
-                <span className="text-sm tracking-wider text-white/50">
+                <span className="text-sm sm:text-base tracking-wider text-white/50">
                   QURUVCHI FIRMASI
                 </span>
               </div>
@@ -72,107 +72,135 @@ export function Footer() {
               O&apos;zbekistonda zamonaviy issiqxona qurish va qurilish
               xizmatlari. Biz bilan kelajak bugun boshlanadi.
             </p>
-
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <a
-                href="tel:+998555152223"
-                className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>+998 55 515 22 23</span>
-              </a>
-              <a
-                href="https://wa.me/+998994352313"
-                className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
-              >
-                <Send className="w-4 h-4" />
-                <span>+998 99 435 23 13 (WhatsApp)</span>
-              </a>
-              <a
-                href="mailto:uzgrrow@gmail.com"
-                className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>uzgrrow@gmail.com</span>
-              </a>
-              <a
-                href="https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto"
-                className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
-              >
-                <MapPin className="w-4 h-4" />
-                <span>Toshkent, Rayhona ko'chasi 107-uy</span>
-              </a>
-            </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-semibold mb-6 text-lg">Xizmatlar</h4>
-            <ul className="space-y-3">
-              {footerLinks.xizmatlar.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Contact Info */}
+          <div className="space-y-3 sm:space-y-4">
+            <a
+              href="tel:+998555152223"
+              className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              <span>+998 55 515 22 23</span>
+            </a>
+            <a
+              href="https://wa.me/+998994352313"
+              className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+            >
+              <Send className="w-4 h-4" />
+              <span>+998 99 435 23 13 (WhatsApp)</span>
+            </a>
+            <a
+              href="mailto:uzgrrow@gmail.com"
+              className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              <span>uzgrrow@gmail.com</span>
+            </a>
+            <a
+              href="https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto"
+              className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+            >
+              <MapPin className="w-4 h-4" />
+              <span>Toshkent, Rayhona ko'chasi 107-uy</span>
+            </a>
+            <a
+              href="tel:+998555152223"
+              className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              <span>+998 55 515 22 23</span>
+            </a>
+            <a
+              href="https://wa.me/+998994352313"
+              className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+            >
+              <Send className="w-4 h-4" />
+              <span>+998 99 435 23 13 (WhatsApp)</span>
+            </a>
+            <a
+              href="mailto:uzgrrow@gmail.com"
+              className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+              <span>uzgrrow@gmail.com</span>
+            </a>
+            <a
+              href="https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto"
+              className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
+            >
+              <MapPin className="w-4 h-4" />
+              <span>Toshkent, Rayhona ko'chasi 107-uy</span>
+            </a>
           </div>
+        </div>
 
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold mb-6 text-lg">Kompaniya</h4>
-            <ul className="space-y-3">
-              {footerLinks.kompaniya.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
+        {/* Services */}
+        <div>
+          <h4 className="font-semibold mb-6 text-lg">Xizmatlar</h4>
+          <ul className="space-y-3">
+            {footerLinks.xizmatlar.map((link, index) => (
+              <li key={index}>
+                <Link
+                  href={link.href}
+                  className="text-white/70 hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Company */}
+        <div>
+          <h4 className="font-semibold mb-6 text-lg">Kompaniya</h4>
+          <ul className="space-y-3">
+            {footerLinks.kompaniya.map((link, index) => (
+              <li key={index}>
+                <Link
+                  href={link.href}
+                  className="text-white/70 hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Help */}
+        <div>
+          <h4 className="font-semibold mb-6 text-lg">Yordam</h4>
+          <ul className="space-y-3">
+            {footerLinks.yordam.map((link, index) => (
+              <li key={index}>
+                <Link
+                  href={link.href}
+                  className="text-white/70 hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Social Links */}
+          <div className="mt-8">
+            <h5 className="font-medium mb-4 text-sm text-white/50">
+              Bizni kuzating
+            </h5>
+            <div className="flex gap-3">
+              {socials.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors group"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
+                </a>
               ))}
-            </ul>
-          </div>
-
-          {/* Help */}
-          <div>
-            <h4 className="font-semibold mb-6 text-lg">Yordam</h4>
-            <ul className="space-y-3">
-              {footerLinks.yordam.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* Social Links */}
-            <div className="mt-8">
-              <h5 className="font-medium mb-4 text-sm text-white/50">
-                Bizni kuzating
-              </h5>
-              <div className="flex gap-3">
-                {socials.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors group"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
         </div>
