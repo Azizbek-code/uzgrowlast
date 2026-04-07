@@ -44,6 +44,64 @@ const translations = {
       description:
         "Biz eng zamonaviy issiqxona texnologiyalarini joriy etamiz va qishloq xo'jaligini rivojlantiramiz",
       cta: "Bog'lanish",
+      downloadCatalog: "Katalog yuklab olish",
+      slides: {
+        slide1: {
+          quote: "Biz har bir loyihani individual yondashuv bilan amalga oshiramiz va mijozlarimiz mamnuniyatini ta'minlaymiz.",
+          author: "UZ-GROW jamoasi",
+          role: "Agro-injiniring bo'yicha mutaxassislar",
+          cta: "Turnkey issiqxonalar",
+        },
+        slide2: {
+          quote: "Zamonaviy texnologiyalar va tajribali mutaxassislar jamoasi bilan yuqori hosildorlikka erishishingizni kafolatlaymiz.",
+          author: "Texnik bo'lim",
+          role: "Loyihalash va qurish",
+          cta: "Plastik issiqxonalar",
+        },
+        slide3: {
+          quote: "Energiya tejamkor va avtomatlashtirilgan tizimlar orqali xarajatlarni kamaytirib, daromadni oshiring.",
+          author: "Innovatsiya markazi",
+          role: "Zamonaviy yechimlar",
+          cta: "Shisha issiqxonalar",
+        },
+        slide4: {
+          quote: "Loyihalashdan tortib to'liq ishga tushirishgacha - biz bilan hamkorlik qiling va natijaga erishing.",
+          author: "Xizmatlar bo'limi",
+          role: "Kompleks yechimlar",
+          cta: "Jihozlar va tizimlar",
+        },
+      },
+      downloadCatalog: "Katalog yuklab olish",
+      slides: {
+        slide1: {
+          quote:
+            "Biz har bir loyihani individual yondashuv bilan amalga oshiramiz va mijozlarimiz mamnuniyatini ta'minlaymiz.",
+          author: "UZ-GROW jamoasi",
+          role: "Agro-injiniring bo'yicha mutaxassislar",
+          cta: "Turnkey issiqxonalar",
+        },
+        slide2: {
+          quote:
+            "Zamonaviy texnologiyalar va tajribali mutaxassislar jamoasi bilan yuqori hosildorlikka erishishingizni kafolatlaymiz.",
+          author: "Texnik bo'lim",
+          role: "Loyihalash va qurish",
+          cta: "Plastik issiqxonalar",
+        },
+        slide3: {
+          quote:
+            "Energiya tejamkor va avtomatlashtirilgan tizimlar orqali xarajatlarni kamaytirib, daromadni oshiring.",
+          author: "Innovatsiya markazi",
+          role: "Zamonaviy yechimlar",
+          cta: "Shisha issiqxonalar",
+        },
+        slide4: {
+          quote:
+            "Loyihalashdan tortib to'liq ishga tushirishgacha - biz bilan hamkorlik qiling va natijaga erishing.",
+          author: "Xizmatlar bo'limi",
+          role: "Kompleks yechimlar",
+          cta: "Jihozlar va tizimlar",
+        },
+      },
     },
     about: {
       title: "Biz haqimizda",
@@ -304,6 +362,41 @@ const translations = {
         businessDesc:
           "Sanoat, Gidroponik yoki Vertikal - maksimal samaradorlik",
         consult: "Mutaxassis bilan maslahatlashish",
+      },
+    },
+    technology: {
+      title: "Texnologiya",
+      subtitle: "Zamonaviy jihozlar va tizimlar",
+      description: "Eng ilg'or agro-texnologiyalar bilan ta'minlaymiz",
+      heating: {
+        title: "Isitish tizimi",
+        description:
+          "Zamonaviy isitish tizimlari orqali optimal haroratni ta'minlash va energiya tejash.",
+      },
+      ventilation: {
+        title: "Ventilyatsiya va sovutish",
+        description:
+          "Avtomatlashtirilgan ventilyatsiya va sovutish tizimlari yordamida iqlimni nazorat qilish.",
+      },
+      shelving: {
+        title: "Stelaj tizimi",
+        description:
+          "Vertikal stelajlar orqali joydan samarali foydalanish va hosildorlikni oshirish.",
+      },
+      led: {
+        title: "LED grow lights",
+        description:
+          "Energiya tejamkor LED yoritish tizimlari orqali yil davomida hosil olish.",
+      },
+      irrigation: {
+        title: "Sug'orish tizimi",
+        description:
+          "Tomchilatib sug'orish va gidroponika tizimlari yordamida suvni 90% gacha tejash.",
+      },
+      automation: {
+        title: "Avtomatlashtirish",
+        description:
+          "IoT sensorlar va AI algoritmlari yordamida iqlimni avtomatik boshqarish.",
       },
     },
     contact: {
@@ -715,6 +808,41 @@ const translations = {
         investment: "Инвестиции",
       },
     },
+    technology: {
+      title: "Technology",
+      subtitle: "Modern equipment and systems",
+      description: "We provide the most advanced agro-technologies",
+      heating: {
+        title: "Heating System",
+        description:
+          "Modern heating systems to ensure optimal temperature and energy savings.",
+      },
+      ventilation: {
+        title: "Ventilation and Cooling",
+        description:
+          "Automated ventilation and cooling systems for climate control.",
+      },
+      shelving: {
+        title: "Shelving System",
+        description:
+          "Vertical shelving for efficient space utilization and increased yields.",
+      },
+      led: {
+        title: "LED grow lights",
+        description:
+          "Energy-efficient LED lighting systems for year-round harvesting.",
+      },
+      irrigation: {
+        title: "Irrigation System",
+        description:
+          "Drip irrigation and hydroponic systems to save up to 90% water.",
+      },
+      automation: {
+        title: "Automation",
+        description:
+          "IoT sensors and AI algorithms for automatic climate control.",
+      },
+    },
   },
 
   en: {
@@ -744,6 +872,33 @@ const translations = {
       description:
         "We implement the most modern greenhouse technologies and develop agriculture",
       cta: "Contact Us",
+      downloadCatalog: "Download Catalog",
+      slides: {
+        slide1: {
+          quote: "We implement each project with an individual approach and ensure customer satisfaction.",
+          author: "UZ-GROW Team",
+          role: "Agro-engineering Specialists",
+          cta: "Turnkey Greenhouses",
+        },
+        slide2: {
+          quote: "Achieve high yields with modern technologies and an experienced team of specialists.",
+          author: "Technical Department",
+          role: "Design and Construction",
+          cta: "Plastic Greenhouses",
+        },
+        slide3: {
+          quote: "Reduce costs and increase revenue with energy-efficient and automated systems.",
+          author: "Innovation Center",
+          role: "Modern Solutions",
+          cta: "Glass Greenhouses",
+        },
+        slide4: {
+          quote: "From design to full implementation - partner with us and achieve results.",
+          author: "Services Department",
+          role: "Integrated Solutions",
+          cta: "Equipment and Systems",
+        },
+      },
     },
     about: {
       title: "About Us",
@@ -779,18 +934,18 @@ const translations = {
         "Climate control system",
         "Drip irrigation",
         "LED grow lights",
-        "O'g'itlash va sug'orish tizimi",
+        "Fertilization and irrigation system",
       ],
-      consulting: "Konsalting",
-      consultingDesc: "Professional maslahatlar va loyihalash",
+      consulting: "Consulting",
+      consultingDesc: "Professional consulting and design",
       consultingFullDesc:
-        "Bizning tajribali mutaxassislarimiz sizga eng yaxshi yechimlarni taklif qiladi. Loyihalashdan tortib to'liq ishga tushirishgacha.",
+        "Our experienced specialists offer you the best solutions. From design to full implementation.",
       consultingFeatures: [
-        "Tekshiruv va tahlil",
-        "3D modellashtirish",
-        "Texnik hujjatlar",
-        "Eksport yo'nalishi",
-        "Biznes model yaratish",
+        "Inspection and analysis",
+        "3D modeling",
+        "Technical documentation",
+        "Export directions",
+        "Business model creation",
       ],
     },
     projects: {
@@ -1108,3 +1263,38 @@ export function useLanguage() {
   }
   return context;
 }
+  en: {
+    hero: {
+      title: "Modern Greenhouse Solutions",
+      subtitle: "Leading agro-engineering company in Uzbekistan",
+      description: "We implement the most modern greenhouse technologies and develop agriculture",
+      cta: "Contact Us",
+      downloadCatalog: "Download Catalog",
+      slides: {
+        slide1: {
+          quote: "We implement each project with an individual approach and ensure customer satisfaction.",
+          author: "UZ-GROW Team",
+          role: "Agro-engineering Specialists",
+          cta: "Turnkey Greenhouses",
+        },
+        slide2: {
+          quote: "Achieve high yields with modern technologies and an experienced team of specialists.",
+          author: "Technical Department",
+          role: "Design and Construction",
+          cta: "Plastic Greenhouses",
+        },
+        slide3: {
+          quote: "Reduce costs and increase revenue with energy-efficient and automated systems.",
+          author: "Innovation Center",
+          role: "Modern Solutions",
+          cta: "Glass Greenhouses",
+        },
+        slide4: {
+          quote: "From design to full implementation - partner with us and achieve results.",
+          author: "Services Department",
+          role: "Integrated Solutions",
+          cta: "Equipment and Systems",
+        },
+      },
+    },
+  },

@@ -13,37 +13,33 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const slides = [
+const getSlides = (t: (key: string) => string) => [
   {
-    quote:
-      "Biz har bir loyihani individual yondashuv bilan amalga oshiramiz va mijozlarimiz mamnuniyatini ta'minlaymiz.",
-    author: "UZ-GROW jamoasi",
-    role: "Agro-injiniring bo'yicha mutaxassislar",
-    cta: "Turnkey issiqxonalar",
+    quoteKey: "hero.slides.slide1.quote",
+    authorKey: "hero.slides.slide1.author",
+    roleKey: "hero.slides.slide1.role",
+    ctaKey: "hero.slides.slide1.cta",
     link: "#xizmatlar",
   },
   {
-    quote:
-      "Zamonaviy texnologiyalar va tajribali mutaxassislar jamoasi bilan yuqori hosildorlikka erishishingizni kafolatlaymiz.",
-    author: "Texnik bo'lim",
-    role: "Loyihalash va qurish",
-    cta: "Plastik issiqxonalar",
+    quoteKey: "hero.slides.slide2.quote",
+    authorKey: "hero.slides.slide2.author",
+    roleKey: "hero.slides.slide2.role",
+    ctaKey: "hero.slides.slide2.cta",
     link: "#xizmatlar",
   },
   {
-    quote:
-      "Energiya tejamkor va avtomatlashtirilgan tizimlar orqali xarajatlarni kamaytirib, daromadni oshiring.",
-    author: "Innovatsiya markazi",
-    role: "Zamonaviy yechimlar",
-    cta: "Shisha issiqxonalar",
+    quoteKey: "hero.slides.slide3.quote",
+    authorKey: "hero.slides.slide3.author",
+    roleKey: "hero.slides.slide3.role",
+    ctaKey: "hero.slides.slide3.cta",
     link: "#xizmatlar",
   },
   {
-    quote:
-      "Loyihalashdan tortib to'liq ishga tushirishgacha - biz bilan hamkorlik qiling va natijaga erishing.",
-    author: "Xizmatlar bo'limi",
-    role: "Kompleks yechimlar",
-    cta: "Jihozlar va tizimlar",
+    quoteKey: "hero.slides.slide4.quote",
+    authorKey: "hero.slides.slide4.author",
+    roleKey: "hero.slides.slide4.role",
+    ctaKey: "hero.slides.slide4.cta",
     link: "#texnologiya",
   },
 ];
@@ -51,13 +47,14 @@ const slides = [
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useLanguage();
+  const slides = getSlides(t);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () =>
@@ -84,7 +81,7 @@ export function Hero() {
         ></video>
       </div>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/20 to-black/30" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/30 via-black/20 to-black/30" />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 lg:px-8 pt-24 pb-12">
@@ -114,17 +111,19 @@ export function Hero() {
                 }`}
               >
                 <blockquote className="text-xl md:text-2xl text-white/90 font-light italic mb-6 text-pretty">
-                  &ldquo;{slide.quote}&rdquo;
+                  &ldquo;{t(slide.quoteKey)}&rdquo;
                 </blockquote>
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center border border-white/20">
                     <span className="text-white font-bold text-lg">
-                      {slide.author.charAt(0)}
+                      {t(slide.authorKey).charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <p className="text-white font-semibold">{slide.author}</p>
-                    <p className="text-white/60 text-sm">{slide.role}</p>
+                    <p className="text-white font-semibold">
+                      {t(slide.authorKey)}
+                    </p>
+                    <p className="text-white/60 text-sm">{t(slide.roleKey)}</p>
                   </div>
                 </div>
               </div>
@@ -151,7 +150,7 @@ export function Hero() {
             >
               <Link href="#" className="gap-2">
                 <Download className="w-5 h-5" />
-                Katalog yuklab olish
+                {t("hero.downloadCatalog")}
               </Link>
             </Button>
           </div>
@@ -195,7 +194,7 @@ export function Hero() {
             className="group flex items-center gap-2 text-white hover:text-primary transition-colors"
           >
             <span className="text-sm font-medium">
-              {slides[currentSlide].cta}
+              {t(slides[currentSlide].ctaKey)}
             </span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>

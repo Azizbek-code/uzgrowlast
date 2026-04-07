@@ -39,7 +39,7 @@ const teamMembers = [
     avatar: "/team/ceo.jpg",
   },
   {
-    name: "Azizbek Karimov",
+    name: "Alisher Majidov",
     position: "Marketing Direktori",
     avatar: "/team/marketolog.jpg",
   },
@@ -49,7 +49,7 @@ const teamMembers = [
     avatar: null,
   },
   {
-    name: "Alisher Majidov",
+    name: "Azizbek Karimov",
     position: "Loyiha Menejeri",
     avatar: null,
   },

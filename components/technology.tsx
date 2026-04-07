@@ -10,49 +10,53 @@ import {
   Cpu,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const technologies = [
   {
     icon: Thermometer,
-    title: "Isitish tizimi",
-    description:
-      "Zamonaviy isitish tizimlari orqali optimal haroratni ta'minlash va energiya tejash.",
+    titleKey: "technology.heating.title",
+    descriptionKey: "technology.heating.description",
     color: "from-orange-500/20 to-red-500/20",
     image:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775570543/28_bnpx3z.jpg",
   },
   {
     icon: Wind,
-    title: "Ventilyatsiya va sovutish",
-    description:
-      "Avtomatlashtirilgan ventilyatsiya va sovutish tizimlari yordamida iqlimni nazorat qilish.",
+    titleKey: "technology.ventilation.title",
+    descriptionKey: "technology.ventilation.description",
     color: "from-blue-500/20 to-cyan-500/20",
     image:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469177/20201023_075858_hcs7fb.jpg",
   },
   {
     icon: Leaf,
-    title: "Stelaj tizimi",
-    description:
-      "Vertikal stelajlar orqali joydan samarali foydalanish va hosildorlikni oshirish.",
+    titleKey: "technology.shelving.title",
+    descriptionKey: "technology.shelving.description",
     color: "from-green-500/20 to-emerald-500/20",
     image:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469181/20201201_105435_hq3q9q.jpg",
   },
   {
+    icon: Lightbulb,
+    titleKey: "technology.led.title",
+    descriptionKey: "technology.led.description",
+    color: "from-yellow-500/20 to-amber-500/20",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg",
+  },
+  {
     icon: Droplets,
-    title: "Sug'orish tizimi",
-    description:
-      "Tomchilatib sug'orish va gidroponika tizimlari yordamida suvni 90% gacha tejash.",
+    titleKey: "technology.irrigation.title",
+    descriptionKey: "technology.irrigation.description",
     color: "from-sky-500/20 to-blue-500/20",
     image:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg",
   },
   {
     icon: Cpu,
-    title: "Avtomatlashtirish",
-    description:
-      "IoT sensorlar va AI algoritmlari yordamida iqlimni avtomatik boshqarish.",
+    titleKey: "technology.automation.title",
+    descriptionKey: "technology.automation.description",
     color: "from-violet-500/20 to-purple-500/20",
     image:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567811/20201201_125915_z2qls3.jpg",
@@ -60,6 +64,7 @@ const technologies = [
 ];
 
 export function Technology() {
+  const { t } = useLanguage();
   return (
     <section
       id="texnologiya"
@@ -75,13 +80,13 @@ export function Technology() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
-            Texnologiya
+            {t("technology.title")}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
-            Zamonaviy jihozlar va tizimlar
+            {t("technology.subtitle")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Eng ilg&apos;or agro-texnologiyalar bilan ta&apos;minlaymiz
+            {t("technology.description")}
           </p>
         </div>
 
@@ -96,7 +101,7 @@ export function Technology() {
               <div className="aspect-video relative">
                 <Image
                   src={tech.image}
-                  alt={tech.title}
+                  alt={t(tech.titleKey)}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -112,10 +117,10 @@ export function Technology() {
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-3">
-                  {tech.title}
+                  {t(tech.titleKey)}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  {tech.description}
+                  {t(tech.descriptionKey)}
                 </p>
               </div>
 
