@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +17,7 @@ import {
   MapPin,
   Briefcase,
   GraduationCap,
+  User,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -24,7 +26,7 @@ const teamMembers = [
     id: 1,
     name: "Rustamjon Rahmonov",
     position: "Asoschi va Bosh Direktor",
-    avatar: "/images/team/1.jpg",
+    avatar: "/team/ceo.jpg",
     bio: "O'zbekistonlik innovator agrofaol va tadbirkor. 2017-yildan beri Markaziy Osiyo agrosektorida minglab fermerlar va agrobiznes vakillariga ma'lumot, ishonch va natija olib kelmoqda.",
     experience: "4+ yillik",
     achievements: [
@@ -43,8 +45,28 @@ const teamMembers = [
   {
     id: 2,
     name: "Azizbek Karimov",
+    position: "Marketing Direktori",
+    avatar: "/team/marketolog.jpg",
+    bio: "Marketing va brend strategiyalari bo'yicha mutaxassis. Kompaniya imidjini rivojlantirish va mijozlar bazasini kengaytirish uchun mas'ul.",
+    experience: "6+ yillik",
+    achievements: [
+      "20+ marketing kampaniyasi",
+      "Brendni rivojlantirish",
+      "Mijozlar bazasi 3x o'sishi",
+    ],
+    education: ["Marketing", "Xalqaro biznes"],
+    skills: ["Marketing strategiyasi", "SMM", "Kontent marketing", "Analitika"],
+    email: "azizbek@uzgrow.uz",
+    phone: "+998 90 123-45-72",
+    location: "Toshkent, O'zbekiston",
+    linkedin: "#",
+    twitter: "#",
+  },
+  {
+    id: 3,
+    name: "Abdulloh Sheraliyevich",
     position: "Texnik Direktor",
-    avatar: "/images/team/2.jpg",
+    avatar: null,
     bio: "Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonaviy agrotexnologiyalarni joriy etmoqda.",
     experience: "10+ yillik",
     achievements: [
@@ -59,105 +81,17 @@ const teamMembers = [
       "3D modellashtirish",
       "Texnik nazorat",
     ],
-    email: "azizbek@uzgrow.uz",
-    phone: "+998 90 123-45-72",
-    location: "Toshkent, O'zbekiston",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    id: 3,
-    name: "Abdurasulov Abdulloh Sheraliyevich",
-    position: "Sotuv bo'limi rahbari",
-    avatar: "/images/team/3.jpg",
-    bio: "6+ yillik tajribaga ega sotuv mutaxassisi. ROODELL kompaniyasida 2 mlrd dan 13 mlrd so'mgacha bo'lgan sotuv hajmini oshirgan. 10 kishilik professional jamoani shakllantirgan.",
-    experience: "6+ yillik",
-    achievements: [
-      "13 mlrd so'm sotuv hajmi",
-      "10 kishilik jamoa shakllantirish",
-      "Liderlik pozitsiyasi",
-      "Eng yuqori KPI",
-    ],
-    education: ["285-maktab", "Sotuv va menejment kurslari"],
-    skills: [
-      "Jamoa boshqaruvi",
-      "Sotuvni rivojlantirish",
-      "Sotuvni boshqarish",
-      "Faol sotuvlar",
-      "B2B sotuvlar",
-      "Xodimlarni o'qitish",
-      "Strategik rejalashtirish",
-      "Biznes muzokaralar",
-    ],
-    email: "abdurasulovabdulloh9@gmail.com",
-    phone: "+998 90 044-00-25",
+    email: "abdulloh@uzgrow.uz",
+    phone: "+998 90 123-45-73",
     location: "Toshkent, O'zbekiston",
     linkedin: "#",
     twitter: "#",
   },
   {
     id: 4,
-    name: "Majidov Alisher",
-    position: "Marketolog",
-    avatar: "/images/team/4.jpg",
-    bio: "10+ yillik tajribaga ega marketing mutaxassisi. 16 ta muvaffaqiyatli loyihani amalga oshirgan. Zamonaviy marketing strategiyalari va brendni rivojlantirish bo'yicha chuqur bilimga ega.",
-    experience: "10+ yillik",
-    achievements: [
-      "16 ta muvaffaqiyatli loyiha",
-      "99% topshirish darajasi",
-      "Marketing strategiyasi",
-      "Brend rivojlantirish",
-    ],
-    education: ["Toshkent Iqtisodiyot Universiteti", "Marketing va reklama"],
-    skills: [
-      "Marketing strategiyasi",
-      "Brendni boshqarish",
-      "Digital marketing",
-      "Kontent marketing",
-      "SMM marketing",
-      "SEO optimallashtirish",
-      "Analiz va tadqiqot",
-      "Reklama kampaniyalari",
-    ],
-    email: "alisher.majidov@uzgrow.uz",
-    phone: "+998 93 428-30-32",
-    location: "Toshkent, O'zbekiston",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    id: 5,
-    name: "Gulbaxor Karaboyeva",
-    position: "Moliya direktori",
-    avatar: "/images/team/5.jpg",
-    bio: "Moliya va boshqaruv bo'yicha tajribali mutaxassis. Kompaniya moliya strategiyasini rivojlantirish va byudjetni boshqarish bo'yicha keng tajribaga ega.",
-    experience: "8+ yillik",
-    achievements: [
-      "Moliya optimallashtirish",
-      "Byudjet boshqaruvi",
-      "Xalqaro standartlar",
-      "Moliya tahlili",
-    ],
-    education: ["Toshkent Moliya Instituti", "Xalqaro moliya"],
-    skills: [
-      "Moliya boshqaruvi",
-      "Byudjet rejalashtirish",
-      "Moliya tahlili",
-      "Investitsiya tahlili",
-      "Xalqaro moliya",
-      "Risk menejmenti",
-    ],
-    email: "gulbaxor@uzgrow.uz",
-    phone: "+998 90 123-45-89",
-    location: "Toshkent, O'zbekiston",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    id: 6,
-    name: "Dilshod Jo'rayev",
-    position: "Loyihalar Menejeri",
-    avatar: "/images/team/dilshod.jpg",
+    name: "Alisher Majidov",
+    position: "Loyiha Menejeri",
+    avatar: null,
     bio: "Katta miqyosli loyihalarni boshqarish va nazorat qilish bo'yicha mutaxassis. Muvaffaqiyatli loyihalarni vaqti yetkazishni ta'minlaydi.",
     experience: "8+ yillik",
     achievements: [
@@ -172,53 +106,8 @@ const teamMembers = [
       "Byudjetlash",
       "Sifat nazorati",
     ],
-    email: "dilshod@uzgrow.uz",
-    phone: "+998 90 123-45-73",
-    location: "Toshkent, O'zbekiston",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    id: 4,
-    name: "Gulnora Nazarova",
-    position: "Marketing Direktori",
-    avatar: "/images/team/gulnora.jpg",
-    bio: "Marketing va brend strategiyalari bo'yicha mutaxassis. Kompaniya imidjini rivojlantirish va mijozlar bazasini kengaytirish uchun mas'ul.",
-    experience: "6+ yillik",
-    achievements: [
-      "20+ marketing kampaniyasi",
-      "Brendni rivojlantirish",
-      "Mijozlar bazasi 3x o'sishi",
-    ],
-    education: ["Marketing", "Xalqaro biznes"],
-    skills: ["Marketing strategiyasi", "SMM", "Kontent marketing", "Analitika"],
-    email: "gulnora@uzgrow.uz",
+    email: "alisher@uzgrow.uz",
     phone: "+998 90 123-45-74",
-    location: "Toshkent, O'zbekiston",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    id: 5,
-    name: "Javohir Toshmatov",
-    position: "Moliya Direktori",
-    avatar: "/images/team/javohir.jpg",
-    bio: "Moliya va byudjet rejalashtirish bo'yicha mutaxassis. Kompaniya moliya salomatligini va samaradorligini ta'minlaydi.",
-    experience: "7+ yillik",
-    achievements: [
-      "Byudjet optimizatsiyasi",
-      "Xarajatlarni kamaytirish 20%",
-      "Moliya tahlili",
-    ],
-    education: ["Moliya va kredit", "MBA"],
-    skills: [
-      "Moliya tahlili",
-      "Byudjetlash",
-      "Investitsiya",
-      "Risk menejmenti",
-    ],
-    email: "javohir@uzgrow.uz",
-    phone: "+998 90 123-45-75",
     location: "Toshkent, O'zbekiston",
     linkedin: "#",
     twitter: "#",
@@ -259,12 +148,20 @@ export function Team() {
               <CardContent className="p-6">
                 {/* Avatar */}
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1">
-                    <img
-                      src={member.avatar}
-                      alt={member.name}
-                      className="w-full h-full rounded-full object-cover"
-                    />
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
+                    {member.avatar ? (
+                      <Image
+                        src={member.avatar}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                        sizes="64px"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-primary/10 flex items-center justify-center">
+                        <User className="w-8 h-8 text-primary/60" />
+                      </div>
+                    )}
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-foreground">
@@ -338,12 +235,20 @@ export function Team() {
                   ×
                 </button>
                 <div className="flex items-center gap-4">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1">
-                    <img
-                      src={selectedMember.avatar}
-                      alt={selectedMember.name}
-                      className="w-full h-full rounded-full object-cover"
-                    />
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
+                    {selectedMember.avatar ? (
+                      <Image
+                        src={selectedMember.avatar}
+                        alt={selectedMember.name}
+                        fill
+                        className="object-cover"
+                        sizes="80px"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-primary/10 flex items-center justify-center">
+                        <User className="w-10 h-10 text-primary/60" />
+                      </div>
+                    )}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground">
