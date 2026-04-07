@@ -293,7 +293,7 @@ export default function AloqaPage() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
+      {/* Map Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-10">
@@ -306,12 +306,88 @@ export default function AloqaPage() {
             </p>
           </div>
 
-          <div className="aspect-[21/9] bg-card rounded-3xl flex items-center justify-center border-2 border-dashed border-border">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">Xarita joylashtiring</p>
-              <p className="text-sm text-muted-foreground/60">
-                Google Maps yoki Yandex Maps
+          {/* Interactive Map */}
+          <div className="aspect-[21/9] bg-card rounded-3xl overflow-hidden border-2 border-border relative">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?ll=69.290768%2C41.243647&z=16&pt=69.290768%2C41.243647%2Cpmrdm1&source=constructor"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              className="w-full h-full"
+              allowFullScreen
+              title="UZ-GROW Location Map"
+            />
+
+            {/* Map Actions */}
+            <div className="absolute bottom-4 right-4 flex gap-2">
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() =>
+                  window.open(
+                    "https://yandex.ru/navi?rtext=41.243647,69.290768&rtt=auto",
+                    "_blank",
+                  )
+                }
+                className="bg-background/90 backdrop-blur-sm hover:bg-background"
+              >
+                <MapPin className="w-4 h-4 mr-2" />
+                Yo'nalish
+              </Button>
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => {
+                  const address =
+                    "Toshkent sh., Yangihayor tumani, Fayzli MFY, Rayhon ko'chasi, 107-uy";
+                  navigator.clipboard.writeText(address);
+                  alert("Manzil nusxalandi!");
+                }}
+                className="bg-background/90 backdrop-blur-sm hover:bg-background"
+              >
+                Nusxalash
+              </Button>
+            </div>
+          </div>
+
+          {/* Location Details */}
+          <div className="grid md:grid-cols-3 gap-6 mt-10">
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="flex items-center gap-3 mb-3">
+                <MapPin className="w-5 h-5 text-primary" />
+                <h3 className="font-semibold text-foreground">Manzil</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Toshkent sh., Yangihayor tumani, Fayzli MFY, Rayhon ko'chasi,
+                107-uy
+              </p>
+            </div>
+
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="flex items-center gap-3 mb-3">
+                <Clock className="w-5 h-5 text-primary" />
+                <h3 className="font-semibold text-foreground">Ish vaqti</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Dushanba-Juma: 9:00 - 18:00
+                <br />
+                Shanba: 9:00 - 15:00
+                <br />
+                Yakshanba: Dam olish kuni
+              </p>
+            </div>
+
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <div className="flex items-center gap-3 mb-3">
+                <Phone className="w-5 h-5 text-primary" />
+                <h3 className="font-semibold text-foreground">
+                  Qo'ng'iroq qilish
+                </h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                +998 55 515 22 23
+                <br />
+                +998 99 435 23 13 (WhatsApp)
               </p>
             </div>
           </div>

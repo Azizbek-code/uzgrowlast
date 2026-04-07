@@ -362,6 +362,76 @@ export function Contact() {
               </div>
             </div>
 
+            {/* Location Map */}
+            <div className="bg-background rounded-xl p-6 border border-border">
+              <h3 className="text-xl font-semibold text-foreground mb-6">
+                {t("contact.location")}
+              </h3>
+              <div className="space-y-4">
+                {/* Interactive Map */}
+                <div className="relative w-full h-64 rounded-lg overflow-hidden border border-border">
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?ll=69.290768%2C41.243647&z=16&pt=69.290768%2C41.243647%2Cpmrdm1&source=constructor"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    className="w-full h-full"
+                    allowFullScreen
+                    title="UZ-GROW Location Map"
+                  />
+                </div>
+
+                {/* Location Details */}
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-foreground font-medium">
+                        UZ-GROW Office
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        Toshkent, O'zbekiston
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        Koordinatalar: 41.243647, 69.290768
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Map Actions */}
+                  <div className="flex gap-2 pt-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() =>
+                        window.open(
+                          "https://yandex.ru/navi?rtext=41.243647,69.290768&rtt=auto",
+                          "_blank",
+                        )
+                      }
+                      className="flex-1"
+                    >
+                      <MapPin className="w-4 h-4 mr-2" />
+                      {t("contact.getDirections")}
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => {
+                        const address = "Toshkent, O'zbekiston";
+                        navigator.clipboard.writeText(address);
+                        alert("Manzil nusxalandi!");
+                      }}
+                      className="flex-1"
+                    >
+                      <Mail className="w-4 h-4 mr-2" />
+                      {t("contact.copyAddress")}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Working Hours */}
             <div className="bg-background rounded-xl p-6 border border-border">
               <div className="flex items-center gap-3 mb-4">

@@ -262,6 +262,9 @@ const translations = {
       closed: "Dam olish kuni",
       socialMedia: "Ijtimoiy tarmoqlar",
       followUs: "Ijtimoiy tarmoqlarda bizga qo'shiling",
+      location: "Manzil",
+      getDirections: "Yo'nalishni olish",
+      copyAddress: "Manzilni nusxalash",
       services: {
         turnkey: "Turnkey issiqxona qurish",
         engineering: "Agro-injiniring",
@@ -410,6 +413,9 @@ const translations = {
       closed: "Выходной",
       socialMedia: "Социальные сети",
       followUs: "Присоединяйтесь к нам в социальных сетях",
+      location: "Адрес",
+      getDirections: "Построить маршрут",
+      copyAddress: "Скопировать адрес",
       services: {
         turnkey: "Строительство теплиц под ключ",
         engineering: "Агроинжиниринг",
@@ -664,6 +670,9 @@ const translations = {
       closed: "Closed",
       socialMedia: "Social Media",
       followUs: "Follow us on social media",
+      location: "Location",
+      getDirections: "Get Directions",
+      copyAddress: "Copy Address",
       services: {
         turnkey: "Turnkey Greenhouse Construction",
         engineering: "Agro-engineering",

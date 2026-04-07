@@ -80,22 +80,32 @@ export function About() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Top Section with Video */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
-          {/* Video Placeholder */}
+          {/* Video */}
           <div className="relative group order-2 lg:order-1">
             <div className="aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <Button
-                    size="lg"
-                    className="w-20 h-20 rounded-full bg-primary hover:bg-primary/90 mb-4"
-                  >
-                    <Play className="w-8 h-8 text-primary-foreground ml-1" />
-                  </Button>
-                  <p className="text-sm">Video joylash uchun joy</p>
-                  <p className="text-xs opacity-60">/public/about-video.mp4</p>
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%2391bf65'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='48' fill='white' text-anchor='middle' dominant-baseline='middle'%3EUZ-GROW%3C/text%3E%3C/svg%3E"
+              >
+                <source
+                  src="https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302096/FeHK2XpaBormS6BB4RJX_r_jqxaZ8CwE_xchfqo.mp4"
+                  type="video/mp4"
+                />
+                Sizning brauzeringiz video qo'llab-quvvatlamaydi.
+              </video>
+
+              {/* Play button overlay */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="bg-black/20 backdrop-blur-sm rounded-full p-6 transform transition-transform group-hover:scale-110">
+                  <Play className="w-8 h-8 text-white" />
                 </div>
               </div>
             </div>
+
             {/* Decorative elements */}
             <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full rounded-3xl bg-primary/10" />
           </div>
