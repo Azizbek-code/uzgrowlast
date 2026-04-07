@@ -101,19 +101,50 @@ const translations = {
     // Projects
     projects: {
       title: "Loyihalar",
-      subtitle: "Muvaffaqiyatli yechimlar",
+      subtitle: "Muvaffaqiyatli issiqxona loyihalari",
+      description: "Prezident tashriflari va qishloq xo'jaligi loyihalari",
       categories: {
         all: "Barchasi",
-        president: "Prezident tashrifi",
-        international: "Xalqaro loyihalar",
-        greenhouse: "Issiqxona turlari",
+        presidential: "Prezident tashrifi",
+        international: "Xalqaro hamkorlik",
+        greenhouse: "Issiqxona",
+        agriculture: "Qishloq xo'jaligi",
       },
-      viewProject: "Loyihani ko'rish",
+      vodiy: {
+        title: "Vodiy loyihalari",
+        location: "Vodiy",
+        size: "7 ta issiqxona",
+        description:
+          "Vodiy hududida qurilgan 7 ta zamonaviy issiqxona majmuasi. Turli o'lchamlarda va texnologiyalar bilan jihozlangan.",
+        year: "2022-2024",
+      },
+      samarqand: {
+        title: "Samarqand loyihalari",
+        location: "Samarqand",
+        size: "2 ta issiqxona",
+        description:
+          "Samarqand viloyatida qurilgan 2 ta yirik issiqxona. Prezident tashrifi va tadbirkorlar uchrashuvi uchun mo'ljallangan.",
+        year: "2024",
+      },
+      international: {
+        title: "Xalqaro loyihalar",
+        location: "Xalqaro",
+        size: "5 ta issiqxona",
+        description:
+          "Xalqaro mijozlar uchun qurilgan 5 ta issiqxona. Yevropa standartlariga mos zamonaviy yechimlar.",
+        year: "2023-2024",
+      },
+      agriculture: {
+        title: "Qishloq xo'jaligi loyihalari",
+        location: "Qishloq xo'jaligi",
+        size: "3 ta issiqxona",
+        description:
+          "Qishloq xo'jaligini rivojlantirish maqsadida qurilgan 3 ta issiqxona. Zamonaviy sug'orish va iqlimlashtirish tizimlari.",
+        year: "2024",
+      },
+      viewProject: "Batafsil",
+      viewGallery: "Galereyani ko'rish",
       close: "Yopish",
-      previous: "Oldingi",
-      next: "Keyingi",
-      image: "rasm",
-      of: "dan",
     },
     // Team
     team: {
@@ -353,26 +384,6 @@ const translations = {
         "Техническая документация",
         "Экспортные направления",
         "Создание бизнес-модели",
-      ],
-    },
-    // Projects
-    projects: {
-      title: "Проекты",
-      subtitle: "Успешные решения",
-      categories: {
-        all: "Все",
-        president: "Визит президента",
-        international: "Международные проекты",
-        greenhouse: "Типы теплиц",
-      },
-      viewProject: "Посмотреть проект",
-      close: "Закрыть",
-      previous: "Предыдущий",
-      next: "Следующий",
-      image: "изображение",
-      of: "из",
-    },
-    // Team
     team: {
       title: "Наша команда",
       subtitle: "Сильные и опытные специалисты",
@@ -615,19 +626,46 @@ const translations = {
     // Projects
     projects: {
       title: "Projects",
-      subtitle: "Successful Solutions",
+      subtitle: "Successful greenhouse projects",
+      description: "Presidential decrees and agricultural projects",
       categories: {
         all: "All",
-        president: "President Visit",
-        international: "International Projects",
-        greenhouse: "Greenhouse Types",
+        presidential: "Presidential Decrees",
+        international: "International Cooperation",
+        greenhouse: "Greenhouses",
+        agriculture: "Agriculture",
       },
-      viewProject: "View Project",
+      vodiy: {
+        title: "Water Projects",
+        location: "Water",
+        size: "7 greenhouses",
+        description: "7 modern greenhouses built in water area. Various sizes and technologies.",
+        year: "2022-2024",
+      },
+      samarqand: {
+        title: "Samarkand Projects",
+        location: "Samarkand",
+        size: "2 greenhouses",
+        description: "2 large greenhouses built in Samarkand region. For presidential decrees and meetings with entrepreneurs.",
+        year: "2024",
+      },
+      international: {
+        title: "International Projects",
+        location: "International",
+        size: "5 greenhouses",
+        description: "5 greenhouses built for international clients. Modern solutions according to European standards.",
+        year: "2023-2024",
+      },
+      agriculture: {
+        title: "Agriculture Projects",
+        location: "Agriculture",
+        size: "3 greenhouses",
+        description: "3 greenhouses built for agricultural development. Modern irrigation and climate control systems.",
+        year: "2024",
+      },
+      viewProject: "View Details",
+      viewGallery: "View Gallery",
       close: "Close",
-      previous: "Previous",
-      next: "Next",
-      image: "image",
-      of: "of",
     },
     // Team
     team: {

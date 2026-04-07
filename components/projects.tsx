@@ -20,7 +20,6 @@ const projects = [
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/37_2_ggepkx.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/32_2_n7x8lw.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/38_shg9uf.jpg",
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469211/32_r91rs8.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468978/31_phdvd6.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468976/21_2_t9kklr.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468970/21_bv62xg.jpg",
