@@ -27,14 +27,16 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const projects = [
   {
     id: 1,
-    title: "Vodiy Prezident Loyihasi",
-    location: "Farg'ona vodiysi",
+    title: "Vodiy Loyihasi",
+    location: "Andijon vodiysi",
     size: "7 ta issiqxona",
     category: "presidential",
     description:
-      "Farg'ona vodiysida qurilgan 7 ta zamonaviy issiqxona majmuasi. Prezident tashrifi uchun mo'ljallangan yirik loyiha. Turli o'lchamlarda va eng ilg'or texnologiyalar bilan jihozlangan.",
+      "Andijon vodiysida qurilgan 7 ta zamonaviy issiqxona majmuasi. Prezident tashrifi uchun mo'ljallangan yirik loyiha. Turli o'lchamlarda va eng ilg'or texnologiyalar bilan jihozlangan.",
     images: [
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/37_2_ggepkx.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468970/21_bv62xg.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775301447/22_qrawq5.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469214/34_rthdcs.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/32_2_n7x8lw.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/38_shg9uf.jpg",
     ],
@@ -58,9 +60,11 @@ const projects = [
     description:
       "Samarqand viloyatida qurilgan 2 ta yirik issiqxona. Prezident tashrifi va tadbirkorlar uchrashuvi uchun mo'ljallangan. Zamonaviy avtomatlashtirish tizimlari bilan jihozlangan.",
     images: [
-      "/images/photo_2026-04-04_10-35-25.jpg",
-      "/images/photo_2026-04-04_10-35-29.jpg",
-      "/images/27.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469051/photo_2026-04-04_10-35-53_kvt95v.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469172/20201201_105047_elutha.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469172/20201201_105047_elutha.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469051/photo_2026-04-04_10-35-50_ctmowh.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469050/IMG_5189_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_atdoz0.jpg",
     ],
     year: "2024",
     status: "completed",
@@ -78,10 +82,11 @@ const projects = [
     description:
       "Buxoro xalqaro turizm markazi, Toshkent raqamli ta'lim platformasi va Olmaota issiqxona loyihalari. Xalqaro standartlarga mos ravishda qurilgan.",
     images: [
-      "/images/27.jpg",
-      "/images/7.jpg",
-      "/images/4.jpg",
-      "/images/8.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469047/IMG_5184_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_iuhwco.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469042/IMG_4545_bl2h6a.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469038/IMG_4540_2_fhkndi.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468985/IMG_4397_copy_iqnrvn.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469023/IMG_4430_copy_g7mb6k.jpg",
     ],
     year: "2024",
     status: "in-progress",
@@ -98,7 +103,12 @@ const projects = [
     category: "greenhouse",
     description:
       "Qashqadaryoda qurilgan polikarbonat issiqxonalari majmui. Zamonaviy texnologiyalar bilan jihozlangan. Yil bo'yi samaradorlikni ta'minlaydi.",
-    images: ["/images/8.jpg", "/images/25.jpg", "/images/24.jpg"],
+    images: [
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468983/IMG_4393_copy_g104ol.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468983/IMG_4393_copy_g104ol.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468989/IMG_3533_zgzdoe.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468975/IMG_3849_fbjrqw.heic",
+    ],
     year: "2024",
     status: "completed",
     featured: false,
@@ -114,7 +124,11 @@ const projects = [
     category: "agriculture",
     description:
       "Toshkent shahrida qurilgan innovatsion issiqxona markazi. Yaqin Sharqdagi eng zamonaviy agrotexnologiyalar jamlanmasi.",
-    images: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    images: [
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5188_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469185/20201201_111323_zaxid6.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567292/IMG_4029_copy_7_q0rdbm.jpg",
+    ],
     year: "2023",
     status: "completed",
     featured: false,

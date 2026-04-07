@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   Thermometer,
   Wind,
@@ -17,6 +18,8 @@ const technologies = [
     description:
       "Zamonaviy isitish tizimlari orqali optimal haroratni ta'minlash va energiya tejash.",
     color: "from-orange-500/20 to-red-500/20",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775570543/28_bnpx3z.jpg",
   },
   {
     icon: Wind,
@@ -24,6 +27,8 @@ const technologies = [
     description:
       "Avtomatlashtirilgan ventilyatsiya va sovutish tizimlari yordamida iqlimni nazorat qilish.",
     color: "from-blue-500/20 to-cyan-500/20",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469177/20201023_075858_hcs7fb.jpg",
   },
   {
     icon: Leaf,
@@ -31,13 +36,8 @@ const technologies = [
     description:
       "Vertikal stelajlar orqali joydan samarali foydalanish va hosildorlikni oshirish.",
     color: "from-green-500/20 to-emerald-500/20",
-  },
-  {
-    icon: Lightbulb,
-    title: "LED grow lights",
-    description:
-      "Energiya tejamkor LED yoritish tizimlari orqali yil davomida hosil olish.",
-    color: "from-yellow-500/20 to-amber-500/20",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469181/20201201_105435_hq3q9q.jpg",
   },
   {
     icon: Droplets,
@@ -45,6 +45,8 @@ const technologies = [
     description:
       "Tomchilatib sug'orish va gidroponika tizimlari yordamida suvni 90% gacha tejash.",
     color: "from-sky-500/20 to-blue-500/20",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg",
   },
   {
     icon: Cpu,
@@ -52,6 +54,8 @@ const technologies = [
     description:
       "IoT sensorlar va AI algoritmlari yordamida iqlimni avtomatik boshqarish.",
     color: "from-violet-500/20 to-purple-500/20",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567811/20201201_125915_z2qls3.jpg",
   },
 ];
 
@@ -86,21 +90,27 @@ export function Technology() {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="group relative bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+              className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
             >
-              {/* Background Gradient */}
-              <div
-                className={cn(
-                  "absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br",
-                  tech.color,
-                )}
-              />
+              {/* Image */}
+              <div className="aspect-video relative">
+                <Image
+                  src={tech.image}
+                  alt={tech.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
+
+                {/* Icon Overlay */}
+                <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                  <tech.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
+                </div>
+              </div>
 
               {/* Content */}
-              <div className="relative">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                  <tech.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
-                </div>
+              <div className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-3">
                   {tech.title}
                 </h3>
@@ -109,8 +119,13 @@ export function Technology() {
                 </p>
               </div>
 
-              {/* Decorative Line */}
-              <div className="absolute bottom-0 left-8 right-8 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              {/* Background Gradient */}
+              <div
+                className={cn(
+                  "absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-linear-to-br",
+                  tech.color,
+                )}
+              />
             </div>
           ))}
         </div>

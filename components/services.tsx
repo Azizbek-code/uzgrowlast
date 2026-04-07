@@ -17,20 +17,6 @@ export function Services() {
   const [activeImage, setActiveImage] = useState(0);
   const { t } = useLanguage();
 
-  // Auto-rotate images
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveImage((prev) => (prev + 1) % 5);
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [activeService]);
-
-  // Reset image when service changes
-  useEffect(() => {
-    setActiveImage(0);
-  }, [activeService]);
-
   const services = [
     {
       icon: Building2,
@@ -43,8 +29,11 @@ export function Services() {
         t("services.engineeringFeatures.2"),
         t("services.engineeringFeatures.3"),
       ],
-      image:
-        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469214/38_2_wy9ces.jpg",
+      images: [
+                "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567292/IMG_4029_copy_7_q0rdbm.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567592/20201201_105521_ugdege.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567918/20201201_143010_eudwpq.jpg",
+      ],
     },
     {
       icon: Settings,
@@ -57,10 +46,31 @@ export function Services() {
         t("services.equipmentFeatures.2"),
         t("services.equipmentFeatures.3"),
       ],
-      image:
-        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/37_2_ggepkx.jpg",
+      images: [
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469176/20201201_105259_q5us00.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567816/20201201_125910_t1nzq8.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468983/IMG_4392_copy_xdhodo.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468978/31_phdvd6.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468978/IMG_3865_ygsucd.jpg",
+      ],
     },
   ];
+
+  // Auto-rotate images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImage(
+        (prev) => (prev + 1) % services[activeService].images.length,
+      );
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [activeService, services]);
+
+  // Reset image when service changes
+  useEffect(() => {
+    setActiveImage(0);
+  }, [activeService]);
 
   return (
     <section id="xizmatlar" className="py-20 lg:py-32 bg-muted/30">
@@ -105,11 +115,11 @@ export function Services() {
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${activeImage * 100}%)` }}
               >
-                {[1, 2, 3, 4, 5].map((index) => (
+                {services[activeService].images.map((image, index) => (
                   <img
                     key={index}
-                    src={`/images/${index}.jpg`}
-                    alt={`${services[activeService].title} - Image ${index}`}
+                    src={image}
+                    alt={`${services[activeService].title} - Image ${index + 1}`}
                     className="w-full h-full object-cover flex-shrink-0"
                   />
                 ))}
@@ -118,7 +128,7 @@ export function Services() {
 
             {/* Slider Indicators */}
             <div className="absolute bottom-4 left-1/2 right-1/2 flex justify-center gap-2">
-              {[1, 2, 3, 4, 5].map((index) => (
+              {services[activeService].images.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveImage(index)}
