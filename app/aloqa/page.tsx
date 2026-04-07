@@ -6,35 +6,38 @@ import { Footer } from "@/components/footer";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const contactInfo = [
+const getContactInfo = (t: (key: string) => string) => [
   {
     icon: Phone,
-    title: "Telefon",
-    value: "+998 55 515 22 23",
-    href: "tel:+998555152223",
+    title: t("contact.phone"),
+    value: "+99893-428-30-32",
+    href: "tel:+998934283032",
   },
   {
     icon: Send,
     title: "WhatsApp",
-    value: "+998 99 435 23 13",
-    href: "https://wa.me/+998994352313",
+    value: "+99893-428-30-32",
+    href: "https://wa.me/+998934283032",
   },
   {
     icon: Mail,
-    title: "Email",
+    title: t("contact.email"),
     value: "uzgrrow@gmail.com",
     href: "mailto:uzgrrow@gmail.com",
   },
   {
     icon: MapPin,
-    title: "Manzil",
+    title: t("contact.location"),
     value: "Toshkent sh., Rayhona ko'chasi 107-uy",
     href: "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
   },
 ];
 
 export default function AloqaPage() {
+  const { t } = useLanguage();
+  const contactInfo = getContactInfo(t);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -71,14 +74,13 @@ export default function AloqaPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-              Aloqa
+              {t("contact.title")}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              Biz bilan bog'laning
+              {t("contact.subtitle")}
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Savollaringiz bormi? Biz sizga yordam berishga tayyormiz. Bepul
-              konsultatsiya olish uchun bog'laning.
+              {t("contact.description")}
             </p>
           </div>
         </div>
@@ -91,7 +93,7 @@ export default function AloqaPage() {
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-6">
               <h2 className="text-2xl font-bold text-foreground mb-6">
-                Kontakt ma'lumotlari
+                {t("contact.infoTitle")}
               </h2>
 
               {contactInfo.map((item, index) => (
@@ -133,7 +135,7 @@ export default function AloqaPage() {
               {/* Social Links */}
               <div className="pt-6">
                 <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
-                  Ijtimoiy tarmoqlar
+                  {t("contact.socialMedia")}
                 </h3>
                 <div className="flex gap-3">
                   {["Telegram", "Instagram", "YouTube", "Facebook"].map(
@@ -155,10 +157,10 @@ export default function AloqaPage() {
             <div className="lg:col-span-2">
               <div className="bg-card rounded-3xl p-8 md:p-10 border border-border">
                 <h2 className="text-2xl font-bold text-foreground mb-2">
-                  Xabar yuborish
+                  {t("contact.formTitle")}
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Formani to'ldiring, biz siz bilan tez orada bog'lanamiz.
+                  {t("contact.formDescription")}
                 </p>
 
                 {isSubmitted ? (
@@ -167,10 +169,10 @@ export default function AloqaPage() {
                       <CheckCircle className="w-10 h-10 text-primary" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground mb-2">
-                      Rahmat!
+                      {t("contact.success")}
                     </h3>
                     <p className="text-muted-foreground">
-                      Xabaringiz qabul qilindi. Tez orada bog'lanamiz.
+                      {t("contact.successMessage")}
                     </p>
                   </div>
                 ) : (
@@ -178,7 +180,7 @@ export default function AloqaPage() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Ismingiz *
+                          {t("contact.name")} *
                         </label>
                         <input
                           type="text"
@@ -188,12 +190,12 @@ export default function AloqaPage() {
                             setFormData({ ...formData, name: e.target.value })
                           }
                           className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                          placeholder="To'liq ismingiz"
+                          placeholder={t("contact.namePlaceholder")}
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Telefon *
+                          {t("contact.phone")} *
                         </label>
                         <input
                           type="tel"
@@ -203,7 +205,7 @@ export default function AloqaPage() {
                             setFormData({ ...formData, phone: e.target.value })
                           }
                           className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                          placeholder="+998 XX XXX XX XX"
+                          placeholder={t("contact.phonePlaceholder")}
                         />
                       </div>
                     </div>
@@ -211,7 +213,7 @@ export default function AloqaPage() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Email
+                          {t("contact.email")}
                         </label>
                         <input
                           type="email"
@@ -220,12 +222,12 @@ export default function AloqaPage() {
                             setFormData({ ...formData, email: e.target.value })
                           }
                           className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                          placeholder="email@example.com"
+                          placeholder={t("contact.emailPlaceholder")}
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Mavzu
+                          {t("contact.service")}
                         </label>
                         <select
                           value={formData.subject}
@@ -237,21 +239,31 @@ export default function AloqaPage() {
                           }
                           className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                         >
-                          <option value="">Tanlang</option>
-                          <option value="consultation">
-                            Bepul konsultatsiya
+                          <option value="">
+                            {t("contact.servicePlaceholder")}
                           </option>
-                          <option value="project">Loyiha hisoblash</option>
-                          <option value="investment">Investitsiya</option>
-                          <option value="partnership">Hamkorlik</option>
-                          <option value="other">Boshqa</option>
+                          <option value="consultation">
+                            {t("contact.services.consulting")}
+                          </option>
+                          <option value="project">
+                            {t("contact.services.project")}
+                          </option>
+                          <option value="investment">
+                            {t("contact.services.investment")}
+                          </option>
+                          <option value="partnership">
+                            {t("contact.services.partnership")}
+                          </option>
+                          <option value="other">
+                            {t("contact.services.other")}
+                          </option>
                         </select>
                       </div>
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        Xabar
+                        {t("contact.message")}
                       </label>
                       <textarea
                         rows={5}
@@ -260,7 +272,7 @@ export default function AloqaPage() {
                           setFormData({ ...formData, message: e.target.value })
                         }
                         className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
-                        placeholder="Xabaringizni yozing..."
+                        placeholder={t("contact.messagePlaceholder")}
                       />
                     </div>
 
@@ -276,12 +288,12 @@ export default function AloqaPage() {
                       {isLoading ? (
                         <>
                           <span className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
-                          Yuborilmoqda...
+                          {t("contact.sending")}
                         </>
                       ) : (
                         <>
                           <Send className="w-4 h-4" />
-                          Yuborish
+                          {t("contact.send")}
                         </>
                       )}
                     </Button>
@@ -298,12 +310,9 @@ export default function AloqaPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Bizning manzilimiz
+              {t("contact.mapTitle")}
             </h2>
-            <p className="text-muted-foreground">
-              Toshkent sh., Yangihayot tumani, Fayzli MFY, Rayhon ko'chasi,
-              107-uy
-            </p>
+            <p className="text-muted-foreground">{t("contact.mapAddress")}</p>
           </div>
 
           {/* Interactive Map */}
@@ -332,7 +341,7 @@ export default function AloqaPage() {
                 className="bg-background/90 backdrop-blur-sm hover:bg-background"
               >
                 <MapPin className="w-4 h-4 mr-2" />
-                Yo'nalish
+                {t("contact.getDirections")}
               </Button>
               <Button
                 variant="secondary"
@@ -341,11 +350,11 @@ export default function AloqaPage() {
                   const address =
                     "Toshkent sh., Yangihayot tumani, Fayzli MFY, Rayhon ko'chasi, 107-uy";
                   navigator.clipboard.writeText(address);
-                  alert("Manzil nusxalandi!");
+                  alert(t("contact.addressCopied"));
                 }}
                 className="bg-background/90 backdrop-blur-sm hover:bg-background"
               >
-                Nusxalash
+                {t("contact.copyAddress")}
               </Button>
             </div>
           </div>
@@ -355,25 +364,28 @@ export default function AloqaPage() {
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <MapPin className="w-5 h-5 text-primary" />
-                <h3 className="font-semibold text-foreground">Manzil</h3>
+                <h3 className="font-semibold text-foreground">
+                  {t("contact.location")}
+                </h3>
               </div>
               <p className="text-muted-foreground text-sm">
-                Toshkent sh., Yangihayot tumani, Fayzli MFY, Rayhon ko'chasi,
-                107-uy
+                {t("contact.locationDetails")}
               </p>
             </div>
 
             <div className="bg-card rounded-xl p-6 border border-border">
               <div className="flex items-center gap-3 mb-3">
                 <Clock className="w-5 h-5 text-primary" />
-                <h3 className="font-semibold text-foreground">Ish vaqti</h3>
+                <h3 className="font-semibold text-foreground">
+                  {t("contact.workingHours")}
+                </h3>
               </div>
               <p className="text-muted-foreground text-sm">
-                Dushanba-Juma: 9:00 - 18:00
+                {t("contact.monday")} - {t("contact.friday")}: 9:00 - 18:00
                 <br />
-                Shanba: 9:00 - 15:00
+                {t("contact.saturday")}: 9:00 - 15:00
                 <br />
-                Yakshanba: Dam olish kuni
+                {t("contact.sunday")}: {t("contact.closed")}
               </p>
             </div>
 
@@ -381,13 +393,13 @@ export default function AloqaPage() {
               <div className="flex items-center gap-3 mb-3">
                 <Phone className="w-5 h-5 text-primary" />
                 <h3 className="font-semibold text-foreground">
-                  Qo'ng'iroq qilish
+                  {t("contact.callUs")}
                 </h3>
               </div>
               <p className="text-muted-foreground text-sm">
-                +998 55 515 22 23
+                +99893-428-30-32
                 <br />
-                +998 99 435 23 13 (WhatsApp)
+                +99893-428-30-32 (WhatsApp)
               </p>
             </div>
           </div>

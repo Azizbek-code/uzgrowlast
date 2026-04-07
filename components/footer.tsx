@@ -45,15 +45,11 @@ const teamMembers = [
     experience: "10+ yillik tajriba",
     projects: "16 ta muvaffaqiyatli loyihalar",
     phone: "+99893-428-30-32",
+    completion: "vaqtida topshirish 99%",
   },
   {
     name: "Abdulloh Sheraliyevich",
     position: "Texnik Direktor",
-    avatar: null,
-  },
-  {
-    name: "Azizbek Karimov",
-    position: "Loyiha Menejeri",
     avatar: null,
   },
 ];
@@ -148,6 +144,11 @@ export function Footer() {
                       {member.phone && (
                         <p className="text-xs text-primary/80 truncate">
                           {member.phone}
+                        </p>
+                      )}
+                      {member.completion && (
+                        <p className="text-xs text-green-400 truncate">
+                          {member.completion}
                         </p>
                       )}
                     </div>
