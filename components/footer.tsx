@@ -42,6 +42,9 @@ const teamMembers = [
     name: "Majidov Alisher",
     position: "Marketolog",
     avatar: "/team/marketolog.jpg",
+    experience: "10+ yillik tajriba",
+    projects: "16 ta muvaffaqiyatli loyihalar",
+    phone: "+99893-428-30-32",
   },
   {
     name: "Abdulloh Sheraliyevich",
@@ -132,6 +135,21 @@ export function Footer() {
                       <p className="text-xs text-white/50 truncate">
                         {member.position}
                       </p>
+                      {member.experience && (
+                        <p className="text-xs text-white/30 truncate">
+                          {member.experience}
+                        </p>
+                      )}
+                      {member.projects && (
+                        <p className="text-xs text-white/30 truncate">
+                          {member.projects}
+                        </p>
+                      )}
+                      {member.phone && (
+                        <p className="text-xs text-primary/80 truncate">
+                          {member.phone}
+                        </p>
+                      )}
                     </div>
                   </div>
                 ))}
