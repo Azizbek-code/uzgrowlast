@@ -1263,38 +1263,3 @@ export function useLanguage() {
   }
   return context;
 }
-  en: {
-    hero: {
-      title: "Modern Greenhouse Solutions",
-      subtitle: "Leading agro-engineering company in Uzbekistan",
-      description: "We implement the most modern greenhouse technologies and develop agriculture",
-      cta: "Contact Us",
-      downloadCatalog: "Download Catalog",
-      slides: {
-        slide1: {
-          quote: "We implement each project with an individual approach and ensure customer satisfaction.",
-          author: "UZ-GROW Team",
-          role: "Agro-engineering Specialists",
-          cta: "Turnkey Greenhouses",
-        },
-        slide2: {
-          quote: "Achieve high yields with modern technologies and an experienced team of specialists.",
-          author: "Technical Department",
-          role: "Design and Construction",
-          cta: "Plastic Greenhouses",
-        },
-        slide3: {
-          quote: "Reduce costs and increase revenue with energy-efficient and automated systems.",
-          author: "Innovation Center",
-          role: "Modern Solutions",
-          cta: "Glass Greenhouses",
-        },
-        slide4: {
-          quote: "From design to full implementation - partner with us and achieve results.",
-          author: "Services Department",
-          role: "Integrated Solutions",
-          cta: "Equipment and Systems",
-        },
-      },
-    },
-  },

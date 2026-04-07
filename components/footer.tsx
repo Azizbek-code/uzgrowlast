@@ -39,8 +39,8 @@ const teamMembers = [
     avatar: "/team/ceo.jpg",
   },
   {
-    name: "Alisher Majidov",
-    position: "Marketing Direktori",
+    name: "Majidov Alisher",
+    position: "Marketolog",
     avatar: "/team/marketolog.jpg",
   },
   {
