@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Building2,
   Settings,
@@ -24,6 +24,11 @@ export function Services() {
     }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
+  }, [activeService]);
+
+  // Reset image when service changes
+  useEffect(() => {
+    setActiveImage(0);
   }, [activeService]);
 
   const services = [
@@ -96,15 +101,16 @@ export function Services() {
           {/* Left: Image Slider */}
           <div className="relative group">
             <div className="aspect-video rounded-2xl overflow-hidden bg-muted">
-              <div className="flex transition-transform duration-500 ease-in-out">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${activeImage * 100}%)` }}
+              >
                 {[1, 2, 3, 4, 5].map((index) => (
                   <img
                     key={index}
-                    src={`/images/service-${activeService}-${index + 1}.jpg`}
+                    src={`/images/${index}.jpg`}
                     alt={`${services[activeService].title} - Image ${index}`}
-                    className={`w-full h-full object-cover transition-opacity duration-300 ${
-                      index === activeImage ? "opacity-100" : "opacity-0"
-                    }`}
+                    className="w-full h-full object-cover flex-shrink-0"
                   />
                 ))}
               </div>

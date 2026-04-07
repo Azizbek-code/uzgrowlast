@@ -24,7 +24,7 @@ const teamMembers = [
     id: 1,
     name: "Rustamjon Rahmonov",
     position: "Asoschi va Bosh Direktor",
-    avatar: "/images/logo.png",
+    avatar: "/images/team/1.jpg",
     bio: "O'zbekistonlik innovator agrofaol va tadbirkor. 2017-yildan beri Markaziy Osiyo agrosektorida minglab fermerlar va agrobiznes vakillariga ma'lumot, ishonch va natija olib kelmoqda.",
     experience: "4+ yillik",
     achievements: [
@@ -44,7 +44,7 @@ const teamMembers = [
     id: 2,
     name: "Azizbek Karimov",
     position: "Texnik Direktor",
-    avatar: "/images/team/azizbek.jpg",
+    avatar: "/images/team/2.jpg",
     bio: "Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonaviy agrotexnologiyalarni joriy etmoqda.",
     experience: "10+ yillik",
     achievements: [
@@ -69,7 +69,7 @@ const teamMembers = [
     id: 3,
     name: "Abdurasulov Abdulloh Sheraliyevich",
     position: "Sotuv bo'limi rahbari",
-    avatar: "/images/team/abdulloh.jpg",
+    avatar: "/images/team/3.jpg",
     bio: "6+ yillik tajribaga ega sotuv mutaxassisi. ROODELL kompaniyasida 2 mlrd dan 13 mlrd so'mgacha bo'lgan sotuv hajmini oshirgan. 10 kishilik professional jamoani shakllantirgan.",
     experience: "6+ yillik",
     achievements: [
@@ -99,7 +99,7 @@ const teamMembers = [
     id: 4,
     name: "Majidov Alisher",
     position: "Marketolog",
-    avatar: "/images/team/alisher.jpg",
+    avatar: "/images/team/4.jpg",
     bio: "10+ yillik tajribaga ega marketing mutaxassisi. 16 ta muvaffaqiyatli loyihani amalga oshirgan. Zamonaviy marketing strategiyalari va brendni rivojlantirish bo'yicha chuqur bilimga ega.",
     experience: "10+ yillik",
     achievements: [
@@ -129,7 +129,7 @@ const teamMembers = [
     id: 5,
     name: "Gulbaxor Karaboyeva",
     position: "Moliya direktori",
-    avatar: "/images/team/gulbaxor.jpg",
+    avatar: "/images/team/5.jpg",
     bio: "Moliya va boshqaruv bo'yicha tajribali mutaxassis. Kompaniya moliya strategiyasini rivojlantirish va byudjetni boshqarish bo'yicha keng tajribaga ega.",
     experience: "8+ yillik",
     achievements: [
