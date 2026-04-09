@@ -67,18 +67,15 @@ export function Hero() {
     >
       {/* Video Background */}
       <div className="absolute inset-0">
-        <video
+        <iframe
           src="https://drive.google.com/file/d/1YjywKKQxbewA7auLFIp5MG3kQWqZr-uv/preview"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover scale-105"
+          className="w-full h-full border-0"
+          allow="autoplay"
           style={{
             filter: "brightness(1.1) contrast(1.1) saturate(1.2)",
             transform: "scale(1.05)",
           }}
-        ></video>
+        />
       </div>
       {/* Overlay */}
       <div className="absolute inset-0 bg-linear-to-r from-black/30 via-black/20 to-black/30" />
