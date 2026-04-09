@@ -13,10 +13,11 @@ import { Globe, Plane, Users, Handshake } from "lucide-react";
 const internationalProjects = [
   {
     id: 1,
-    title: "Qozog'iston Energetika Hamkorligi",
+    title: "Qozog'iston Avtomatlashtirish Hamkorligi",
     description:
       "Markaziy Osiyo mamlakatlari o'rtasida qayta tiklanuvchi energiya manbalarini rivojlantirish bo'yicha qo'shma loyiha",
-    image: "/images/1.jpg",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469176/20201201_105259_q5us00.jpgg",
     country: "Qozog'iston",
     status: "Faol",
     icon: <Globe className="h-5 w-5" />,
@@ -28,7 +29,8 @@ const internationalProjects = [
     title: "Tojikiston Sug'orish Tizimi",
     description:
       "Zamonaviy sug'orish texnologiyalarini joriy etish orqali qishloq xo'jaligini rivojlantirish dasturi",
-    image: "/images/2.jpg",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg",
     country: "Tojikiston",
     status: "Jarayonda",
     icon: <Plane className="h-5 w-5" />,
@@ -37,10 +39,11 @@ const internationalProjects = [
   },
   {
     id: 3,
-    title: "Qirg'iziston Ta'lim Dasturi",
+    title: "Qirg'iziston Issiqxona",
     description:
       "Raqamli ta'lim platformalarini yaratish va o'qituvchilar malakasini oshirish bo'yicha xalqaro loyiha",
-    image: "/images/3.jpg",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567956/20210211_141225_yvl1wr.jpg",
     country: "Qirg'iziston",
     status: "Rejalashtirilgan",
     icon: <Users className="h-5 w-5" />,
@@ -49,10 +52,11 @@ const internationalProjects = [
   },
   {
     id: 4,
-    title: "Turkmaniston Savdo Koridori",
+    title: "Turkmaniston Stelaj Tizimi",
     description:
       "Xalqaro transport yo'llarini rivojlantirish va savdo aloqalarini kengaytirish bo'yicha strategik loyiha",
-    image: "/images/4.jpg",
+    image:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5188_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg",
     country: "Turkmaniston",
     status: "Faol",
     icon: <Handshake className="h-5 w-5" />,

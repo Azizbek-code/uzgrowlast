@@ -30,14 +30,14 @@ const teamMembers = [
     bio: "O'zbekistonlik innovator agrofaol va tadbirkor. 2017-yildan beri Markaziy Osiyo agrosektorida minglab fermerlar va agrobiznes vakillariga ma'lumot, ishonch va natija olib kelmoqda.",
     experience: "4+ yillik",
     achievements: [
-      "150,000+ obunachi",
+      "200,000+ obunachi",
       "100+ muvaffaqiyatli loyiha",
       "Xalqaro hamkorliklar",
     ],
     education: ["Qishloq xo'jaligi instituti", "Xalqaro biznes menejmenti"],
     skills: ["Agrobiznes", "Innovatsiya", "Loyihalash", "Menejment"],
-    email: "rustamjon@uzgrow.uz",
-    phone: "+998 90 123-45-71",
+    email: "uzgrrow@gmail.com",
+    phone: "+998 88 507 00 70",
     location: "Toshkent, O'zbekiston",
     linkedin: "#",
     twitter: "#",
@@ -83,31 +83,6 @@ const teamMembers = [
     ],
     email: "abdulloh@uzgrow.uz",
     phone: "+998 90 123-45-73",
-    location: "Toshkent, O'zbekiston",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    id: 4,
-    name: "Azizbek Karimov",
-    position: "Loyiha Menejeri",
-    avatar: null,
-    bio: "Katta miqyosli loyihalarni boshqarish va nazorat qilish bo'yicha mutaxassis. Muvaffaqiyatli loyihalarni vaqti yetkazishni ta'minlaydi.",
-    experience: "8+ yillik",
-    achievements: [
-      "30+ muvaffaqiyatli loyiha",
-      "Vaqt yetkazish 100%",
-      "Mijozlar mamnunligi",
-    ],
-    education: ["Loyihalar boshqaruvi", "Biznes administratsiyasi"],
-    skills: [
-      "Loyihalar boshqaruvi",
-      "Mijozlar bilan ishlash",
-      "Byudjetlash",
-      "Sifat nazorati",
-    ],
-    email: "azizbek@uzgrow.uz",
-    phone: "+998 90 123-45-74",
     location: "Toshkent, O'zbekiston",
     linkedin: "#",
     twitter: "#",
@@ -308,46 +283,13 @@ export function Team() {
                       </div>
                     </div>
 
-                    {/* Education */}
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                        <GraduationCap className="h-4 w-4" />
-                        Ta'lim
-                      </h4>
-                      <div className="space-y-1">
-                        {selectedMember.education.map((edu, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center gap-2 text-sm text-muted-foreground"
-                          >
-                            <div className="w-2 h-2 bg-primary rounded-full" />
-                            <span>{edu}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                  
                   </div>
 
                   {/* Right Column */}
                   <div className="space-y-6">
                     {/* Education */}
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                        <GraduationCap className="h-4 w-4" />
-                        {t("team.education")}
-                      </h4>
-                      <div className="space-y-1">
-                        {selectedMember.education.map((edu, index) => (
-                          <div
-                            key={index}
-                            className="text-sm text-muted-foreground"
-                          >
-                            • {edu}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
+                  
                     {/* Skills */}
                     <div>
                       <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">

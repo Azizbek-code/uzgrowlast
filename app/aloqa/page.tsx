@@ -138,17 +138,30 @@ export default function AloqaPage() {
                   {t("contact.socialMedia")}
                 </h3>
                 <div className="flex gap-3">
-                  {["Telegram", "Instagram", "YouTube", "Facebook"].map(
-                    (social) => (
-                      <a
-                        key={social}
-                        href="#"
-                        className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
-                      >
-                        <span className="text-xs font-bold">{social[0]}</span>
-                      </a>
-                    ),
-                  )}
+                  {[
+                    { name: "Telegram", href: "http://@Uz_Grow", icon: "T" },
+                    {
+                      name: "Instagram",
+                      href: "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
+                      icon: "I",
+                    },
+                    {
+                      name: "YouTube",
+                      href: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
+                      icon: "Y",
+                    },
+                    { name: "Facebook", href: "#", icon: "F" },
+                  ].map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
+                    >
+                      <span className="text-xs font-bold">{social.icon}</span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
