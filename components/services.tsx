@@ -30,7 +30,6 @@ export function Services() {
         t("services.engineeringFeatures.3"),
       ],
       images: [
-                "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567292/IMG_4029_copy_7_q0rdbm.jpg",
         "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567592/20201201_105521_ugdege.jpg",
         "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567918/20201201_143010_eudwpq.jpg",
       ],

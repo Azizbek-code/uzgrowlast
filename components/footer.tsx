@@ -42,10 +42,6 @@ const teamMembers = [
     name: "Majidov Alisher",
     position: "Marketolog",
     avatar: "/team/marketolog.jpg",
-    experience: "10+ yillik tajriba",
-    projects: "16 ta muvaffaqiyatli loyihalar",
-    phone: "+99893-428-30-32",
-    completion: "vaqtida topshirish 99%",
   },
   {
     name: "Abdulloh Sheraliyevich",
