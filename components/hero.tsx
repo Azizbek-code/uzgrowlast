@@ -68,9 +68,9 @@ export function Hero() {
       {/* Video Background */}
       <div className="absolute inset-0">
         <iframe
-          src="https://drive.google.com/file/d/1YjywKKQxbewA7auLFIp5MG3kQWqZr-uv/preview"
+          src="https://drive.google.com/file/d/1YjywKKQxbewA7auLFIp5MG3kQWqZr-uv/preview?loop=1&autoplay=1"
           className="w-full h-full border-0"
-          allow="autoplay"
+          allow="autoplay; loop"
           style={{
             filter: "brightness(1.1) contrast(1.1) saturate(1.2)",
             transform: "scale(1.05)",
