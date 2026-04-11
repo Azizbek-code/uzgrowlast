@@ -205,7 +205,7 @@ const translations = {
           name: "Rustamjon Rahmonov",
           position: "Asoschi va Bosh Direktor",
           bio: "O'zbekistonlik innovator agrofaol va tadbirkor. 2017-yildan beri Markaziy Osiyo agrosektorida minglab fermerlar va agrobiznes vakillariga ma'lumot, ishonch va natija olib kelmoqda.",
-          experience: "4+ yillik",
+          experience: "6+ yillik",
           achievements: [
             "200,000+ obunachi",
             "100+ muvaffaqiyatli loyiha",
@@ -227,7 +227,7 @@ const translations = {
           name: "Alisher Majidov",
           position: "Marketing Direktori",
           bio: "Marketing va brend strategiyalari bo'yicha mutaxassis. Kompaniya imidjini rivojlantirish va mijozlar bazasini kengaytirish uchun mas'ul.",
-          experience: "6+ yillik",
+          experience: "10+ yillik",
           achievements: [
             "20+ marketing kampaniyasi",
             "Brendni rivojlantirish",
@@ -1140,7 +1140,7 @@ const translations = {
           name: "Rustamjon Rahmonov",
           position: "Founder and CEO",
           bio: "Uzbek innovator and agricultural entrepreneur. Since 2017, he has been bringing information, trust and results to thousands of farmers and agricultural entrepreneurs in Central Asia.",
-          experience: "4+ years",
+          experience: "6+ years",
           achievements: [
             "200,000+ subscribers",
             "100+ successful projects",
