@@ -475,7 +475,7 @@ export function Contact() {
                 {t("contact.socialMedia")}
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {socialLinks.map((social, index) => (
+                {socials.map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
