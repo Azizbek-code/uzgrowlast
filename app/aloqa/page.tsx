@@ -99,26 +99,25 @@ export default function AloqaPage() {
         <Header />
 
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
-          <div className="container mx-auto px-4 lg:px-8">
+        <section className="pt-20 sm:pt-32 pb-16 sm:pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+              <span className="inline-block px-3 sm:px-4 py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 {t("contact.title")}
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 text-balance">
                 {t("contact.subtitle")}
               </h1>
-             
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-3 gap-8">
+        <section className="py-16 sm:py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
               {/* Contact Info */}
-              <div className="lg:col-span-1 space-y-6">
+              <div className="lg:col-span-1 space-y-4 sm:space-y-6">
                 <h2 className="text-2xl font-bold text-foreground mb-6">
                   {t("contact.infoTitle")}
                 </h2>
@@ -126,10 +125,10 @@ export default function AloqaPage() {
                 {contactInfo.map((item, index) => (
                   <div
                     key={index}
-                    className="flex gap-4 p-4 bg-card rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all"
+                    className="flex gap-3 sm:gap-4 p-3 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-5 h-5 text-primary" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">
@@ -199,7 +198,7 @@ export default function AloqaPage() {
 
               {/* Contact Form */}
               <div className="lg:col-span-2">
-                <div className="bg-card rounded-3xl p-8 md:p-10 border border-border">
+                <div className="bg-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-border">
                   <h2 className="text-2xl font-bold text-foreground mb-2">
                     {t("contact.formTitle")}
                   </h2>
@@ -220,8 +219,11 @@ export default function AloqaPage() {
                       </p>
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-6">
+                    <form
+                      onSubmit={handleSubmit}
+                      className="space-y-4 sm:space-y-6"
+                    >
+                      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         <div>
                           <label className="block text-sm font-medium text-foreground mb-2">
                             {t("contact.name")} *
@@ -233,7 +235,7 @@ export default function AloqaPage() {
                             onChange={(e) =>
                               setFormData({ ...formData, name: e.target.value })
                             }
-                            className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                            className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-background border border-border focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm"
                             placeholder={t("contact.namePlaceholder")}
                           />
                         </div>
@@ -334,7 +336,7 @@ export default function AloqaPage() {
                         size="lg"
                         disabled={isLoading}
                         className={cn(
-                          "w-full rounded-full gap-2",
+                          "w-full rounded-full gap-2 text-sm sm:text-base",
                           isLoading && "opacity-70 cursor-not-allowed",
                         )}
                       >
