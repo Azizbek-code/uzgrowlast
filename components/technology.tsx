@@ -43,7 +43,7 @@ const technologies = [
     descriptionKey: "technology.led.description",
     color: "from-yellow-500/20 to-amber-500/20",
     image:
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg",
+      "/images/1.jpg",
   },
   {
     icon: Droplets,

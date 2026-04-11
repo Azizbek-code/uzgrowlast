@@ -95,9 +95,16 @@ export function About() {
   return (
     <section
       id="haqimizda"
-      className="py-20 lg:py-32 bg-background overflow-hidden"
+      className="py-20 lg:py-32 overflow-hidden relative"
+      style={{
+        backgroundImage: `url("https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469051/photo_2026-04-04_10-35-53_kvt95v.jpg")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Top Section with Video */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
           {/* Image Slideshow */}
@@ -125,7 +132,7 @@ export function About() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
               {t("about.headline")}
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg  leading-relaxed mb-8 text-black">
               {t("about.descriptionText")}
             </p>
             <Button size="lg" className="rounded-full px-8">
