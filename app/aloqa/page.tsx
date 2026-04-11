@@ -12,14 +12,14 @@ const getContactInfo = (t: (key: string) => string) => [
   {
     icon: Phone,
     title: t("contact.phone"),
-    value: "+99893-428-30-32",
-    href: "tel:+998934283032",
+    value: "+998555152223",
+    href: "tel:+998555152223",
   },
   {
     icon: Send,
     title: "WhatsApp",
-    value: "+99893-428-30-32",
-    href: "https://wa.me/+998934283032",
+    value: "+998555152223",
+    href: "https://wa.me/+998555152223",
   },
   {
     icon: Mail,
@@ -452,9 +452,9 @@ export default function AloqaPage() {
                   </h3>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  +99893-428-30-32
+                  +998555152223
                   <br />
-                  +99893-428-30-32 (WhatsApp)
+                  +998555152223 (WhatsApp)
                 </p>
               </div>
             </div>
