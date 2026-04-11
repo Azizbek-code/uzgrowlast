@@ -86,7 +86,7 @@ export function Header() {
                   className={cn(
                     "flex items-center gap-1 text-xs px-2 py-1 rounded transition-colors",
                     showTransparent
-                      ? "text-white hover:text-white/80"
+                      ? "text-black hover:text-white/80"
                       : "text-foreground hover:text-primary",
                   )}
                 >

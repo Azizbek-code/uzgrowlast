@@ -121,18 +121,7 @@ export function Team() {
                     ))}
                 </div>
 
-                {/* Contact */}
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline">
-                    <Mail className="h-4 w-4 mr-1" />
-                  </Button>
-                  <Button size="sm" variant="outline">
-                    <Phone className="h-4 w-4 mr-1" />
-                  </Button>
-                  <Button size="sm" variant="outline">
-                    <Linkedin className="h-4 w-4 mr-1" />
-                  </Button>
-                </div>
+
               </CardContent>
             </Card>
           ))}
