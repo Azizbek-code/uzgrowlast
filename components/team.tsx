@@ -21,12 +21,64 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const teamMembers = [
+  {
+    name: "Rustamjon Rahmonov",
+    position: "Asoschi va Bosh Direktor",
+    avatar: "/team/ceo.jpg",
+    experience: "15+ yil",
+    projects: "100+ loyiha",
+    phone: "+998 55 515 22 33",
+    email: "rustamjon@uzgrow.uz",
+    achievements: [
+      "Prezident loyihalari",
+      "Xalqaro sertifikatlar",
+      "Innovatsion yechimlar",
+    ],
+    skills: ["Agro-injiniring", "Biznes strategiyasi", "Loyihalar boshqaruvi"],
+    education: [
+      "Qishloq xo'jaligi instituti",
+      "Biznes boshqaruvi",
+      "Xalqaro treninglar",
+    ],
+  },
+  {
+    name: "Majidov Alisher",
+    position: "Marketolog",
+    avatar: "/team/marketolog.jpg",
+    experience: "5+ yil",
+    projects: "50+ loyiha",
+    phone: "+998 90 123 45 67",
+    email: "alisher@uzgrow.uz",
+    achievements: [
+      "Marketing strategiyalari",
+      "Sotuvning o'sishi",
+      "Mijozlar bazasi",
+    ],
+    skills: ["Digital marketing", "Kontent marketing", "SMM"],
+    education: ["Marketing instituti", "Grafik dizayn", "Reklama kurslari"],
+  },
+  {
+    name: "Abdulloh Sheraliyevich",
+    position: "Texnik Direktor",
+    avatar: null,
+    experience: "10+ yil",
+    projects: "80+ loyiha",
+    phone: "+998 99 876 54 32",
+    email: "abdulloh@uzgrow.uz",
+    achievements: ["Texnik yechimlar", "Avtomatlashtirish", "Injiniring"],
+    skills: ["Texnik dizayn", "Avtomatlashtirish", "Muhandislik"],
+    education: [
+      "Texnik universitet",
+      "Muhandislik kurslari",
+      "Xalqaro sertifikatlar",
+    ],
+  },
+];
+
 export function Team() {
   const [selectedMember, setSelectedMember] = useState<any>(null);
-  const { t, tObj } = useLanguage();
-
-  // Get team members from LanguageContext
-  const teamMembers = Object.values(tObj("team.members"));
+  const { t } = useLanguage();
 
   return (
     <section className="py-20 bg-background">

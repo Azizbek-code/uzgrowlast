@@ -71,7 +71,7 @@ export function Contact() {
     t("contact.services.investment"),
   ];
 
-  const socialLinks = [
+  const socials = [
     {
       icon: Youtube,
       label: "YouTube",
@@ -87,23 +87,17 @@ export function Contact() {
     {
       icon: Facebook,
       label: "Facebook",
-      href: "https://www.facebook.com/share/1DePjLwX79/",
+      href: "https://www.facebook.com/people/UZ-Grow/61555877069972/?rdid=DcrSKZ6JcT9V7Tj3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DePjLwX79%2F",
       color: "bg-blue-500/10 text-blue-600 hover:bg-blue-500/20",
     },
     {
       icon: MessageCircle,
-      label: "TikTok",
-      href: "https://www.tiktok.com/@uz.grow",
-      color: "bg-black/10 text-black hover:bg-black/20",
-    },
-    {
-      icon: MessageCircle,
       label: "Telegram",
-      href: "http://t.me/Uz_Grow",
-      color: "bg-blue-400/10 text-blue-500 hover:bg-blue-400/20",
+      href: "http://@Uz_Grow",
+      color: "bg-blue-500/10 text-blue-600 hover:bg-blue-500/20",
     },
     {
-      icon: Mail,
+      icon: Send,
       label: "Website",
       href: "http://uzgrow.uz",
       color: "bg-green-500/10 text-green-600 hover:bg-green-500/20",

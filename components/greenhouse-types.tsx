@@ -182,7 +182,7 @@ export function GreenhouseTypes() {
                       Xususiyatlar
                     </h4>
                     <div className="space-y-2">
-                      {type.features.map((feature, index) => (
+                      {type.features.map((feature: any, index: number) => (
                         <div
                           key={index}
                           className="flex items-center gap-2 text-sm text-gray-600"

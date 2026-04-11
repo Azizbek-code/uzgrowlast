@@ -57,7 +57,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 export function About() {
-  const { t, tArray } = useLanguage();
+  const { t } = useLanguage();
   const [currentAboutImage, setCurrentAboutImage] = useState(0);
 
   // 6 Cloudinary images for about section slideshow
@@ -86,7 +86,11 @@ export function About() {
     { value: 12, suffix: "+", label: t("about.countries") },
   ];
 
-  const values = tArray("about.values");
+  const values = [
+    t("about.values.0"),
+    t("about.values.1"),
+    t("about.values.2"),
+  ];
   return (
     <section
       id="haqimizda"
@@ -166,7 +170,7 @@ export function About() {
               {t("about.valuesTitle")}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {values.map((value, index) => (
+              {values.map((value: any, index: number) => (
                 <span
                   key={index}
                   className="px-3 py-1.5 bg-[#24B14B]/10 text-primary rounded-full text-sm font-medium"

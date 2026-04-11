@@ -13,9 +13,40 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const getSlides = (t: (key: string) => string) => [
+  {
+    quote: t("hero.slides.slide1.quote"),
+    author: t("hero.slides.slide1.author"),
+    role: t("hero.slides.slide1.role"),
+    cta: t("hero.slides.slide1.cta"),
+    link: "#issiqxona-turlari",
+  },
+  {
+    quote: t("hero.slides.slide2.quote"),
+    author: t("hero.slides.slide2.author"),
+    role: t("hero.slides.slide2.role"),
+    cta: t("hero.slides.slide2.cta"),
+    link: "#jixozlar",
+  },
+  {
+    quote: t("hero.slides.slide3.quote"),
+    author: t("hero.slides.slide3.author"),
+    role: t("hero.slides.slide3.role"),
+    cta: t("hero.slides.slide3.cta"),
+    link: "#aloqa",
+  },
+  {
+    quote: t("hero.slides.slide4.quote"),
+    author: t("hero.slides.slide4.author"),
+    role: t("hero.slides.slide4.role"),
+    cta: t("hero.slides.slide4.cta"),
+    link: "#texnologiya",
+  },
+];
+
 export function Hero() {
-  const { t, tObj } = useLanguage();
-  const slides = tObj("hero.slides");
+  const { t } = useLanguage();
+  const slides = getSlides(t);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -89,9 +120,9 @@ export function Hero() {
 
           {/* Slider Content */}
           <div className="relative min-h-[180px] mb-10">
-            {Object.entries(slides).map(([key, slide], index) => (
+            {slides.map((slide: any, index: number) => (
               <div
-                key={key}
+                key={index}
                 className={`absolute inset-0 transition-all duration-700 ${
                   index === currentSlide
                     ? "opacity-100 translate-y-0"
@@ -151,7 +182,7 @@ export function Hero() {
           {/* Slide Navigation */}
           <div className="flex items-center gap-6">
             <div className="flex gap-2">
-              {Object.values(slides).map((_, index) => (
+              {slides.map((_: any, index: number) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
@@ -183,11 +214,11 @@ export function Hero() {
         {/* Discover Button */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2">
           <Link
-            href={Object.values(slides)[currentSlide].link}
+            href={slides[currentSlide].link}
             className="group flex items-center gap-2 text-white hover:text-primary transition-colors"
           >
             <span className="text-sm font-medium">
-              {Object.values(slides)[currentSlide].cta}
+              {slides[currentSlide].cta}
             </span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>

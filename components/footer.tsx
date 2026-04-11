@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -11,6 +13,27 @@ import {
   Users,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+const footerLinks = {
+  xizmatlar: [
+    { label: "Issiqxona turlari", href: "/issiqxona-turlari" },
+    { label: "Loyihalar", href: "/loyihalar" },
+    { label: "Jihozlar", href: "/jixozlar" },
+    { label: "Qurilish", href: "/qurilish" },
+  ],
+  kompaniya: [
+    { label: "Biz haqimizda", href: "/haqimizda" },
+    { label: "Jamoa", href: "/rahbariyat" },
+    { label: "Xalqaro hamkorlik", href: "/xalqaro-hamkorlik" },
+    { label: "Media hamkorlik", href: "/media-hamkorlik" },
+  ],
+  yordam: [
+    { label: "Bog'lanish", href: "/aloqa" },
+    { label: "Galereya", href: "/gallery" },
+    { label: "Maxfiylik siyosati", href: "/maxfiylik-siyosati" },
+    { label: "Foydalanish shartlari", href: "/foydanalish-shartlari" },
+  ],
+};
 
 const teamMembers = [
   {
@@ -42,11 +65,10 @@ const socials = [
     label: "Facebook",
   },
   {
-    icon: Linkedin,
-    href: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
-    label: "YouTube",
+    icon: Send,
+    href: "http://@Uz_Grow",
+    label: "Telegram",
   },
-  { icon: Send, href: "http://@Uz_Grow", label: "Telegram" },
 ];
 
 export function Footer() {
@@ -80,7 +102,7 @@ export function Footer() {
                 <h4 className="font-semibold text-white">Jamoa</h4>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                {teamMembers.map((member, index) => (
+                {teamMembers.map((member: any, index: number) => (
                   <div
                     key={index}
                     className="flex items-center gap-2 p-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
@@ -171,7 +193,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-6 text-lg">Xizmatlar</h4>
             <ul className="space-y-3">
-              {footerLinks.xizmatlar.map((link, index) => (
+              {footerLinks.xizmatlar.map((link: any, index: number) => (
                 <li key={index}>
                   <Link
                     href={link.href}
@@ -188,7 +210,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-6 text-lg">Kompaniya</h4>
             <ul className="space-y-3">
-              {footerLinks.kompaniya.map((link, index) => (
+              {footerLinks.kompaniya.map((link: any, index: number) => (
                 <li key={index}>
                   <Link
                     href={link.href}
@@ -205,7 +227,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-6 text-lg">Yordam</h4>
             <ul className="space-y-3 mb-8">
-              {footerLinks.yordam.map((link, index) => (
+              {footerLinks.yordam.map((link: any, index: number) => (
                 <li key={index}>
                   <Link
                     href={link.href}
@@ -223,7 +245,7 @@ export function Footer() {
                 Bizni kuzating
               </h5>
               <div className="flex gap-3">
-                {socials.map((social, index) => (
+                {socials.map((social: any, index: number) => (
                   <a
                     key={index}
                     href={social.href}
