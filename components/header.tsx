@@ -52,8 +52,8 @@ export function Header() {
         className={cn(
           "hidden lg:block transition-all duration-300 border-b",
           showTransparent
-            ? "bg-black/20 backdrop-blur-sm border-white/10"
-            : "bg-muted/50 border-border",
+            ? "bg-[#24B14B]/20 backdrop-blur-sm border-white/10"
+            : "bg-[#24B14B]/50 border-border",
         )}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
