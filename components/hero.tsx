@@ -45,9 +45,33 @@ const getSlides = (t: (key: string) => string) => [
 ];
 
 export function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const { t } = useLanguage();
   const slides = getSlides(t);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  // 10 Cloudinary images for hero background slideshow
+  const backgroundImages = [
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469176/20201201_105259_q5us00.jpg", // Qozog'iston loyihasi
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg", // Tojikiston loyihasi
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567956/20210211_141225_yvl1wr.jpg", // Qirg'iziston loyihasi
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5188_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg", // Turkmaniston loyihasi
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775570543/28_bnpx3z.jpg", // Isitish tizimi
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469177/20201023_075858_hcs7fb.jpg", // Ventilyatsiya
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469181/20201201_105435_hq3q9q.jpg", // Stelaj tizimi
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468970/21_bv62xg.jpg", // Andijon loyihasi
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469051/photo_2026-04-04_10-35-53_kvt95v.jpg", // Samarqand loyihasi
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469047/IMG_5184_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_iuhwco.jpg", // Xalqaro loyiha
+  ];
+
+  // Change image every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -65,12 +89,12 @@ export function Hero() {
       id="bosh-sahifa"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Video Background */}
+      {/* Image Slideshow Background */}
       <div className="absolute inset-0">
-        <iframe
-          src="https://drive.google.com/file/d/1YjywKKQxbewA7auLFIp5MG3kQWqZr-uv/preview?loop=1&autoplay=1"
-          className="w-full h-full border-0"
-          allow="autoplay; loop"
+        <img
+          src={backgroundImages[currentImage]}
+          alt="Greenhouse background"
+          className="w-full h-full object-cover"
           style={{
             filter: "brightness(1.1) contrast(1.1) saturate(1.2)",
             transform: "scale(1.05)",
@@ -87,7 +111,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 bg-black/20 backdrop-blur-md rounded-full px-4 py-2 mb-8 border border-white/10">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-white text-sm font-medium">
-              4+ yil tajriba - 100+ muvaffaqiyatli loyiha
+              {t("hero.tagline")}
             </span>
           </div>
 
@@ -203,10 +227,10 @@ export function Hero() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
-              { value: "4+", label: "Yil tajriba" },
-              { value: "100+", label: "Muvaffaqiyatli loyiha" },
-              { value: "50+", label: "Mutaxassislar" },
-              { value: "12+", label: "Viloyatda xizmat" },
+              { value: "4+", label: t("hero.stats.experience") },
+              { value: "100+", label: t("hero.stats.projects") },
+              { value: "50+", label: t("hero.stats.specialists") },
+              { value: "12+", label: t("hero.stats.regions") },
             ].map((stat, index) => (
               <div key={index} className="py-5 px-4 text-center">
                 <div className="text-2xl md:text-3xl font-bold text-white">

@@ -39,39 +39,19 @@ const translations = {
       all: "Barchasi",
     },
     hero: {
-      title: "Zamonaviy Issiqxona Yechimlari",
+      title: "Zamonavoy Issiqxona Yechimlari",
       subtitle: "O'zbekistonning yetakchi agro-injiniring kompaniyasi",
       description:
-        "Biz eng zamonaviy issiqxona texnologiyalarini joriy etamiz va qishloq xo'jaligini rivojlantiramiz",
+        "Biz eng zamonavoy issiqxona texnologiyalarini joriy etamiz va qishloq xo'jaligini rivojlantiramiz",
       cta: "Bog'lanish",
       downloadCatalog: "Katalog yuklab olish",
-      slides: {
-        slide1: {
-          quote: "Biz har bir loyihani individual yondashuv bilan amalga oshiramiz va mijozlarimiz mamnuniyatini ta'minlaymiz.",
-          author: "UZ-GROW jamoasi",
-          role: "Agro-injiniring bo'yicha mutaxassislar",
-          cta: "Turnkey issiqxonalar",
-        },
-        slide2: {
-          quote: "Zamonaviy texnologiyalar va tajribali mutaxassislar jamoasi bilan yuqori hosildorlikka erishishingizni kafolatlaymiz.",
-          author: "Texnik bo'lim",
-          role: "Loyihalash va qurish",
-          cta: "Plastik issiqxonalar",
-        },
-        slide3: {
-          quote: "Energiya tejamkor va avtomatlashtirilgan tizimlar orqali xarajatlarni kamaytirib, daromadni oshiring.",
-          author: "Innovatsiya markazi",
-          role: "Zamonaviy yechimlar",
-          cta: "Shisha issiqxonalar",
-        },
-        slide4: {
-          quote: "Loyihalashdan tortib to'liq ishga tushirishgacha - biz bilan hamkorlik qiling va natijaga erishing.",
-          author: "Xizmatlar bo'limi",
-          role: "Kompleks yechimlar",
-          cta: "Jihozlar va tizimlar",
-        },
+      tagline: "4+ yil tajriba - 100+ muvaffaqiyatli loyiha",
+      stats: {
+        experience: "Yil tajriba",
+        projects: "Muvaffaqiyatli loyiha",
+        specialists: "Mutaxassislar",
+        regions: "Viloyatda xizmat",
       },
-      downloadCatalog: "Katalog yuklab olish",
       slides: {
         slide1: {
           quote:
@@ -82,7 +62,7 @@ const translations = {
         },
         slide2: {
           quote:
-            "Zamonaviy texnologiyalar va tajribali mutaxassislar jamoasi bilan yuqori hosildorlikka erishishingizni kafolatlaymiz.",
+            "Zamonavoy texnologiyalar va tajribali mutaxassislar jamoasi bilan yuqori hosildorlikka erishishingizni kafolatlaymiz.",
           author: "Texnik bo'lim",
           role: "Loyihalash va qurish",
           cta: "Plastik issiqxonalar",
@@ -91,7 +71,7 @@ const translations = {
           quote:
             "Energiya tejamkor va avtomatlashtirilgan tizimlar orqali xarajatlarni kamaytirib, daromadni oshiring.",
           author: "Innovatsiya markazi",
-          role: "Zamonaviy yechimlar",
+          role: "Zamonavoy yechimlar",
           cta: "Shisha issiqxonalar",
         },
         slide4: {
@@ -113,6 +93,19 @@ const translations = {
       clients: "Mijozlar",
       countries: "Davlatlar",
       values: ["Sifat", "Innovatsiya", "Ishonch", "Uzoq muddatli hamkorlik"],
+      tagline: "Biz haqimizda",
+      headline: "4 yildan ortiq kompaniya 3 ta mamlakatda sizning yoningizda",
+      descriptionText:
+        "UZ-GROW - zamonavoy issiqxona qurilishi va agro-injiniring sohasida faoliyat yurituvchi kompaniya. Bizning maqsadimiz - O'zbekistonda yuqori samaradorlikka ega, innovatsion va eksportbop issiqxona infratuzilmasini rivojlantirish.",
+      aboutUsButton: "Biz haqimizda batafsil",
+      videoNotSupported: "Sizning brauzeringiz video qo'llab-quvvatlamaydi.",
+      mission: "Missiya",
+      missionDesc:
+        "Mahalliy va xalqaro standartlarga mos, barqaror va rentabelli issiqxona loyihalarini amalga oshirish orqali mijozlar daromadini oshirish.",
+      vision: "Vizyon",
+      visionDesc:
+        "Markaziy Osiyoda yetakchi agro-injiniring kompaniyaga aylanish va zamonavoy issiqxonalarni eksport qilish.",
+      valuesTitle: "Qadriyatlar",
     },
     services: {
       title: "Xizmatlar",
@@ -122,7 +115,7 @@ const translations = {
       engineering: "Injiniring",
       engineeringDesc: "Loyihalashdan boshlab to'liq ishga tushirishgacha",
       engineeringFullDesc:
-        "Biz to'liq sikl asosida issiqxona quramiz. Natija: energiya tejamkor, yuqori hosildorlikka ega zamonaviy issiqxona",
+        "Biz to'liq sikl asosida issiqxona quramiz. Natija: energiya tejamkor, yuqori hosildorlikka ega zamonavoy issiqxona",
       engineeringFeatures: [
         "Metall konstruksiya",
         "Polikarbonat yoki shisha qoplama",
@@ -130,7 +123,7 @@ const translations = {
         "Avtomatlashtirilgan boshqaruv",
       ],
       equipment: "Jihozlar",
-      equipmentDesc: "Zamonaviy avtomatlashtirish va texnologiyalar",
+      equipmentDesc: "Zamonavoy avtomatlashtirish va texnologiyalar",
       equipmentFullDesc:
         "Issiqxona uchun zarur bo'lgan barcha jihozlar va tizimlarni taqdim etamiz. Eng yuqori samaradorlik va ishonchlilik",
       equipmentFeatures: [
@@ -167,7 +160,7 @@ const translations = {
         location: "Vodiy",
         size: "7 ta issiqxona",
         description:
-          "Vodiy hududida qurilgan 7 ta zamonaviy issiqxona majmuasi. Turli o'lchamlarda va texnologiyalar bilan jihozlangan.",
+          "Vodiy hududida qurilgan 7 ta zamonavoy issiqxona majmuasi. Turli o'lchamlarda va texnologiyalar bilan jihozlangan.",
         year: "2022-2024",
       },
       samarqand: {
@@ -183,7 +176,7 @@ const translations = {
         location: "Xalqaro",
         size: "5 ta issiqxona",
         description:
-          "Xalqaro mijozlar uchun qurilgan 5 ta issiqxona. Yevropa standartlariga mos zamonaviy yechimlar.",
+          "Xalqaro mijozlar uchun qurilgan 5 ta issiqxona. Yevropa standartlariga mos zamonavoy yechimlar.",
         year: "2023-2024",
       },
       agriculture: {
@@ -191,7 +184,7 @@ const translations = {
         location: "Qishloq xo'jaligi",
         size: "3 ta issiqxona",
         description:
-          "Qishloq xo'jaligini rivojlantirish maqsadida qurilgan 3 ta issiqxona. Zamonaviy sug'orish va iqlimlashtirish tizimlari.",
+          "Qishloq xo'jaligini rivojlantirish maqsadida qurilgan 3 ta issiqxona. Zamonavoy sug'orish va iqlimlashtirish tizimlari.",
         year: "2024",
       },
       viewProject: "Batafsil",
@@ -210,35 +203,73 @@ const translations = {
       members: {
         rustamjon: {
           name: "Rustamjon Rahmonov",
-          position: "Asoschisi va bosh direktori",
-          bio: "O'zbek innovatori va agrar tadbirkor. 2017 yildan beri Markaziy Osiyodagi minglab fermerlar va agrar tadbirkorlarga ma'lumot, ishonch va natijalar keltirmoqda.",
-        },
-        azizbek: {
-          name: "Azizbek Karimov",
-          position: "Texnik direktor",
-          bio: "Issiqxona qurilishi va texnologiyalari bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonaviy agrar texnologiyalarni joriy etadi.",
-        },
-        abdulloh: {
-          name: "Abdurasulov Abdulloh Sheraliyevich",
-          position: "Sotuv bo'limi boshlig'i",
-          bio: "6+ yillik tajribaga ega sotuv mutaxassisi. ROODELL'da sotuv hajmini 2 mlrd dan 13 mlrd so'mga oshirdi va 10 kishilik professional jamoa tuzdi.",
+          position: "Asoschi va Bosh Direktor",
+          bio: "O'zbekistonlik innovator agrofaol va tadbirkor. 2017-yildan beri Markaziy Osiyo agrosektorida minglab fermerlar va agrobiznes vakillariga ma'lumot, ishonch va natija olib kelmoqda.",
+          experience: "4+ yillik",
+          achievements: [
+            "200,000+ obunachi",
+            "100+ muvaffaqiyatli loyiha",
+            "Xalqaro hamkorliklar",
+          ],
+          education: [
+            "Qishloq xo'jaligi instituti",
+            "Xalqaro biznes menejmenti",
+          ],
+          skills: ["Agrobiznes", "Innovatsiya", "Loyihalash", "Menejment"],
+          email: "uzgrrow@gmail.com",
+          phone: "+998 88 507 00 70",
+          location: "Toshkent, O'zbekiston",
+          linkedin: "#",
+          twitter: "#",
         },
         alisher: {
-          name: "Majidov Alisher",
-          position: "Marketing mutaxassisi",
-          bio: "10+ yillik tajribaga ega marketing mutaxassisi. 16 ta muvaffaqiyatli loyihani amalga oshirdi. Zamonaviy marketing strategiyalari va brend rivojlantirish bo'yicha chuqur bilimga ega.",
+          name: "Alisher Majidov",
+          position: "Marketing Direktori",
+          bio: "Marketing va brend strategiyalari bo'yicha mutaxassis. Kompaniya imidjini rivojlantirish va mijozlar bazasini kengaytirish uchun mas'ul.",
+          experience: "6+ yillik",
+          achievements: [
+            "20+ marketing kampaniyasi",
+            "Brendni rivojlantirish",
+            "Mijozlar bazasi 3x o'sishi",
+          ],
+          education: ["Marketing", "Xalqaro biznes"],
+          skills: [
+            "Marketing strategiyasi",
+            "SMM",
+            "Kontent marketing",
+            "Analitika",
+          ],
+          email: "uzgrrow@gmail.com",
+          phone: "+998 88 507 00 70",
+          location: "Toshkent, O'zbekiston",
+          linkedin: "#",
+          twitter: "#",
         },
-        gulbaxor: {
-          name: "Gulbaxor Karaboyeva",
-          position: "Moliya direktori",
-          bio: "Moliya va boshqaruv bo'yicha tajribali mutaxassis. Moliyaviy strategiyalar ishlab chiqish va byudjetni boshqarish bo'yicha keng tajribaga ega.",
-        },
-        dilshod: {
-          name: "Dilshod Jo'rayev",
-          position: "Loyiha menejeri",
-          bio: "Yirik loyihalarni boshqarish va nazorat qilish bo'yicha mutaxassis. Muvaffaqiyatli loyihalarni o'z vaqtida amalga oshirishni ta'minlaydi.",
+        abdulloh: {
+          name: "Abdulloh Sheraliyevich",
+          position: "Texnik Direktor",
+          bio: "Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonavoy agrotexnologiyalarni joriy etmoqda.",
+          experience: "10+ yillik",
+          achievements: [
+            "50+ issiqxona loyihasi",
+            "Texnik innovatsiyalar",
+            "Xalqaro sertifikatlar",
+          ],
+          education: ["Qurilish muhandisligi", "Avtomatlashtirish sistemlari"],
+          skills: [
+            "Issiqxona qurilish",
+            "Avtomatlashtirish",
+            "3D modellashtirish",
+            "Texnik nazorat",
+          ],
+          email: "uzgrrow@gmail.com",
+          phone: "+998 88 507 00 70",
+          location: "Toshkent, O'zbekiston",
+          linkedin: "#",
+          twitter: "#",
         },
       },
+      achievementsLabel: "yutuq",
     },
     greenhouse: {
       title: "Issiqxona turlari",
@@ -351,7 +382,7 @@ const translations = {
         serviceLife: "Xizmat muddati",
       },
       guide: {
-        title: "To'g'ri Issiqxonini Qanday Tanlash?",
+        title: "To'g'ri Issiqxonani Qanday Tanlash?",
         beginners: "Boshlanuvchilar uchun",
         beginnersDesc:
           "Oddiy yoki Tunnel issiqxona - arzon va oson boshqariladi",
@@ -366,12 +397,12 @@ const translations = {
     },
     technology: {
       title: "Texnologiya",
-      subtitle: "Zamonaviy jihozlar va tizimlar",
+      subtitle: "Zamonavoy jihozlar va tizimlar",
       description: "Eng ilg'or agro-texnologiyalar bilan ta'minlaymiz",
       heating: {
         title: "Isitish tizimi",
         description:
-          "Zamonaviy isitish tizimlari orqali optimal haroratni ta'minlash va energiya tejash.",
+          "Zamonavoy isitish tizimlari orqali optimal haroratni ta'minlash va energiya tejash.",
       },
       ventilation: {
         title: "Ventilyatsiya va sovutish",
@@ -431,6 +462,21 @@ const translations = {
       location: "Manzil",
       getDirections: "Yo'nalishni olish",
       copyAddress: "Manzilni nusxalash",
+      address: "Toshkent shahri, Yunusobod tumani, Amir Temur ko'chasi, 123-uy",
+      companyPhone: "+998555152223",
+      companyPhone2: "+998994352313",
+      companyEmail: "uzgrrow@gmail.com",
+      website: "https://www.uzgrow.uz/",
+      locationUrl:
+        "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
+      socialLinks: {
+        facebook: "https://www.facebook.com/share/1DePjLwX79/",
+        instagram:
+          "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
+        telegram: "http://@Uz_Grow",
+        youtube: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
+        tiktok: "https://www.tiktok.com/@uz.grow",
+      },
       services: {
         turnkey: "Turnkey issiqxona qurish",
         engineering: "Agro-injiniring",
@@ -439,8 +485,39 @@ const translations = {
         investment: "Investitsiya",
       },
     },
+    footer: {
+      brandName: "UZ-GROW",
+      brandTagline: "",
+      brandDescription:
+        "O'zbekistonda zamonavoy issiqxona qurish va qurilish xizmatlari. Biz bilan kelajak bugun boshlanadi.",
+      contact: "Aloqa",
+      services: "Xizmatlar",
+      company: "Kompaniya",
+      help: "Yordam",
+      team: "Jamoa",
+      allRightsReserved: "Barcha huquqlar himoyalangan",
+      links: {
+        services: [
+          { label: "Issiqxona turlari", href: "/issiqxona-turlari" },
+          { label: "Loyihalar", href: "/loyihalar" },
+          { label: "Jihozlar", href: "/jixozlar" },
+          { label: "Qurilish", href: "/qurilish" },
+        ],
+        company: [
+          { label: "Biz haqimizda", href: "/haqimizda" },
+          { label: "Jamoa", href: "/rahbariyat" },
+          { label: "Xalqaro hamkorlik", href: "/xalqaro-hamkorlik" },
+          { label: "Media hamkorlik", href: "/media-hamkorlik" },
+        ],
+        help: [
+          { label: "Bog'lanish", href: "/aloqa" },
+          { label: "Galereya", href: "/gallery" },
+          { label: "Maxfiylik siyosati", href: "/maxfiylik-siyosati" },
+          { label: "Foydalanish shartlari", href: "/foydanalish-shartlari" },
+        ],
+      },
+    },
   },
-
   ru: {
     nav: {
       home: "Главная",
@@ -800,6 +877,21 @@ const translations = {
       location: "Адрес",
       getDirections: "Построить маршрут",
       copyAddress: "Скопировать адрес",
+      address: "g. Tashkent, Yunusobodskiy rayon, ul. Amir Temur, 123",
+      companyPhone: "+998555152223",
+      companyPhone2: "+998994352313",
+      companyEmail: "uzgrrow@gmail.com",
+      website: "https://www.uzgrow.uz/",
+      locationUrl:
+        "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
+      socialLinks: {
+        facebook: "https://www.facebook.com/share/1DePjLwX79/",
+        instagram:
+          "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
+        telegram: "http://@Uz_Grow",
+        youtube: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
+        tiktok: "https://www.tiktok.com/@uz.grow",
+      },
       services: {
         turnkey: "Строительство теплиц под ключ",
         engineering: "Агроинжиниринг",
@@ -809,42 +901,41 @@ const translations = {
       },
     },
     technology: {
-      title: "Technology",
-      subtitle: "Modern equipment and systems",
-      description: "We provide the most advanced agro-technologies",
+      title: "Технология",
+      subtitle: "Современное оборудование и системы",
+      description: "Мы предоставляем самые передовые агротехнологии",
       heating: {
-        title: "Heating System",
+        title: "Система отопления",
         description:
-          "Modern heating systems to ensure optimal temperature and energy savings.",
+          "Современные системы отопления для обеспечения оптимальной температуры и экономии энергии.",
       },
       ventilation: {
-        title: "Ventilation and Cooling",
+        title: "Вентиляция и охлаждение",
         description:
-          "Automated ventilation and cooling systems for climate control.",
+          "Автоматизированные системы вентиляции и охлаждения для контроля климата.",
       },
       shelving: {
-        title: "Shelving System",
+        title: "Система стеллажей",
         description:
-          "Vertical shelving for efficient space utilization and increased yields.",
+          "Вертикальные стеллажи для эффективного использования пространства и повышения урожайности.",
       },
       led: {
         title: "LED grow lights",
         description:
-          "Energy-efficient LED lighting systems for year-round harvesting.",
+          "Энергосберегающие светодиодные системы освещения для круглогодичного сбора урожая.",
       },
       irrigation: {
-        title: "Irrigation System",
+        title: "Система орошения",
         description:
-          "Drip irrigation and hydroponic systems to save up to 90% water.",
+          "Системы капельного орошения и гидропоники для экономии до 90% воды.",
       },
       automation: {
-        title: "Automation",
+        title: "Автоматизация",
         description:
-          "IoT sensors and AI algorithms for automatic climate control.",
+          "IoT датчики и алгоритмы AI для автоматического управления климатом.",
       },
     },
   },
-
   en: {
     nav: {
       home: "Home",
@@ -873,27 +964,38 @@ const translations = {
         "We implement the most modern greenhouse technologies and develop agriculture",
       cta: "Contact Us",
       downloadCatalog: "Download Catalog",
+      tagline: "4+ years experience - 100+ successful projects",
+      stats: {
+        experience: "Years experience",
+        projects: "Successful projects",
+        specialists: "Specialists",
+        regions: "Service regions",
+      },
       slides: {
         slide1: {
-          quote: "We implement each project with an individual approach and ensure customer satisfaction.",
+          quote:
+            "We implement each project with an individual approach and ensure customer satisfaction.",
           author: "UZ-GROW Team",
           role: "Agro-engineering Specialists",
           cta: "Turnkey Greenhouses",
         },
         slide2: {
-          quote: "Achieve high yields with modern technologies and an experienced team of specialists.",
+          quote:
+            "Achieve high yields with modern technologies and an experienced team of specialists.",
           author: "Technical Department",
           role: "Design and Construction",
           cta: "Plastic Greenhouses",
         },
         slide3: {
-          quote: "Reduce costs and increase revenue with energy-efficient and automated systems.",
+          quote:
+            "Reduce costs and increase revenue with energy-efficient and automated systems.",
           author: "Innovation Center",
           role: "Modern Solutions",
           cta: "Glass Greenhouses",
         },
         slide4: {
-          quote: "From design to full implementation - partner with us and achieve results.",
+          quote:
+            "From design to full implementation - partner with us and achieve results.",
           author: "Services Department",
           role: "Integrated Solutions",
           cta: "Equipment and Systems",
@@ -902,14 +1004,26 @@ const translations = {
     },
     about: {
       title: "About Us",
-      subtitle: "15+ years of experience",
-      description:
-        "UZ-GROW - leading company in the agricultural sector in Uzbekistan",
+      subtitle: "15+ years experience",
+      description: "UZ-GROW - leading company in agriculture in Uzbekistan",
       experience: "Experience",
       projects: "Projects",
       clients: "Clients",
       countries: "Countries",
       values: ["Quality", "Innovation", "Trust", "Long-term partnership"],
+      tagline: "About Us",
+      headline: "More than 4 years company by your side in 3 countries",
+      descriptionText:
+        "UZ-GROW - a company engaged in the construction of modern greenhouses and agro-engineering. Our goal is to develop greenhouse infrastructure in Uzbekistan with high efficiency, innovation and export potential.",
+      aboutUsButton: "Learn more about us",
+      videoNotSupported: "Your browser does not support video.",
+      mission: "Mission",
+      missionDesc:
+        "Increase customer income through the implementation of sustainable and profitable greenhouse projects that meet local and international standards.",
+      vision: "Vision",
+      visionDesc:
+        "Become the leading agro-engineering company in Central Asia and export modern greenhouses.",
+      valuesTitle: "Values",
     },
     services: {
       title: "Services",
@@ -1009,6 +1123,22 @@ const translations = {
           name: "Rustamjon Rahmonov",
           position: "Founder and CEO",
           bio: "Uzbek innovator and agricultural entrepreneur. Since 2017, he has been bringing information, trust and results to thousands of farmers and agricultural entrepreneurs in Central Asia.",
+          experience: "4+ years",
+          achievements: [
+            "200,000+ subscribers",
+            "100+ successful projects",
+            "International partnerships",
+          ],
+          education: [
+            "Agricultural Institute",
+            "International business management",
+          ],
+          skills: ["Agribusiness", "Innovation", "Design", "Management"],
+          email: "uzgrrow@gmail.com",
+          phone: "+998 88 507 00 70",
+          location: "Tashkent, Uzbekistan",
+          linkedin: "#",
+          twitter: "#",
         },
         azizbek: {
           name: "Azizbek Karimov",
@@ -1036,16 +1166,16 @@ const translations = {
           bio: "Specialist in management and control of large-scale projects. Ensures timely implementation of successful projects.",
         },
       },
+      achievementsLabel: "achievement",
     },
     greenhouse: {
       title: "Greenhouse Types",
-      subtitle: "Optimal solution for every crop",
+      subtitle: "Optimal solution for each crop",
       description:
-        "Explore different greenhouse types and choose the right solution for you",
+        "Familiarize yourself with different types of greenhouses and choose the right solution for you",
       glass: {
         title: "Glass Greenhouse",
-        description:
-          "Good light transmission, durable, but high construction cost.",
+        description: "Passes light well, durable but high construction cost.",
         features: ["Maximum light", "Long-lasting", "High efficiency"],
         complexity: "High",
         durability: "20+ years",
@@ -1055,7 +1185,7 @@ const translations = {
       polycarbonate: {
         title: "Polycarbonate Greenhouse",
         description:
-          "Lightweight, affordable, good insulation, but not as durable as glass.",
+          "Light, affordable, good insulation, but not as durable as glass.",
         features: ["Lightweight", "Affordable", "Good insulation"],
         complexity: "Medium",
         durability: "10-15 years",
@@ -1064,65 +1194,12 @@ const translations = {
       },
       tunnel: {
         title: "Tunnel Greenhouse",
-        description:
-          "Simple, affordable, quick installation, but not long-lasting.",
+        description: "Simple, affordable, quick installation, but not durable.",
         features: ["Simple", "Affordable", "Quick installation"],
         complexity: "Low",
         durability: "5-8 years",
         cost: "Low",
         maintenance: "Easy",
-      },
-      film: {
-        title: "Film Greenhouse",
-        description: "Simple, affordable, quick setup, but not very durable.",
-        features: ["Affordable", "Quick setup", "Portable"],
-        complexity: "Low",
-        durability: "5-8 years",
-        cost: "Low",
-        maintenance: "Easy",
-      },
-      mini: {
-        title: "Mini Greenhouse",
-        description:
-          "Small size, affordable, ideal for home. Perfect for beginners.",
-        features: ["Small size", "Ideal for home", "Easy assembly"],
-        complexity: "Low",
-        durability: "3-5 years",
-        cost: "Low",
-        maintenance: "Very easy",
-      },
-      oddiy: {
-        title: "Standard Greenhouse",
-        description:
-          "Standard shape, affordable, easy maintenance. Perfect for small farms.",
-        features: ["Standard shape", "Easy maintenance", "Many materials"],
-        complexity: "Low",
-        durability: "3-7 years",
-        cost: "Low",
-        maintenance: "Easy",
-      },
-      gektar: {
-        title: "Hectare Greenhouse",
-        description: "For large areas, reliable construction, high yield.",
-        features: ["Large area", "Reliable construction", "High yield"],
-        complexity: "High",
-        durability: "15-20 years",
-        cost: "High",
-        maintenance: "Complex",
-      },
-      polikarbanat: {
-        title: "Polycarbonate Greenhouse",
-        description:
-          "Advanced polycarbonate, excellent insulation, great features. Ideal for year-round cultivation.",
-        features: [
-          "Advanced polycarbonate",
-          "Excellent insulation",
-          "Great features",
-        ],
-        complexity: "High",
-        durability: "15-20 years",
-        cost: "High",
-        maintenance: "Moderate",
       },
       industrial: {
         title: "Industrial Greenhouse",
@@ -1145,17 +1222,68 @@ const translations = {
       vertical: {
         title: "Vertical Greenhouse",
         description: "Saves space, ideal for urban conditions, new technology.",
-        features: ["Space saving", "Ideal for urban", "New technology"],
+        features: ["Space saving", "Ideal for city", "New technology"],
         complexity: "High",
         durability: "10-15 years",
         cost: "High",
         maintenance: "Complex",
       },
+      film: {
+        title: "Film Greenhouse",
+        description: "Simple, affordable, quick installation, but not durable.",
+        features: ["Cheap", "Quick installation", "Portable"],
+        complexity: "Low",
+        durability: "5-8 years",
+        cost: "Low",
+        maintenance: "Easy",
+      },
+      mini: {
+        title: "Mini Greenhouse",
+        description: "Small, affordable, ideal for home. Great for beginners.",
+        features: ["Small size", "Ideal for home", "Simple assembly"],
+        complexity: "Low",
+        durability: "3-5 years",
+        cost: "Low",
+        maintenance: "Very easy",
+      },
+      oddiy: {
+        title: "Simple Greenhouse",
+        description:
+          "Simple shape, affordable, easy to maintain. Great for small plots.",
+        features: ["Simple shape", "Easy maintenance", "Lots of materials"],
+        complexity: "Low",
+        durability: "3-7 years",
+        cost: "Low",
+        maintenance: "Easy",
+      },
+      gektar: {
+        title: "Hectare Greenhouse",
+        description: "For large areas, reliable construction, high yield.",
+        features: ["Large area", "Reliable construction", "High yield"],
+        complexity: "High",
+        durability: "15-20 years",
+        cost: "High",
+        maintenance: "Complex",
+      },
+      polikarbanat: {
+        title: "Polycarbonate Greenhouse",
+        description:
+          "Advanced polycarbonate, excellent insulation, excellent characteristics. Perfect for year-round cultivation.",
+        features: [
+          "Advanced polycarbonate",
+          "Excellent insulation",
+          "Excellent characteristics",
+        ],
+        complexity: "High",
+        durability: "15-20 years",
+        cost: "High",
+        maintenance: "Moderate",
+      },
       comparison: {
         title: "Comparison Table",
         subtitle: "Compare greenhouse types",
         material: "Material",
-        light: "Light transmission",
+        light: "Light transmittance",
         durability: "Durability",
         cost: "Cost",
         maintenance: "Maintenance",
@@ -1163,14 +1291,14 @@ const translations = {
       },
       guide: {
         title: "How to Choose the Right Greenhouse?",
-        beginners: "For Beginners",
+        beginners: "For beginners",
         beginnersDesc:
-          "Simple or Tunnel greenhouse - affordable and easy to manage",
-        professionals: "For Professionals",
-        professionalsDesc: "Polycarbonate or Glass - durable and efficient",
-        business: "For Business",
-        businessDesc: "Industrial, Hydroponic or Vertical - maximum efficiency",
-        consult: "Consult with Specialist",
+          "Simple or tunnel greenhouse - affordable and easy to manage",
+        professionals: "For professionals",
+        professionalsDesc: "Polycarbonate or glass - durable and efficient",
+        business: "For business",
+        businessDesc: "Industrial, hydroponic or vertical - maximum efficiency",
+        consult: "Consultation with specialist",
       },
     },
     contact: {
@@ -1205,12 +1333,97 @@ const translations = {
       location: "Location",
       getDirections: "Get Directions",
       copyAddress: "Copy Address",
+      address: "Tashkent city, Yunusobod district, Amir Temur street, 123",
+      companyPhone: "+998555152223",
+      companyPhone2: "+998994352313",
+      companyEmail: "uzgrrow@gmail.com",
+      website: "https://www.uzgrow.uz/",
+      locationUrl:
+        "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
+      socialLinks: {
+        facebook: "https://www.facebook.com/share/1DePjLwX79/",
+        instagram:
+          "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
+        telegram: "http://@Uz_Grow",
+        youtube: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
+        tiktok: "https://www.tiktok.com/@uz.grow",
+      },
       services: {
         turnkey: "Turnkey Greenhouse Construction",
         engineering: "Agro-engineering",
         equipment: "Equipment",
         consulting: "Agro-consulting",
         investment: "Investment",
+      },
+    },
+    technology: {
+      title: "Technology",
+      subtitle: "Modern equipment and systems",
+      description: "We provide the most advanced agro-technologies",
+      heating: {
+        title: "Heating System",
+        description:
+          "Modern heating systems to ensure optimal temperature and energy savings.",
+      },
+      ventilation: {
+        title: "Ventilation and Cooling",
+        description:
+          "Automated ventilation and cooling systems for climate control.",
+      },
+      shelving: {
+        title: "Shelving System",
+        description:
+          "Vertical shelving for efficient space utilization and increased yields.",
+      },
+      led: {
+        title: "LED grow lights",
+        description:
+          "Energy-efficient LED lighting systems for year-round harvesting.",
+      },
+      irrigation: {
+        title: "Irrigation System",
+        description:
+          "Drip irrigation and hydroponic systems to save up to 90% water.",
+      },
+      automation: {
+        title: "Automation",
+        description:
+          "IoT sensors and AI algorithms for automatic climate control.",
+      },
+    },
+    footer: {
+      brandName: "UZ-GROW",
+      brandTagline: "CONSTRUCTION COMPANY",
+      brandDescription:
+        "Modern greenhouse construction and building services in Uzbekistan. The future starts today with us.",
+      contact: "Contact",
+      services: "Services",
+      company: "Company",
+      help: "Help",
+      team: "Team",
+      allRightsReserved: "All rights reserved",
+      links: {
+        services: [
+          { label: "Greenhouse types", href: "/greenhouse-types" },
+          { label: "Projects", href: "/projects" },
+          { label: "Equipment", href: "/equipment" },
+          { label: "Construction", href: "/construction" },
+        ],
+        company: [
+          { label: "About us", href: "/about" },
+          { label: "Team", href: "/team" },
+          {
+            label: "International partnership",
+            href: "/international-partnership",
+          },
+          { label: "Media partnership", href: "/media-partnership" },
+        ],
+        help: [
+          { label: "Contact", href: "/contact" },
+          { label: "Gallery", href: "/gallery" },
+          { label: "Privacy policy", href: "/privacy-policy" },
+          { label: "Terms of use", href: "/terms-of-use" },
+        ],
       },
     },
   },
@@ -1240,6 +1453,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string): string => {
     const keys = key.split(".");
+
     let value: any = translations[currentLang];
 
     for (const k of keys) {

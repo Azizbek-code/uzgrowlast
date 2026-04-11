@@ -161,7 +161,9 @@ export function Team() {
                   </div>
                   <div className="flex items-center gap-1">
                     <Award className="h-4 w-4 text-muted-foreground" />
-                    <span>{member.achievements.length} yutuq</span>
+                    <span>
+                      {member.achievements.length} {t("team.achievementsLabel")}
+                    </span>
                   </div>
                 </div>
 
@@ -282,14 +284,12 @@ export function Team() {
                         )}
                       </div>
                     </div>
-
-                  
                   </div>
 
                   {/* Right Column */}
                   <div className="space-y-6">
                     {/* Education */}
-                  
+
                     {/* Skills */}
                     <div>
                       <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
