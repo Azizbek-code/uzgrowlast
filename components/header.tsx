@@ -110,7 +110,7 @@ export function Header() {
                       className={cn(
                         "w-full px-4 py-2 text-sm text-left rounded-lg transition-colors",
                         currentLang === lang.code
-                          ? "bg-primary text-primary-foreground"
+                          ? "bg-[#24B14B] text-primary-foreground"
                           : "hover:bg-muted text-foreground",
                       )}
                     >
@@ -146,7 +146,6 @@ export function Header() {
                 <span className="font-bold text-2xl tracking-tight text-foreground">
                   UZ-GROW
                 </span>
-               
               </div>
             </Link>
 
@@ -159,8 +158,8 @@ export function Header() {
                   className={cn(
                     "px-4 py-2 text-sm font-medium rounded-lg",
                     pathname === item.href
-                      ? "text-primary bg-primary/10"
-                      : "text-gray-900 hover:text-primary hover:bg-primary/5",
+                      ? "text-primary bg-[#24B14B]/10"
+                      : "text-gray-900 hover:text-primary hover:bg-[#24B14B]/5",
                   )}
                 >
                   {item.label}
@@ -176,7 +175,7 @@ export function Header() {
                   "rounded-full px-6 transition-all",
                   showTransparent
                     ? "bg-white text-primary hover:bg-white/90"
-                    : "bg-primary hover:bg-primary/90 text-primary-foreground",
+                    : "bg-[#24B14B] hover:bg-[#24B14B]/90 text-primary-foreground",
                 )}
               >
                 Bepul konsultatsiya
@@ -231,8 +230,8 @@ export function Header() {
                     className={cn(
                       "px-4 py-3 rounded-xl transition-colors font-medium",
                       pathname === item.href
-                        ? "text-primary bg-primary/10"
-                        : "text-foreground hover:text-primary hover:bg-primary/5",
+                        ? "text-primary bg-[#24B14B]/10"
+                        : "text-foreground hover:text-primary hover:bg-[#24B14B]/5",
                     )}
                   >
                     {item.label}
@@ -253,7 +252,7 @@ export function Header() {
                       className={cn(
                         "px-3 py-1.5 text-sm rounded-lg transition-colors",
                         currentLang === lang.code
-                          ? "bg-primary text-primary-foreground"
+                          ? "bg-[#24B14B] text-primary-foreground"
                           : "bg-muted text-muted-foreground hover:bg-muted/80",
                       )}
                     >
@@ -265,7 +264,7 @@ export function Header() {
 
               {/* Mobile CTA Button - Removed as per request */}
               {/* <div className="mt-4 pt-4 border-t border-border">
-                <Button className="w-full bg-primary hover:bg-primary/90 rounded-full">
+                <Button className="w-full bg-[#24B14B] hover:bg-[#24B14B]/90 rounded-full">
                   Bepul konsultatsiya
                 </Button>
               </div> */}

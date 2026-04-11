@@ -78,7 +78,7 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-1 lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6 sm:mb-4">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-xl flex items-center justify-center font-bold text-2xl text-primary-foreground shadow-lg">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#24B14B] rounded-xl flex items-center justify-center font-bold text-2xl text-primary-foreground shadow-lg">
                 UG
               </div>
               <div>
@@ -115,7 +115,7 @@ export function Footer() {
                           sizes="32px"
                         />
                       ) : (
-                        <div className="w-full h-full bg-primary/10 flex items-center justify-center">
+                        <div className="w-full h-full bg-[#24B14B]/10 flex items-center justify-center">
                           <Users className="w-4 h-4 text-primary/60" />
                         </div>
                       )}
@@ -247,7 +247,7 @@ export function Footer() {
                   <a
                     key={index}
                     href={social.href}
-                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-primary transition-colors group"
+                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#24B14B] transition-colors group"
                     aria-label={social.label}
                   >
                     <social.icon className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />

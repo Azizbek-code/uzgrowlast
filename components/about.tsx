@@ -121,7 +121,7 @@ export function About() {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full rounded-3xl bg-primary/10" />
+            <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full rounded-3xl bg-[#24B14B]/10" />
           </div>
 
           {/* Content */}
@@ -144,7 +144,7 @@ export function About() {
         {/* Mission, Vision, Values */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           <div className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-shadow">
-            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+            <div className="w-14 h-14 bg-[#24B14B]/10 rounded-xl flex items-center justify-center mb-6">
               <Target className="w-7 h-7 text-primary" />
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">
@@ -154,7 +154,7 @@ export function About() {
           </div>
 
           <div className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-shadow">
-            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+            <div className="w-14 h-14 bg-[#24B14B]/10 rounded-xl flex items-center justify-center mb-6">
               <Eye className="w-7 h-7 text-primary" />
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">
@@ -164,7 +164,7 @@ export function About() {
           </div>
 
           <div className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-shadow">
-            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+            <div className="w-14 h-14 bg-[#24B14B]/10 rounded-xl flex items-center justify-center mb-6">
               <Heart className="w-7 h-7 text-primary" />
             </div>
             <h3 className="text-xl font-bold text-foreground mb-4">
@@ -174,7 +174,7 @@ export function About() {
               {values.map((value, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                  className="px-3 py-1.5 bg-[#24B14B]/10 text-primary rounded-full text-sm font-medium"
                 >
                   {value}
                 </span>
@@ -184,7 +184,7 @@ export function About() {
         </div>
 
         {/* Stats */}
-        <div className="bg-primary rounded-3xl p-8 md:p-12">
+        <div className="bg-[#24B14B] rounded-3xl p-8 md:p-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">

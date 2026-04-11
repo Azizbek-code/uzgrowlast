@@ -96,7 +96,7 @@ export function Services() {
               className={cn(
                 "px-6 py-3 rounded-full text-sm font-medium transition-all duration-300",
                 activeService === index
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                  ? "bg-[#24B14B] text-primary-foreground shadow-lg shadow-primary/20"
                   : "bg-background text-foreground hover:bg-muted border border-border",
               )}
             >
@@ -133,7 +133,7 @@ export function Services() {
                   onClick={() => setActiveImage(index)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === activeImage
-                      ? "bg-primary text-primary-foreground"
+                      ? "bg-[#24B14B] text-primary-foreground"
                       : "bg-white/50 hover:bg-white text-muted-foreground"
                   }`}
                   aria-label={`Go to image ${index + 1}`}
@@ -143,14 +143,14 @@ export function Services() {
               ))}
             </div>
             {/* Decorative elements */}
-            <div className="absolute -z-10 -bottom-6 -left-6 w-full h-full rounded-2xl bg-primary/10" />
+            <div className="absolute -z-10 -bottom-6 -left-6 w-full h-full rounded-2xl bg-[#24B14B]/10" />
           </div>
 
           {/* Right: Content */}
           <div className="space-y-6">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#24B14B]/10 rounded-lg flex items-center justify-center">
                   {React.createElement(services[activeService].icon, {
                     className: "w-6 h-6 text-primary",
                   })}
@@ -185,7 +185,7 @@ export function Services() {
               onClick={() => setActiveService(index)}
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <div className="w-12 h-12 bg-[#24B14B]/10 rounded-lg flex items-center justify-center group-hover:bg-[#24B14B]/20 transition-colors">
                   {React.createElement(service.icon, {
                     className: "w-6 h-6 text-primary",
                   })}

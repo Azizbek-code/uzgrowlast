@@ -435,7 +435,7 @@ export function Contact() {
             {/* Working Hours */}
             <div className="bg-background rounded-xl p-6 border border-border">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#24B14B]/10 rounded-lg flex items-center justify-center">
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>

@@ -99,15 +99,15 @@ export function Hero() {
           }}
         />
       </div>
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-linear-to-r from-black/30 via-black/20 to-black/30" />
+      {/* Overlay with Blur */}
+      <div className="absolute inset-0 bg-linear-to-r from-black/40 via-black/30 to-black/40 backdrop-blur-sm" />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 lg:px-8 pt-24 pb-12">
         <div className="max-w-4xl">
           {/* Tagline */}
           <div className="inline-flex items-center gap-2 bg-black/20 backdrop-blur-md rounded-full px-4 py-2 mb-8 border border-white/10">
-            <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+            <span className="w-2 h-2 bg-[#24B14B] rounded-full animate-pulse" />
             <span className="text-white text-sm font-medium">
               {t("hero.tagline")}
             </span>
@@ -155,7 +155,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base w-full sm:w-auto"
+              className="bg-[#24B14B] hover:bg-[#24B14B]/90 text-primary-foreground rounded-full px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base w-full sm:w-auto"
               asChild
             >
               <Link href="#aloqa" className="gap-2">
@@ -188,7 +188,7 @@ export function Hero() {
                   onClick={() => setCurrentSlide(index)}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     index === currentSlide
-                      ? "w-10 bg-primary"
+                      ? "w-10 bg-[#24B14B]"
                       : "w-4 bg-white/30 hover:bg-white/50"
                   }`}
                 />

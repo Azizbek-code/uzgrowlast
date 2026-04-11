@@ -221,6 +221,7 @@ const translations = {
           location: "Toshkent, O'zbekiston",
           linkedin: "#",
           twitter: "#",
+          resume: "/RESUME 2025 (3).docx",
         },
         alisher: {
           name: "Alisher Majidov",
@@ -313,6 +314,30 @@ const translations = {
           location: "Toshkent, O'zbekiston",
           linkedin: "#",
           twitter: "#",
+        },
+        bobgulbaxor: {
+          name: "Gulbaxor Karaboyeva",
+          position: "Financial Director",
+          bio: "Experienced specialist in finance and management. Extensive experience in developing financial strategies and budget management.",
+          experience: "10+ yillik",
+          achievements: [
+            "Moliyaviy rejalashtirish",
+            "Byudjet optimizatsiyasi",
+            "Xisobot tayyorlash",
+          ],
+          education: ["Iqtisodiyot", "Moliya"],
+          skills: [
+            "Moliyaviy tahlil",
+            "Excel",
+            "1C:Buхгалтерия",
+            "Byudjet rejalashtirish",
+          ],
+          email: "uzgrrow@gmail.com",
+          phone: "+998 88 507 00 70",
+          location: "Toshkent, O'zbekiston",
+          linkedin: "#",
+          twitter: "#",
+          resume: "/Rezyume_Karaboyeva_Gulbaxor_YAKUNIY_FINAL-1.docx",
         },
         azamat: {
           name: "Azamatjon Umarov",

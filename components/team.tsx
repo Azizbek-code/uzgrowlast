@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import {
   Users,
   Award,
-  Target,
   Lightbulb,
   Mail,
   Phone,
@@ -18,89 +17,23 @@ import {
   Briefcase,
   GraduationCap,
   User,
+  Download,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const teamMembers = [
-  {
-    id: 1,
-    name: "Rustamjon Rahmonov",
-    position: "Asoschi va Bosh Direktor",
-    avatar: "/team/ceo.jpg",
-    bio: "O'zbekistonlik innovator agrofaol va tadbirkor. 2017-yildan beri Markaziy Osiyo agrosektorida minglab fermerlar va agrobiznes vakillariga ma'lumot, ishonch va natija olib kelmoqda.",
-    experience: "4+ yillik",
-    achievements: [
-      "200,000+ obunachi",
-      "100+ muvaffaqiyatli loyiha",
-      "Xalqaro hamkorliklar",
-    ],
-    education: ["Qishloq xo'jaligi instituti", "Xalqaro biznes menejmenti"],
-    skills: ["Agrobiznes", "Innovatsiya", "Loyihalash", "Menejment"],
-    email: "uzgrrow@gmail.com",
-    phone: "+998 88 507 00 70",
-    location: "Toshkent, O'zbekiston",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    id: 2,
-    name: "Alisher Majidov",
-    position: "Marketing Direktori",
-    avatar: "/team/marketolog.jpg",
-    bio: "Marketing va brend strategiyalari bo'yicha mutaxassis. Kompaniya imidjini rivojlantirish va mijozlar bazasini kengaytirish uchun mas'ul.",
-    experience: "6+ yillik",
-    achievements: [
-      "20+ marketing kampaniyasi",
-      "Brendni rivojlantirish",
-      "Mijozlar bazasi 3x o'sishi",
-    ],
-    education: ["Marketing", "Xalqaro biznes"],
-    skills: ["Marketing strategiyasi", "SMM", "Kontent marketing", "Analitika"],
-    email: "uzgrrow@gmail.com",
-    phone: "+998 88 507 00 70",
-    location: "Toshkent, O'zbekiston",
-    linkedin: "#",
-    twitter: "#",
-  },
-  {
-    id: 3,
-    name: "Abdulloh Sheraliyevich",
-    position: "Texnik Direktor",
-    avatar: null,
-    bio: "Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonaviy agrotexnologiyalarni joriy etmoqda.",
-    experience: "10+ yillik",
-    achievements: [
-      "50+ issiqxona loyihasi",
-      "Texnik innovatsiyalar",
-      "Xalqaro sertifikatlar",
-    ],
-    education: ["Qurilish muhandisligi", "Avtomatlashtirish sistemlari"],
-    skills: [
-      "Issiqxona qurilish",
-      "Avtomatlashtirish",
-      "3D modellashtirish",
-      "Texnik nazorat",
-    ],
-    email: "uzgrrow@gmail.com",
-    phone: "+998 88 507 00 70",
-    location: "Toshkent, O'zbekiston",
-    linkedin: "#",
-    twitter: "#",
-  },
-];
-
 export function Team() {
-  const [selectedMember, setSelectedMember] = useState<
-    (typeof teamMembers)[0] | null
-  >(null);
+  const [selectedMember, setSelectedMember] = useState<any>(null);
   const { t } = useLanguage();
+
+  // Get team members from LanguageContext
+  const teamMembers = Object.values(t("team.members"));
 
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-primary/10 text-primary px-4 py-2">
+          <Badge className="mb-4 bg-[#24B14B]/10 text-primary px-4 py-2">
             <Users className="h-4 w-4 mr-2" />
             {t("team.title")}
           </Badge>
@@ -108,15 +41,15 @@ export function Team() {
             {t("team.subtitle")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t("team.description")}
+            {t("")}
           </p>
         </div>
 
         {/* Team Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {teamMembers.map((member) => (
+          {teamMembers.map((member: any, index: number) => (
             <Card
-              key={member.id}
+              key={index}
               className="group cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105"
               onClick={() => setSelectedMember(member)}
             >
@@ -124,16 +57,21 @@ export function Team() {
                 {/* Avatar */}
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
-                    {member.avatar ? (
+                    {member.name === "Rustamjon Rahmonov" ||
+                    member.name === "Alisher Majidov" ? (
                       <Image
-                        src={member.avatar}
+                        src={
+                          member.name === "Rustamjon Rahmonov"
+                            ? "/team/ceo.jpg"
+                            : "/team/marketolog.jpg"
+                        }
                         alt={member.name}
                         fill
                         className="object-cover"
                         sizes="64px"
                       />
                     ) : (
-                      <div className="w-full h-full bg-primary/10 flex items-center justify-center">
+                      <div className="w-full h-full bg-[#24B14B]/10 flex items-center justify-center">
                         <User className="w-8 h-8 text-primary/60" />
                       </div>
                     )}
@@ -162,18 +100,25 @@ export function Team() {
                   <div className="flex items-center gap-1">
                     <Award className="h-4 w-4 text-muted-foreground" />
                     <span>
-                      {member.achievements.length} {t("team.achievementsLabel")}
+                      {member.achievements?.length || 0}{" "}
+                      {t("team.achievementsLabel")}
                     </span>
                   </div>
                 </div>
 
                 {/* Skills */}
                 <div className="flex flex-wrap gap-1 mb-4">
-                  {member.skills.slice(0, 3).map((skill, index) => (
-                    <Badge key={index} variant="secondary" className="text-xs">
-                      {skill}
-                    </Badge>
-                  ))}
+                  {member.skills
+                    ?.slice(0, 3)
+                    .map((skill: string, skillIndex: number) => (
+                      <Badge
+                        key={skillIndex}
+                        variant="secondary"
+                        className="text-xs"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
                 </div>
 
                 {/* Contact */}
@@ -213,16 +158,21 @@ export function Team() {
                 </button>
                 <div className="flex items-center gap-4">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
-                    {selectedMember.avatar ? (
+                    {selectedMember.name === "Rustamjon Rahmonov" ||
+                    selectedMember.name === "Alisher Majidov" ? (
                       <Image
-                        src={selectedMember.avatar}
+                        src={
+                          selectedMember.name === "Rustamjon Rahmonov"
+                            ? "/images/team/ceo.jpg"
+                            : "/images/team/marketolog.jpg"
+                        }
                         alt={selectedMember.name}
                         fill
                         className="object-cover"
                         sizes="80px"
                       />
                     ) : (
-                      <div className="w-full h-full bg-primary/10 flex items-center justify-center">
+                      <div className="w-full h-full bg-[#24B14B]/10 flex items-center justify-center">
                         <User className="w-10 h-10 text-primary/60" />
                       </div>
                     )}
@@ -272,13 +222,13 @@ export function Team() {
                         {t("team.achievements")}
                       </h4>
                       <div className="space-y-1">
-                        {selectedMember.achievements.map(
-                          (achievement, index) => (
+                        {selectedMember.achievements?.map(
+                          (achievement: string, index: number) => (
                             <div
                               key={index}
                               className="text-sm text-muted-foreground"
                             >
-                              • {achievement}
+                              {achievement}
                             </div>
                           ),
                         )}
@@ -289,6 +239,24 @@ export function Team() {
                   {/* Right Column */}
                   <div className="space-y-6">
                     {/* Education */}
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                        <GraduationCap className="h-4 w-4" />
+                        {t("team.education")}
+                      </h4>
+                      <div className="space-y-1">
+                        {selectedMember.education?.map(
+                          (edu: string, index: number) => (
+                            <div
+                              key={index}
+                              className="text-sm text-muted-foreground"
+                            >
+                              {edu}
+                            </div>
+                          ),
+                        )}
+                      </div>
+                    </div>
 
                     {/* Skills */}
                     <div>
@@ -297,14 +265,16 @@ export function Team() {
                         {t("team.skills")}
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {selectedMember.skills.map((skill, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                          >
-                            {skill}
-                          </span>
-                        ))}
+                        {selectedMember.skills?.map(
+                          (skill: string, index: number) => (
+                            <span
+                              key={index}
+                              className="px-3 py-1 bg-[#24B14B]/10 text-primary rounded-full text-sm"
+                            >
+                              {skill}
+                            </span>
+                          ),
+                        )}
                       </div>
                     </div>
 
@@ -360,6 +330,18 @@ export function Team() {
                     </div>
                   </div>
                 </div>
+
+                {/* Resume Download */}
+                {selectedMember.resume && (
+                  <div className="mt-6 pt-6 border-t">
+                    <Button className="w-full gap-2" asChild>
+                      <a href={selectedMember.resume} download>
+                        <Download className="h-4 w-4" />
+                        Resume yuklab olish
+                      </a>
+                    </Button>
+                  </div>
+                )}
 
                 {/* Contact Buttons */}
                 <div className="flex gap-3 mt-6 pt-6 border-t">

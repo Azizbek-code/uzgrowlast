@@ -3,8 +3,23 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
+  CheckCircle,
+  Users,
+  Download,
+  ExternalLink,
+  MessageCircle,
+  Youtube,
+  Facebook,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -95,6 +110,8 @@ export default function AloqaPage() {
         backgroundAttachment: "fixed",
       }}
     >
+      {/* Background overlay for better text readability */}
+      <div className="absolute inset-0 bg-background/60 backdrop-blur-md" />
       <div className="relative z-10">
         <Header />
 
@@ -102,7 +119,7 @@ export default function AloqaPage() {
         <section className="pt-20 sm:pt-32 pb-16 sm:pb-20 bg-gradient-to-br from-primary/10 via-background to-secondary/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <span className="inline-block px-3 sm:px-4 py-2 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <span className="inline-block px-3 sm:px-4 py-2 bg-[#24B14B]/10 text-primary rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 {t("contact.title")}
               </span>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 text-balance">
@@ -127,7 +144,7 @@ export default function AloqaPage() {
                     key={index}
                     className="flex gap-3 sm:gap-4 p-3 sm:p-4 bg-card rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all"
                   >
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#24B14B]/10 flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                     </div>
                     <div>
@@ -165,21 +182,25 @@ export default function AloqaPage() {
                   </h3>
                   <div className="flex gap-3">
                     {[
-                      { name: "Telegram", href: "http://@Uz_Grow", icon: "T" },
+                      {
+                        name: "Telegram",
+                        href: "http://@Uz_Grow",
+                        icon: MessageCircle,
+                      },
                       {
                         name: "Instagram",
                         href: "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
-                        icon: "I",
+                        icon: MessageCircle,
                       },
                       {
                         name: "YouTube",
                         href: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
-                        icon: "Y",
+                        icon: Youtube,
                       },
                       {
                         name: "Facebook",
                         href: "https://www.facebook.com/people/UZ-Grow/61555877069972/?rdid=DcrSKZ6JcT9V7Tj3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DePjLwX79%2F",
-                        icon: "F",
+                        icon: Facebook,
                       },
                     ].map((social) => (
                       <a
@@ -187,9 +208,9 @@ export default function AloqaPage() {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all"
+                        className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-[#24B14B] hover:text-primary-foreground transition-all"
                       >
-                        <span className="text-xs font-bold">{social.icon}</span>
+                        <social.icon className="w-5 h-5" />
                       </a>
                     ))}
                   </div>
@@ -208,7 +229,7 @@ export default function AloqaPage() {
 
                   {isSubmitted ? (
                     <div className="text-center py-12">
-                      <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                      <div className="w-20 h-20 rounded-full bg-[#24B14B]/10 flex items-center justify-center mx-auto mb-6">
                         <CheckCircle className="w-10 h-10 text-primary" />
                       </div>
                       <h3 className="text-2xl font-bold text-foreground mb-2">

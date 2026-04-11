@@ -143,7 +143,7 @@ export function Projects() {
               className={cn(
                 "px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                  ? "bg-[#24B14B] text-primary-foreground shadow-lg shadow-primary/20"
                   : "bg-card text-foreground hover:bg-card/80 border border-border",
               )}
             >
@@ -201,7 +201,7 @@ export function Projects() {
                     <h3 className="text-xl font-bold text-white mb-2">
                       {project.title}
                     </h3>
-                    <span className="inline-block px-3 py-1 bg-primary/90 text-primary-foreground text-xs rounded-full">
+                    <span className="inline-block px-3 py-1 bg-[#24B14B]/90 text-primary-foreground text-xs rounded-full">
                       {project.category}
                     </span>
                   </div>
@@ -209,7 +209,7 @@ export function Projects() {
                   {/* Hover Effect */}
                   <div
                     className={cn(
-                      "absolute inset-0 bg-primary/90 flex items-center justify-center transition-opacity duration-300",
+                      "absolute inset-0 bg-[#24B14B]/90 flex items-center justify-center transition-opacity duration-300",
                       hoveredProject === project.id
                         ? "opacity-100"
                         : "opacity-0",
@@ -336,7 +336,7 @@ export function Projects() {
             {/* Content */}
             <div className="p-8">
               <div className="flex flex-wrap items-center gap-4 mb-4">
-                <span className="px-4 py-1.5 bg-primary text-primary-foreground text-sm rounded-full font-medium">
+                <span className="px-4 py-1.5 bg-[#24B14B] text-primary-foreground text-sm rounded-full font-medium">
                   {selectedProject.category}
                 </span>
                 <span className="text-muted-foreground text-sm">

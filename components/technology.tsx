@@ -42,8 +42,7 @@ const technologies = [
     titleKey: "technology.led.title",
     descriptionKey: "technology.led.description",
     color: "from-yellow-500/20 to-amber-500/20",
-    image:
-      "/images/1.jpg",
+    image: "/images/1.jpg",
   },
   {
     icon: Droplets,
@@ -72,8 +71,8 @@ export function Technology() {
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#24B14B]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#24B14B]/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative">
@@ -109,7 +108,7 @@ export function Technology() {
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
 
                 {/* Icon Overlay */}
-                <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center group-hover:bg-[#24B14B] transition-colors duration-300">
                   <tech.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                 </div>
               </div>

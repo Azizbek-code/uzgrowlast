@@ -217,7 +217,7 @@ export function Projects() {
               <Building2 className="w-10 h-10 text-primary" />
             </div>
           </div>
-          <Badge className="mb-4 bg-primary/10 text-primary px-4 py-2">
+          <Badge className="mb-4 bg-[#24B14B]/10 text-primary px-4 py-2">
             Portfolio
           </Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
@@ -306,7 +306,7 @@ export function Projects() {
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="absolute top-4 left-4 z-10">
-                    <Badge className="bg-primary text-primary-foreground gap-1">
+                    <Badge className="bg-[#24B14B] text-primary-foreground gap-1">
                       <Award className="w-3 h-3" />
                       Mashhur
                     </Badge>
@@ -379,7 +379,7 @@ export function Projects() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="gap-1 group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                      className="gap-1 group-hover:bg-[#24B14B] group-hover:text-primary-foreground transition-colors"
                     >
                       Batafsil
                       <ArrowRight className="w-4 h-4" />
@@ -576,7 +576,7 @@ export function Projects() {
                 <Badge variant="outline">{selectedProject.size}</Badge>
                 <Badge variant="outline">{selectedProject.year}</Badge>
                 {selectedProject.featured && (
-                  <Badge className="bg-primary text-primary-foreground gap-1">
+                  <Badge className="bg-[#24B14B] text-primary-foreground gap-1">
                     <Award className="w-3 h-3" />
                     Mashhur
                   </Badge>
