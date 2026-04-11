@@ -14,6 +14,7 @@ import {
   Download,
   ExternalLink,
   MessageCircle,
+  Instagram,
   Youtube,
   Facebook,
 } from "lucide-react";
@@ -190,7 +191,7 @@ export default function AloqaPage() {
                       {
                         name: "Instagram",
                         href: "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
-                        icon: MessageCircle,
+                        icon: Instagram,
                       },
                       {
                         name: "YouTube",

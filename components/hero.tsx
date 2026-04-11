@@ -94,7 +94,7 @@ export function Hero() {
           alt="Greenhouse background"
           className="w-full h-full object-cover"
           style={{
-            filter: "brightness(1.1) contrast(1.1) saturate(1.2)",
+            filter: "brightness(1.1) contrast(1.1) saturate(1.2) blur(2px)",
             transform: "scale(1.05)",
           }}
         />
