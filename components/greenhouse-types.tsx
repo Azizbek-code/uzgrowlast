@@ -35,7 +35,7 @@ export function GreenhouseTypes() {
       title: t("greenhouse.mini.title"),
       description: t("greenhouse.mini.description"),
       image:
-        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567298/IMG_4029_copy_3_lorfp3.jpg",
+        "https://funrent.ee/wp-content/uploads/2026/03/kasvuhoone-muuk-nordify-baltica-lt-lumekoormus-kasvuhoone-hea-kvaliteetne-kiirelt-kokkupandav-kasvuhoone-5-600x600.webp",
       icon: <Home className="h-6 w-6" />,
       features: [
         t("greenhouse.mini.features.0"),
@@ -52,8 +52,7 @@ export function GreenhouseTypes() {
       id: 5,
       title: t("greenhouse.oddiy.title"),
       description: t("greenhouse.oddiy.description"),
-      image:
-        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468975/IMG_3852_rosmbo.heic",
+      image: "/images/1.jpg",
       icon: <Factory className="h-6 w-6" />,
       features: [
         t("greenhouse.oddiy.features.0"),
@@ -154,7 +153,7 @@ export function GreenhouseTypes() {
                   <img
                     src={type.image}
                     alt={type.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 right-4">
                     <div
@@ -196,16 +195,6 @@ export function GreenhouseTypes() {
                   </div>
 
                   {/* Stats */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gray-50 rounded-lg p-2">
-                      <Thermometer className="h-4 w-4 text-red-600 mx-auto mb-1" />
-                      <p className="text-xs font-medium">{type.complexity}</p>
-                    </div>
-                    <div className="bg-gray-50 rounded-lg p-2">
-                      <Zap className="h-4 w-4 text-blue-600 mx-auto mb-1" />
-                      <p className="text-xs font-medium">{type.durability}</p>
-                    </div>
-                  </div>
 
                   {/* CTA Button */}
                   <Link href="/aloqa">

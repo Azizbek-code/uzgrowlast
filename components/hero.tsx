@@ -129,20 +129,22 @@ export function Hero() {
                     : "opacity-0 translate-y-8 pointer-events-none"
                 }`}
               >
-                <blockquote className="text-xl md:text-2xl text-white/90 font-light italic mb-6 text-pretty">
+                <blockquote className="text-lg sm:text-xl md:text-2xl text-white/90 font-light italic mb-4 sm:mb-6 text-pretty">
                   &ldquo;{t(slide.quoteKey)}&rdquo;
                 </blockquote>
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center border border-white/20">
-                    <span className="text-white font-bold text-lg">
+                <div className="flex items-center gap-2 sm:gap-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center border border-white/20">
+                    <span className="text-white font-bold text-base sm:text-lg">
                       {t(slide.authorKey).charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <p className="text-white font-semibold">
+                    <p className="text-white font-semibold text-sm sm:text-base">
                       {t(slide.authorKey)}
                     </p>
-                    <p className="text-white/60 text-sm">{t(slide.roleKey)}</p>
+                    <p className="text-white/60 text-xs sm:text-sm">
+                      {t(slide.roleKey)}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -150,10 +152,10 @@ export function Hero() {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 h-14 text-base"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base w-full sm:w-auto"
               asChild
             >
               <Link href="#aloqa" className="gap-2">
@@ -164,10 +166,13 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/50 text-white hover:bg-white/20 hover:border-white/70 rounded-full px-8 h-14 text-base bg-transparent backdrop-blur-sm"
+              className="border-white text-amber-500 hover:bg-white hover:text-amber-600 rounded-full px-6 sm:px-8 h-12 sm:h-14 text-sm sm:text-base w-full sm:w-auto"
               asChild
             >
-              <Link href="#" className="gap-2">
+              <Link
+                href="https://drive.usercontent.google.com/download?id=1HErqszuF53VmZMGFVHg9mOFhM0y_G50L&export=download&authuser=0"
+                className="gap-2"
+              >
                 <Download className="w-5 h-5" />
                 {t("hero.downloadCatalog")}
               </Link>
@@ -223,14 +228,17 @@ export function Hero() {
       {/* Stats Bar */}
       <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm border-t border-white/10">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
               { value: "4+", label: t("hero.stats.experience") },
               { value: "100+", label: t("hero.stats.projects") },
               { value: "50+", label: t("hero.stats.specialists") },
               { value: "12+", label: t("hero.stats.regions") },
             ].map((stat, index) => (
-              <div key={index} className="py-5 px-4 text-center">
+              <div
+                key={index}
+                className="py-4 sm:py-5 px-2 sm:px-4 text-center"
+              >
                 <div className="text-2xl md:text-3xl font-bold text-white">
                   {stat.value}
                 </div>

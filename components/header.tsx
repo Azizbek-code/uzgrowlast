@@ -146,9 +146,7 @@ export function Header() {
                 <span className="font-bold text-2xl tracking-tight text-foreground">
                   UZ-GROW
                 </span>
-                <span className="text-sm tracking-wider text-muted-foreground">
-                  QURUVCHI FIRMASI
-                </span>
+               
               </div>
             </Link>
 
