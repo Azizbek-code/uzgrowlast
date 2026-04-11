@@ -23,10 +23,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Team() {
   const [selectedMember, setSelectedMember] = useState<any>(null);
-  const { t } = useLanguage();
+  const { t, tObj } = useLanguage();
 
   // Get team members from LanguageContext
-  const teamMembers = Object.values(t("team.members"));
+  const teamMembers = Object.values(tObj("team.members"));
 
   return (
     <section className="py-20 bg-background">
@@ -120,8 +120,6 @@ export function Team() {
                       </Badge>
                     ))}
                 </div>
-
-
               </CardContent>
             </Card>
           ))}

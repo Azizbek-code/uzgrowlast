@@ -10,27 +10,7 @@ import {
   Send,
   Users,
 } from "lucide-react";
-
-const footerLinks = {
-  xizmatlar: [
-    { label: "Issiqxona turlari", href: "/issiqxona-turlari" },
-    { label: "Loyihalar", href: "/loyihalar" },
-    { label: "Jihozlar", href: "/jixozlar" },
-    { label: "Qurilish", href: "/qurilish" },
-  ],
-  kompaniya: [
-    { label: "Biz haqimizda", href: "/haqimizda" },
-    { label: "Jamoa", href: "/rahbariyat" },
-    { label: "Xalqaro hamkorlik", href: "/xalqaro-hamkorlik" },
-    { label: "Media hamkorlik", href: "/media-hamkorlik" },
-  ],
-  yordam: [
-    { label: "Bog'lanish", href: "/aloqa" },
-    { label: "Galereya", href: "/gallery" },
-    { label: "Maxfiylik siyosati", href: "/maxfiylik-siyosati" },
-    { label: "Foydalanish shartlari", href: "/foydanalish-shartlari" },
-  ],
-};
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const teamMembers = [
   {

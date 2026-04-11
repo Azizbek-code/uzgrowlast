@@ -57,7 +57,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 export function About() {
-  const { t } = useLanguage();
+  const { t, tArray } = useLanguage();
   const [currentAboutImage, setCurrentAboutImage] = useState(0);
 
   // 6 Cloudinary images for about section slideshow
@@ -86,12 +86,7 @@ export function About() {
     { value: 12, suffix: "+", label: t("about.countries") },
   ];
 
-  const values = [
-    t("about.values.0"),
-    t("about.values.1"),
-    t("about.values.2"),
-    t("about.values.3"),
-  ];
+  const values = tArray("about.values");
   return (
     <section
       id="haqimizda"

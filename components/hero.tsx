@@ -13,40 +13,9 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const getSlides = (t: (key: string) => string) => [
-  {
-    quoteKey: "hero.slides.slide1.quote",
-    authorKey: "hero.slides.slide1.author",
-    roleKey: "hero.slides.slide1.role",
-    ctaKey: "hero.slides.slide1.cta",
-    link: "#xizmatlar",
-  },
-  {
-    quoteKey: "hero.slides.slide2.quote",
-    authorKey: "hero.slides.slide2.author",
-    roleKey: "hero.slides.slide2.role",
-    ctaKey: "hero.slides.slide2.cta",
-    link: "#xizmatlar",
-  },
-  {
-    quoteKey: "hero.slides.slide3.quote",
-    authorKey: "hero.slides.slide3.author",
-    roleKey: "hero.slides.slide3.role",
-    ctaKey: "hero.slides.slide3.cta",
-    link: "#xizmatlar",
-  },
-  {
-    quoteKey: "hero.slides.slide4.quote",
-    authorKey: "hero.slides.slide4.author",
-    roleKey: "hero.slides.slide4.role",
-    ctaKey: "hero.slides.slide4.cta",
-    link: "#texnologiya",
-  },
-];
-
 export function Hero() {
-  const { t } = useLanguage();
-  const slides = getSlides(t);
+  const { t, tObj } = useLanguage();
+  const slides = tObj("hero.slides");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -120,9 +89,9 @@ export function Hero() {
 
           {/* Slider Content */}
           <div className="relative min-h-[180px] mb-10">
-            {slides.map((slide, index) => (
+            {Object.entries(slides).map(([key, slide], index) => (
               <div
-                key={index}
+                key={key}
                 className={`absolute inset-0 transition-all duration-700 ${
                   index === currentSlide
                     ? "opacity-100 translate-y-0"
@@ -130,20 +99,20 @@ export function Hero() {
                 }`}
               >
                 <blockquote className="text-lg sm:text-xl md:text-2xl text-white/90 font-light italic mb-4 sm:mb-6 text-pretty">
-                  &ldquo;{t(slide.quoteKey)}&rdquo;
+                  &ldquo;{slide.quote}&rdquo;
                 </blockquote>
                 <div className="flex items-center gap-2 sm:gap-4">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center border border-white/20">
                     <span className="text-white font-bold text-base sm:text-lg">
-                      {t(slide.authorKey).charAt(0)}
+                      {slide.author.charAt(0)}
                     </span>
                   </div>
                   <div>
                     <p className="text-white font-semibold text-sm sm:text-base">
-                      {t(slide.authorKey)}
+                      {slide.author}
                     </p>
                     <p className="text-white/60 text-xs sm:text-sm">
-                      {t(slide.roleKey)}
+                      {slide.role}
                     </p>
                   </div>
                 </div>
@@ -182,7 +151,7 @@ export function Hero() {
           {/* Slide Navigation */}
           <div className="flex items-center gap-6">
             <div className="flex gap-2">
-              {slides.map((_, index) => (
+              {Object.values(slides).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
@@ -214,11 +183,11 @@ export function Hero() {
         {/* Discover Button */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2">
           <Link
-            href={slides[currentSlide].link}
+            href={Object.values(slides)[currentSlide].link}
             className="group flex items-center gap-2 text-white hover:text-primary transition-colors"
           >
             <span className="text-sm font-medium">
-              {t(slides[currentSlide].ctaKey)}
+              {Object.values(slides)[currentSlide].cta}
             </span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
