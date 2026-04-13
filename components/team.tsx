@@ -61,7 +61,8 @@ const teamMembers = [
   {
     name: "Abdulloh Sheraliyevich",
     position: "Sotuv Bolimi Raxbari",
-    avatar: null,
+    avatar:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089300/photo_2026-04-13_20-07-11_rhpvei.jpg",
     experience: "10+ yil",
     projects: "80+ loyiha",
     phone: "+998 55 515 22 23",
@@ -77,7 +78,8 @@ const teamMembers = [
   {
     name: "Gulbaxor Karaboyeva",
     position: "Asistant",
-    avatar: "/team/finance-director.jpg",
+    avatar:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089222/image_8_foqgvg.png",
     experience: "10+ yil",
     projects: "50+ loyiha",
     phone: "+998 55 515 22 23",
@@ -97,8 +99,9 @@ const teamMembers = [
   },
   {
     name: "Botirboyeva Nafosat",
-    position: "Boshlovchi buxgalter",
-    avatar: "/team/buxgalter.jpg",
+    position: "Molyachi ",
+    avatar:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089221/image_6_raudyy.png",
     experience: "3 yil",
     projects: "—",
     phone: "+998 55 515 22 23",
@@ -114,7 +117,8 @@ const teamMembers = [
   {
     name: "Rizqiyeva Dilnoza Ilhomovna",
     position: "Buxgalter",
-    avatar: "/team/buxgalter.jpg",
+    avatar:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089301/photo_2026-04-13_18-06-10_zdzdtd.jpg",
     experience: "4+ yil",
     projects: "5+ kompaniya",
     phone: "+998 55 515 22 23",
@@ -132,6 +136,30 @@ const teamMembers = [
       "Bank klient",
     ],
     education: ["Moliya Studiya - Buxgalteriya kursi (2021)"],
+  },
+  {
+    name: "Abdutalipov Sardor Aybekovich",
+    position: "Ish Boshqaruvchi",
+    avatar:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089301/photo_2026-04-13_20-07-13_chuzwi.jpg",
+    experience: "2+ yil",
+    projects: "1 kompaniya",
+    phone: "+998 55 515 22 23",
+    email: "uzgrrow@gmail.com",
+    achievements: [
+      "Xarid bo'limi rahbari",
+      "Moliyaviy tahlil",
+      "Marketing strategiyalari",
+    ],
+    skills: [
+      "Aktiv sotuvlar",
+      "Biznes muzokaralar",
+      "Moliyaviy menejment",
+      "Marketing",
+    ],
+    education: [
+      "Xalqaro Iqtisodiyot Biznes Banki — Moliyaviy analist (2028, tugallanmagan)",
+    ],
   },
 ];
 
