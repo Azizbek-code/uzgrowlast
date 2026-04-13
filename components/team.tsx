@@ -196,16 +196,9 @@ export function Team() {
                 {/* Avatar */}
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
-                    {member.name === "Rustamjon Rahmonov" ||
-                    member.name === "Majidov Alisher" ||
-                    member.name === "Botirboyeva Nafosat" ||
-                    member.name === "Rizqiyeva Dilnoza Ilhomovna" ? (
+                    {member.avatar ? (
                       <Image
-                        src={
-                          member.name === "Rustamjon Rahmonov"
-                            ? "/team/ceo.jpg"
-                            : "/team/marketolog.jpg"
-                        }
+                        src={member.avatar}
                         alt={member.name}
                         fill
                         className="object-cover"
@@ -286,16 +279,9 @@ export function Team() {
                 </button>
                 <div className="flex items-center gap-4">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
-                    {selectedMember.name === "Rustamjon Rahmonov" ||
-                    selectedMember.name === "Majidov Alisher" ||
-                    selectedMember.name === "Botirboyeva Nafosat" ||
-                    selectedMember.name === "Rizqiyeva Dilnoza Ilhomovna" ? (
+                    {selectedMember.avatar ? (
                       <Image
-                        src={
-                          selectedMember.name === "Rustamjon Rahmonov"
-                            ? "/team/ceo.jpg"
-                            : "/team/marketolog.jpg"
-                        }
+                        src={selectedMember.avatar}
                         alt={selectedMember.name}
                         fill
                         className="object-cover"
