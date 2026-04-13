@@ -197,7 +197,9 @@ export function Team() {
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
                     {member.name === "Rustamjon Rahmonov" ||
-                    member.name === "Majidov Alisher" ? (
+                    member.name === "Majidov Alisher" ||
+                    member.name === "Botirboyeva Nafosat" ||
+                    member.name === "Rizqiyeva Dilnoza Ilhomovna" ? (
                       <Image
                         src={
                           member.name === "Rustamjon Rahmonov"
@@ -285,7 +287,9 @@ export function Team() {
                 <div className="flex items-center gap-4">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
                     {selectedMember.name === "Rustamjon Rahmonov" ||
-                    selectedMember.name === "Majidov Alisher" ? (
+                    selectedMember.name === "Majidov Alisher" ||
+                    selectedMember.name === "Botirboyeva Nafosat" ||
+                    selectedMember.name === "Rizqiyeva Dilnoza Ilhomovna" ? (
                       <Image
                         src={
                           selectedMember.name === "Rustamjon Rahmonov"
