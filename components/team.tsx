@@ -60,7 +60,7 @@ const teamMembers = [
   },
   {
     name: "Abdulloh Sheraliyevich",
-    position: "Texnik Direktor",
+    position: "Sotuv Bolimi Raxbari",
     avatar: null,
     experience: "10+ yil",
     projects: "80+ loyiha",
@@ -76,7 +76,7 @@ const teamMembers = [
   },
   {
     name: "Gulbaxor Karaboyeva",
-    position: "Moliya Direktori",
+    position: "Asistant",
     avatar: "/team/finance-director.jpg",
     experience: "10+ yil",
     projects: "50+ loyiha",
@@ -94,6 +94,44 @@ const teamMembers = [
       "Byudjet rejalashtirish",
     ],
     education: ["Iqtisodiyot", "Moliya"],
+  },
+  {
+    name: "Botirboyeva Nafosat",
+    position: "Boshlovchi buxgalter",
+    avatar: "/team/buxgalter.jpg",
+    experience: "3 yil",
+    projects: "—",
+    phone: "+998 55 515 22 23",
+    email: "uzgrrow@gmail.com",
+    achievements: [
+      "Hisobotlarni tayyorlash",
+      "Pul oqimini yuritish",
+      "Buxgalteriyani tiklash",
+    ],
+    skills: ["1C", "Didox", "MyMehnat", "Hisobotlar"],
+    education: ["Buxgalteriya kursi", "Yurist malaka kursi", "Inplus kursi"],
+  },
+  {
+    name: "Rizqiyeva Dilnoza Ilhomovna",
+    position: "Buxgalter",
+    avatar: "/team/buxgalter.jpg",
+    experience: "4+ yil",
+    projects: "5+ kompaniya",
+    phone: "+998 55 515 22 23",
+    email: "uzgrrow@gmail.com",
+    achievements: [
+      "Bosh buxgalter",
+      "Soliq hisobotlari",
+      "1C 8.3.0 mutaxassisi",
+    ],
+    skills: [
+      "1C 8.3.0",
+      "My.soliq.uz",
+      "EDO / Didox",
+      "Mehnat.uz",
+      "Bank klient",
+    ],
+    education: ["Moliya Studiya - Buxgalteriya kursi (2021)"],
   },
 ];
 
@@ -219,12 +257,12 @@ export function Team() {
                 <div className="flex items-center gap-4">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
                     {selectedMember.name === "Rustamjon Rahmonov" ||
-                    selectedMember.name === "Alisher Majidov" ? (
+                    selectedMember.name === "Majidov Alisher" ? (
                       <Image
                         src={
                           selectedMember.name === "Rustamjon Rahmonov"
-                            ? "/images/team/ceo.jpg"
-                            : "/images/team/marketolog.jpg"
+                            ? "/team/ceo.jpg"
+                            : "/team/marketolog.jpg"
                         }
                         alt={selectedMember.name}
                         fill
@@ -255,7 +293,6 @@ export function Team() {
                   <div className="space-y-6">
                     {/* Bio */}
                     <div>
-                     
                       <p className="text-muted-foreground leading-relaxed">
                         {selectedMember.bio}
                       </p>
