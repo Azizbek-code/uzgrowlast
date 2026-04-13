@@ -34,25 +34,25 @@ const platforms = [
   {
     name: "YouTube",
     icon: <Youtube className="h-6 w-6" />,
-    subscribers: "117k",
+    subscribers: "122k+",
     color: "bg-red-500",
   },
   {
     name: "Instagram",
     icon: <Instagram className="h-6 w-6" />,
-    subscribers: "59.5k",
+    subscribers: "74.5k+",
     color: "bg-pink-500",
   },
   {
     name: "TikTok",
     icon: <Music className="h-6 w-6" />,
-    subscribers: "16k",
+    subscribers: "16k+",
     color: "bg-black",
   },
   {
     name: "Telegram",
     icon: <MessageCircle className="h-6 w-6" />,
-    subscribers: "1.5k",
+    subscribers: "1.5k+",
     color: "bg-blue-500",
   },
 ];
@@ -206,7 +206,7 @@ export function AssoDesignMedia() {
                         Kuchli auditoriyaga ega bo'lish
                       </h3>
                       <p className="text-gray-600">
-                        150,000+ obunachilar, 1.5-3 million oylik ko'rishlar
+                        200,000+ obunachilar, 1.5-3 million oylik ko'rishlar
                       </p>
                     </div>
                   </div>

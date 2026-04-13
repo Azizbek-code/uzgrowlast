@@ -169,7 +169,8 @@ export function About() {
             <h3 className="text-xl font-bold text-foreground mb-4">
               {t("about.valuesTitle")}
             </h3>
-            <div className="flex flex-wrap gap-2">
+            <p className="text-muted-foreground">{t("about.valuesAndRules.desc")}</p>
+            <div className="flex flex-wrap gap-2 mt-4">
               {values.map((value: any, index: number) => (
                 <span
                   key={index}

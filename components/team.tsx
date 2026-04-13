@@ -29,7 +29,7 @@ const teamMembers = [
     experience: "15+ yil",
     projects: "100+ loyiha",
     phone: "+998 55 515 22 33",
-    email: "rustamjon@uzgrow.uz",
+    email: "uzgrrow@gmail.com",
     achievements: [
       "Prezident loyihalari",
       "Xalqaro sertifikatlar",
@@ -48,8 +48,8 @@ const teamMembers = [
     avatar: "/team/marketolog.jpg",
     experience: "5+ yil",
     projects: "50+ loyiha",
-    phone: "+998 90 123 45 67",
-    email: "alisher@uzgrow.uz",
+    phone: "+998 55 515 22 23",
+    email: "uzgrrow@gmail.com",
     achievements: [
       "Marketing strategiyalari",
       "Sotuvning o'sishi",
@@ -64,8 +64,8 @@ const teamMembers = [
     avatar: null,
     experience: "10+ yil",
     projects: "80+ loyiha",
-    phone: "+998 99 876 54 32",
-    email: "abdulloh@uzgrow.uz",
+    phone: "+998 55 515 22 23",
+    email: "uzgrrow@gmail.com",
     achievements: ["Texnik yechimlar", "Avtomatlashtirish", "Injiniring"],
     skills: ["Texnik dizayn", "Avtomatlashtirish", "Muhandislik"],
     education: [
@@ -73,6 +73,27 @@ const teamMembers = [
       "Muhandislik kurslari",
       "Xalqaro sertifikatlar",
     ],
+  },
+  {
+    name: "Gulbaxor Karaboyeva",
+    position: "Moliya Direktori",
+    avatar: "/team/finance-director.jpg",
+    experience: "10+ yil",
+    projects: "50+ loyiha",
+    phone: "+998 55 515 22 23",
+    email: "uzgrrow@gmail.com",
+    achievements: [
+      "Moliyaviy rejalashtirish",
+      "Byudjet optimizatsiyasi",
+      "Hisobot tayyorlash",
+    ],
+    skills: [
+      "Moliyaviy tahlil",
+      "Excel",
+      "1C:Buxgalteriya",
+      "Byudjet rejalashtirish",
+    ],
+    education: ["Iqtisodiyot", "Moliya"],
   },
 ];
 
@@ -110,7 +131,7 @@ export function Team() {
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/10 p-1 relative overflow-hidden">
                     {member.name === "Rustamjon Rahmonov" ||
-                    member.name === "Alisher Majidov" ? (
+                    member.name === "Majidov Alisher" ? (
                       <Image
                         src={
                           member.name === "Rustamjon Rahmonov"
@@ -234,10 +255,7 @@ export function Team() {
                   <div className="space-y-6">
                     {/* Bio */}
                     <div>
-                      <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                        <Users className="h-4 w-4" />
-                        {t("team.about")}
-                      </h4>
+                     
                       <p className="text-muted-foreground leading-relaxed">
                         {selectedMember.bio}
                       </p>

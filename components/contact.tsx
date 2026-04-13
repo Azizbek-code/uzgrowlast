@@ -15,6 +15,8 @@ import {
   Linkedin,
   Youtube,
   MessageCircle,
+  Globe,
+  Music,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -36,30 +38,37 @@ export function Contact() {
     {
       icon: Phone,
       label: t("contact.phoneLabel"),
-      value: "+998 55 515 22 23",
-      href: "tel:+998555152223",
+      value: t("contact.companyPhone"),
+      href: `tel:${t("contact.companyPhone").replace(/\s/g, "")}`,
       color: "bg-green-500/10 text-green-600",
     },
     {
       icon: Phone,
       label: "WhatsApp",
-      value: "+998 99 435 23 13",
-      href: "tel:+998994352313",
+      value: t("contact.companyPhone2"),
+      href: `tel:${t("contact.companyPhone2").replace(/\s/g, "")}`,
       color: "bg-green-500/10 text-green-600",
     },
     {
       icon: Mail,
       label: t("contact.emailLabel"),
-      value: "uzgrrow@gmail.com",
-      href: "mailto:uzgrrow@gmail.com",
+      value: t("contact.companyEmail"),
+      href: `mailto:${t("contact.companyEmail")}`,
       color: "bg-blue-500/10 text-blue-600",
     },
     {
       icon: MapPin,
       label: t("contact.address"),
-      value: "Toshkent, O'zbekiston",
-      href: "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
+      value: t("contact.address"),
+      href: t("contact.locationUrl"),
       color: "bg-red-500/10 text-red-600",
+    },
+    {
+      icon: Globe,
+      label: "Website",
+      value: t("contact.website"),
+      href: t("contact.website"),
+      color: "bg-purple-500/10 text-purple-600",
     },
   ];
 
@@ -75,32 +84,32 @@ export function Contact() {
     {
       icon: Youtube,
       label: "YouTube",
-      href: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
+      href: t("contact.socialLinks.youtube"),
       color: "bg-red-500/10 text-red-600 hover:bg-red-500/20",
     },
     {
       icon: Instagram,
       label: "Instagram",
-      href: "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
+      href: t("contact.socialLinks.instagram"),
       color: "bg-pink-500/10 text-pink-600 hover:bg-pink-500/20",
     },
     {
       icon: Facebook,
       label: "Facebook",
-      href: "https://www.facebook.com/people/UZ-Grow/61555877069972/?rdid=DcrSKZ6JcT9V7Tj3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DePjLwX79%2F",
+      href: t("contact.socialLinks.facebook"),
       color: "bg-blue-500/10 text-blue-600 hover:bg-blue-500/20",
     },
     {
       icon: MessageCircle,
       label: "Telegram",
-      href: "http://@Uz_Grow",
-      color: "bg-blue-500/10 text-blue-600 hover:bg-blue-500/20",
+      href: t("contact.socialLinks.telegram"),
+      color: "bg-cyan-500/10 text-cyan-600 hover:bg-cyan-500/20",
     },
     {
-      icon: Send,
-      label: "Website",
-      href: "http://uzgrow.uz",
-      color: "bg-green-500/10 text-green-600 hover:bg-green-500/20",
+      icon: Music,
+      label: "TikTok",
+      href: t("contact.socialLinks.tiktok"),
+      color: "bg-gray-500/10 text-gray-600 hover:bg-gray-500/20",
     },
   ];
 
