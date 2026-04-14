@@ -88,7 +88,6 @@ const geographicCoverage = [
 const partnershipPlans = [
   {
     name: "STANDART",
-    price: "$4,500",
     duration: "3 OY",
     videos: 4,
     posts: 12,
@@ -97,7 +96,6 @@ const partnershipPlans = [
   },
   {
     name: "PREMIUM",
-    price: "$7,200",
     duration: "6 OY",
     videos: 8,
     posts: 24,
@@ -106,7 +104,6 @@ const partnershipPlans = [
   },
   {
     name: "VIP",
-    price: "$12,000",
     duration: "12 OY",
     videos: 14,
     posts: 38,
@@ -139,7 +136,7 @@ export function AssoDesignMedia() {
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            AssoDesign Media Hamkorlik Taklifi
+            Uzgr Hamkorlik Taklifi
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Biz kimmiz - Men — Rustamjon Rahmonov, O'zbekistonlik bloger,
@@ -335,9 +332,7 @@ export function AssoDesignMedia() {
               >
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="text-3xl font-bold text-blue-600">
-                    {plan.price}
-                  </div>
+                 
                   <p className="text-gray-600">{plan.duration}</p>
                 </CardHeader>
                 <CardContent>
@@ -422,11 +417,13 @@ export function AssoDesignMedia() {
             </div>
             <div className="flex flex-col items-center">
               <Phone className="h-8 w-8 mb-2" />
-              <span>+998 88 435-23-13</span>
+              <span>+998 93 435-23-13</span>
             </div>
             <div className="flex flex-col items-center">
               <MapPin className="h-8 w-8 mb-2" />
-              <span>Toshkent, Rayhona Ko'chasi, 107-uy</span>
+              <span>
+                Toshkent shahri, Sirg’ali tumani, Nomdanak ko’chasi, Ziyokor 6/9
+              </span>
             </div>
           </div>
           <div className="flex gap-4 justify-center">

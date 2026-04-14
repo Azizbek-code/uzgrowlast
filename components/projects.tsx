@@ -27,12 +27,30 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const projects = [
   {
     id: 1,
-    title: "Vodiy Loyihasi",
-    location: "Andijon vodiysi",
-    size: "7 ta issiqxona",
+    title: "Surxondaryo Agro Majmuasi",
+    location: "Surxondaryo viloyati",
+    size: "3 ta issiqxona",
     category: "presidential",
     description:
-      "Andijon vodiysida qurilgan 7 ta zamonaviy issiqxona majmuasi. Prezident tashrifi uchun mo'ljallangan yirik loyiha. Turli o'lchamlarda va eng ilg'or texnologiyalar bilan jihozlangan.",
+      "Surxondaryo viloyatida qurilgan 3 ta zamonaviy issiqxona majmuasi. Prezident tashrifi uchun mo'ljallangan yirik loyiha. Eng ilg'or texnologiyalar bilan jihozlangan.",
+    images: [
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg",
+    ],
+    year: "2023",
+    status: "completed",
+    featured: true,
+    technologies: ["Polikarbonat", "Tomchilatib sug'orish", "Iqlim nazorati"],
+    client: "Surxondaryo viloyati hokimligi",
+    investment: "$1.2M",
+  },
+  {
+    id: 2,
+    title: "Andijon Vodiy Loyihasi",
+    location: "Andijon vodiysi",
+    size: "7 ta issiqxona",
+    category: "greenhouse",
+    description:
+      "Andijon vodiysida qurilgan 7 ta zamonaviy issiqxona majmuasi. Turli o'lchamlarda va eng ilg'or texnologiyalar bilan jihozlangan.",
     images: [
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468970/21_bv62xg.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775301447/22_qrawq5.jpg",
@@ -42,17 +60,17 @@ const projects = [
     ],
     year: "2022-2024",
     status: "completed",
-    featured: true,
+    featured: false,
     technologies: [
       "Polikarbonat",
       "Tomchilatib sug'orish",
       "Avtomatlashtirish",
     ],
-    client: "Prezident administratsiyasi",
+    client: "Andijon viloyati hokimligi",
     investment: "$2.5M",
   },
   {
-    id: 2,
+    id: 3,
     title: "Samarqand Agro Majmuasi",
     location: "Samarqand viloyati",
     size: "2 ta issiqxona",
@@ -74,13 +92,13 @@ const projects = [
     investment: "$1.8M",
   },
   {
-    id: 3,
+    id: 4,
     title: "Xalqaro Agro Hamkorlik",
-    location: "Buxoro, Toshkent, Olmaota",
+    location: "Toshkent, Almata",
     size: "3 ta loyiha",
     category: "international",
     description:
-      "Buxoro xalqaro turizm markazi, Toshkent raqamli ta'lim platformasi va Olmaota issiqxona loyihalari. Xalqaro standartlarga mos ravishda qurilgan.",
+      "Toshkent raqamli ta'lim platformasi va Olmaota issiqxona loyihalari. Xalqaro standartlarga mos ravishda qurilgan.",
     images: [
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469047/IMG_5184_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_iuhwco.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469042/IMG_4545_bl2h6a.jpg",
@@ -96,8 +114,8 @@ const projects = [
     investment: "$3.2M",
   },
   {
-    id: 4,
-    title: "Qashqadaryo Polikarbonat Majmuasi",
+    id: 5,
+    title: "Qashqadaryo Issiqxona Majmuasi",
     location: "Qashqadaryo viloyati",
     size: "3 gektar",
     category: "greenhouse",
@@ -117,7 +135,7 @@ const projects = [
     investment: "$1.5M",
   },
   {
-    id: 5,
+    id: 6,
     title: "Toshkent Innovatsion Markazi",
     location: "Toshkent shahri",
     size: "1.5 gektar",
@@ -125,7 +143,7 @@ const projects = [
     description:
       "Toshkent shahrida qurilgan innovatsion issiqxona markazi. Yaqin Sharqdagi eng zamonaviy agrotexnologiyalar jamlanmasi.",
     images: [
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5188_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5193_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469185/20201201_111323_zaxid6.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567292/IMG_4029_copy_7_q0rdbm.jpg",
     ],

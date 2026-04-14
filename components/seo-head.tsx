@@ -15,7 +15,7 @@ interface SEOHeadProps {
 
 export function SEOHead({
   title = "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
-  description = "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 100+ muvaffaqiyatli loyiha.",
+  description = "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 2000+ muvaffaqiyatli loyiha.",
   keywords = "issiqxona qurish, agro-injiniring, qishloq xo'jaligi, UZ-GROW, issiqxona turlari, polikarbonat issiqxona, gidroponik, agrobiznes, O'zbekiston, Toshkent, issiqxona narxlari, qurilish materiallari",
   image = "/images/logo.png",
   url = "https://uzgrow.uz",
@@ -91,7 +91,7 @@ export function SEOHead({
             },
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+998884352313",
+              telephone: "+999384352313",
               contactType: "customer service",
               email: "uzgrrow@gmail.com",
               availableLanguage: ["Uzbek", "Russian", "English"],

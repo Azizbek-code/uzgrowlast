@@ -56,11 +56,10 @@ const internationalProjects = [
     description:
       "Xalqaro transport yo'llarini rivojlantirish va savdo aloqalarini kengaytirish bo'yicha strategik loyiha",
     image:
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5188_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5193_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg",
     country: "Turkmaniston",
     status: "Faol",
     icon: <Handshake className="h-5 w-5" />,
-    budget: "$3.1M",
     timeline: "2024-2028",
   },
 ];
@@ -151,9 +150,6 @@ export function International() {
                       {project.country}
                     </span>
                   </div>
-                  <span className="text-sm font-bold text-green-600">
-                    {project.budget}
-                  </span>
                 </div>
                 <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
                   {project.title}

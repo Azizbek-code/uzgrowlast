@@ -37,7 +37,7 @@ const ceoData = {
       "O'zbekistonni Markaziy Osiyoning qishloq xo'jaligi markaziga aylantirish, mahalliy fermerlarni global miqyosda raqobatbardosh qilish va yashil texnologiyalar orqali oziq-ovqat xavfsizligini ta'minlash.",
     achievements: [
       "150,000+ obunachi ijtimoiy tarmoqlarda",
-      "100+ muvaffaqiyatli loyiha",
+      "2000+ muvaffaqiyatli loyiha",
       "4+ yillik tajriba",
       "Xalqaro hamkorliklar",
       "Innovatsion yechimlar",
@@ -60,7 +60,7 @@ const ceoData = {
       "Agro-biznes - bu faqat pul topish emas, balki millionlab insonlar hayotini yaxshilash, mamlakat oziq-ovqat mustaqilligini ta'minlash va kelajak avlodlari uchun yashil Yer yaratishdir.",
     contact: {
       email: "ceo@uzgrow.uz",
-      phone: "+998 88 435-23-13",
+      phone: "+998 99 435-23-13",
       linkedin: "linkedin.com/in/rustamjon-rahmonov",
       telegram: "@rustamjon_ceo",
     },
@@ -75,7 +75,7 @@ const ceoData = {
       "Превратить Узбекистан в центр сельского хозяйства Центральной Азии, сделать местных фермеров конкурентоспособными на глобальном уровне и обеспечить продовольственную безопасность через зеленые технологии.",
     achievements: [
       "150,000+ подписчиков в соцсетях",
-      "100+ успешных проектов",
+      "2000+ успешных проектов",
       "4+ лет опыта",
       "Международные партнерства",
       "Инновационные решения",
@@ -98,7 +98,7 @@ const ceoData = {
       "Агробизнес - это не только заработок денег, но и улучшение жизни миллионов людей, обеспечение продовольственной независимости страны и создание зеленой Земли для будущих поколений.",
     contact: {
       email: "ceo@uzgrow.uz",
-      phone: "+998 88 435-23-13",
+      phone: "+998 93 435-23-13",
       linkedin: "linkedin.com/in/rustamjon-rahmonov",
       telegram: "@rustamjon_ceo",
     },
@@ -113,7 +113,7 @@ const ceoData = {
       "Transform Uzbekistan into the agricultural hub of Central Asia, make local farmers globally competitive, and ensure food security through green technologies.",
     achievements: [
       "150,000+ social media followers",
-      "100+ successful projects",
+      "2000+ successful projects",
       "4+ years of experience",
       "International partnerships",
       "Innovative solutions",
@@ -136,7 +136,7 @@ const ceoData = {
       "Agribusiness is not just about making money, but about improving millions of lives, ensuring the country's food independence, and creating a green Earth for future generations.",
     contact: {
       email: "ceo@uzgrow.uz",
-      phone: "+998 88 435-23-13",
+      phone: "+998 93 435-23-13",
       linkedin: "linkedin.com/in/rustamjon-rahmonov",
       telegram: "@rustamjon_ceo",
     },
@@ -235,7 +235,7 @@ export function CEO() {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-500">Loyihalar</span>
-                    <span className="font-medium">100+</span>
+                    <span className="font-medium">2000+</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-500">Obunachilar</span>

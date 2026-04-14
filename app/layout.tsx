@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title:
     "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
   description:
-    "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 100+ muvaffaqiyatli loyiha.",
+    "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 2000+ muvaffaqiyatli loyiha.",
   keywords: [
     "issiqxona qurish",
     "agro-injiniring",

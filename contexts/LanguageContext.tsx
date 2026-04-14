@@ -45,7 +45,7 @@ const translations = {
         "Biz eng zamonaviy issiqxona texnologiyalarini joriy etamiz va qishloq xo'jaligini rivojlantiramiz",
       cta: "Bog'lanish",
       downloadCatalog: "Katalog yuklab olish",
-      tagline: "4+ yil tajriba - 100+ muvaffaqiyatli loyiha",
+      tagline: "4+ yil tajriba - 2000+ muvaffaqiyatli loyiha",
       stats: {
         experience: "Yil tajriba",
         projects: "Muvaffaqiyatli loyiha",
@@ -243,7 +243,7 @@ const translations = {
           experience: "6+ yillik",
           achievements: [
             "200,000+ obunachi",
-            "100+ muvaffaqiyatli loyiha",
+            "2000+ muvaffaqiyatli loyiha",
             "Xalqaro hamkorliklar",
           ],
           education: [
@@ -282,7 +282,7 @@ const translations = {
           twitter: "#",
         },
         abdulloh: {
-          name: "Abdulloh Sheraliyevich",
+          name: "Abdulloh Abdutolipov",
           position: "Texnik Direktor",
           bio: "Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonaviy agrotexnologiyalarni joriy etmoqda.",
           experience: "10+ yillik",
@@ -649,7 +649,7 @@ const translations = {
         "Мы внедряем самые современные тепличные технологии и развиваем сельское хозяйство",
       cta: "Связаться",
       downloadCatalog: "Скачать каталог",
-      tagline: "4+ лет опыта - 100+ успешных проектов",
+      tagline: "4+ лет опыта - 2000+ успешных проектов",
       stats: {
         experience: "Лет опыта",
         projects: "Успешных проектов",
@@ -812,7 +812,7 @@ const translations = {
           experience: "6+ лет",
           achievements: [
             "200 000+ подписчиков",
-            "100+ успешных проектов",
+            "2000+ успешных проектов",
             "Международные партнёрства",
           ],
           education: [
@@ -1217,7 +1217,7 @@ const translations = {
         "We implement the most modern greenhouse technologies and develop agriculture",
       cta: "Contact Us",
       downloadCatalog: "Download Catalog",
-      tagline: "4+ years experience - 100+ successful projects",
+      tagline: "4+ years experience - 2000+ successful projects",
       stats: {
         experience: "Years experience",
         projects: "Successful projects",
@@ -1379,7 +1379,7 @@ const translations = {
           experience: "6+ years",
           achievements: [
             "200,000+ subscribers",
-            "100+ successful projects",
+            "2000+ successful projects",
             "International partnerships",
           ],
           education: [
@@ -1418,7 +1418,7 @@ const translations = {
           twitter: "#",
         },
         abdulloh: {
-          name: "Abdulloh Sheraliyevich",
+          name: "Abdulloh Abdutolipov",
           position: "Technical Director",
           bio: "Specialist in greenhouse construction and technologies. Implementing modern agro-technologies with 10+ years of experience.",
           experience: "10+ years",

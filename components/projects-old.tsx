@@ -64,7 +64,7 @@ const projects = [
     size: "3 gektar",
     category: "Issiqxona turlari",
     description:
-      "Qashqadaryoda qurilgan polikarbonat issiqxonalari majmui. Zamonaviy texnologiyalar bilan jihozlangan.",
+      "Qashqadaryoda qurilgan issiqxonalari majmui. Zamonaviy texnologiyalar bilan jihozlangan.",
     image: "/images/8.jpg",
     images: ["/images/8.jpg"],
     year: "2024",

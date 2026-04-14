@@ -26,7 +26,7 @@ import {
 const stats = [
   { value: "4+", label: "Yillik tajriba" },
   { value: "95+", label: "Mamlakatda xizmat" },
-  { value: "100+", label: "Loyihalar" },
+  { value: "2000+", label: "Loyihalar" },
   { value: "50+", label: "Mijozlar" },
 ];
 
@@ -96,33 +96,6 @@ export default function HaqimizdaPage() {
       </section>
 
       {/* Video Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Biz bilan tanishing
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                60 yillik tajriba va 95 mamlakatdagi xizmatimiz haqida videoni
-                tomosha qiling
-              </p>
-            </div>
-
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <video
-                src="/about-video.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full aspect-video object-cover"
-                controls
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Mission & Vision */}
       <section className="py-20">
@@ -255,128 +228,6 @@ export default function HaqimizdaPage() {
       </section>
 
       {/* Audience & Leadership Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Bizning jamoamiz va auditoriyamiz
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Kompaniya rahbariyati va bizning qadrli mijozlarimiz
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Leadership */}
-            <Card className="overflow-hidden shadow-lg border-0">
-              <CardHeader className="bg-gradient-to-r from-blue-50 to-purple-50">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                    <UserCheck className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl">Rahbariyat</CardTitle>
-                    <CardDescription>Kompaniya boshqaruvi</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                        <UserCheck className="w-5 h-5 text-blue-600" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold">Rustamjon Rahmonov</h4>
-                        <p className="text-sm text-gray-600">CEO & Asoschi</p>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-5 h-5 text-gray-400" />
-                  </div>
-
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <BarChart3 className="w-4 h-4 text-blue-600" />
-                      <span>4+ yillik tajriba</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <TrendingUp className="w-4 h-4 text-green-600" />
-                      <span>100+ muvaffaqiyatli loyiha</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Users className="w-4 h-4 text-purple-600" />
-                      <span>150K+ ijtimoiy tarmoq obunachilari</span>
-                    </div>
-                  </div>
-
-                  <Link href="/rahbariyat">
-                    <Button className="w-full">
-                      Rahbariyat haqida ko'proq
-                      <ChevronRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Audience */}
-            <Card className="overflow-hidden shadow-lg border-0">
-              <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl">Auditoriya</CardTitle>
-                    <CardDescription>Bizning mijozlarimiz</CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-4 bg-green-50 rounded-lg">
-                      <div className="text-2xl font-bold text-green-600">
-                        87%
-                      </div>
-                      <div className="text-sm text-gray-600">Ayol mijozlar</div>
-                    </div>
-                    <div className="text-center p-4 bg-blue-50 rounded-lg">
-                      <div className="text-2xl font-bold text-blue-600">
-                        25-55
-                      </div>
-                      <div className="text-sm text-gray-600">Yosh oralig'i</div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Globe className="w-4 h-4 text-blue-600" />
-                      <span>O'zbekiston, Qozog'iston, Qirg'iziston</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <TrendingUp className="w-4 h-4 text-green-600" />
-                      <span>1.5-3M oylik ko'rishlar</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <Heart className="w-4 h-4 text-red-600" />
-                      <span>Agro-biznes vakillari</span>
-                    </div>
-                  </div>
-
-                  <Link href="/asso-design-media">
-                    <Button variant="outline" className="w-full">
-                      Media hamkorlik
-                      <ChevronRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>

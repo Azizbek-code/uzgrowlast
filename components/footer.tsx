@@ -17,9 +17,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const footerLinks = {
   xizmatlar: [
     { label: "Issiqxona turlari", href: "/issiqxona-turlari" },
+    { label: "Texnologiyalar", href: "/texnologiya" },
     { label: "Loyihalar", href: "/loyihalar" },
     { label: "Jihozlar", href: "/jixozlar" },
-    { label: "Qurilish", href: "/qurilish" },
   ],
   kompaniya: [
     { label: "Biz haqimizda", href: "/haqimizda" },
@@ -85,9 +85,6 @@ export function Footer() {
               </div>
               <div>
                 <span className="text-2xl font-bold block">UZ-GROW</span>
-                <span className="text-sm sm:text-base tracking-wider text-white/50">
-                  QURUVCHI FIRMASI
-                </span>
               </div>
             </Link>
             <p className="text-white/70 mb-6 max-w-sm leading-relaxed">
@@ -185,7 +182,9 @@ export function Footer() {
               className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors"
             >
               <MapPin className="w-4 h-4" />
-              <span>Toshkent, Rayhona ko'chasi 107-uy</span>
+              <span>
+                Toshkent shahri, Sirg’ali tumani, Nomdanak ko’chasi, Ziyokor 6/9
+              </span>
             </a>
           </div>
 

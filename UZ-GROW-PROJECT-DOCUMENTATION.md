@@ -1,6 +1,7 @@
 # UZ-GROW Web Sayt - To'liq Loyiqa Hujjati
 
 ## Table of Contents
+
 1. [Loyiha Umumiy Ma'lumotlari](#loyiha-umumiy-malumotlari)
 2. [Texnologiya Stack](#texnologiya-stack)
 3. [Arxitektura](#arxitektura)
@@ -18,6 +19,7 @@
 ## Loyiha Umumiy Ma'lumotlari
 
 ### **Kompaniya Ma'lumotlari:**
+
 - **Nomi:** UZ-GROW Quruvchi Firmasi
 - **Soxasi:** Issiqxona qurilishi, agro-injiniring, konsalting
 - **Target:** O'zbekiston fermerlari va agrobiznes vakillari
@@ -25,6 +27,7 @@
 - **Manzil:** Toshkent, O'zbekiston
 
 ### **Loyiha Maqsadi:**
+
 Zamonaviy, responsive va multi-language veb-sayt orqali kompaniya xizmatlarini ko'rsatish, potensial mijozlar bilan aloqa o'rnatish va professional imij yaratish.
 
 ---
@@ -32,6 +35,7 @@ Zamonaviy, responsive va multi-language veb-sayt orqali kompaniya xizmatlarini k
 ## Texnologiya Stack
 
 ### **Frontend Framework:**
+
 ```json
 {
   "framework": "Next.js 16.2.0",
@@ -43,6 +47,7 @@ Zamonaviy, responsive va multi-language veb-sayt orqali kompaniya xizmatlarini k
 ```
 
 ### **Development Tools:**
+
 ```json
 {
   "bundler": "Turbopack",
@@ -57,6 +62,7 @@ Zamonaviy, responsive va multi-language veb-sayt orqali kompaniya xizmatlarini k
 ## Arxitektura
 
 ### **Component Architecture:**
+
 ```
 App Layout (root)
   Header (navigation, language switcher)
@@ -74,6 +80,7 @@ App Layout (root)
 ```
 
 ### **State Management:**
+
 ```typescript
 // React Context API
 LanguageContext: {
@@ -140,6 +147,7 @@ public/
 ## Komponentlar Tavsifi
 
 ### **Header Component (`components/header.tsx`)**
+
 ```typescript
 // Features:
 - Logo and company name
@@ -163,6 +171,7 @@ public/
 ```
 
 ### **Services Component (`components/services.tsx`)**
+
 ```typescript
 // Features:
 - 3 main services (Engineering, Equipment, Consulting)
@@ -190,6 +199,7 @@ useEffect(() => {
 ```
 
 ### **Team Component (`components/team.tsx`)**
+
 ```typescript
 // Team Members Data:
 const teamMembers = [
@@ -200,7 +210,7 @@ const teamMembers = [
     avatar: "/images/team/1.jpg",
     bio: "O'zbekistonlik innovator agrofaol va tadbirkor...",
     experience: "4+ yillik",
-    achievements: ["150,000+ obunachi", "100+ muvaffaqiyatli loyiha"],
+    achievements: ["150,000+ obunachi", "2000+ muvaffaqiyatli loyiha"],
     // ... more data
   },
   // 4 more members with avatars 2.jpg, 3.jpg, 4.jpg, 5.jpg
@@ -215,6 +225,7 @@ const teamMembers = [
 ```
 
 ### **About Component (`components/about.tsx`)**
+
 ```typescript
 // Features:
 - Company story and statistics
@@ -240,6 +251,7 @@ const teamMembers = [
 ## Multi-Language Tizimi
 
 ### **LanguageContext Structure:**
+
 ```typescript
 interface LanguageContextType {
   language: 'uz' | 'ru' | 'en'
@@ -265,6 +277,7 @@ translations = {
 ```
 
 ### **Translation Coverage:**
+
 - **Navigation:** All menu items
 - **Services:** Titles, descriptions, features
 - **Team:** Positions, skills, achievements
@@ -279,21 +292,26 @@ translations = {
 ## Media Va Assetlar
 
 ### **Cloudinary Integration:**
+
 ```typescript
 // Video URLs:
 const videos = {
-  heroVideo: "https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302096/FeHK2XpaBormS6BB4RJX_r_jqxaZ8CwE_xchfqo.mp4",
-  presidentialVideo: "https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302121/video_2026-04-04_10-35-19_r8tdyl.mp4"
-}
+  heroVideo:
+    "https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302096/FeHK2XpaBormS6BB4RJX_r_jqxaZ8CwE_xchfqo.mp4",
+  presidentialVideo:
+    "https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302121/video_2026-04-04_10-35-19_r8tdyl.mp4",
+};
 
 // Image URLs:
 const images = {
-  service: "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/37_2_ggepkx.jpg",
-  team: "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469214/38_2_wy9ces.jpg"
-}
+  service:
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/37_2_ggepkx.jpg",
+  team: "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469214/38_2_wy9ces.jpg",
+};
 ```
 
 ### **Local Asset Structure:**
+
 ```
 images/
 team/
@@ -319,10 +337,11 @@ projects/
 ## UI/UX Design
 
 ### **Color Palette:**
+
 ```css
 :root {
   /* Primary Brand Colors */
-  --primary: #22c55e;          /* UZ-GROW Green */
+  --primary: #22c55e; /* UZ-GROW Green */
   --primary-foreground: #ffffff;
 
   /* Secondary Colors */
@@ -335,11 +354,12 @@ projects/
   --muted: #f9fafb;
   --muted-foreground: #6b7280;
   --border: #e5e7eb;
-  --accent: #fbbf24;           /* Yellow accent */
+  --accent: #fbbf24; /* Yellow accent */
 }
 ```
 
 ### **Typography:**
+
 ```css
 /* Font Family */
 font-family: 'Inter', system-ui, sans-serif;
@@ -357,6 +377,7 @@ text-5xl: 3rem      (48px)
 ```
 
 ### **Responsive Breakpoints:**
+
 ```css
 /* Mobile First Approach */
 sm: 640px    /* Small tablets */
@@ -371,6 +392,7 @@ xl: 1280px   /* Desktops */
 ## API Va Data Manbalari
 
 ### **Mock Data Structure:**
+
 ```typescript
 // Services Data
 const services = [
@@ -380,11 +402,16 @@ const services = [
     title: "Injiniring",
     shortDesc: "Loyihalashdan to'liq amalga oshirishgacha",
     description: "Issiqxonalarni to'liq aylanma asosida quramiz...",
-    features: ["Metal konstruktsiya", "Polikarbonat yoki shisha", "Tomchilatib sug'orish", "Avtomatlashtirilgan boshqaruv"],
-    image: "/images/1.jpg"
+    features: [
+      "Metal konstruktsiya",
+      "Polikarbonat yoki shisha",
+      "Tomchilatib sug'orish",
+      "Avtomatlashtirilgan boshqaruv",
+    ],
+    image: "/images/1.jpg",
   },
   // Equipment and Consulting services...
-]
+];
 
 // Team Data
 const teamMembers = [
@@ -395,17 +422,21 @@ const teamMembers = [
     avatar: "/images/team/1.jpg",
     bio: "O'zbekistonlik innovator agrofaol va tadbirkor...",
     experience: "4+ yillik",
-    achievements: ["150,000+ obunachi", "100+ muvaffaqiyatli loyiha", "Xalqaro hamkorliklar"],
+    achievements: [
+      "150,000+ obunachi",
+      "2000+ muvaffaqiyatli loyiha",
+      "Xalqaro hamkorliklar",
+    ],
     education: ["Qishloq xo'jaligi instituti", "Xalqaro biznes menejmenti"],
     skills: ["Agrobiznes", "Innovatsiya", "Loyihalash", "Menejment"],
     contact: {
       email: "rustamjon@uzgrow.uz",
       phone: "+998 90 123-45-71",
-      location: "Toshkent, O'zbekiston"
-    }
+      location: "Toshkent, O'zbekiston",
+    },
   },
   // 4 more team members...
-]
+];
 
 // Greenhouse Types Data
 const greenhouseTypes = [
@@ -419,10 +450,10 @@ const greenhouseTypes = [
     cost: "Yuqori",
     maintenance: "Oson",
     color: "bg-blue-500",
-    icon: Glasses
+    icon: Glasses,
   },
   // 6 more greenhouse types including mini, oddiy, gektar, polikarbanat...
-]
+];
 
 // Projects Data
 const projects = [
@@ -434,40 +465,44 @@ const projects = [
     size: "7 issiqxona",
     description: "Vodiy mintaqasida qurilgan 7 ta zamonaviy issiqxona...",
     images: ["/images/projects/vodiy-1.jpg", "/images/projects/vodiy-2.jpg"],
-    year: "2024"
+    year: "2024",
   },
   // More projects with presidential, international, greenhouse, agriculture categories...
-]
+];
 ```
 
 ### **External URLs:**
+
 ```typescript
 // Cloudinary URLs
 const cloudinaryAssets = {
   videos: {
     hero: "https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302096/FeHK2XpaBormS6BB4RJX_r_jqxaZ8CwE_xchfqo.mp4",
-    presidential: "https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302121/video_2026-04-04_10-35-19_r8tdyl.mp4"
+    presidential:
+      "https://res.cloudinary.com/dnqi0bdjk/video/upload/v1775302121/video_2026-04-04_10-35-19_r8tdyl.mp4",
   },
   images: {
-    service1: "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/37_2_ggepkx.jpg",
-    service2: "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469214/38_2_wy9ces.jpg"
-  }
-}
+    service1:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469212/37_2_ggepkx.jpg",
+    service2:
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469214/38_2_wy9ces.jpg",
+  },
+};
 
 // Social Media URLs
 const socialLinks = {
   instagram: "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
   facebook: "https://www.facebook.com/share/1DePjLwX79/",
   youtube: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
-  telegram: "http://@Uz_Grow"
-}
+  telegram: "http://@Uz_Grow",
+};
 
 // Contact Information
 const contactInfo = {
   phone: "+998 55 515 22 33",
   email: "uzgrrow@gmail.com",
-  address: "Toshkent, O'zbekiston"
-}
+  address: "Toshkent, O'zbekiston",
+};
 ```
 
 ---
@@ -475,6 +510,7 @@ const contactInfo = {
 ## Performance Optimizatsiyasi
 
 ### **Image Optimization:**
+
 ```typescript
 // Next.js Image Component
 <Image
@@ -488,11 +524,12 @@ const contactInfo = {
 />
 
 // Cloudinary Optimization
-const optimizedImageUrl = (base_url) => 
+const optimizedImageUrl = (base_url) =>
   `${base_url}?w_800&h_600&f_auto&c_limit&cs_srgb&dpr_auto&fl_lossy`
 ```
 
 ### **Code Splitting:**
+
 ```typescript
 // Dynamic Imports for Large Components
 const Services = dynamic(() => import('@/components/services'), {
@@ -506,25 +543,27 @@ const Projects = dynamic(() => import('@/components/projects'), {
 ```
 
 ### **SEO Optimization:**
+
 ```typescript
 // Metadata Configuration
 export const metadata = {
   title: "UZ-GROW - Issiqxona Qurilishi",
-  description: "O'zbekistonda zamonaviy issiqxona qurilishi va agro-injiniring xizmatlari",
+  description:
+    "O'zbekistonda zamonaviy issiqxona qurilishi va agro-injiniring xizmatlari",
   keywords: ["issiqxona", "qurilish", "agro-injiniring", "UZ-GROW"],
   openGraph: {
     title: "UZ-GROW Quruvchi Firmasi",
     description: "Professional issiqxona qurilishi xizmatlari",
-    images: ["/og-image.jpg"]
+    images: ["/og-image.jpg"],
   },
   alternates: {
     languages: {
-      'uz-UZ': '/uz',
-      'ru-RU': '/ru',
-      'en-US': '/en'
-    }
-  }
-}
+      "uz-UZ": "/uz",
+      "ru-RU": "/ru",
+      "en-US": "/en",
+    },
+  },
+};
 ```
 
 ---
@@ -532,6 +571,7 @@ export const metadata = {
 ## Deployment
 
 ### **Production Build:**
+
 ```bash
 # Build Commands
 npm run build          # Production build
@@ -541,6 +581,7 @@ npm run type-check     # TypeScript validation
 ```
 
 ### **Environment Variables:**
+
 ```bash
 # .env.local
 NEXT_PUBLIC_CLOUDINARY_URL=https://res.cloudinary.com/dnqi0bdjk
@@ -549,6 +590,7 @@ NEXT_PUBLIC_GA_ID=GA_MEASUREMENT_ID
 ```
 
 ### **Vercel Deployment:**
+
 ```bash
 # Install Vercel CLI
 npm i -g vercel
@@ -561,26 +603,27 @@ vercel domains add uz-grow.uz
 ```
 
 ### **Performance Monitoring:**
+
 ```typescript
 // Lighthouse Configuration
 module.exports = {
-  extends: '@lhci/default-config',
+  extends: "@lhci/default-config",
   ci: {
     collect: {
       numberOfRuns: 3,
-      startServerCommand: 'npm run start',
-      url: ['http://localhost:3000']
+      startServerCommand: "npm run start",
+      url: ["http://localhost:3000"],
     },
     assert: {
       assertions: {
-        'categories:performance': ['warn', { minScore: 0.9 }],
-        'categories:accessibility': ['error', { minScore: 0.9 }],
-        'categories:best-practices': ['warn', { minScore: 0.9 }],
-        'categories:seo': ['warn', { minScore: 0.9 }]
-      }
-    }
-  }
-}
+        "categories:performance": ["warn", { minScore: 0.9 }],
+        "categories:accessibility": ["error", { minScore: 0.9 }],
+        "categories:best-practices": ["warn", { minScore: 0.9 }],
+        "categories:seo": ["warn", { minScore: 0.9 }],
+      },
+    },
+  },
+};
 ```
 
 ---
@@ -588,12 +631,14 @@ module.exports = {
 ## Qo'shimcha Ma'lumotlar
 
 ### **Cross-Browser Compatibility:**
+
 - Chrome 90+
 - Firefox 88+
 - Safari 14+
 - Edge 90+
 
 ### **Accessibility Features:**
+
 - ARIA labels for screen readers
 - Keyboard navigation support
 - High contrast mode support
@@ -601,6 +646,7 @@ module.exports = {
 - Semantic HTML5 elements
 
 ### **Security Measures:**
+
 - Content Security Policy (CSP)
 - XSS protection
 - HTTPS enforcement
@@ -608,17 +654,18 @@ module.exports = {
 - Secure headers
 
 ### **Analytics Integration:**
+
 ```typescript
 // Google Analytics
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from "@vercel/analytics/react";
 
 // Custom Events
 const trackEvent = (action: string, category: string, label?: string) => {
-  gtag('event', action, {
+  gtag("event", action, {
     event_category: category,
-    event_label: label
-  })
-}
+    event_label: label,
+  });
+};
 ```
 
 ---
@@ -626,6 +673,7 @@ const trackEvent = (action: string, category: string, label?: string) => {
 ## Test Coverage
 
 ### **Unit Tests:**
+
 ```typescript
 // Component Testing
 import { render, screen } from '@testing-library/react'
@@ -638,15 +686,16 @@ test('renders service cards', () => {
 ```
 
 ### **E2E Tests:**
+
 ```typescript
 // Playwright Configuration
-import { test, expect } from '@playwright/test'
+import { test, expect } from "@playwright/test";
 
-test('navigation works correctly', async ({ page }) => {
-  await page.goto('/')
-  await page.click('text=Xizmatlar')
-  await expect(page).toHaveURL('/xizmatlar')
-})
+test("navigation works correctly", async ({ page }) => {
+  await page.goto("/");
+  await page.click("text=Xizmatlar");
+  await expect(page).toHaveURL("/xizmatlar");
+});
 ```
 
 ---
@@ -656,6 +705,7 @@ test('navigation works correctly', async ({ page }) => {
 UZ-GROW veb-sayti - bu zamonaviy, professional va to'liq funksional loyiha bo'lib, O'zbekistonning yetakchi issiqxona qurilish kompaniyasining xizmatlarini ko'rsatish uchun mo'ljallangan. Loyiha eng yuqori texnologik standartlar, responsive design va multi-language qo'llab-quvvatlash bilan amalga oshirilgan.
 
 **Asosiy xususiyatlar:**
+
 - 3 tilda to'liq qo'llab-quvvatlash (UZ, RU, EN)
 - Mobile-first responsive design
 - Auto-rotating image sliders

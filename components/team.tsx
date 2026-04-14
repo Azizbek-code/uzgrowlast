@@ -27,7 +27,7 @@ const teamMembers = [
     position: "Asoschi va Bosh Direktor",
     avatar: "/team/ceo.jpg",
     experience: "15+ yil",
-    projects: "100+ loyiha",
+    projects: "2000+ loyiha",
     phone: "+998 55 515 22 33",
     email: "uzgrrow@gmail.com",
     achievements: [
@@ -59,7 +59,7 @@ const teamMembers = [
     education: ["Marketing instituti", "Grafik dizayn", "Reklama kurslari"],
   },
   {
-    name: "Abdulloh Sheraliyevich",
+    name: "Abdulloh Abdutolipov",
     position: "Sotuv Bolimi Raxbari",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089300/photo_2026-04-13_20-07-11_rhpvei.jpg",

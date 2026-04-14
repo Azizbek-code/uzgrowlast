@@ -55,7 +55,7 @@ export function Hero() {
     "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469176/20201201_105259_q5us00.jpg", // Qozog'iston loyihasi
     "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg", // Tojikiston loyihasi
     "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567956/20210211_141225_yvl1wr.jpg", // Qirg'iziston loyihasi
-    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5188_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg", // Turkmaniston loyihasi
+    "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5193_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg", // Turkmaniston loyihasi
     "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469177/20201023_075858_hcs7fb.jpg", // Ventilyatsiya
     "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469181/20201201_105435_hq3q9q.jpg", // Stelaj tizimi
     "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469051/photo_2026-04-04_10-35-53_kvt95v.jpg", // Samarqand loyihasi
@@ -231,7 +231,7 @@ export function Hero() {
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
               { value: "4+", label: t("hero.stats.experience") },
-              { value: "100+", label: t("hero.stats.projects") },
+              { value: "2000+", label: t("hero.stats.projects") },
               { value: "50+", label: t("hero.stats.specialists") },
               { value: "12+", label: t("hero.stats.regions") },
             ].map((stat, index) => (
