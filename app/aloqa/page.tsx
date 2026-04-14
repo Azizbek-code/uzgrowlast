@@ -46,8 +46,7 @@ const getContactInfo = (t: (key: string) => string) => [
   {
     icon: MapPin,
     title: t("contact.location"),
-    value:
-      "Toshkent sh., Yangihayot tumani, Fayzli MFY, Rayhon ko'chasi, 107-uy",
+    value: "Toshkent shahri, Sirg’ali tumani, Nomdanak ko’chasi, Ziyokor 6/9",
     href: "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
   },
 ];
@@ -425,7 +424,7 @@ export default function AloqaPage() {
                   size="sm"
                   onClick={() => {
                     const address =
-                      "Toshkent sh., Yangihayot tumani, Fayzli MFY, Rayhon ko'chasi, 107-uy";
+                      "Toshkent shahri, Sirg’ali tumani, Nomdanak ko’chasi, Ziyokor 6/9";
                     navigator.clipboard.writeText(address);
                     alert(t("contact.addressCopied"));
                   }}

@@ -561,7 +561,7 @@ const translations = {
       getDirections: "Yo'nalishni olish",
       copyAddress: "Manzilni nusxalash",
       address:
-        "Toshkent sh., Yangihayot tumani, Fayzli MFY, Rayhon ko'chasi, 107-uy",
+        "Toshkent shahri, Sirg’ali tumani, Nomdanak ko’chasi, Ziyokor 6/9",
       companyPhone: "+998555152223",
       companyPhone2: "+998994352313",
       companyEmail: "uzgrrow@gmail.com",

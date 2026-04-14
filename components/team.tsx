@@ -23,7 +23,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const teamMembers = [
   {
-    name: "Rustamjon Rahmonov",
+    name: "Rustamjon Raxmonov",
     position: "Asoschi va Bosh Direktor",
     avatar: "/team/ceo.jpg",
     experience: "15+ yil",
@@ -43,7 +43,7 @@ const teamMembers = [
     ],
   },
   {
-    name: "Majidov Alisher",
+    name: "Alisher Majidov",
     position: "Marketolog",
     avatar: "/team/marketolog.jpg",
     experience: "5+ yil",
@@ -77,7 +77,7 @@ const teamMembers = [
   },
   {
     name: "Gulbaxor Karaboyeva",
-    position: "Asistant",
+    position: "Assistent",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089222/image_8_foqgvg.png",
     experience: "10+ yil",
@@ -98,7 +98,7 @@ const teamMembers = [
     education: ["Iqtisodiyot", "Moliya"],
   },
   {
-    name: "Botirboyeva Nafosat",
+    name: "Nafosat Botirboyeva",
     position: "Molyachi ",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089221/image_6_raudyy.png",
@@ -115,7 +115,7 @@ const teamMembers = [
     education: ["Buxgalteriya kursi", "Yurist malaka kursi", "Inplus kursi"],
   },
   {
-    name: "Rizqiyeva Dilnoza Ilhomovna",
+    name: "Dilnoza Rizqiyeva",
     position: "Buxgalter",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089301/photo_2026-04-13_18-06-10_zdzdtd.jpg",
@@ -138,7 +138,7 @@ const teamMembers = [
     education: ["Moliya Studiya - Buxgalteriya kursi (2021)"],
   },
   {
-    name: "Abdutalipov Sardor Aybekovich",
+    name: "Sardor Abdulatipov",
     position: "Ish Boshqaruvchi",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089301/photo_2026-04-13_20-07-13_chuzwi.jpg",
