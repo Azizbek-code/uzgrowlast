@@ -138,7 +138,7 @@ const teamMembers = [
     education: ["Moliya Studiya - Buxgalteriya kursi (2021)"],
   },
   {
-    name: "Sardor Abdulatipov",
+    name: "Sardor Abdutolipov",
     position: "Ish Boshqaruvchi",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089301/photo_2026-04-13_20-07-13_chuzwi.jpg",
@@ -180,7 +180,7 @@ export function Team() {
             {t("team.subtitle")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t("")}
+            {t("team.description")}
           </p>
         </div>
 

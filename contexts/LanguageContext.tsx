@@ -223,12 +223,21 @@ const translations = {
         year: "2024",
       },
       viewProject: "Batafsil",
+    gallery: {
+      title: "Galereya",
+      description: "Bizning loyihalarimiz, tadbirlarimiz va Prezident tashriflaridan lavhalar",
+      totalImages: "Jami rasmlar",
+      projects: "Loyihalar",
+      samarqand: "Samarqand",
+    },
       viewGallery: "Galereyani ko'rish",
       close: "Yopish",
     },
     team: {
       title: "Bizning jamoa",
       subtitle: "Kuchli va tajribali mutaxassislar",
+      description:
+        "Bizning jamoamiz eng yuqori malakali mutaxassislardan iborat bo'lib, ular har kuni sizning muvaffaqiyatingiz uchun ishlaydi",
       ourTeam: "Bizning jamoa",
       experience: "Tajriba",
       achievements: "Yutuqlar",
@@ -784,6 +793,13 @@ const translations = {
         year: "2023-2024",
       },
       agriculture: {
+    gallery: {
+      title: "Галерея",
+      description: "Наши проекты, мероприятия и визиты Президента",
+      totalImages: "Всего изображений",
+      projects: "Проекты",
+      samarqand: "Самарканд",
+    },
         title: "Сельскохозяйственные проекты",
         location: "Сельское хозяйство",
         size: "3 теплицы",
@@ -1347,7 +1363,15 @@ const translations = {
         location: "International",
         size: "5 greenhouses",
         description:
-          "5 greenhouses built for international clients. Modern solutions according to European standards.",
+          "Soilless cultivation with high yield modern technology.",
+        },
+    gallery: {
+      title: "Gallery",
+      description: "Our projects, events and Presidential visits",
+      totalImages: "Total Images",
+      projects: "Projects",
+      samarqand: "Samarqand",
+    },
         year: "2023-2024",
       },
       agriculture: {
@@ -1365,6 +1389,7 @@ const translations = {
     team: {
       title: "Our Team",
       subtitle: "Strong and experienced specialists",
+      description: "Our team consists of the highest qualified specialists who work every day for your success",
       ourTeam: "Our Team",
       experience: "Experience",
       achievements: "Achievements",
@@ -1731,8 +1756,7 @@ const translations = {
         ],
       },
     },
-  },
-};
+  }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined,
