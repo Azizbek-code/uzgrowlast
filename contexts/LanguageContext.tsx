@@ -39,13 +39,13 @@ const translations = {
       all: "Barchasi",
     },
     hero: {
-      title: "Zamonavoy Issiqxona Yechimlari",
+      title: "Zamonaviy Issiqxona Yechimlari",
       subtitle: "O'zbekistonning yetakchi agro-injiniring kompaniyasi",
       description:
         "Biz eng zamonaviy issiqxona texnologiyalarini joriy etamiz va qishloq xo'jaligini rivojlantiramiz",
       cta: "Bog'lanish",
       downloadCatalog: "Katalog yuklab olish",
-      tagline: "4+ yil tajriba - 2000+ muvaffaqiyatli loyiha",
+      tagline: "8+ yil tajriba - 2000+ muvaffaqiyatli loyiha",
       stats: {
         experience: "Yil tajriba",
         projects: "Muvaffaqiyatli loyiha",
@@ -658,7 +658,7 @@ const translations = {
         "Мы внедряем самые современные тепличные технологии и развиваем сельское хозяйство",
       cta: "Связаться",
       downloadCatalog: "Скачать каталог",
-      tagline: "4+ лет опыта - 2000+ успешных проектов",
+      tagline: "8+ лет опыта - 2000+ успешных проектов",
       stats: {
         experience: "Лет опыта",
         projects: "Успешных проектов",
@@ -1233,7 +1233,7 @@ const translations = {
         "We implement the most modern greenhouse technologies and develop agriculture",
       cta: "Contact Us",
       downloadCatalog: "Download Catalog",
-      tagline: "4+ years experience - 2000+ successful projects",
+      tagline: "8+ years experience - 2000+ successful projects",
       stats: {
         experience: "Years experience",
         projects: "Successful projects",

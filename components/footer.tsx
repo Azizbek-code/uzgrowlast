@@ -11,6 +11,7 @@ import {
   Linkedin,
   Send,
   Users,
+  Youtube,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -35,23 +36,7 @@ const footerLinks = {
   ],
 };
 
-const teamMembers = [
-  {
-    name: "Rustamjon Rahmonov",
-    position: "Asoschi va Bosh Direktor",
-    avatar: "/team/ceo.jpg",
-  },
-  {
-    name: "Majidov Alisher",
-    position: "Marketolog",
-    avatar: "/team/marketolog.jpg",
-  },
-  {
-    name: "Abdulloh Sheraliyevich",
-    position: "Texnik Direktor",
-    avatar: null,
-  },
-];
+
 
 const socials = [
   {
@@ -68,6 +53,11 @@ const socials = [
     icon: Send,
     href: "http://@Uz_Grow",
     label: "Telegram",
+  },
+  {
+    icon: Youtube,
+    href: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
+    label: "Youtube",
   },
 ];
 
@@ -92,66 +82,7 @@ export function Footer() {
               xizmatlari. Biz bilan kelajak bugun boshlanadi.
             </p>
 
-            {/* Team Members */}
-            <div className="mt-8">
-              <div className="flex items-center gap-2 mb-4">
-                <Users className="w-5 h-5 text-primary" />
-                <h4 className="font-semibold text-white">Jamoa</h4>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                {teamMembers.map((member: any, index: number) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 p-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
-                  >
-                    <div className="relative w-8 h-8 rounded-full overflow-hidden bg-white/10">
-                      {member.avatar ? (
-                        <Image
-                          src={member.avatar}
-                          alt={member.name}
-                          fill
-                          className="object-cover"
-                          sizes="32px"
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-[#24B14B]/10 flex items-center justify-center">
-                          <Users className="w-4 h-4 text-primary/60" />
-                        </div>
-                      )}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs font-medium text-white truncate">
-                        {member.name}
-                      </p>
-                      <p className="text-xs text-white/50 truncate">
-                        {member.position}
-                      </p>
-                      {member.experience && (
-                        <p className="text-xs text-white/30 truncate">
-                          {member.experience}
-                        </p>
-                      )}
-                      {member.projects && (
-                        <p className="text-xs text-white/30 truncate">
-                          {member.projects}
-                        </p>
-                      )}
-                      {member.phone && (
-                        <p className="text-xs text-primary/80 truncate">
-                          {member.phone}
-                        </p>
-                      )}
-                      {member.completion && (
-                        <p className="text-xs text-green-400 truncate">
-                          {member.completion}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+            
 
           {/* Contact Info */}
           <div className="space-y-3 sm:space-y-4">

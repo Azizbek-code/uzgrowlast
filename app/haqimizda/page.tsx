@@ -66,7 +66,7 @@ export default function HaqimizdaPage() {
               Biz haqimizda
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              4+ yillik tajriba
+              8+ yillik tajriba
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               95 ta mamlakatda sizning yoningizda. UZ-GROW — zamonaviy issiqxona

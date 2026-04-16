@@ -94,13 +94,13 @@ export function Hero() {
           alt="Greenhouse background"
           className="w-full h-full object-cover"
           style={{
-            filter: "brightness(1.1) contrast(1.1) saturate(1.2) blur(2px)",
+            filter: "brightness(1.1) contrast(1.1) saturate(1.2)",
             transform: "scale(1.05)",
           }}
         />
       </div>
-      {/* Overlay with Blur */}
-      <div className="absolute inset-0 bg-linear-to-r from-black/40 via-black/30 to-black/40 backdrop-blur-sm" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-linear-to-r from-black/40 via-black/30 to-black/40" />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 lg:px-8 pt-24 pb-12">

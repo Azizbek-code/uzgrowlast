@@ -99,7 +99,7 @@ const teamMembers = [
   },
   {
     name: "Nafosat Botirboyeva",
-    position: "Molyachi ",
+    position: "Moliyachi ",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089221/image_6_raudyy.png",
     experience: "3 yil",
@@ -118,8 +118,8 @@ const teamMembers = [
     name: "Dilnoza Rizqiyeva",
     position: "Buxgalter",
     avatar:
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089301/photo_2026-04-13_18-06-10_zdzdtd.jpg",
-    experience: "4+ yil",
+      "/team/image.png",
+    experience: "8+ yil",
     projects: "5+ kompaniya",
     phone: "+998 55 515 22 23",
     email: "uzgrrow@gmail.com",

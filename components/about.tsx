@@ -96,7 +96,7 @@ export function About() {
       id="haqimizda"
       className="py-20 lg:py-32 overflow-hidden relative"
       style={{
-        backgroundImage: `url("https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469051/photo_2026-04-04_10-35-53_kvt95v.jpg")`,
+        backgroundImage: `url("https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469050/IMG_5189_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_atdoz0.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -108,15 +108,12 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
           {/* Image Slideshow */}
           <div className="relative group order-2 lg:order-1">
-            <div className="aspect-video rounded-3xl overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 relative">
+            <div className="aspect-video rounded-3xl overflow-hidden relative">
               <img
                 src={aboutBackgroundImages[currentAboutImage]}
                 alt="About UZ-GROW"
                 className="w-full h-full object-cover transition-opacity duration-1000"
               />
-
-              {/* Subtle overlay for better text readability */}
-              <div className="absolute inset-0 bg-black/10" />
             </div>
 
             {/* Decorative elements */}

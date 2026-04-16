@@ -317,7 +317,7 @@ images/
 team/
   1.jpg    # Rustamjon Rahmonov
   2.jpg    # Azizbek Karimov
-  3.jpg    # Abdulloh Sheraliyevich
+  3.jpg    # Abdulloh Abdurasulov
   4.jpg    # Alisher Majidov
   5.jpg    # Gulbaxor Karaboyeva
 
