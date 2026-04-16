@@ -81,8 +81,7 @@ export function Footer() {
               O&apos;zbekistonda zamonaviy issiqxona qurish va qurilish
               xizmatlari. Biz bilan kelajak bugun boshlanadi.
             </p>
-
-            
+          </div>
 
           {/* Contact Info */}
           <div className="space-y-3 sm:space-y-4">
