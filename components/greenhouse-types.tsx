@@ -102,7 +102,7 @@ export function GreenhouseTypes() {
       title: t("greenhouse.polikarbanat.title"),
       description: t("greenhouse.polikarbanat.description"),
       images: [
-        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468971/IMG_3534_g9l06y.jpg",
+        "/images/ss.png",
         "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567922/20201201_145045_k4litc.jpg",
         "/images/1.jpg",
         "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422629/IMG_1001_vft7io.jpg"
