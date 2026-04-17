@@ -296,6 +296,48 @@ const allImages = [
     category: "Loyihalar",
     description: "Samarqand viloyatidagi issiqxona majmui",
   },
+  {
+    id: 46,
+    src: "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422619/IMG_1015_jf5dqm.jpg",
+    title: "Yangi loyiha",
+    category: "Loyihalar",
+    description: "Yangi loyihadan lavhalar",
+  },
+  {
+    id: 47,
+    src: "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422624/IMG_0994_angy5l.jpg",
+    title: "Yangi loyiha",
+    category: "Loyihalar",
+    description: "Yangi loyihadan lavhalar",
+  },
+  {
+    id: 48,
+    src: "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422625/IMG_1033_akpcc1.jpg",
+    title: "Yangi loyiha",
+    category: "Loyihalar",
+    description: "Yangi loyihadan lavhalar",
+  },
+  {
+    id: 49,
+    src: "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422625/IMG_1030_dcuj82.jpg",
+    title: "Yangi loyiha",
+    category: "Loyihalar",
+    description: "Yangi loyihadan lavhalar",
+  },
+  {
+    id: 50,
+    src: "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422629/IMG_1001_vft7io.jpg",
+    title: "Yangi loyiha",
+    category: "Loyihalar",
+    description: "Yangi loyihadan lavhalar",
+  },
+  {
+    id: 51,
+    src: "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422629/IMG_1059_wwp8bn.jpg",
+    title: "Yangi loyiha",
+    category: "Loyihalar",
+    description: "Yangi loyihadan lavhalar",
+  },
 ];
 
 const categories = ["Barchasi", "Loyihalar", "Samarqand"];

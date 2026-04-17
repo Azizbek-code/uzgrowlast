@@ -34,7 +34,13 @@ const projects = [
     description:
       "Surxondaryo viloyatida qurilgan 3 ta zamonaviy issiqxona majmuasi. Prezident tashrifi uchun mo'ljallangan yirik loyiha. Eng ilg'or texnologiyalar bilan jihozlangan.",
     images: [
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423881/IMG_4397_copy_fymoco.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423899/2_nqvejm.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423853/IMG_4392_copy_xwrtpy.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423853/IMG_4392_copy_xwrtpy.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423866/IMG_4429_copy_dqhz5y.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423853/IMG_4392_copy_xwrtpy.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469049/photo_2026-04-04_10-35-29_ajfw6x.jpg"
     ],
     year: "2023",
     status: "completed",
@@ -83,6 +89,7 @@ const projects = [
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469172/20201201_105047_elutha.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469051/photo_2026-04-04_10-35-50_ctmowh.jpg",
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469050/IMG_5189_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_atdoz0.jpg",
+      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/photo_2026-04-04_10-35-55_dvrnxd.jpg"  
     ],
     year: "2024",
     status: "completed",
@@ -136,22 +143,25 @@ const projects = [
   },
   {
     id: 6,
-    title: "Toshkent Innovatsion Markazi",
-    location: "Toshkent shahri",
+    title: "Termiz angor",
+    location: "Termiz shahri",
     size: "1.5 gektar",
     category: "agriculture",
     description:
-      "Toshkent shahrida qurilgan innovatsion issiqxona markazi. Yaqin Sharqdagi eng zamonaviy agrotexnologiyalar jamlanmasi.",
+      "Termiz shahrida qurilgan innovatsion issiqxona markazi. Yaqin Sharqdagi eng zamonaviy agrotexnologiyalar jamlanmasi.",
     images: [
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469052/IMG_5193_%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80_rmwd8l.jpg",
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469185/20201201_111323_zaxid6.jpg",
-      "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567292/IMG_4029_copy_7_q0rdbm.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422634/IMG_1075_rrylu1.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422634/IMG_3535_zs9roq.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422637/IMG_0976_kkvp42.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422634/IMG_1052_qr8w62.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422704/IMG_0980_adj1rq.jpg",
+      "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422704/IMG_0980_adj1rq.jpg"
     ],
     year: "2023",
     status: "completed",
     featured: false,
     technologies: ["Vertikal fermerlik", "LED yoritish", "Suv aylanma"],
-    client: "Toshkent shahar hokimligi",
+    client: "Termiz shahar hokimligi",
     investment: "$2.1M",
   },
 ];

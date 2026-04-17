@@ -7,24 +7,24 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
   Home,
-  Glasses,
-  Shield,
-  Circle,
   Factory,
-  Droplets,
   ArrowUp,
   CheckCircle,
   ArrowRight,
-  Thermometer,
-  Zap,
   Users,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export function GreenhouseTypes() {
   const { t } = useLanguage();
@@ -34,8 +34,15 @@ export function GreenhouseTypes() {
       id: 4,
       title: t("greenhouse.mini.title"),
       description: t("greenhouse.mini.description"),
-      image:
-        "https://funrent.ee/wp-content/uploads/2026/03/kasvuhoone-muuk-nordify-baltica-lt-lumekoormus-kasvuhoone-hea-kvaliteetne-kiirelt-kokkupandav-kasvuhoone-5-600x600.webp",
+      images: [
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423098/5_m9wxqk.jpg",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423097/6_xllnrd.jpg",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423096/4_gbt4yc.jpg",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423094/2_pgjqrd.jpg",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423093/3_zln8rx.jpg",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776423090/1_nwlemk.jpg",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422645/ss_kkvphf.png"
+      ],
       icon: <Home className="h-6 w-6" />,
       features: [
         t("greenhouse.mini.features.0"),
@@ -52,7 +59,11 @@ export function GreenhouseTypes() {
       id: 5,
       title: t("greenhouse.oddiy.title"),
       description: t("greenhouse.oddiy.description"),
-      image: "/images/1.jpg",
+      images: [
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422638/IMG_0976_2_i27xqb.jpg",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422638/IMG_0976_2_i27xqb.jpg",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422638/IMG_0976_2_i27xqb.jpg",
+      ],
       icon: <Factory className="h-6 w-6" />,
       features: [
         t("greenhouse.oddiy.features.0"),
@@ -69,8 +80,11 @@ export function GreenhouseTypes() {
       id: 6,
       title: t("greenhouse.gektar.title"),
       description: t("greenhouse.gektar.description"),
-      image:
+      images: [
         "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469046/IMG_4551_vkvzkh.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468971/IMG_3534_g9l06y.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567922/20201201_145045_k4litc.jpg",
+      ],
       icon: <ArrowUp className="h-6 w-6" />,
       features: [
         t("greenhouse.gektar.features.0"),
@@ -87,8 +101,12 @@ export function GreenhouseTypes() {
       id: 7,
       title: t("greenhouse.polikarbanat.title"),
       description: t("greenhouse.polikarbanat.description"),
-      image:
+      images: [
         "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775468971/IMG_3534_g9l06y.jpg",
+        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567922/20201201_145045_k4litc.jpg",
+        "/images/1.jpg",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422629/IMG_1001_vft7io.jpg"
+      ],
       icon: <Users className="h-6 w-6" />,
       features: [
         t("greenhouse.polikarbanat.features.0"),
@@ -105,8 +123,13 @@ export function GreenhouseTypes() {
       id: 9,
       title: t("greenhouse.vertical.title"),
       description: t("greenhouse.vertical.description"),
-      image:
-        "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775567922/20201201_145045_k4litc.jpg",
+      images: [
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422791/Screenshot_77_up8uxh.png",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422795/Screenshot_88_bukg6e.png",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422795/Screenshot_88_bukg6e.png",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422773/jgfgkjjhk_p_q4x7bl.png",
+        "https://res.cloudinary.com/duvvgqc3i/image/upload/q_auto/f_auto/v1776422772/Screenshot_1_xcgci6.png"
+      ],
       icon: <ArrowUp className="h-6 w-6" />,
       features: [
         t("greenhouse.vertical.features.0"),
@@ -150,14 +173,24 @@ export function GreenhouseTypes() {
             >
               <CardHeader className="p-0">
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <img
-                    src={type.image}
-                    alt={type.title}
-                    className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 right-4">
+                  <Carousel className="w-full">
+                    <CarouselContent>
+                      {type.images.map((imgSrc, index) => (
+                        <CarouselItem key={index}>
+                          <img
+                            src={imgSrc}
+                            alt={`${type.title} ${index + 1}`}
+                            className="w-full h-48 object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0" />
+                    <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0" />
+                  </Carousel>
+                  <div className="absolute top-4 right-4 z-10 pointer-events-none">
                     <div
-                      className={`${type.color} text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1`}
+                      className={`${type.color} text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1 shadow-md`}
                     >
                       {type.icon}
                       {type.complexity}
