@@ -44,7 +44,7 @@ export function SamarqandVideo() {
           <div className="flex justify-center mb-6">
             <img
               src="/images/logo.png"
-              alt="UZ-GROW Logo"
+              alt="UZ GROW Logo"
               className="h-16 w-auto"
             />
           </div>

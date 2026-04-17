@@ -30,7 +30,7 @@ const ceoData = {
   uz: {
     name: "Rustamjon Rahmonov",
     title: "Asoschi va Bosh Direktor",
-    company: "UZ-GROW Agro-Injiniring",
+    company: "UZ GROW Agro-Injiniring",
     experience: "8+ yillik",
     bio: "O'zbekistonlik innovator agrofaol va tadbirkor. 2017-yildan beri Markaziy Osiyo agrosektorida minglab fermerlar va agrobiznes vakillariga ma'lumot, ishonch va natija olib kelmoqda. Zamonaviy texnologiyalar va an'anaviy bilimlarni birlashtirib, qishloq xo'jaligini rivojlantirishga hissa qo'shmoqda.",
     vision:
@@ -59,7 +59,7 @@ const ceoData = {
     quote:
       "Agro-biznes - bu faqat pul topish emas, balki millionlab insonlar hayotini yaxshilash, mamlakat oziq-ovqat mustaqilligini ta'minlash va kelajak avlodlari uchun yashil Yer yaratishdir.",
     contact: {
-      email: "ceo@uzgrow.uz",
+      email: "ceo@UZ GROW.uz",
       phone: "+998 99 435-23-13",
       linkedin: "linkedin.com/in/rustamjon-rahmonov",
       telegram: "@rustamjon_ceo",
@@ -68,7 +68,7 @@ const ceoData = {
   ru: {
     name: "Рустамджон Рахмонов",
     title: "Основатель и Генеральный директор",
-    company: "UZ-GROW Агро-инжиниринг",
+    company: "UZ GROW Агро-инжиниринг",
     experience: "8+ лет",
     bio: "Узбекский инноватор, агроактивист и предприниматель. С 2017 года доставляет информацию, доверие и результаты тысячам фермеров и представителей агробизнеса в агросекторе Центральной Азии. Объединяя современные технологии и традиционные знания, вносит вклад в развитие сельского хозяйства.",
     vision:
@@ -97,7 +97,7 @@ const ceoData = {
     quote:
       "Агробизнес - это не только заработок денег, но и улучшение жизни миллионов людей, обеспечение продовольственной независимости страны и создание зеленой Земли для будущих поколений.",
     contact: {
-      email: "ceo@uzgrow.uz",
+      email: "ceo@UZ GROW.uz",
       phone: "+998 93 435-23-13",
       linkedin: "linkedin.com/in/rustamjon-rahmonov",
       telegram: "@rustamjon_ceo",
@@ -106,7 +106,7 @@ const ceoData = {
   en: {
     name: "Rustamjon Rahmonov",
     title: "Founder & CEO",
-    company: "UZ-GROW Agro-Engineering",
+    company: "UZ GROW Agro-Engineering",
     experience: "8+ years",
     bio: "Uzbekistani innovator, agro-activist and entrepreneur. Since 2017, has been delivering information, trust and results to thousands of farmers and agribusiness representatives in the Central Asian agro-sector. Combining modern technologies and traditional knowledge to contribute to agricultural development.",
     vision:
@@ -135,7 +135,7 @@ const ceoData = {
     quote:
       "Agribusiness is not just about making money, but about improving millions of lives, ensuring the country's food independence, and creating a green Earth for future generations.",
     contact: {
-      email: "ceo@uzgrow.uz",
+      email: "ceo@UZ GROW.uz",
       phone: "+998 93 435-23-13",
       linkedin: "linkedin.com/in/rustamjon-rahmonov",
       telegram: "@rustamjon_ceo",
@@ -167,7 +167,7 @@ export function CEO() {
           <div className="flex justify-center mb-6">
             <img
               src="/images/logo.png"
-              alt="UZ-GROW Logo"
+              alt="UZ GROW Logo"
               className="h-16 w-auto"
             />
           </div>

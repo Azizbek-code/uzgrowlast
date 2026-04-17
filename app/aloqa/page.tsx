@@ -34,7 +34,7 @@ const getContactInfo = (t: (key: string) => string) => [
   {
     icon: Send,
     title: "WhatsApp",
-    value: "+998555152223",
+    value: "+998994352313",
     href: "https://wa.me/+998555152223",
   },
   {
@@ -199,7 +199,7 @@ export default function AloqaPage() {
                       },
                       {
                         name: "Facebook",
-                        href: "https://www.facebook.com/people/UZ-Grow/61555877069972/?rdid=DcrSKZ6JcT9V7Tj3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DePjLwX79%2F",
+                        href: "https://www.facebook.com/people/UZ GROW/61555877069972/?rdid=DcrSKZ6JcT9V7Tj3&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DePjLwX79%2F",
                         icon: Facebook,
                       },
                     ].map((social) => (
@@ -400,7 +400,7 @@ export default function AloqaPage() {
                 frameBorder="0"
                 className="w-full h-full"
                 allowFullScreen
-                title="UZ-GROW Location Map"
+                title="UZ GROW Location Map"
               />
 
               {/* Map Actions */}
@@ -475,7 +475,7 @@ export default function AloqaPage() {
                 <p className="text-muted-foreground text-sm">
                   +998555152223
                   <br />
-                  +998555152223 (WhatsApp)
+                  +998994352313 (WhatsApp)
                 </p>
               </div>
             </div>

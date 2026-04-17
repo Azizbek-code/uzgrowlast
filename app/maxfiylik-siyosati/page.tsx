@@ -10,15 +10,15 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Maxfiylik siyosati - UZ-GROW | Ma'lumotlarni himoya qilish",
+  title: "Maxfiylik siyosati - UZ GROW | Ma'lumotlarni himoya qilish",
   description:
-    "UZ-GROW maxfiylik siyosati. Shaxsiy ma'lumotlaringizni qanday to'playmiz, qanday maqsadda ishlatamiz va qanday himoya qilamiz.",
+    "UZ GROW maxfiylik siyosati. Shaxsiy ma'lumotlaringizni qanday to'playmiz, qanday maqsadda ishlatamiz va qanday himoya qilamiz.",
   keywords:
-    "UZ-GROW maxfiylik siyosati, shaxsiy ma'lumotlar, GDPR, ma'lumotlarni himoya qilish, cookies",
+    "UZ GROW maxfiylik siyosati, shaxsiy ma'lumotlar, GDPR, ma'lumotlarni himoya qilish, cookies",
   openGraph: {
-    title: "Maxfiylik siyosati - UZ-GROW | Ma'lumotlarni himoya qilish",
+    title: "Maxfiylik siyosati - UZ GROW | Ma'lumotlarni himoya qilish",
     description:
-      "UZ-GROW maxfiylik siyosati. Shaxsiy ma'lumotlaringizni qanday to'playmiz va himoya qilamiz.",
+      "UZ GROW maxfiylik siyosati. Shaxsiy ma'lumotlaringizni qanday to'playmiz va himoya qilamiz.",
     images: ["/images/logo.png"],
   },
 };
@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
                 1. Ma'lumotlar to'plami
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                UZ-GROW sifatida biz sizdan quyidagi shaxsiy ma'lumotlarni
+                UZ GROW sifatida biz sizdan quyidagi shaxsiy ma'lumotlarni
                 to'plamiz:
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 mt-4">
@@ -182,7 +182,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <div className="mt-4 space-y-2 text-blue-800">
                 <p>
-                  <strong>Email:</strong> privacy@uzgrow.uz
+                  <strong>Email:</strong> privacy@UZ GROW.uz
                 </p>
                 <p>
                   <strong>Telefon:</strong> +998 93 435-23-13

@@ -9,16 +9,16 @@ import { Footer } from "@/components/footer";
 
 export const metadata = {
   title:
-    "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
+    "UZ GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
   description:
-    "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 2000+ muvaffaqiyatli loyiha.",
+    "UZ GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 2000+ muvaffaqiyatli loyiha.",
   keywords:
-    "issiqxona qurish, agro-injiniring, qishloq xo'jaligi, UZ-GROW, issiqxona turlari, polikarbonat issiqxona, gidroponik, agrobiznes, O'zbekiston, Toshkent",
+    "issiqxona qurish, agro-injiniring, qishloq xo'jaligi, UZ GROW, issiqxona turlari, polikarbonat issiqxona, gidroponik, agrobiznes, O'zbekiston, Toshkent",
   openGraph: {
     title:
-      "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
+      "UZ GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
     description:
-      "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar.",
+      "UZ GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar.",
     images: ["/images/logo.png"],
   },
 };

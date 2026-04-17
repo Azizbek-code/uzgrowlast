@@ -40,6 +40,11 @@ const footerLinks = {
 
 const socials = [
   {
+    icon: Youtube,
+    href: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
+    label: "Youtube",
+  },
+  {
     icon: Instagram,
     href: "https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==",
     label: "Instagram",
@@ -54,11 +59,7 @@ const socials = [
     href: "http://@Uz_Grow",
     label: "Telegram",
   },
-  {
-    icon: Youtube,
-    href: "https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9",
-    label: "Youtube",
-  },
+  
 ];
 
 export function Footer() {
@@ -70,11 +71,9 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-1 lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6 sm:mb-4">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#24B14B] rounded-xl flex items-center justify-center font-bold text-2xl text-primary-foreground shadow-lg">
-                UG
-              </div>
+              <img src="/images/logo.png" alt="UZ GROW Logo" className="h-12 sm:h-16 w-auto object-contain" />
               <div>
-                <span className="text-2xl font-bold block">UZ-GROW</span>
+                <span className="text-2xl font-bold block">UZ GROW</span>
               </div>
             </Link>
             <p className="text-white/70 mb-6 max-w-sm leading-relaxed">
@@ -195,7 +194,7 @@ export function Footer() {
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-white/50">
-              &copy; {new Date().getFullYear()} UZ-GROW. Barcha huquqlar
+              &copy; {new Date().getFullYear()} UZ GROW. Barcha huquqlar
               himoyalangan.
             </p>
             <p className="text-sm text-white/50">

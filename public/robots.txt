@@ -1,5 +1,5 @@
-# UZ-GROW Agro-Injiniring - Robots.txt
-# https://uzgrow.uz
+# UZ GROW Agro-Injiniring - Robots.txt
+# https://UZ GROW.uz
 
 User-agent: *
 Allow: /
@@ -18,7 +18,7 @@ Disallow: /_next/
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://uzgrow.uz/sitemap.xml
+Sitemap: https://UZ GROW.uz/sitemap.xml
 
 # Additional instructions for specific crawlers
 User-agent: Googlebot

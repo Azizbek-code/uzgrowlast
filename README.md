@@ -1,6 +1,6 @@
-# UZ-GROW - Agro-Injiniring Corporate Website
+# UZ GROW - Agro-Injiniring Corporate Website
 
-A modern, production-ready, multi-language corporate website for UZ-GROW, a leading greenhouse construction and agro-engineering company in Uzbekistan.
+A modern, production-ready, multi-language corporate website for UZ GROW, a leading greenhouse construction and agro-engineering company in Uzbekistan.
 
 ## Features
 
@@ -158,7 +158,7 @@ const { currentLang, setLanguage, t } = useLanguage();
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd uz-grow-website
+cd UZ GROW-website
 ```
 
 2. Install dependencies:
@@ -183,7 +183,7 @@ npm run dev
 ```bash
 # .env.local
 NEXT_PUBLIC_CLOUDINARY_URL=https://res.cloudinary.com/dnqi0bdjk
-NEXT_PUBLIC_SITE_URL=https://uzgrow.uz
+NEXT_PUBLIC_SITE_URL=https://UZ GROW.uz
 NEXT_PUBLIC_GA_ID=GA_MEASUREMENT_ID
 EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 EMAILJS_SERVICE_ID=your_emailjs_service_id
@@ -215,7 +215,7 @@ vercel --prod
 
 3. Set up custom domain:
 ```bash
-vercel domains add uz-grow.uz
+vercel domains add UZ GROW.uz
 ```
 
 ## Tech Stack Details
@@ -275,15 +275,15 @@ vercel domains add uz-grow.uz
 
 ## License
 
-This project is proprietary and belongs to UZ-GROW company.
+This project is proprietary and belongs to UZ GROW company.
 
 ## Contact
 
-- **Website**: [https://uzgrow.uz](https://uzgrow.uz)
+- **Website**: [https://UZ GROW.uz](https://UZ GROW.uz)
 - **Email**: uzgrrow@gmail.com
 - **Phone**: +998 55 515 22 23
 - **Address**: Toshkent, O'zbekiston
 
 ---
 
-Built with passion by UZ-GROW team © 2026
+Built with passion by UZ GROW team © 2026

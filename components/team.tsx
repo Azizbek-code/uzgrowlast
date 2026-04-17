@@ -59,11 +59,11 @@ const teamMembers = [
     education: ["Marketing instituti", "Grafik dizayn", "Reklama kurslari"],
   },
   {
-    name: "Abdulloh Abdutolipov",
+    name: "Abdulloh Abdurasulov",
     position: "Sotuv Bolimi Raxbari",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089300/photo_2026-04-13_20-07-11_rhpvei.jpg",
-    experience: "10+ yil",
+    experience: "6+ yil",
     projects: "80+ loyiha",
     phone: "+998 55 515 22 23",
     email: "uzgrrow@gmail.com",
@@ -80,7 +80,7 @@ const teamMembers = [
     position: "Assistent",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089222/image_8_foqgvg.png",
-    experience: "10+ yil",
+    experience: "+ yil",
     projects: "50+ loyiha",
     phone: "+998 55 515 22 23",
     email: "uzgrrow@gmail.com",
@@ -138,7 +138,7 @@ const teamMembers = [
     education: ["Moliya Studiya - Buxgalteriya kursi (2021)"],
   },
   {
-    name: "Sardor Abdutolipov",
+    name: "Sardor Abdurasulov",
     position: "Ish Boshqaruvchi",
     avatar:
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1776089301/photo_2026-04-13_20-07-13_chuzwi.jpg",

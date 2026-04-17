@@ -3,11 +3,11 @@ import { Footer } from "@/components/footer";
 import { Projects } from "@/components/projects";
 
 export const metadata = {
-  title: "Loyihalar - UZ-GROW | Muvaffaqiyatli issiqxona loyihalari",
+  title: "Loyihalar - UZ GROW | Muvaffaqiyatli issiqxona loyihalari",
   description:
-    "UZ-GROW kompaniyasining muvaffaqiyatli issiqxona loyihalari. Prezident tashriflari, xalqaro hamkorliklar va zamonaviy agrotexnologiyalar.",
+    "UZ GROW kompaniyasining muvaffaqiyatli issiqxona loyihalari. Prezident tashriflari, xalqaro hamkorliklar va zamonaviy agrotexnologiyalar.",
   keywords: [
-    "UZ-GROW",
+    "UZ GROW",
     "loyihalar",
     "issiqxona",
     "qurilish",
@@ -16,9 +16,9 @@ export const metadata = {
     "agro-injiniring",
   ],
   openGraph: {
-    title: "Loyihalar - UZ-GROW | Muvaffaqiyatli issiqxona loyihalari",
+    title: "Loyihalar - UZ GROW | Muvaffaqiyatli issiqxona loyihalari",
     description:
-      "UZ-GROW kompaniyasining muvaffaqiyatli issiqxona loyihalari. Prezident tashriflari va qishloq xo'jaligi loyihalari.",
+      "UZ GROW kompaniyasining muvaffaqiyatli issiqxona loyihalari. Prezident tashriflari va qishloq xo'jaligi loyihalari.",
     images: ["/images/logo.png"],
   },
 };

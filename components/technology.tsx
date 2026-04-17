@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
   Thermometer,
@@ -38,13 +39,6 @@ const technologies = [
       "https://res.cloudinary.com/dnqi0bdjk/image/upload/v1775469181/20201201_105435_hq3q9q.jpg",
   },
   {
-    icon: Lightbulb,
-    titleKey: "technology.led.title",
-    descriptionKey: "technology.led.description",
-    color: "from-yellow-500/20 to-amber-500/20",
-    image: "/images/1.jpg",
-  },
-  {
     icon: Droplets,
     titleKey: "technology.irrigation.title",
     descriptionKey: "technology.irrigation.description",
@@ -64,20 +58,45 @@ const technologies = [
 
 export function Technology() {
   const { t } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="texnologiya"
+      ref={sectionRef}
       className="py-20 lg:py-32 bg-background relative overflow-hidden"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#24B14B]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#24B14B]/10 rounded-full blur-3xl" />
+      <div className={`absolute inset-0 transition-opacity duration-1000 ${isVisible ? "opacity-30" : "opacity-0"}`}>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#24B14B]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#24B14B]/10 rounded-full blur-3xl animate-pulse" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div 
+          className={`text-center mb-16 transition-all duration-1000 transform ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+          }`}
+        >
           <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
             {t("technology.title")}
           </span>
@@ -94,7 +113,11 @@ export function Technology() {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1"
+              style={{ transitionDelay: `${index * 150}ms` }}
+              className={cn(
+                "group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-700 hover:shadow-xl hover:-translate-y-2",
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+              )}
             >
               {/* Image */}
               <div className="aspect-video relative">

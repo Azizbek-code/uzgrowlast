@@ -44,6 +44,37 @@ const getSlides = (t: (key: string) => string) => [
   },
 ];
 
+function AnimatedNumber({ end, duration = 2000 }: { end: number; duration?: number }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number | null = null;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const percentage = Math.min(progress / duration, 1);
+      
+      const easeOut = 1 - Math.pow(1 - percentage, 3); // cubic ease out
+      
+      setCount(Math.floor(end * easeOut));
+      
+      if (progress < duration) {
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration]);
+
+  return <>{count}</>;
+}
+
 export function Hero() {
   const { t } = useLanguage();
   const slides = getSlides(t);
@@ -230,17 +261,17 @@ export function Hero() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
             {[
-              { value: "4+", label: t("hero.stats.experience") },
-              { value: "2000+", label: t("hero.stats.projects") },
-              { value: "50+", label: t("hero.stats.specialists") },
-              { value: "12+", label: t("hero.stats.regions") },
+              { value: 8, suffix: "+", label: t("hero.stats.experience"), duration: 3000 },
+              { value: 2000, suffix: "+", label: t("hero.stats.projects"), duration: 2000 },
+              { value: 50, suffix: "+", label: t("hero.stats.specialists"), duration: 3000 },
+              { value: 12, suffix: "+", label: t("hero.stats.regions"), duration: 3000 },
             ].map((stat, index) => (
               <div
                 key={index}
                 className="py-4 sm:py-5 px-2 sm:px-4 text-center"
               >
                 <div className="text-2xl md:text-3xl font-bold text-white">
-                  {stat.value}
+                  <AnimatedNumber end={stat.value} duration={stat.duration} />{stat.suffix}
                 </div>
                 <div className="text-white/60 text-sm mt-1">{stat.label}</div>
               </div>

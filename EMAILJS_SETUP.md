@@ -1,4 +1,4 @@
-# UZ-GROW EmailJS To'liq Sozlamlari
+# UZ GROW EmailJS To'liq Sozlamlari
 
 ## EmailJS hisobini yarating (Muhim!)
 
@@ -18,8 +18,8 @@
 ### 2. Email Template yarating
 
 - EmailJS dashboard → Email Templates → Create New Template
-- **Template Name**: "UZ-GROW Contact Form"
-- **Subject**: "Yangi xabar - UZ-GROW dan"
+- **Template Name**: "UZ GROW Contact Form"
+- **Subject**: "Yangi xabar - UZ GROW dan"
 - **Content** quyidagicha bo'lishi kerak:
 
 ```
@@ -32,7 +32,7 @@
 {{message}}
 
 ---
-UZ-GROW Contact Form
+UZ GROW Contact Form
 ```
 
 ### 3. Public Key olish
@@ -117,16 +117,16 @@ Agar hamma narsa to'g'ri bo'lsa:
 - **Backup**: Ikkinchi email service qo'shing
 - **Monitoring**: EmailJS dashboard dan statistikani kuzating
 
-## Ijtimoiy tarmoqlar (Haqiqiy UZ-GROW linklari)
+## Ijtimoiy tarmoqlar (Haqiqiy UZ GROW linklari)
 
-UZ-GROW Taplink dan olingan haqiqiy ijtimoiy tarmoqlari:
+UZ GROW Taplink dan olingan haqiqiy ijtimoiy tarmoqlari:
 
 - **YouTube**: https://youtube.com/@rustamjonrakhmonov?si=9-OxlFiY0B875tD9
 - **Instagram**: https://www.instagram.com/uz.grow?igsh=MXMwN3lzaW95NTN1YQ==
 - **Facebook**: https://www.facebook.com/share/1DePjLwX79/
 - **TikTok**: https://www.tiktok.com/@uz.grow
 - **Telegram**: http://t.me/Uz_Grow
-- **Website**: http://uzgrow.uz
+- **Website**: http://UZ GROW.uz
 
 ## Kontakt ma'lumotlari (Haqiqiy)
 

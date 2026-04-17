@@ -70,7 +70,7 @@ export function Investors() {
             Agro-sanoat investitsiya imkoniyati
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            UZ-GROW yuqori rentabelli issiqxona loyihalarini amalga oshirish
+            UZ GROW yuqori rentabelli issiqxona loyihalarini amalga oshirish
             bo&apos;yicha hamkorlik taklif qiladi
           </p>
         </div>

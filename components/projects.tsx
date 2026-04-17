@@ -180,18 +180,6 @@ export function Projects() {
       icon: Globe,
       color: "bg-green-500",
     },
-    {
-      id: "greenhouse",
-      label: "Issiqxona",
-      icon: Building2,
-      color: "bg-orange-500",
-    },
-    {
-      id: "agriculture",
-      label: "Qishloq xo'jaligi",
-      icon: Sprout,
-      color: "bg-purple-500",
-    },
   ];
 
   const filteredProjects = projects.filter((project) => {

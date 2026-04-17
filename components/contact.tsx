@@ -128,23 +128,23 @@ export function Contact() {
     setIsLoading(true);
 
     try {
-      // EmailJS configuration - UZ-GROW real credentials
+      // EmailJS configuration - UZ GROW real credentials
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         from_phone: formData.phone,
         service: formData.service,
         message: formData.message,
-        to_email: "uzgrrow@gmail.com", // UZ-GROW real email from Taplink
+        to_email: "uzgrrow@gmail.com", // UZ GROW real email from Taplink
         reply_to: formData.email,
       };
 
       // EmailJS integration with real credentials
       await emailjs.send(
-        "service_uzgrow", // Replace with actual EmailJS service ID
-        "template_uzgrow_contact", // Replace with actual EmailJS template ID
+        "service_UZ GROW", // Replace with actual EmailJS service ID
+        "template_UZ GROW_contact", // Replace with actual EmailJS template ID
         templateParams,
-        "public_key_uzgrow", // Replace with actual EmailJS public key
+        "public_key_UZ GROW", // Replace with actual EmailJS public key
       );
 
       setIsSubmitted(true);
@@ -159,7 +159,7 @@ export function Contact() {
       console.error("Email sending failed:", error);
 
       // Fallback: Send data to console and show success for demo
-      console.log("=== UZ-GROW CONTACT FORM DATA ===");
+      console.log("=== UZ GROW CONTACT FORM DATA ===");
       console.log("Ism:", formData.name);
       console.log("Email:", formData.email);
       console.log("Telefon:", formData.phone);
@@ -380,7 +380,7 @@ export function Contact() {
                     frameBorder="0"
                     className="w-full h-full"
                     allowFullScreen
-                    title="UZ-GROW Location Map"
+                    title="UZ GROW Location Map"
                   />
                 </div>
 
@@ -390,7 +390,7 @@ export function Contact() {
                     <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-foreground font-medium">
-                        UZ-GROW Office
+                        UZ GROW Office
                       </p>
                       <p className="text-sm text-muted-foreground">
                         Toshkent, O'zbekiston

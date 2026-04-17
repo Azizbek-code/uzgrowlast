@@ -139,12 +139,12 @@ export function Header() {
             <Link href="/" className="flex items-center gap-3">
               <img
                 src="/images/logo.png"
-                alt="UZ-GROW Logo"
+                alt="UZ GROW Logo"
                 className="w-24 h-24 rounded-xl object-contain shadow-lg"
               />
               <div className="flex flex-col">
                 <span className="font-bold text-2xl tracking-tight text-foreground">
-                  UZ-GROW
+                  UZ GROW
                 </span>
               </div>
             </Link>

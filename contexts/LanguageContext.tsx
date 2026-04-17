@@ -56,7 +56,7 @@ const translations = {
         slide1: {
           quote:
             "Biz har bir loyihani individual yondashuv bilan amalga oshiramiz va mijozlarimiz mamnuniyatini ta'minlaymiz.",
-          author: "UZ-GROW jamoasi",
+          author: "UZ GROW jamoasi",
           role: "Agro-injiniring bo'yicha mutaxassislar",
           cta: "Turnkey issiqxonalar",
         },
@@ -87,16 +87,16 @@ const translations = {
       title: "Biz haqimizda",
       subtitle: "15+ yillik tajriba",
       description:
-        "UZ-GROW - O'zbekistonda qishloq xo'jaligi sohasidagi yetakchi kompaniya",
+        "UZ GROW - O'zbekistonda qishloq xo'jaligi sohasidagi yetakchi kompaniya",
       experience: "Tajriba",
       projects: "Loyihalar",
       clients: "Mijozlar",
       countries: "Davlatlar",
       values: ["Sifat", "Innovatsiya", "Ishonch", "Uzoq muddatli hamkorlik"],
       tagline: "Biz haqimizda",
-      headline: "4 yildan ortiq kompaniya 3 ta mamlakatda sizning yoningizda",
+      headline: "8 yildan ortiq kompaniya 3 ta mamlakatda sizning yoningizda",
       descriptionText:
-        "UZ-GROW - zamonaviy issiqxona qurilishi va agro-injiniring sohasida faoliyat yurituvchi kompaniya. Bizning maqsadimiz - O'zbekistonda yuqori samaradorlikka ega, innovatsion va eksportbop issiqxona infratuzilmasini rivojlantirish.",
+        "UZ GROW - zamonaviy issiqxona qurilishi va agro-injiniring sohasida faoliyat yurituvchi kompaniya. Bizning maqsadimiz - O'zbekistonda yuqori samaradorlikka ega, innovatsion va eksportbop issiqxona infratuzilmasini rivojlantirish.",
       aboutUsButton: "Biz haqimizda batafsil",
       videoNotSupported: "Sizning brauzeringiz video qo'llab-quvvatlamaydi.",
       mission: "Missiya",
@@ -107,7 +107,7 @@ const translations = {
         "Markaziy Osiyoda yetakchi agro-injiniring kompaniyaga aylanish va zamonaviy issiqxonalarni eksport qilish.",
       valuesTitle: "Qadriyatlar",
       valuesAndRules: {
-        title: "UZ-GROW QADRIYATLARI VA ISHCHI AXLOQI QOIDALARI",
+        title: "UZ GROW QADRIYATLARI VA ISHCHI AXLOQI QOIDALARI",
         desc: "Bizning qadriyatlarimiz – bu bizning ishimiz, madaniyatimiz va kelajak yo'nalishimiz asosi.",
         rules: [
           "1. Halollik – asosiy tamoyilimiz",
@@ -164,7 +164,6 @@ const translations = {
       equipmentFeatures: [
         "Iqlim nazorati tizimi",
         "Tomchilatib sug'orish",
-        "LED grow lights",
         "O'g'itlash va sug'orish tizimi",
       ],
       consulting: "Konsalting",
@@ -271,7 +270,7 @@ const translations = {
           name: "Alisher Majidov",
           position: "Marketing Direktori",
           bio: "Marketing va brend strategiyalari bo'yicha mutaxassis. Kompaniya imidjini rivojlantirish va mijozlar bazasini kengaytirish uchun mas'ul.",
-          experience: "10+ yillik",
+          experience: "6+ yillik",
           achievements: [
             "20+ marketing kampaniyasi",
             "Brendni rivojlantirish",
@@ -291,10 +290,10 @@ const translations = {
           twitter: "#",
         },
         abdulloh: {
-          name: "Abdulloh Abdutolipov",
+          name: "Abdulloh Abdurasulov",
           position: "Texnik Direktor",
-          bio: "Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonaviy agrotexnologiyalarni joriy etmoqda.",
-          experience: "10+ yillik",
+          bio: "Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 6+ yillik tajriba bilan zamonaviy agrotexnologiyalarni joriy etmoqda.",
+          experience: "6+ yillik",
           achievements: [
             "50+ issiqxona loyihasi",
             "Texnik innovatsiyalar",
@@ -317,7 +316,7 @@ const translations = {
           name: "Gulbaxor Karaboyeva",
           position: "Moliya Direktori",
           bio: "Moliya va menejment sohasida tajribali mutaxassis. Moliyaviy strategiyalarni ishlab chiqish va byudjet boshqaruvida keng tajribaga ega.",
-          experience: "10+ yillik",
+          experience: "6+ yillik",
           achievements: [
             "Moliyaviy rejalashtirish",
             "Byudjet optimizatsiyasi",
@@ -427,13 +426,13 @@ const translations = {
         maintenance: "O'rtacha",
       },
       vertical: {
-        title: "Vertikal issiqxona",
+        title: "Issiqxona maxsulotlari",
         description:
-          "Bo'sh joyni tejaydi, shahar sharoitida ideal, yangi texnologiya.",
+          "Yangi, sifatli va ekologik toza issiqxona mahsulotlar. Har qanday mavsumda yetkazib beriladi.",
         features: [
-          "Bo'sh joy tejash",
-          "Shahar uchun ideal",
-          "Yangi texnologiya",
+          "Yangi va Tabiiy",
+          "Yuqori sifat Kafolati",
+          "Mavsumdan qat'i nazar yetkazib beriladi",
         ],
         complexity: "Yuqori",
         durability: "10-15 yil",
@@ -521,11 +520,6 @@ const translations = {
         description:
           "Vertikal stelajlar orqali joydan samarali foydalanish va hosildorlikni oshirish.",
       },
-      led: {
-        title: "LED grow lights",
-        description:
-          "Energiya tejamkor LED yoritish tizimlari orqali yil davomida hosil olish.",
-      },
       irrigation: {
         title: "Sug'orish tizimi",
         description:
@@ -574,7 +568,7 @@ const translations = {
       companyPhone: "+998555152223",
       companyPhone2: "+998994352313",
       companyEmail: "uzgrrow@gmail.com",
-      website: "https://www.uzgrow.uz/",
+      website: "https://www.UZ GROW.uz/",
       locationUrl:
         "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
       socialLinks: {
@@ -594,7 +588,7 @@ const translations = {
       },
     },
     footer: {
-      brandName: "UZ-GROW",
+      brandName: "UZ GROW",
       brandTagline: "QURILISH KOMPANIYASI",
       brandDescription:
         "O'zbekistonda zamonaviy issiqxona qurish va qurilish xizmatlari. Biz bilan kelajak bugun boshlanadi.",
@@ -669,7 +663,7 @@ const translations = {
         slide1: {
           quote:
             "Мы реализуем каждый проект с индивидуальным подходом и обеспечиваем удовлетворённость клиентов.",
-          author: "Команда UZ-GROW",
+          author: "Команда UZ GROW",
           role: "Специалисты по агроинжинирингу",
           cta: "Теплицы под ключ",
         },
@@ -700,7 +694,7 @@ const translations = {
       title: "О нас",
       subtitle: "15+ лет опыта",
       description:
-        "UZ-GROW - ведущая компания в сфере сельского хозяйства в Узбекистане",
+        "UZ GROW - ведущая компания в сфере сельского хозяйства в Узбекистане",
       experience: "Опыт",
       projects: "Проекты",
       clients: "Клиенты",
@@ -709,7 +703,7 @@ const translations = {
       tagline: "О нас",
       headline: "Более 4 лет компания работает рядом с вами в 3 странах",
       descriptionText:
-        "UZ-GROW — компания, занимающаяся строительством современных теплиц и агроинжинирингом. Наша цель — развитие тепличной инфраструктуры в Узбекистане с высокой эффективностью, инновациями и экспортным потенциалом.",
+        "UZ GROW — компания, занимающаяся строительством современных теплиц и агроинжинирингом. Наша цель — развитие тепличной инфраструктуры в Узбекистане с высокой эффективностью, инновациями и экспортным потенциалом.",
       aboutUsButton: "Подробнее о нас",
       videoNotSupported: "Ваш браузер не поддерживает видео.",
       mission: "Миссия",
@@ -742,7 +736,6 @@ const translations = {
       equipmentFeatures: [
         "Система контроля климата",
         "Капельное орошение",
-        "LED grow lights",
         "Система удобрения и полива",
       ],
       consulting: "Консалтинг",
@@ -1096,11 +1089,6 @@ const translations = {
         description:
           "Вертикальные стеллажи для эффективного использования пространства и повышения урожайности.",
       },
-      led: {
-        title: "LED grow lights",
-        description:
-          "Энергосберегающие светодиодные системы освещения для круглогодичного сбора урожая.",
-      },
       irrigation: {
         title: "Система орошения",
         description:
@@ -1149,7 +1137,7 @@ const translations = {
       companyPhone: "+998555152223",
       companyPhone2: "+998994352313",
       companyEmail: "uzgrrow@gmail.com",
-      website: "https://www.uzgrow.uz/",
+      website: "https://www.UZ GROW.uz/",
       locationUrl:
         "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
       socialLinks: {
@@ -1169,7 +1157,7 @@ const translations = {
       },
     },
     footer: {
-      brandName: "UZ-GROW",
+      brandName: "UZ GROW",
       brandTagline: "СТРОИТЕЛЬНАЯ КОМПАНИЯ",
       brandDescription:
         "Современное строительство теплиц и строительные услуги в Узбекистане. Будущее начинается сегодня вместе с нами.",
@@ -1244,7 +1232,7 @@ const translations = {
         slide1: {
           quote:
             "We implement each project with an individual approach and ensure customer satisfaction.",
-          author: "UZ-GROW Team",
+          author: "UZ GROW Team",
           role: "Agro-engineering Specialists",
           cta: "Turnkey Greenhouses",
         },
@@ -1274,7 +1262,7 @@ const translations = {
     about: {
       title: "About Us",
       subtitle: "15+ years experience",
-      description: "UZ-GROW - leading company in agriculture in Uzbekistan",
+      description: "UZ GROW - leading company in agriculture in Uzbekistan",
       experience: "Experience",
       projects: "Projects",
       clients: "Clients",
@@ -1283,7 +1271,7 @@ const translations = {
       tagline: "About Us",
       headline: "More than 4 years by your side in 3 countries",
       descriptionText:
-        "UZ-GROW - a company engaged in the construction of modern greenhouses and agro-engineering. Our goal is to develop greenhouse infrastructure in Uzbekistan with high efficiency, innovation and export potential.",
+        "UZ GROW - a company engaged in the construction of modern greenhouses and agro-engineering. Our goal is to develop greenhouse infrastructure in Uzbekistan with high efficiency, innovation and export potential.",
       aboutUsButton: "Learn more about us",
       videoNotSupported: "Your browser does not support video.",
       mission: "Mission",
@@ -1316,7 +1304,7 @@ const translations = {
       equipmentFeatures: [
         "Climate control system",
         "Drip irrigation",
-        "LED grow lights",
+        
         "Fertilization and irrigation system",
       ],
       consulting: "Consulting",
@@ -1443,7 +1431,7 @@ const translations = {
           twitter: "#",
         },
         abdulloh: {
-          name: "Abdulloh Abdutolipov",
+          name: "Abdulloh Abdurasulov",
           position: "Technical Director",
           bio: "Specialist in greenhouse construction and technologies. Implementing modern agro-technologies with 10+ years of experience.",
           experience: "10+ years",
@@ -1649,11 +1637,6 @@ const translations = {
         description:
           "Vertical shelving for efficient space utilization and increased yields.",
       },
-      led: {
-        title: "LED grow lights",
-        description:
-          "Energy-efficient LED lighting systems for year-round harvesting.",
-      },
       irrigation: {
         title: "Irrigation System",
         description:
@@ -1702,7 +1685,7 @@ const translations = {
       companyPhone: "+998555152223",
       companyPhone2: "+998994352313",
       companyEmail: "uzgrrow@gmail.com",
-      website: "https://www.uzgrow.uz/",
+      website: "https://www.UZ GROW.uz/",
       locationUrl:
         "https://yandex.ru/navi?rtext=41.202864,69.235732~41.202625,69.235384&rtt=auto",
       socialLinks: {
@@ -1722,7 +1705,7 @@ const translations = {
       },
     },
     footer: {
-      brandName: "UZ-GROW",
+      brandName: "UZ GROW",
       brandTagline: "CONSTRUCTION COMPANY",
       brandDescription:
         "Modern greenhouse construction and building services in Uzbekistan. The future starts today with us.",

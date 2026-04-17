@@ -1,9 +1,9 @@
-UZ-GROW VEB-SAYT RASM LINKLARI
+UZ GROW VEB-SAYT RASM LINKLARI
 =====================================
 
 LOGO VA BRAND RASMLARI
 ------------------------
-/images/logo.png - UZ-GROW logotipi
+/images/logo.png - UZ GROW logotipi
 
 TEAM AVATARLARI
 --------------

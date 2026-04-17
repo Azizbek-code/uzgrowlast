@@ -1,4 +1,4 @@
-# UZ-GROW Web Sayt - To'liq Loyiqa Hujjati
+# UZ GROW Web Sayt - To'liq Loyiqa Hujjati
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@
 
 ### **Kompaniya Ma'lumotlari:**
 
-- **Nomi:** UZ-GROW Quruvchi Firmasi
+- **Nomi:** UZ GROW Quruvchi Firmasi
 - **Soxasi:** Issiqxona qurilishi, agro-injiniring, konsalting
 - **Target:** O'zbekiston fermerlari va agrobiznes vakillari
 - **Tillari:** O'zbek, Rus, Ingliz
@@ -341,7 +341,7 @@ projects/
 ```css
 :root {
   /* Primary Brand Colors */
-  --primary: #22c55e; /* UZ-GROW Green */
+  --primary: #22c55e; /* UZ GROW Green */
   --primary-foreground: #ffffff;
 
   /* Secondary Colors */
@@ -430,7 +430,7 @@ const teamMembers = [
     education: ["Qishloq xo'jaligi instituti", "Xalqaro biznes menejmenti"],
     skills: ["Agrobiznes", "Innovatsiya", "Loyihalash", "Menejment"],
     contact: {
-      email: "rustamjon@uzgrow.uz",
+      email: "rustamjon@UZ GROW.uz",
       phone: "+998 90 123-45-71",
       location: "Toshkent, O'zbekiston",
     },
@@ -515,7 +515,7 @@ const contactInfo = {
 // Next.js Image Component
 <Image
   src="/hero-image.jpg"
-  alt="UZ-GROW Services"
+  alt="UZ GROW Services"
   width={1920}
   height={1080}
   priority
@@ -547,12 +547,12 @@ const Projects = dynamic(() => import('@/components/projects'), {
 ```typescript
 // Metadata Configuration
 export const metadata = {
-  title: "UZ-GROW - Issiqxona Qurilishi",
+  title: "UZ GROW - Issiqxona Qurilishi",
   description:
     "O'zbekistonda zamonaviy issiqxona qurilishi va agro-injiniring xizmatlari",
-  keywords: ["issiqxona", "qurilish", "agro-injiniring", "UZ-GROW"],
+  keywords: ["issiqxona", "qurilish", "agro-injiniring", "UZ GROW"],
   openGraph: {
-    title: "UZ-GROW Quruvchi Firmasi",
+    title: "UZ GROW Quruvchi Firmasi",
     description: "Professional issiqxona qurilishi xizmatlari",
     images: ["/og-image.jpg"],
   },
@@ -585,7 +585,7 @@ npm run type-check     # TypeScript validation
 ```bash
 # .env.local
 NEXT_PUBLIC_CLOUDINARY_URL=https://res.cloudinary.com/dnqi0bdjk
-NEXT_PUBLIC_SITE_URL=https://uz-grow.uz
+NEXT_PUBLIC_SITE_URL=https://UZ GROW.uz
 NEXT_PUBLIC_GA_ID=GA_MEASUREMENT_ID
 ```
 
@@ -599,7 +599,7 @@ npm i -g vercel
 vercel --prod
 
 # Custom Domain
-vercel domains add uz-grow.uz
+vercel domains add UZ GROW.uz
 ```
 
 ### **Performance Monitoring:**
@@ -702,7 +702,7 @@ test("navigation works correctly", async ({ page }) => {
 
 ## Xulosa
 
-UZ-GROW veb-sayti - bu zamonaviy, professional va to'liq funksional loyiha bo'lib, O'zbekistonning yetakchi issiqxona qurilish kompaniyasining xizmatlarini ko'rsatish uchun mo'ljallangan. Loyiha eng yuqori texnologik standartlar, responsive design va multi-language qo'llab-quvvatlash bilan amalga oshirilgan.
+UZ GROW veb-sayti - bu zamonaviy, professional va to'liq funksional loyiha bo'lib, O'zbekistonning yetakchi issiqxona qurilish kompaniyasining xizmatlarini ko'rsatish uchun mo'ljallangan. Loyiha eng yuqori texnologik standartlar, responsive design va multi-language qo'llab-quvvatlash bilan amalga oshirilgan.
 
 **Asosiy xususiyatlar:**
 

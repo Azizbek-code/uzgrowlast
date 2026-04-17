@@ -48,7 +48,6 @@ const services = [
       "Isitish tizimi",
       "Ventilyatsiya va sovutish",
       "CO₂ tizimi",
-      "LED grow lights",
       "O'g'itlash va sug'orish tizimi",
     ],
     result: "To'liq avtomatlashtirilgan issiqxona boshqaruvi.",

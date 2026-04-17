@@ -14,17 +14,17 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
-  description = "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 2000+ muvaffaqiyatli loyiha.",
-  keywords = "issiqxona qurish, agro-injiniring, qishloq xo'jaligi, UZ-GROW, issiqxona turlari, polikarbonat issiqxona, gidroponik, agrobiznes, O'zbekiston, Toshkent, issiqxona narxlari, qurilish materiallari",
+  title = "UZ GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
+  description = "UZ GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 2000+ muvaffaqiyatli loyiha.",
+  keywords = "issiqxona qurish, agro-injiniring, qishloq xo'jaligi, UZ GROW, issiqxona turlari, polikarbonat issiqxona, gidroponik, agrobiznes, O'zbekiston, Toshkent, issiqxona narxlari, qurilish materiallari",
   image = "/images/logo.png",
-  url = "https://uzgrow.uz",
+  url = "https://UZ GROW.uz",
   type = "website",
   locale = "uz_UZ",
   alternateUrls = {
-    uz: "https://uzgrow.uz",
-    ru: "https://uzgrow.uz/ru",
-    en: "https://uzgrow.uz/en",
+    uz: "https://UZ GROW.uz",
+    ru: "https://UZ GROW.uz/ru",
+    en: "https://UZ GROW.uz/en",
   },
 }: SEOHeadProps) {
   return (
@@ -33,7 +33,7 @@ export function SEOHead({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="UZ-GROW Agro-Injiniring" />
+      <meta name="author" content="UZ GROW Agro-Injiniring" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="UTF-8" />
       <meta name="robots" content="index, follow" />
@@ -48,15 +48,15 @@ export function SEOHead({
       <meta property="og:image:height" content="630" />
       <meta property="og:url" content={url} />
       <meta property="og:locale" content={locale} />
-      <meta property="og:site_name" content="UZ-GROW" />
+      <meta property="og:site_name" content="UZ GROW" />
 
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@uzgrow" />
-      <meta name="twitter:site" content="@uzgrow" />
+      <meta name="twitter:creator" content="@UZ GROW" />
+      <meta name="twitter:site" content="@UZ GROW" />
 
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
@@ -79,7 +79,7 @@ export function SEOHead({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "UZ-GROW Agro-Injiniring",
+            name: "UZ GROW Agro-Injiniring",
             url: url,
             logo: image,
             description: description,
@@ -97,17 +97,17 @@ export function SEOHead({
               availableLanguage: ["Uzbek", "Russian", "English"],
             },
             sameAs: [
-              "https://www.facebook.com/uzgrow",
-              "https://www.instagram.com/uzgrow",
-              "https://www.linkedin.com/company/uzgrow",
-              "https://www.youtube.com/c/uzgrow",
-              "https://t.me/uzgrow",
+              "https://www.facebook.com/UZ GROW",
+              "https://www.instagram.com/UZ GROW",
+              "https://www.linkedin.com/company/UZ GROW",
+              "https://www.youtube.com/c/UZ GROW",
+              "https://t.me/UZ GROW",
             ],
             founder: {
               "@type": "Person",
               name: "Rustamjon Rahmonov",
               jobTitle: "CEO",
-              url: "https://uzgrow.uz/ceo",
+              url: "https://UZ GROW.uz/ceo",
             },
             hasOfferCatalog: {
               "@type": "OfferCatalog",

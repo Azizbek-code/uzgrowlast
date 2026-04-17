@@ -131,18 +131,14 @@ export function AssoDesignMedia() {
           <div className="flex justify-center mb-6">
             <img
               src="/images/logo.png"
-              alt="UZ-GROW Logo"
+              alt="UZ GROW Logo"
               className="h-16 w-auto"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Uzgr Hamkorlik Taklifi
+            UZ GROW Hamkorlik Taklifi
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Biz kimmiz - Men — Rustamjon Rahmonov, O'zbekistonlik bloger,
-            agrofaol va "UzGrow" agroplatformasi asoschisidan media hamkorlik
-            taklifi
-          </p>
+          
         </div>
 
         {/* About Section */}
@@ -407,8 +403,8 @@ export function AssoDesignMedia() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <div className="flex flex-col items-center">
               <Globe className="h-8 w-8 mb-2" />
-              <a href="https://taplink.cc/uzgrow" className="hover:underline">
-                taplink.cc/uzgrow
+              <a href="https://taplink.cc/UZ GROW" className="hover:underline">
+                taplink.cc/UZ GROW
               </a>
             </div>
             <div className="flex flex-col items-center">
@@ -450,7 +446,7 @@ export function AssoDesignMedia() {
           <p className="text-gray-600 mb-4">
             "Bizga hoziroq qo'ng'iroq qiling va bepul konsultatsiya oling!"
           </p>
-          <p className="text-sm text-gray-500">Hurmat bilan, UzGrow jamoasi!</p>
+          <p className="text-sm text-gray-500">Hurmat bilan, UZ GROW jamoasi!</p>
         </div>
       </div>
     </section>

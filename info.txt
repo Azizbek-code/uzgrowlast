@@ -1,10 +1,10 @@
-UZ-GROW WEBSITE INFORMATION
+UZ GROW WEBSITE INFORMATION
 ==========================
 
 BASIC INFORMATION
 ----------------
-Company Name: UZ-GROW
-Full Name: UZ-GROW QURUVCHI FIRMASI
+Company Name: UZ GROW
+Full Name: UZ GROW QURUVCHI FIRMASI
 Industry: Agro-injiniring, Issiqxona qurilishi
 Founded: 2017
 Experience: 4+ years
@@ -13,7 +13,7 @@ Website: Modern Next.js application
 
 COMPANY DESCRIPTION
 ------------------
-UZ-GROW - O'zbekistonda zamonaviy issiqxona qurilishi va agro-injiniring sohasida faoliyat yurituvchi kompaniya. Bizning maqsadimiz - O'zbekistonda yuqori samaradorlikka ega, innovatsion va eksportbop issiqxona infratuzilmasini rivojlantirish.
+UZ GROW - O'zbekistonda zamonaviy issiqxona qurilishi va agro-injiniring sohasida faoliyat yurituvchi kompaniya. Bizning maqsadimiz - O'zbekistonda yuqori samaradorlikka ega, innovatsion va eksportbop issiqxona infratuzilmasini rivojlantirish.
 
 SERVICES OFFERED
 -----------------
@@ -53,8 +53,8 @@ TEAM MEMBERS
 
 3. Abdulloh Abdurasulov
    - Position: Texnik Direktor
-   - Experience: 10+ yillik
-   - Bio: Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 10+ yillik tajriba bilan zamonaviy agrotexnologiyalarni joriy etmoqda.
+   - Experience: 6+ yillik
+   - Bio: Issiqxona qurilish va texnologiyalar bo'yicha mutaxassis. 6+ yillik tajriba bilan zamonaviy agrotexnologiyalarni joriy etmoqda.
    - Contact: uzgrrow@gmail.com, +998 88 507 00 70
 
 PROJECTS

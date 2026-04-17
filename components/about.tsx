@@ -59,6 +59,23 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 export function About() {
   const { t } = useLanguage();
   const [currentAboutImage, setCurrentAboutImage] = useState(0);
+  const [isStatsVisible, setIsStatsVisible] = useState(false);
+  const statsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsStatsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (statsRef.current) observer.observe(statsRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   // 6 Cloudinary images for about section slideshow
   const aboutBackgroundImages = [
@@ -80,8 +97,8 @@ export function About() {
   }, [aboutBackgroundImages.length]);
 
   const stats = [
-    { value: 4, suffix: "+", label: t("about.experience") },
-    { value: 100, suffix: "+", label: t("about.projects") },
+    { value: 8, suffix: "+", label: t("about.experience") },
+    { value: 2000, suffix: "+", label: t("about.projects") },
     { value: 50, suffix: "+", label: t("about.clients") },
     { value: 12, suffix: "+", label: t("about.countries") },
   ];
@@ -111,7 +128,7 @@ export function About() {
             <div className="aspect-video rounded-3xl overflow-hidden relative">
               <img
                 src={aboutBackgroundImages[currentAboutImage]}
-                alt="About UZ-GROW"
+                alt="About UZ GROW"
                 className="w-full h-full object-cover transition-opacity duration-1000"
               />
             </div>
@@ -125,10 +142,10 @@ export function About() {
             <span className="inline-block text-primary font-semibold text-sm tracking-wider uppercase mb-4">
               {t("about.tagline")}
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#24B14B] mb-6 text-balance">
               {t("about.headline")}
             </h2>
-            <p className="text-lg  leading-relaxed mb-8 text-black">
+            <p className="text-lg  leading-relaxed mb-8 text-[#24B14B]">
               {t("about.descriptionText")}
             </p>
             <Button size="lg" className="rounded-full px-8">
@@ -181,7 +198,12 @@ export function About() {
         </div>
 
         {/* Stats */}
-        <div className="bg-[#24B14B] rounded-3xl p-8 md:p-12">
+        <div 
+          ref={statsRef}
+          className={`bg-[#24B14B] rounded-3xl p-8 md:p-12 transition-all duration-1000 transform ${
+            isStatsVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+          }`}
+        >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">

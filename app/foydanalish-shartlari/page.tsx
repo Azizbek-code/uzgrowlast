@@ -3,12 +3,12 @@ import { Footer } from "@/components/footer"
 import { FileText, CheckCircle, AlertCircle, Scale, Users, Shield } from "lucide-react"
 
 export const metadata = {
-  title: 'Foydalanish shartlari - UZ-GROW | Xizmatlar shartnomasi',
-  description: 'UZ-GROW foydalanish shartlari. Veb-saytimizdan foydalanish qoidalari, xizmatlar shartlari va huquqiy majburiyatlar.',
-  keywords: 'UZ-GROW foydalanish shartlari, xizmatlar shartnomasi, huquqiy shartlar, veb-sayt qoidalari',
+  title: 'Foydalanish shartlari - UZ GROW | Xizmatlar shartnomasi',
+  description: 'UZ GROW foydalanish shartlari. Veb-saytimizdan foydalanish qoidalari, xizmatlar shartlari va huquqiy majburiyatlar.',
+  keywords: 'UZ GROW foydalanish shartlari, xizmatlar shartnomasi, huquqiy shartlar, veb-sayt qoidalari',
   openGraph: {
-    title: 'Foydalanish shartlari - UZ-GROW | Xizmatlar shartnomasi',
-    description: 'UZ-GROW foydalanish shartlari. Veb-saytimizdan foydalanish qoidalari va xizmatlar shartlari.',
+    title: 'Foydalanish shartlari - UZ GROW | Xizmatlar shartnomasi',
+    description: 'UZ GROW foydalanish shartlari. Veb-saytimizdan foydalanish qoidalari va xizmatlar shartlari.',
     images: ['/images/logo.png'],
   },
 }
@@ -41,7 +41,7 @@ export default function TermsOfServicePage() {
                 1. Umumiy qoidalar
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                UZ-GROW veb-saytidan foydalanish quyidagi shartlarga bo'ysunadi:
+                UZ GROW veb-saytidan foydalanish quyidagi shartlarga bo'ysunadi:
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 mt-4">
                 <li>Siz 18 yoshga to'lgan va huquqiy jihatdan to'liq qobiliyatli bo'lishingiz kerak</li>
@@ -58,7 +58,7 @@ export default function TermsOfServicePage() {
                 2. Xizmatlar
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                UZ-GROW quyidagi xizmatlarni taqdim etadi:
+                UZ GROW quyidagi xizmatlarni taqdim etadi:
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 mt-4">
                 <li>Issiqxona loyihalash va qurish bo'yicha konsalting</li>
@@ -101,7 +101,7 @@ export default function TermsOfServicePage() {
                 4. Mas'uliyatni cheklash
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                UZ-GROW quyidagi holatlarda mas'uliyatni cheklaydi:
+                UZ GROW quyidagi holatlarda mas'uliyatni cheklaydi:
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 mt-4">
                 <li>Force majeure holatlarida (tabiiy ofatlar, urushlar)</li>
@@ -161,7 +161,7 @@ export default function TermsOfServicePage() {
               </ul>
               <div className="mt-6 pt-6 border-t border-green-300">
                 <p className="text-green-800 font-medium">
-                  UZ-GROW Agro-Injiniring kompaniyasi
+                  UZ GROW Agro-Injiniring kompaniyasi
                 </p>
                 <p className="text-green-600 text-sm mt-1">
                   Toshkent shahri, Rayhona ko'chasi 107-uy

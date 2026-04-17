@@ -3,15 +3,15 @@ import { Footer } from "@/components/footer";
 import { Team } from "@/components/team";
 
 export const metadata = {
-  title: "Jamoa - UZ-GROW | Mutaxassislar Jamoasi",
+  title: "Jamoa - UZ GROW | Mutaxassislar Jamoasi",
   description:
-    "UZ-GROW kompaniyasi mutaxassislar jamoasi. 15+ yillik tajribaga ega professional mutaxassislar. Agro-injiniring, marketing, moliya va loyiha boshqaruvi.",
+    "UZ GROW kompaniyasi mutaxassislar jamoasi. 15+ yillik tajribaga ega professional mutaxassislar. Agro-injiniring, marketing, moliya va loyiha boshqaruvi.",
   keywords:
-    "UZ-GROW jamoa, mutaxassislar, agro-injiniring, marketing, moliya, loyiha boshqaruvi, O'zbekiston",
+    "UZ GROW jamoa, mutaxassislar, agro-injiniring, marketing, moliya, loyiha boshqaruvi, O'zbekiston",
   openGraph: {
-    title: "Jamoa - UZ-GROW | Mutaxassislar Jamoasi",
+    title: "Jamoa - UZ GROW | Mutaxassislar Jamoasi",
     description:
-      "UZ-GROW kompaniyasi mutaxassislar jamoasi. 15+ yillik tajribaga ega professional mutaxassislar.",
+      "UZ GROW kompaniyasi mutaxassislar jamoasi. 15+ yillik tajribaga ega professional mutaxassislar.",
     images: ["/images/logo.png"],
   },
 };

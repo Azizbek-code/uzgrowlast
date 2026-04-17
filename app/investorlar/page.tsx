@@ -62,7 +62,7 @@ const investmentModels = [
   },
   {
     title: "Franchayzing",
-    description: "UZ-GROW brendi ostida mustaqil issiqxona",
+    description: "UZ GROW brendi ostida mustaqil issiqxona",
     minInvestment: "$50,000",
     roi: "20-30%",
     period: "3-5 yil",
@@ -93,7 +93,7 @@ export default function InvestorlarPage() {
                 Agro-sanoat investitsiya imkoniyati
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                UZ-GROW yuqori rentabelli issiqxona loyihalarini amalga oshirish
+                UZ GROW yuqori rentabelli issiqxona loyihalarini amalga oshirish
                 bo'yicha hamkorlik taklif qiladi.
               </p>
               <div className="flex flex-wrap gap-4">

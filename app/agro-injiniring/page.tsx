@@ -27,15 +27,15 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Agro-injiniring - UZ-GROW | Zamonaviy qishloq xo'jaligi yechimlari",
+  title: "Agro-injiniring - UZ GROW | Zamonaviy qishloq xo'jaligi yechimlari",
   description:
-    "UZ-GROW agro-injiniring xizmatlari. Zamonaviy qishloq xo'jaligi texnologiyalari, avtomatlashtirish tizimlari va samarali yechimlar.",
+    "UZ GROW agro-injiniring xizmatlari. Zamonaviy qishloq xo'jaligi texnologiyalari, avtomatlashtirish tizimlari va samarali yechimlar.",
   keywords:
-    "UZ-GROW agro-injiniring, qishloq xo'jaligi texnologiyalari, avtomatlashtirish, gidroponik, issiqxona texnologiyalari",
+    "UZ GROW agro-injiniring, qishloq xo'jaligi texnologiyalari, avtomatlashtirish, gidroponik, issiqxona texnologiyalari",
   openGraph: {
-    title: "Agro-injiniring - UZ-GROW | Zamonaviy qishloq xo'jaligi yechimlari",
+    title: "Agro-injiniring - UZ GROW | Zamonaviy qishloq xo'jaligi yechimlari",
     description:
-      "UZ-GROW agro-injiniring xizmatlari. Zamonaviy qishloq xo'jaligi texnologiyalari va avtomatlashtirish tizimlari.",
+      "UZ GROW agro-injiniring xizmatlari. Zamonaviy qishloq xo'jaligi texnologiyalari va avtomatlashtirish tizimlari.",
     images: ["/images/logo.png"],
   },
 };

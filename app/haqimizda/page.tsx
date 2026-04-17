@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/card";
 
 const stats = [
-  { value: "4+", label: "Yillik tajriba" },
+  { value: "8+", label: "Yillik tajriba" },
   { value: "95+", label: "Mamlakatda xizmat" },
   { value: "2000+", label: "Loyihalar" },
   { value: "50+", label: "Mijozlar" },
@@ -69,7 +69,7 @@ export default function HaqimizdaPage() {
               8+ yillik tajriba
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              95 ta mamlakatda sizning yoningizda. UZ-GROW — zamonaviy issiqxona
+              95 ta mamlakatda sizning yoningizda. UZ GROW — zamonaviy issiqxona
               qurilishi va quruvchi firma sifatida faoliyat yurituvchi
               kompaniya. Bizning maqsadimiz — O'zbekistonda yuqori
               samaradorlikka ega, innovatsion va eksportbop issiqxona
@@ -188,7 +188,7 @@ export default function HaqimizdaPage() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Nega aynan UZ-GROW?
+              Nega aynan UZ GROW?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Biz bilan ishlashning asosiy afzalliklari

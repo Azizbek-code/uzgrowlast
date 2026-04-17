@@ -1,5 +1,5 @@
 ---
-description: Project management workflow for UZ-GROW website
+description: Project management workflow for UZ GROW website
 ---
 
 # Loyihalar Boshqaruvi Ish Oqimi (Workflow)

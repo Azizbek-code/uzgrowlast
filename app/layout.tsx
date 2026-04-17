@@ -8,14 +8,14 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title:
-    "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
+    "UZ GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
   description:
-    "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 2000+ muvaffaqiyatli loyiha.",
+    "UZ GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar. 8+ yillik tajriba, 2000+ muvaffaqiyatli loyiha.",
   keywords: [
     "issiqxona qurish",
     "agro-injiniring",
     "qishloq xo'jaligi",
-    "UZ-GROW",
+    "UZ GROW",
     "issiqxona turlari",
     "polikarbonat issiqxona",
     "gidroponik",
@@ -25,44 +25,44 @@ export const metadata: Metadata = {
     "issiqxona narxlari",
     "qurilish materiallari",
   ],
-  authors: [{ name: "Rustamjon Rahmonov", url: "https://uzgrow.uz/ceo" }],
-  creator: "UZ-GROW Agro-Injiniring",
-  publisher: "UZ-GROW",
+  authors: [{ name: "Rustamjon Rahmonov", url: "https://UZ GROW.uz/ceo" }],
+  creator: "UZ GROW Agro-Injiniring",
+  publisher: "UZ GROW",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "uz_UZ",
-    url: "https://uzgrow.uz",
+    url: "https://UZ GROW.uz",
     title:
-      "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
+      "UZ GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
     description:
-      "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar.",
-    siteName: "UZ-GROW",
+      "UZ GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar.",
+    siteName: "UZ GROW",
     images: [
       {
         url: "/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "UZ-GROW Agro-Injiniring",
+        alt: "UZ GROW Agro-Injiniring",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "UZ-GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
+      "UZ GROW - Agro-Injiniring | Issiqxona qurish va qishloq xo'jaligi yechimlari",
     description:
-      "UZ-GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar.",
+      "UZ GROW - O'zbekistonning yetakchi agro-injiniring kompaniyasi. Zamonaviy issiqxonalar, agrotexnologiyalar va qishloq xo'jaligi uchun kompleks yechimlar.",
     images: ["/images/logo.png"],
-    creator: "@uzgrow",
-    site: "@uzgrow",
+    creator: "@UZ GROW",
+    site: "@UZ GROW",
   },
   alternates: {
-    canonical: "https://uzgrow.uz",
+    canonical: "https://UZ GROW.uz",
     languages: {
-      "uz-UZ": "https://uzgrow.uz",
-      "ru-RU": "https://uzgrow.uz/ru",
-      "en-US": "https://uzgrow.uz/en",
+      "uz-UZ": "https://UZ GROW.uz",
+      "ru-RU": "https://UZ GROW.uz/ru",
+      "en-US": "https://UZ GROW.uz/en",
     },
   },
   verification: {

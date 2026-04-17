@@ -37,18 +37,6 @@ const technologies = [
     ],
   },
   {
-    icon: Sun,
-    title: "LED Grow Lights",
-    description:
-      "O'simliklar uchun optimal yorug'lik spektri bilan energiya tejamkor LED yoritish.",
-    features: [
-      "To'liq spektr",
-      "Energiya tejash",
-      "Uzoq umr",
-      "Issiqlik nazorati",
-    ],
-  },
-  {
     icon: Wind,
     title: "CO₂ tizimi",
     description:
