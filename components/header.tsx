@@ -60,7 +60,7 @@ export function Header() {
           <div className="flex items-center justify-between h-10">
             <div className="flex items-center gap-4 sm:gap-6">
               <a
-                href="tel:+998555152233"
+                href="tel:+998555152223"
                 className="flex items-center gap-2 text-sm sm:text-base transition-colors"
               >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -206,7 +206,7 @@ export function Header() {
               {/* Mobile Contact Info */}
               <div className="flex flex-col gap-2 pb-4 mb-4 border-b border-border">
                 <a
-                  href="tel:+998555152233"
+                  href="tel:+998555152223"
                   className="flex items-center gap-2 text-sm text-muted-foreground"
                 >
                   <Phone className="w-4 h-4 text-primary" />
