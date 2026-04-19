@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { LoadingScreen } from "@/components/loading-screen";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -82,6 +83,7 @@ export default function RootLayout({
         className={`${inter.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
+        <LoadingScreen />
         <LanguageProvider>{children}</LanguageProvider>
         <Analytics />
       </body>
